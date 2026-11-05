@@ -10,7 +10,7 @@ Parte prática do TCC. A interface mostra o resultado já calculado. O Python n�
 - Sentence-Transformers: `BAAI/bge-large-en-v1.5`
 - Embeddings extraídos de `Qwen/Qwen2.5-0.5B` (último hidden state, média dos tokens, 512 tokens, normalização L2). Não é um segundo BGE e não usa API paga.
 
-Vinte rótulos são manuais. Oitenta vêm de regra lexical. A amostra para conferência está em `piloto_tfidf/data/amostra_revisao.csv`.
+Vinte rótulos são manuais. Oitenta vêm de regra lexical. Uma amostra de 20 desses 80 foi relida pelo protocolo: concordância de 95%, com uma divergência (`piloto_tfidf/data/amostra_revisao.csv`).
 
 ## Interface
 

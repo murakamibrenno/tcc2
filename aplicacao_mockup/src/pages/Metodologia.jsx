@@ -28,7 +28,7 @@ const ETAPAS = [
   {
     num: 2,
     titulo: 'Anotação Manual',
-    descricao: 'Vinte currículos anotados à mão e oitenta por regra lexical (SQL, REST, Git e linguagem de programação). No total: 3 Adequados, 21 Parcialmente Adequados e 76 Inadequados. Uma amostra dos 80 será conferida à mão; o restante da base não entra neste fechamento.',
+    descricao: 'Vinte currículos anotados à mão e oitenta por regra lexical (SQL, REST, Git e linguagem de programação). No total: 3 Adequados, 21 Parcialmente Adequados e 76 Inadequados. Uma amostra de 20 dos 80 foi relida pelo protocolo; o restante da base não entra neste fechamento.',
     icone: <LabelRoundedIcon />,
     cor: '#7C3AED',
     status: 'parcial',
@@ -250,10 +250,11 @@ export default function Metodologia() {
         {revisao && (
           <Paper elevation={0} sx={{ p: 2, mb: 2.5, borderRadius: '10px', border: '1px solid #E5E7EB' }}>
             <Typography sx={{ fontSize: '0.85rem', color: 'text.primary', lineHeight: 1.6 }}>
-              Amostra dos rótulos automáticos: {revisao.n_revisados} de {revisao.n_amostra} conferidos
+              Amostra dos rótulos automáticos: {revisao.n_revisados} de {revisao.n_amostra} relidos pelo protocolo
               {revisao.concordancia == null
                 ? '. A planilha ainda está em branco — a concordância entra aqui depois da conferência.'
                 : `. Concordância com a regra: ${(revisao.concordancia * 100).toFixed(1)}%.`}
+              {revisao.nota ? ` ${revisao.nota}` : ''}
             </Typography>
           </Paper>
         )}

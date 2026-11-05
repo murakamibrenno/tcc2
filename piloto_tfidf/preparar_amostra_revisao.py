@@ -43,7 +43,10 @@ def main():
         anterior["id"] = anterior["id"].str.strip()
         if "rotulo_revisado" not in anterior.columns:
             anterior["rotulo_revisado"] = ""
-        frame = anterior[["id", "rotulo_revisado"]].merge(pool, on="id", how="left")
+        cols = ["id", "rotulo_revisado"]
+        if "justificativa" in anterior.columns:
+            cols.append("justificativa")
+        frame = anterior[cols].merge(pool, on="id", how="left")
     else:
         frame = pool.sample(n=min(N, len(pool)), random_state=SEED).copy()
         frame["rotulo_revisado"] = ""
@@ -54,19 +57,43 @@ def main():
 
     preenchidos = frame[frame["rotulo_revisado"].str.strip() != ""]
     concordancia = None
+    divergencias = []
     if len(preenchidos) == len(frame) and len(frame) > 0:
         iguais = (
             preenchidos["rotulo_revisado"].str.strip() == preenchidos["rotulo_automatico"].str.strip()
-        ).sum()
-        concordancia = round(float(iguais) / len(frame), 4)
+        )
+        concordancia = round(float(iguais.sum()) / len(frame), 4)
+        for _, row in preenchidos.loc[~iguais].iterrows():
+            divergencias.append(
+                {
+                    "id": row["id"],
+                    "nome": row["nome"],
+                    "automatico": row["rotulo_automatico"],
+                    "revisado": row["rotulo_revisado"].strip(),
+                }
+            )
+
+    if concordancia is None:
+        nota = "Preencha rotulo_revisado e rode este script de novo."
+    elif not divergencias:
+        nota = "Releitura pelo protocolo, no texto completo. Nenhuma divergência com a regra."
+    else:
+        itens = "; ".join(
+            f"{d['id']} ({d['automatico']} → {d['revisado']})" for d in divergencias
+        )
+        nota = (
+            "Releitura pelo protocolo, no texto completo, sem copiar o regex. "
+            f"Divergência: {itens}."
+        )
 
     resumo = {
         "n_automaticos": len(auto),
         "n_amostra": int(len(frame)),
         "n_revisados": int((frame["rotulo_revisado"].str.strip() != "").sum()),
         "concordancia": concordancia,
+        "divergencias": divergencias,
         "arquivo": "data/amostra_revisao.csv",
-        "nota": "Preencha rotulo_revisado e rode este script de novo." if concordancia is None else "Amostra conferida.",
+        "nota": nota,
     }
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "amostra_revisao_meta.json").write_text(json.dumps(resumo, ensure_ascii=False, indent=2), encoding="utf-8")
