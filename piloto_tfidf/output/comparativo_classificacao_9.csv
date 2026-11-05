@@ -1,0 +1,10 @@
+﻿id,representacao,representacao_key,modelo_embedding,classificador,tempo_vetorizacao_seg,f1_macro,f1_weighted,folds,tempo_treino_inferencia_seg
+tfidf_lr,TF-IDF,tfidf,TfidfVectorizer,Regressao Logistica,0.409,0.2879,0.6564,5,2.675
+tfidf_svm,TF-IDF,tfidf,TfidfVectorizer,SVM,0.409,0.2879,0.6564,5,13.313
+tfidf_xgb,TF-IDF,tfidf,TfidfVectorizer,XGBoost,0.409,0.5467,0.6626,5,29.952
+st_lr,Sentence-Transformers,st,BAAI/bge-large-en-v1.5,Regressao Logistica,185.833,0.2879,0.6564,5,0.105
+st_svm,Sentence-Transformers,st,BAAI/bge-large-en-v1.5,SVM,185.833,0.2879,0.6564,5,0.033
+st_xgb,Sentence-Transformers,st,BAAI/bge-large-en-v1.5,XGBoost,185.833,0.6099,0.7219,5,3.984
+llm_lr,LLM Embeddings,llm,BAAI/bge-base-en-v1.5,Regressao Logistica,56.795,0.2879,0.6564,5,0.093
+llm_svm,LLM Embeddings,llm,BAAI/bge-base-en-v1.5,SVM,56.795,0.2879,0.6564,5,0.027
+llm_xgb,LLM Embeddings,llm,BAAI/bge-base-en-v1.5,XGBoost,56.795,0.7568,0.8322,5,2.668

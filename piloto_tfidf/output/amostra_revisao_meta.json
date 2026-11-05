@@ -1,0 +1,8 @@
+{
+  "n_automaticos": 80,
+  "n_amostra": 20,
+  "n_revisados": 0,
+  "concordancia": null,
+  "arquivo": "data/amostra_revisao.csv",
+  "nota": "Preencha rotulo_revisado e rode este script de novo."
+}

@@ -1,0 +1,673 @@
+{
+  "termos_vaga_referencia": [
+    {
+      "termo": "relational databases",
+      "score_tfidf_vaga": 0.2568
+    },
+    {
+      "termo": "junior",
+      "score_tfidf_vaga": 0.2206
+    },
+    {
+      "termo": "relational",
+      "score_tfidf_vaga": 0.209
+    },
+    {
+      "termo": "backend",
+      "score_tfidf_vaga": 0.209
+    },
+    {
+      "termo": "web services",
+      "score_tfidf_vaga": 0.1914
+    },
+    {
+      "termo": "web",
+      "score_tfidf_vaga": 0.1398
+    },
+    {
+      "termo": "or",
+      "score_tfidf_vaga": 0.1333
+    },
+    {
+      "termo": "and",
+      "score_tfidf_vaga": 0.1304
+    },
+    {
+      "termo": "restful apis",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "version control",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "databases mysql",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "in java",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "in agile",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "required skills",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "or service",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "docker",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "software developer",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "postgresql",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "postgresql oracle",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "mysql postgresql",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "backend and",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "services or",
+      "score_tfidf_vaga": 0.1284
+    },
+    {
+      "termo": "mid",
+      "score_tfidf_vaga": 0.1178
+    },
+    {
+      "termo": "restful",
+      "score_tfidf_vaga": 0.1178
+    },
+    {
+      "termo": "microservices",
+      "score_tfidf_vaga": 0.1178
+    }
+  ],
+  "termos_por_classe_lr": {
+    "Adequado": {
+      "termos_positivos": [
+        {
+          "termo": "net",
+          "peso": 0.3138
+        },
+        {
+          "termo": "the",
+          "peso": 0.2394
+        },
+        {
+          "termo": "like",
+          "peso": 0.2084
+        },
+        {
+          "termo": "application",
+          "peso": 0.1895
+        },
+        {
+          "termo": "framework",
+          "peso": 0.1829
+        },
+        {
+          "termo": "java",
+          "peso": 0.1678
+        },
+        {
+          "termo": "entity",
+          "peso": 0.1664
+        },
+        {
+          "termo": "controls",
+          "peso": 0.1626
+        },
+        {
+          "termo": "used",
+          "peso": 0.1622
+        },
+        {
+          "termo": "database",
+          "peso": 0.1566
+        },
+        {
+          "termo": "using",
+          "peso": 0.1538
+        },
+        {
+          "termo": "asp net",
+          "peso": 0.1433
+        },
+        {
+          "termo": "spring",
+          "peso": 0.1409
+        },
+        {
+          "termo": "asp",
+          "peso": 0.1365
+        },
+        {
+          "termo": "scrum",
+          "peso": 0.135
+        }
+      ],
+      "termos_negativos": [
+        {
+          "termo": "and",
+          "peso": -0.1768
+        },
+        {
+          "termo": "business",
+          "peso": -0.0569
+        },
+        {
+          "termo": "technology",
+          "peso": -0.055
+        },
+        {
+          "termo": "support",
+          "peso": -0.0531
+        },
+        {
+          "termo": "systems",
+          "peso": -0.0526
+        },
+        {
+          "termo": "it",
+          "peso": -0.0518
+        },
+        {
+          "termo": "information",
+          "peso": -0.0499
+        },
+        {
+          "termo": "network",
+          "peso": -0.0486
+        },
+        {
+          "termo": "management",
+          "peso": -0.0468
+        },
+        {
+          "termo": "customer",
+          "peso": -0.043
+        },
+        {
+          "termo": "company",
+          "peso": -0.0424
+        },
+        {
+          "termo": "office",
+          "peso": -0.0376
+        },
+        {
+          "termo": "state",
+          "peso": -0.0361
+        },
+        {
+          "termo": "city",
+          "peso": -0.0351
+        },
+        {
+          "termo": "marketing",
+          "peso": -0.0339
+        }
+      ]
+    },
+    "Inadequado": {
+      "termos_positivos": [
+        {
+          "termo": "and",
+          "peso": 0.3427
+        },
+        {
+          "termo": "cisco",
+          "peso": 0.1581
+        },
+        {
+          "termo": "sales",
+          "peso": 0.1538
+        },
+        {
+          "termo": "security",
+          "peso": 0.1299
+        },
+        {
+          "termo": "mdm",
+          "peso": 0.1208
+        },
+        {
+          "termo": "care",
+          "peso": 0.1194
+        },
+        {
+          "termo": "food",
+          "peso": 0.1098
+        },
+        {
+          "termo": "01",
+          "peso": 0.1084
+        },
+        {
+          "termo": "or",
+          "peso": 0.1058
+        },
+        {
+          "termo": "de",
+          "peso": 0.1057
+        },
+        {
+          "termo": "responsible",
+          "peso": 0.1035
+        },
+        {
+          "termo": "responsible for",
+          "peso": 0.1021
+        },
+        {
+          "termo": "equipment",
+          "peso": 0.0969
+        },
+        {
+          "termo": "hr",
+          "peso": 0.0941
+        },
+        {
+          "termo": "safety",
+          "peso": 0.0894
+        }
+      ],
+      "termos_negativos": [
+        {
+          "termo": "the",
+          "peso": -0.5201
+        },
+        {
+          "termo": "net",
+          "peso": -0.402
+        },
+        {
+          "termo": "project",
+          "peso": -0.3604
+        },
+        {
+          "termo": "asp",
+          "peso": -0.3394
+        },
+        {
+          "termo": "application",
+          "peso": -0.33
+        },
+        {
+          "termo": "sql",
+          "peso": -0.2715
+        },
+        {
+          "termo": "asp net",
+          "peso": -0.262
+        },
+        {
+          "termo": "database",
+          "peso": -0.2479
+        },
+        {
+          "termo": "ms",
+          "peso": -0.2392
+        },
+        {
+          "termo": "to",
+          "peso": -0.2388
+        },
+        {
+          "termo": "data",
+          "peso": -0.2308
+        },
+        {
+          "termo": "drupal",
+          "peso": -0.2209
+        },
+        {
+          "termo": "web",
+          "peso": -0.2097
+        },
+        {
+          "termo": "business",
+          "peso": -0.2044
+        },
+        {
+          "termo": "java",
+          "peso": -0.1975
+        }
+      ]
+    },
+    "Parcialmente Adequado": {
+      "termos_positivos": [
+        {
+          "termo": "the",
+          "peso": 0.2807
+        },
+        {
+          "termo": "project",
+          "peso": 0.2697
+        },
+        {
+          "termo": "ms",
+          "peso": 0.2667
+        },
+        {
+          "termo": "business",
+          "peso": 0.2613
+        },
+        {
+          "termo": "drupal",
+          "peso": 0.2366
+        },
+        {
+          "termo": "sql",
+          "peso": 0.2112
+        },
+        {
+          "termo": "asp",
+          "peso": 0.2029
+        },
+        {
+          "termo": "software",
+          "peso": 0.2009
+        },
+        {
+          "termo": "safelite",
+          "peso": 0.2001
+        },
+        {
+          "termo": "information",
+          "peso": 0.1926
+        },
+        {
+          "termo": "to",
+          "peso": 0.189
+        },
+        {
+          "termo": "information technology",
+          "peso": 0.1883
+        },
+        {
+          "termo": "mission partner",
+          "peso": 0.1848
+        },
+        {
+          "termo": "system",
+          "peso": 0.1817
+        },
+        {
+          "termo": "technology",
+          "peso": 0.1786
+        }
+      ],
+      "termos_negativos": [
+        {
+          "termo": "and",
+          "peso": -0.1659
+        },
+        {
+          "termo": "cisco",
+          "peso": -0.1338
+        },
+        {
+          "termo": "sales",
+          "peso": -0.1238
+        },
+        {
+          "termo": "security",
+          "peso": -0.1087
+        },
+        {
+          "termo": "responsible for",
+          "peso": -0.1047
+        },
+        {
+          "termo": "responsible",
+          "peso": -0.1047
+        },
+        {
+          "termo": "mdm",
+          "peso": -0.1036
+        },
+        {
+          "termo": "care",
+          "peso": -0.0987
+        },
+        {
+          "termo": "01",
+          "peso": -0.098
+        },
+        {
+          "termo": "food",
+          "peso": -0.094
+        },
+        {
+          "termo": "de",
+          "peso": -0.0903
+        },
+        {
+          "termo": "of",
+          "peso": -0.0826
+        },
+        {
+          "termo": "safety",
+          "peso": -0.0772
+        },
+        {
+          "termo": "equipment",
+          "peso": -0.0753
+        },
+        {
+          "termo": "control",
+          "peso": -0.075
+        }
+      ]
+    }
+  },
+  "tfidf_medio_por_classe": {
+    "Adequado": [
+      {
+        "termo": "the",
+        "tfidf_medio": 0.1985
+      },
+      {
+        "termo": "and",
+        "tfidf_medio": 0.1948
+      },
+      {
+        "termo": "net",
+        "tfidf_medio": 0.141
+      },
+      {
+        "termo": "to",
+        "tfidf_medio": 0.1407
+      },
+      {
+        "termo": "of",
+        "tfidf_medio": 0.1006
+      },
+      {
+        "termo": "application",
+        "tfidf_medio": 0.0926
+      },
+      {
+        "termo": "for",
+        "tfidf_medio": 0.0899
+      },
+      {
+        "termo": "like",
+        "tfidf_medio": 0.0815
+      },
+      {
+        "termo": "database",
+        "tfidf_medio": 0.081
+      },
+      {
+        "termo": "in",
+        "tfidf_medio": 0.0774
+      },
+      {
+        "termo": "framework",
+        "tfidf_medio": 0.0742
+      },
+      {
+        "termo": "used",
+        "tfidf_medio": 0.0739
+      },
+      {
+        "termo": "using",
+        "tfidf_medio": 0.0715
+      },
+      {
+        "termo": "controls",
+        "tfidf_medio": 0.0711
+      },
+      {
+        "termo": "entity",
+        "tfidf_medio": 0.0704
+      }
+    ],
+    "Inadequado": [
+      {
+        "termo": "and",
+        "tfidf_medio": 0.2793
+      },
+      {
+        "termo": "to",
+        "tfidf_medio": 0.1122
+      },
+      {
+        "termo": "of",
+        "tfidf_medio": 0.0936
+      },
+      {
+        "termo": "the",
+        "tfidf_medio": 0.0787
+      },
+      {
+        "termo": "for",
+        "tfidf_medio": 0.0591
+      },
+      {
+        "termo": "in",
+        "tfidf_medio": 0.0546
+      },
+      {
+        "termo": "with",
+        "tfidf_medio": 0.041
+      },
+      {
+        "termo": "management",
+        "tfidf_medio": 0.0292
+      },
+      {
+        "termo": "state",
+        "tfidf_medio": 0.0291
+      },
+      {
+        "termo": "company",
+        "tfidf_medio": 0.0288
+      },
+      {
+        "termo": "city",
+        "tfidf_medio": 0.0267
+      },
+      {
+        "termo": "city state",
+        "tfidf_medio": 0.0258
+      },
+      {
+        "termo": "network",
+        "tfidf_medio": 0.0254
+      },
+      {
+        "termo": "technology",
+        "tfidf_medio": 0.0244
+      },
+      {
+        "termo": "on",
+        "tfidf_medio": 0.0244
+      }
+    ],
+    "Parcialmente Adequado": [
+      {
+        "termo": "and",
+        "tfidf_medio": 0.2563
+      },
+      {
+        "termo": "to",
+        "tfidf_medio": 0.1298
+      },
+      {
+        "termo": "the",
+        "tfidf_medio": 0.1174
+      },
+      {
+        "termo": "of",
+        "tfidf_medio": 0.0902
+      },
+      {
+        "termo": "for",
+        "tfidf_medio": 0.0671
+      },
+      {
+        "termo": "in",
+        "tfidf_medio": 0.0545
+      },
+      {
+        "termo": "project",
+        "tfidf_medio": 0.0435
+      },
+      {
+        "termo": "business",
+        "tfidf_medio": 0.0431
+      },
+      {
+        "termo": "with",
+        "tfidf_medio": 0.0419
+      },
+      {
+        "termo": "information",
+        "tfidf_medio": 0.0391
+      },
+      {
+        "termo": "technology",
+        "tfidf_medio": 0.0388
+      },
+      {
+        "termo": "management",
+        "tfidf_medio": 0.0383
+      },
+      {
+        "termo": "systems",
+        "tfidf_medio": 0.0373
+      },
+      {
+        "termo": "software",
+        "tfidf_medio": 0.0352
+      },
+      {
+        "termo": "system",
+        "tfidf_medio": 0.0351
+      }
+    ]
+  },
+  "nota": "LR treinado no corpus piloto completo (n=20) — exploratorio."
+}

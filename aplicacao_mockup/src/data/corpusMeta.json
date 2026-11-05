@@ -1,0 +1,12 @@
+{
+  "total": 100,
+  "anotacao": "automatica_heuristica",
+  "inclui_piloto_manual": true,
+  "distribuicao": {
+    "Adequado": 3,
+    "Parcialmente Adequado": 21,
+    "Inadequado": 76
+  },
+  "fonte_csv": "selecao_corpus_auto_100.csv",
+  "nota": "Anotacao por regras lexicas (protocolo_anotacao.md). Revisar amostra antes da versao final."
+}

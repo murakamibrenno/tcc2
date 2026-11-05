@@ -1,0 +1,101 @@
+﻿id,categoria,titulo_detectado,hits_backend,incluir,classificacao_referencia,classificacao_confirmada,observacao
+20674668,information-technology,,,1,,Parcialmente Adequado,"IT: Drupal/PHP/Python/SQL — dev web, sem REST/Git explícito"
+83816738,information-technology,,,1,,Adequado,IT: Java/Spring/REST/SQL/Git — 4/4 backend
+18067556,information-technology,,,1,,Inadequado,IT: gestão de dados — só SQL
+26746496,information-technology,,,1,,Adequado,IT: .NET/SQL/web services/GitHub — 4/4
+16186411,information-technology,,,1,,Adequado,IT: .NET/SQL/web services/GitHub — 4/4
+90867631,information-technology,,,1,,Inadequado,IT: suporte/MCITP — só SQL
+16899268,information-technology,,,1,,Inadequado,IT: manager — sem termos de dev
+24889109,information-technology,,,1,,Inadequado,IT: segurança/redes — infraestrutura
+10089434,information-technology,,,1,,Parcialmente Adequado,IT: sysadmin — SQL + JavaScript
+10265057,information-technology,,,1,,Parcialmente Adequado,IT: RF engineer — SQL + linguagens
+10554236,accountant,,,1,,Inadequado,NEGATIVO: contabilidade
+10001727,chef,,,1,,Inadequado,NEGATIVO: cozinha
+10504237,teacher,,,1,,Inadequado,NEGATIVO: professor
+10186968,advocate,,,1,,Inadequado,NEGATIVO: advogado
+10182582,apparel,,,1,,Inadequado,NEGATIVO: moda/varejo
+10953078,agriculture,,,1,,Inadequado,NEGATIVO: agronegócio
+10062724,healthcare,,,1,,Inadequado,NEGATIVO: saúde
+10399912,hr,,,1,,Inadequado,NEGATIVO: recursos humanos
+10138632,sales,,,1,,Inadequado,NEGATIVO: vendas (falso positivo lexical no TF-IDF)
+10235429,fitness,,,1,,Inadequado,NEGATIVO: fitness/educação física
+12763627,information-technology,ASP.NET WEB DEVELOPER,5,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 3/4 | SQL=True REST=False GIT=True LANG=True
+10641230,information-technology,IT MANAGEMENT,4,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=False REST=False GIT=False LANG=True
+13405733,information-technology,DIRECTOR OF INFORMATION TECHNOLOGY,4,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+22776912,information-technology,DIRECTOR OF INFORMATION TECHNOLOGY /CHIEF TECHNOLOGY OFFICER,4,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+70089206,information-technology,INFORMATION TECHNOLOGY SPECIALIST,4,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+28126340,information-technology,INFORMATION TECHNOLOGY COORDINATOR,4,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+33381211,information-technology,VICE PRESIDENT INFORMATION TECHNOLOGY - SOFTWARE ENGINEERING,4,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 3/4 | SQL=True REST=True GIT=False LANG=True
+37242217,information-technology,INFORMATION TECHNOLOGY CONSULTANT,4,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+15651486,information-technology,DIRECTOR OF INFORMATION TECHNOLOGY,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+18301617,information-technology,INFORMATION TECHNOLOGY MANAGER,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+20001721,information-technology,INFORMATION TECHNOLOGY STUDENT,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+18187364,information-technology,INFORMATION TECHNOLOGY SPECIALIST INFORMATION SECURITY OFFICER,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+10553553,information-technology,INFORMATION TECHNOLOGY MANAGER,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+12635195,information-technology,Objective,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=False REST=False GIT=False LANG=True
+31111279,information-technology,"MANAGER, INFORMATION TECHNOLOGY PROJECT MANAGEMENT OFFICE",3,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+27295996,information-technology,IT DIRECTOR,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+27536013,information-technology,EXPERIENCED INFORMATION TECHNOLOGY MANAGER,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+32959732,information-technology,"SENIOR DIRECTOR, INFORMATION TECHNOLOGY",3,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=True GIT=False LANG=False
+41344156,information-technology,VP OF INFORMATION TECHNOLOGY,3,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+46260230,information-technology,INFORMATION TECHNOLOGY SPECIALIST(DISCOUNTPCFIX),3,1,Inadequado,Inadequado,AUTO: IT 0/4 | SQL=False REST=False GIT=False LANG=False
+39413067,information-technology,FREELANCE IT CONSULTANT,3,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+30223363,information-technology,BUSINESS SYSTEMS ANALYST I,3,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+25959103,information-technology,ADMINISTRATOR OF INFORMATION TECHNOLOGY,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+26801767,information-technology,"DIRECTOR, INFORMATION TECHNOLOGY",3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+24020470,information-technology,INFORMATION TECHNOLOGY SPECIALIST,3,1,Inadequado,Inadequado,AUTO: IT 0/4 | SQL=False REST=False GIT=False LANG=False
+28897981,information-technology,"INFORMATION TECHNOLOGY SPECIALIST (WEB), GS-11",3,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 3/4 | SQL=True REST=True GIT=False LANG=True
+10247517,information-technology,INFORMATION TECHNOLOGY MANAGER,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+79541391,information-technology,SUBJECT MATTER EXPERT (INFORMATION TECHNOLOGY ASSISTANT),3,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+51639418,information-technology,INFORMATION TECHNOLOGY BUREAU DEPUTY DIRECTOR,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+31243710,information-technology,IT MANAGER,3,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+22450718,information-technology,INFORMATION TECHNOLOGY SPECIALIST,2,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+20879311,information-technology,DIRECTOR OF INFORMATION TECHNOLOGY AND ANALYTICS,2,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+19796840,information-technology,INFORMATION TECHNOLOGY AUDITOR,2,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+19850482,information-technology,SENIOR VP - INFORMATION TECHNOLOGY,2,1,Inadequado,Inadequado,AUTO: IT 0/4 | SQL=False REST=False GIT=False LANG=False
+11957080,information-technology,LEAD INFORMATION TECHNOLOGY SUPPORT SPECIALIST,2,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+13836471,information-technology,INFORMATION TECHNOLOGY MANAGER,2,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+15802627,information-technology,SENIOR VICE-PRESIDENT AND CHIEF INFORMATION OFFICER,2,1,Inadequado,Inadequado,AUTO: IT 0/4 | SQL=False REST=False GIT=False LANG=False
+14789139,information-technology,DIRECTOR OF INFORMATION TECHNOLOGY,2,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+19201175,information-technology,INFORMATION TECHNOLOGY SPECIALIST,2,1,Inadequado,Inadequado,AUTO: IT 0/4 | SQL=False REST=False GIT=False LANG=False
+20024870,information-technology,INFORMATION TECHNOLOGY (INTERNSHIP),2,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+18159866,information-technology,SENIOR VICE PRESIDENT OF GLOBAL INFORMATION TECHNOLOGY,2,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+17111768,information-technology,INFORMATION TECHNOLOGY PROJECT MANAGER SYSTEM ANALYSIS (SYSANALSYS) [GS-2210-12],2,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+17688766,information-technology,DIRECTOR OF INFORMATION TECHNOLOGY,2,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+13385306,information-technology,DIRECTOR OF INFORMATION TECHNOLOGY,2,1,Parcialmente Adequado,Parcialmente Adequado,AUTO: IT 2/4 | SQL=True REST=False GIT=False LANG=True
+10840430,information-technology,BRANCH CHIEF INFORMATION TECHNOLOGY SPECIALIST,2,1,Inadequado,Inadequado,AUTO: IT 0/4 | SQL=False REST=False GIT=False LANG=False
+11580408,information-technology,INFORMATION TECHNOLOGY COORDINATOR,2,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+91635250,information-technology,Christopher Townes,2,1,Inadequado,Inadequado,AUTO: IT 0/4 | SQL=False REST=False GIT=False LANG=False
+57002858,information-technology,INFORMATION TECHNOLOGY MANAGER,2,1,Inadequado,Inadequado,AUTO: IT 1/4 | SQL=True REST=False GIT=False LANG=False
+17306905,accountant,SENIOR ACCOUNTANT,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: accountant (outra area) | SQL=True REST=False GIT=False LANG=False
+44115326,advocate,LEVEL 2 CRITICAL PLATFORM SUPPORT ENGINEER,5,1,Inadequado,Inadequado,AUTO: NEGATIVO: advocate (outra area) | SQL=True REST=True GIT=False LANG=True
+37292350,agriculture,PROGRAM SUPPORT ASSISTANT,3,1,Inadequado,Inadequado,AUTO: NEGATIVO: agriculture (outra area) | SQL=False REST=False GIT=False LANG=False
+17714174,apparel,ACCOUNT MANAGER/BUSINESS DEVELOPMENT,1,1,Inadequado,Inadequado,AUTO: NEGATIVO: apparel (outra area) | SQL=False REST=False GIT=False LANG=False
+16244633,arts,SALES & CUSTOMER SERVICE REP,1,1,Inadequado,Inadequado,AUTO: NEGATIVO: arts (outra area) | SQL=False REST=False GIT=False LANG=False
+51508889,automobile,SENIOR ARCHITECT - MDM,4,1,Inadequado,Inadequado,AUTO: NEGATIVO: automobile (outra area) | SQL=True REST=False GIT=False LANG=True
+29221006,aviation,AVIATION SAFETY ASSISTANT,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: aviation (outra area) | SQL=False REST=False GIT=False LANG=False
+21297521,banking,MANAGER,8,1,Inadequado,Inadequado,AUTO: NEGATIVO: banking (outra area) | SQL=True REST=True GIT=True LANG=True
+27710853,bpo,BUSINESS ACCOUNT LEAD,3,1,Inadequado,Inadequado,AUTO: NEGATIVO: bpo (outra area) | SQL=False REST=False GIT=False LANG=False
+12230301,business-development,BUSINESS DEVELOPMENT SPECIALIST/AE,3,1,Inadequado,Inadequado,AUTO: NEGATIVO: business-development (outra area) | SQL=False REST=False GIT=False LANG=False
+65373280,chef,EXECUTIVE CHEF,1,1,Inadequado,Inadequado,AUTO: NEGATIVO: chef (outra area) | SQL=False REST=False GIT=False LANG=False
+39908485,construction,PROJECT MANGER/LEAD SUPER,1,1,Inadequado,Inadequado,AUTO: NEGATIVO: construction (outra area) | SQL=False REST=False GIT=False LANG=False
+26167298,consultant,MARKETING CONSULTANT,3,1,Inadequado,Inadequado,AUTO: NEGATIVO: consultant (outra area) | SQL=False REST=False GIT=False LANG=False
+11155153,designer,MECHANICAL DESIGNER,1,1,Inadequado,Inadequado,AUTO: NEGATIVO: designer (outra area) | SQL=False REST=False GIT=False LANG=False
+23085604,digital-media,"CHIEF SYSTEM ARCHITECT, SVP SYSTEM INTEGRATION",3,1,Inadequado,Inadequado,AUTO: NEGATIVO: digital-media (outra area) | SQL=False REST=False GIT=False LANG=False
+13264796,engineering,DIRECTOR OF ENGINEERING,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: engineering (outra area) | SQL=False REST=True GIT=False LANG=True
+15011085,finance,DIRECTOR OF FINANCE,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: finance (outra area) | SQL=False REST=False GIT=False LANG=False
+34792238,fitness,WELLNESS DIRECTOR,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: fitness (outra area) | SQL=False REST=False GIT=False LANG=False
+28670024,healthcare,HEALTHCARE PROVIDER,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: healthcare (outra area) | SQL=False REST=False GIT=False LANG=False
+20806155,hr,HR SPECIALIST (INFORMATION SYSTEMS),1,1,Inadequado,Inadequado,AUTO: NEGATIVO: hr (outra area) | SQL=False REST=False GIT=False LANG=False
+11842274,public-relations,BARTENDER,1,1,Inadequado,Inadequado,AUTO: NEGATIVO: public-relations (outra area) | SQL=False REST=False GIT=False LANG=False
+17704246,sales,SALES ASSOCIATE,1,1,Inadequado,Inadequado,AUTO: NEGATIVO: sales (outra area) | SQL=False REST=False GIT=False LANG=False
+37660306,teacher,GUEST TEACHER,0,1,Inadequado,Inadequado,AUTO: NEGATIVO: teacher (outra area) | SQL=False REST=False GIT=False LANG=False
+17342969,construction,DIRECTOR OF SHIP CONSTRUCTION,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: construction (outra area) | SQL=False REST=False GIT=False LANG=True
+19072267,public-relations,EXECUTIVE DIRECTOR,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: public-relations (outra area) | SQL=False REST=False GIT=False LANG=True
+12472574,engineering,QA ENGINEERING TEAM LEAD,6,1,Inadequado,Inadequado,AUTO: NEGATIVO: engineering (outra area) | SQL=True REST=False GIT=False LANG=True
+12491898,construction,Company Name,1,1,Inadequado,Inadequado,AUTO: NEGATIVO: construction (outra area) | SQL=False REST=False GIT=False LANG=True
+24508725,hr,FIELD HR ASSOCIATE,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: hr (outra area) | SQL=False REST=False GIT=False LANG=False
+19063156,advocate,SENIOR MEMBER SERVICE ADVOCATE,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: advocate (outra area) | SQL=True REST=False GIT=False LANG=False
+10480456,healthcare,"DIRECTOR, NEW PRODUCT RESEARCH AND R&D LIAISON, GLOBAL ORAL HEALTHCARE R&D, CONSUMER",2,1,Inadequado,Inadequado,AUTO: NEGATIVO: healthcare (outra area) | SQL=False REST=False GIT=False LANG=False
+34317538,designer,LEAD INTERACTION DESIGNER,3,1,Inadequado,Inadequado,AUTO: NEGATIVO: designer (outra area) | SQL=True REST=False GIT=False LANG=False
+35651876,engineering,DIRECTOR OF ENGINEERING,2,1,Inadequado,Inadequado,AUTO: NEGATIVO: engineering (outra area) | SQL=False REST=False GIT=False LANG=False

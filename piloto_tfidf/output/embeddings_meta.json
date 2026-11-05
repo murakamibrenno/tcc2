@@ -1,0 +1,23 @@
+[
+  {
+    "metodo": "Sentence-Transformers",
+    "modelo": "BAAI/bge-large-en-v1.5",
+    "tempo_vetorizacao_seg": 183.352,
+    "top3_ids": [
+      "16186411",
+      "26746496",
+      "83816738"
+    ]
+  },
+  {
+    "metodo": "LLM Embeddings",
+    "modelo": "Qwen/Qwen2.5-0.5B",
+    "protocolo": "ultimo hidden state, media dos tokens, 512 tokens, L2",
+    "tempo_vetorizacao_seg": 1515.25,
+    "top3_ids": [
+      "83816738",
+      "20674668",
+      "37242217"
+    ]
+  }
+]

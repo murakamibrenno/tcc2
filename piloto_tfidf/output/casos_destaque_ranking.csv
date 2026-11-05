@@ -1,0 +1,6 @@
+﻿id,pos_TF-IDF,score_TF-IDF,classe,pos_Sentence-Transformers,score_Sentence-Transformers,pos_LLM Embeddings,score_LLM Embeddings,delta_TF-IDF_vs_Sentence-Transformers,delta_TF-IDF_vs_LLM Embeddings,delta_Sentence-Transformers_vs_TF-IDF,delta_Sentence-Transformers_vs_LLM Embeddings,delta_LLM Embeddings_vs_TF-IDF,delta_LLM Embeddings_vs_Sentence-Transformers
+10138632,8,0.074,Inadequado,49,0.547,91,0.8684,-41,-83,41,-42,83,42
+16186411,5,0.0824,Adequado,1,0.7397,6,0.9459,4,-1,-4,-5,1,5
+20674668,9,0.0732,Parcialmente Adequado,4,0.6584,2,0.9611,5,7,-5,2,-7,-2
+26746496,7,0.0789,Adequado,2,0.7359,7,0.945,5,0,-5,-5,0,5
+83816738,1,0.1521,Adequado,3,0.6808,1,0.9639,-2,0,2,2,0,-2

@@ -1,0 +1,18 @@
+Vaga: Junior Software Developer (Backend / Web)
+
+Top 15 termos TF-IDF da vaga de referência:
+  relational databases: 0.1857
+  junior: 0.1648
+  backend: 0.1509
+  relational: 0.1509
+  web services: 0.1406
+  web: 0.1054
+  and: 0.1026
+  net docker: 0.1012
+  testing microservices: 0.1012
+  maintain web: 0.1012
+  microservices experience: 0.1012
+  service integration: 0.1012
+  multidisciplinary teams: 0.1012
+  mode hybrid: 0.1012
+  or github: 0.1012

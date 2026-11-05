@@ -1,0 +1,10 @@
+﻿id,representacao,representacao_key,modelo_embedding,classificador,tempo_vetorizacao_seg,sem_vazamento_tfidf,f1_macro,f1_weighted,acuracia,roc_auc_macro,precision_adequado,recall_adequado,folds,tempo_treino_inferencia_seg
+tfidf_lr,TF-IDF,tfidf,TfidfVectorizer,Regressao Logistica,0.0,True,0.2879,0.6564,0.76,0.8373,0.0,0.0,5,6.89
+tfidf_svm,TF-IDF,tfidf,TfidfVectorizer,SVM,0.0,True,0.2879,0.6564,0.76,0.7809,0.0,0.0,5,10.0
+tfidf_xgb,TF-IDF,tfidf,TfidfVectorizer,XGBoost,0.0,True,0.5978,0.7031,0.75,0.7668,1.0,0.6667,5,23.734
+st_lr,Sentence-Transformers,st,BAAI/bge-large-en-v1.5,Regressao Logistica,179.907,False,0.2879,0.6564,0.76,0.8276,0.0,0.0,5,0.231
+st_svm,Sentence-Transformers,st,BAAI/bge-large-en-v1.5,SVM,179.907,False,0.2879,0.6564,0.76,0.7927,0.0,0.0,5,0.168
+st_xgb,Sentence-Transformers,st,BAAI/bge-large-en-v1.5,XGBoost,179.907,False,0.6099,0.7219,0.78,0.7936,1.0,0.6667,5,7.256
+llm_lr,LLM Embeddings,llm,Qwen/Qwen2.5-0.5B,Regressao Logistica,1511.57,False,0.2879,0.6564,0.76,0.7398,0.0,0.0,5,0.214
+llm_svm,LLM Embeddings,llm,Qwen/Qwen2.5-0.5B,SVM,1511.57,False,0.2879,0.6564,0.76,0.8413,0.0,0.0,5,0.151
+llm_xgb,LLM Embeddings,llm,Qwen/Qwen2.5-0.5B,XGBoost,1511.57,False,0.571,0.7331,0.77,0.8238,0.5,0.6667,5,6.498

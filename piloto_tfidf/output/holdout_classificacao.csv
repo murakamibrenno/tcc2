@@ -1,0 +1,10 @@
+﻿representacao,modelo_embedding,classificador,f1_macro,acuracia,roc_auc_macro,n_teste
+TF-IDF,TfidfVectorizer,Regressao Logistica,0.2857,0.75,0.8002,20
+Sentence-Transformers,BAAI/bge-large-en-v1.5,Regressao Logistica,0.2857,0.75,0.8537,20
+LLM Embeddings,Qwen/Qwen2.5-0.5B,Regressao Logistica,0.2857,0.75,0.8826,20
+TF-IDF,TfidfVectorizer,SVM,0.2857,0.75,0.4632,20
+Sentence-Transformers,BAAI/bge-large-en-v1.5,SVM,0.2857,0.75,0.9116,20
+LLM Embeddings,Qwen/Qwen2.5-0.5B,SVM,0.2857,0.75,0.8151,20
+TF-IDF,TfidfVectorizer,XGBoost,0.2745,0.7,0.8745,20
+Sentence-Transformers,BAAI/bge-large-en-v1.5,XGBoost,0.3661,0.7,0.6572,20
+LLM Embeddings,Qwen/Qwen2.5-0.5B,XGBoost,0.503,0.85,0.8782,20

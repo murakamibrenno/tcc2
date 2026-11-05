@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "titulo": "Junior Software Developer (Backend / Web)",
+  "area": "Software Development",
+  "empresa": "TechSolutions Ltd.",
+  "idioma": "en",
+  "fonte": "Vaga adaptada ao vocabulário dos currículos reais da base archive (inglês). Requisitos ampliados para Java/Spring, .NET, PHP e web services — não apenas Python.",
+  "requisitosObrigatorios": [
+    "SQL (banco relacional)",
+    "REST / web services",
+    "Git ou controle de versão",
+    "Linguagem de programação (Java, Python, PHP, C#/.NET ou similar)"
+  ],
+  "requisitosDesejaveis": [
+    "Spring",
+    ".NET",
+    "Docker",
+    "Automated testing",
+    "Microservices"
+  ],
+  "texto": "Junior Software Developer (Backend and Web Applications). Build and maintain web services and backend components, integrate with relational databases, and work with multidisciplinary teams in agile environments. Required skills: SQL and relational databases (MySQL, PostgreSQL, Oracle, SQL Server); RESTful APIs, web services, or service integration; version control with Git or GitHub; programming experience in Java, Python, PHP, C#, or similar for application development. Desired: Spring, .NET, Docker, automated testing, microservices. Experience level: Junior to mid-level (0-3 years). Work mode: Hybrid."
+}

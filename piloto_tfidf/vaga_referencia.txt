@@ -1,0 +1,13 @@
+Junior Backend Developer — TechSolutions Ltd.
+
+RESTful API development, maintenance of distributed systems, and integration
+with relational and non-relational databases. Agile multidisciplinary teams.
+
+Required: Python, SQL, REST APIs, Git
+Desired: FastAPI, Docker, automated testing, PostgreSQL
+Level: Junior (0–2 years)
+Mode: Hybrid
+
+NOTA: Esta vaga está em inglês porque o piloto usa currículos reais extraídos
+da base archive (PDFs em inglês). O experimento completo do TCC continua
+previsto para currículos em português.
