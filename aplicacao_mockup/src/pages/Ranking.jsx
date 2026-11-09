@@ -78,7 +78,7 @@ export default function Ranking() {
           Ranking de Candidatos
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Candidatos ordenados pelo score da combinação selecionada (representação textual + modelo supervisionado)
+          Currículos ordenados pela proximidade com a vaga. Passe o cursor no título de cada coluna da tabela.
         </Typography>
       </Box>
 
@@ -98,7 +98,7 @@ export default function Ranking() {
             fontSize: '0.85rem',
           }}
         >
-          Ranking com <strong>dados reais</strong> — {pilotoMeta?.totalCurriculos} currículos em inglês. Método ativo: <strong>{REPRESENTACOES[representacao]?.label}</strong> ({pilotoMeta?.metodo}). A ordem é similaridade de cosseno entre a vaga e cada currículo. As nove combinações com classificador estão na tela Comparativo.
+          {pilotoMeta?.totalCurriculos} currículos em inglês. Método ativo: <strong>{REPRESENTACOES[representacao]?.label}</strong> ({pilotoMeta?.metodo}). A ordem é a similaridade de cosseno entre a vaga e cada currículo. As nove combinações com classificador estão em Comparativo.
         </Alert>
       )}
 
@@ -294,8 +294,8 @@ export default function Ranking() {
             </Box>
             <Typography sx={{ fontSize: '0.78rem', color: 'text.secondary', lineHeight: 1.7 }}>
               {piloto
-                ? `Este ranking usa os ${pilotoMeta?.totalCurriculos ?? 100} currículos do experimento (${REPRESENTACOES[representacao]?.label}). A ordem é similaridade de cosseno. A cor segue o rótulo de aderência: 20 anotações manuais e 80 por regra lexical. O currículo Sales Manager, inadequado, fica na posição ${posSales('TF-IDF') ?? '—'} no TF-IDF, ${posSales('Sentence-Transformers') ?? '—'} no Sentence-Transformers e ${posSales('LLM Embeddings') ?? '—'} nos embeddings de LLM.`
-                : 'Este ranking utiliza pontuações simuladas geradas pela combinação entre uma técnica de representação textual e um modelo supervisionado. Na versão final, os scores serão calculados a partir dos vetores gerados por TF-IDF, Sentence-Transformers e LLM Embeddings, utilizados como entrada para modelos como Regressão Logística, SVM e XGBoost.'}
+                ? `Fila dos ${pilotoMeta?.totalCurriculos ?? 100} currículos com ${REPRESENTACOES[representacao]?.label}. A ordem é similaridade de cosseno. A cor segue o rótulo de aderência: 20 anotações manuais e 80 pela regra lexical. O Sales Manager, inadequado, fica na posição ${posSales('TF-IDF') ?? '—'} no TF-IDF, ${posSales('Sentence-Transformers') ?? '—'} no Sentence-Transformers e ${posSales('LLM Embeddings') ?? '—'} no Qwen.`
+                : 'Esta combinação ainda não tem notas calculadas para a vaga selecionada.'}
             </Typography>
 
             <Divider sx={{ my: 2 }} />
@@ -328,15 +328,14 @@ export default function Ranking() {
             <Divider sx={{ my: 2 }} />
 
             <Typography sx={{ fontSize: '0.72rem', fontWeight: 700, color: 'text.secondary', textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1 }}>
-              {piloto ? 'Sobre o piloto' : 'Combinações disponíveis'}
+              {piloto ? 'Como ler esta fila' : 'Combinações disponíveis'}
             </Typography>
             <Typography sx={{ fontSize: '0.72rem', color: 'text.secondary', lineHeight: 1.6 }}>
               {piloto ? (
                 <>
-                  Corpus: {pilotoMeta?.totalCurriculos} currículos reais ({pilotoMeta?.fonte}).
-                  Clique no ícone <Box component="span" sx={{ fontWeight: 700 }}>⊞</Box> em qualquer linha
-                  para ver o score TF-IDF, a anotação e um trecho do currículo. Note o falso positivo lexical
-                  sinalizado no ranking, uma limitação típica do TF-IDF.
+                  {pilotoMeta?.totalCurriculos} currículos em inglês ({pilotoMeta?.fonte}).
+                  O ícone de cada linha abre a similaridade, o rótulo e um trecho do currículo.
+                  O aviso na tabela marca um Inadequado que ficou à frente de alguém aderente: é o falso positivo do TF-IDF.
                 </>
               ) : (
                 <>

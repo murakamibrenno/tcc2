@@ -7,6 +7,7 @@ import Curriculos from '../pages/Curriculos'
 import Ranking from '../pages/Ranking'
 import Comparativo from '../pages/Comparativo'
 import Metodologia from '../pages/Metodologia'
+import Resultados from '../pages/Resultados'
 import Sobre from '../pages/Sobre'
 
 export default function AppRoutes() {
@@ -20,6 +21,7 @@ export default function AppRoutes() {
         <Route path="/ranking" element={<Ranking />} />
         <Route path="/comparativo" element={<Comparativo />} />
         <Route path="/metodologia" element={<Metodologia />} />
+        <Route path="/resultados" element={<Resultados />} />
         <Route path="/sobre" element={<Sobre />} />
       </Route>
       <Route path="*" element={<Navigate to="/dashboard" replace />} />

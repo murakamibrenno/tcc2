@@ -20,18 +20,18 @@ const ETAPAS = [
   {
     num: 1,
     titulo: 'Coleta dos Currículos',
-    descricao: 'Corpus atual: 100 currículos reais em inglês do Resume Dataset. Vinte vieram do piloto e oitenta foram acrescentados da mesma base. A base completa (2.484) fica para depois deste fechamento.',
+    descricao: 'A base archive tem 2.484 currículos em inglês, de 24 profissões. A comparação entre representações usa 100 deles, desenhados para conter perfis aderentes e não aderentes. A contagem da base inteira explica por que a triagem é um problema de poucos currículos relevantes.',
     icone: <DatasetRoundedIcon />,
     cor: '#0E7490',
-    status: 'parcial',
+    status: 'concluido',
   },
   {
     num: 2,
     titulo: 'Anotação Manual',
-    descricao: 'Vinte currículos anotados à mão e oitenta por regra lexical (SQL, REST, Git e linguagem de programação). No total: 3 Adequados, 21 Parcialmente Adequados e 76 Inadequados. Uma amostra de 20 dos 80 foi relida pelo protocolo; o restante da base não entra neste fechamento.',
+    descricao: 'Vinte currículos anotados à mão e oitenta por regra lexical (SQL, REST, Git e linguagem de programação). No recorte da comparação: 3 Adequados, 21 Parcialmente Adequados e 76 Inadequados. A mesma regra, nos 2.484, produz 3, 26 e 2.455. Uma amostra de 20 dos 80 automáticos foi relida pelo protocolo.',
     icone: <LabelRoundedIcon />,
     cor: '#7C3AED',
-    status: 'parcial',
+    status: 'concluido',
   },
   {
     num: 3,
@@ -39,7 +39,7 @@ const ETAPAS = [
     descricao: 'Extração com PyMuPDF, limpeza e truncamento aplicados aos 100 currículos em inglês. O texto da vaga está no mesmo idioma.',
     icone: <CleaningServicesRoundedIcon />,
     cor: '#D97706',
-    status: 'parcial',
+    status: 'concluido',
   },
   {
     num: 4,
@@ -60,7 +60,7 @@ const ETAPAS = [
   {
     num: 6,
     titulo: 'Avaliação Comparativa',
-    descricao: 'Classificação: F1 macro, acurácia e ROC-AUC. Ranking: Precision@5, Precision@10, MAP e NDCG@10, mais tempo de vetorização. Os números da tela Comparativo vêm do CSV do pipeline, não de simulação.',
+    descricao: 'Classificação: F1 macro, acurácia e ROC-AUC. Ranking: Precision@5, Precision@10, MAP e NDCG@10, mais tempo de vetorização. Os números da tela Comparativo são os desta avaliação.',
     icone: <AnalyticsRoundedIcon />,
     cor: '#0E7490',
     status: 'concluido',
@@ -68,7 +68,7 @@ const ETAPAS = [
   {
     num: 7,
     titulo: 'Interface de uso',
-    descricao: 'Dashboard, Ranking (3 representações), Comparativo (9 combinações) e Currículos alimentados pelo pipeline Python. Backend contínuo e upload de PDF ficam para a versão completa.',
+    descricao: 'Dashboard, Ranking, Comparativo e a página Resultados, que lê o experimento do começo à discussão. Backend contínuo e upload de PDF ficam de fora desta comparação.',
     icone: <MonitorRoundedIcon />,
     cor: '#7C3AED',
     status: 'concluido',
@@ -80,11 +80,9 @@ const STATUS_ITEMS = [
   { label: 'Ranking por método (TF-IDF, ST, LLM)', status: 'concluido' },
   { label: 'Comparação entre métodos e 9 combinações', status: 'concluido' },
   { label: 'Navegação entre telas', status: 'concluido' },
-  { label: 'Gráficos de métricas com dados reais', status: 'concluido' },
-  { label: 'Pipeline Python (corpus EN, 100 currículos)', status: 'concluido' },
-  { label: 'Rótulos de aderência na base completa (2.484)', status: 'pendente' },
-  { label: 'Integração com backend Python (FastAPI)', status: 'pendente' },
-  { label: 'Upload de currículos em PDF', status: 'pendente' },
+  { label: 'Gráficos comparativos', status: 'concluido' },
+  { label: 'Pipeline Python (100 currículos em inglês)', status: 'concluido' },
+  { label: 'Rótulos de aderência na base completa (2.484)', status: 'concluido' },
 ]
 
 export default function Metodologia() {
@@ -244,7 +242,7 @@ export default function Metodologia() {
           Estado atual da interface
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2.5, fontSize: '0.82rem' }}>
-          Funcionalidades já cobertas pela interface frente ao pipeline completo planejado na linha do tempo acima
+          O que esta versão entrega
         </Typography>
 
         {revisao && (
@@ -253,7 +251,7 @@ export default function Metodologia() {
               Amostra dos rótulos automáticos: {revisao.n_revisados} de {revisao.n_amostra} relidos pelo protocolo
               {revisao.concordancia == null
                 ? '. A planilha ainda está em branco — a concordância entra aqui depois da conferência.'
-                : `. Concordância com a regra: ${(revisao.concordancia * 100).toFixed(1)}%.`}
+                : `. Concordância com a regra: ${(revisao.concordancia * 100).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}%.`}
               {revisao.nota ? ` ${revisao.nota}` : ''}
             </Typography>
           </Paper>

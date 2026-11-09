@@ -1,0 +1,10 @@
+{
+  "total": 2484,
+  "rotulos_manuais_preservados": 20,
+  "distribuicao": {
+    "Adequado": 3,
+    "Parcialmente Adequado": 26,
+    "Inadequado": 2455
+  },
+  "nota": "Mesma regra lexical do experimento dos 100. A pasta da base marca como Inadequado quem está fora de information-technology."
+}

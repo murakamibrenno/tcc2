@@ -10,6 +10,7 @@ import ScoresDetailModal from './ScoresDetailModal'
 import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded'
 import { formatScore, formatCosseno, getInitials, getAvatarColor, formatExperiencia } from '../utils/formatters'
 import { getAderencia, getAderenciaPiloto, REPRESENTACOES, MODELOS } from '../utils/rankingUtils'
+import { RotuloMetrica, COLUNAS } from './CabecalhoMetrica'
 
 const MEDAL_COLORS = ['#D97706', '#9CA3AF', '#B45309']
 const AREA_COLORS = {
@@ -36,23 +37,23 @@ export default function RankingTable({ candidatos, representacaoAtiva = 'llmEmbe
         <Table size="small" stickyHeader>
           <TableHead>
             <TableRow>
-              <TableCell align="center" sx={{ width: 52 }}>Pos.</TableCell>
-              <TableCell>Candidato</TableCell>
-              <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}>Área</TableCell>
-              <TableCell sx={{ display: { xs: 'none', md: 'table-cell' } }}>Classif. Manual</TableCell>
+              <TableCell align="center" sx={{ width: 52 }}><RotuloMetrica id="posicao">Pos.</RotuloMetrica></TableCell>
+              <TableCell><RotuloMetrica id="candidato">Candidato</RotuloMetrica></TableCell>
+              <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}><RotuloMetrica id="area">Área</RotuloMetrica></TableCell>
+              <TableCell sx={{ display: { xs: 'none', md: 'table-cell' } }}><RotuloMetrica id="classificacao">Aderência</RotuloMetrica></TableCell>
               <TableCell align="center">
-                <Tooltip title={piloto ? 'Similaridade cosseno TF-IDF entre a vaga e o currículo (dados reais)' : `Score de ${repInfo?.label ?? representacaoAtiva} + ${modInfo?.label ?? modeloAtivo}`}>
-                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0.25, cursor: 'help' }}>
+                <Tooltip title={piloto ? COLUNAS.similaridade.texto : `Nota de ${repInfo?.label ?? representacaoAtiva} com ${modInfo?.label ?? modeloAtivo}. ${COLUNAS.similaridade.texto}`}>
+                  <Box sx={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: 0.25, cursor: 'help' }}>
                     <Typography sx={{ fontSize: '0.72rem', fontWeight: 700, lineHeight: 1.1 }}>
-                      {piloto ? 'Sim. Cosseno' : 'Score'}
+                      {piloto ? 'Similaridade' : 'Nota'}
                     </Typography>
                     <Typography sx={{ fontSize: '0.65rem', color: 'text.secondary', lineHeight: 1.1 }}>
-                      {piloto ? (repInfo?.label ?? 'Real') : '(combinação ativa)'}
+                      {piloto ? (repInfo?.label ?? 'Cosseno') : (modInfo?.label ?? 'modelo')}
                     </Typography>
                   </Box>
                 </Tooltip>
               </TableCell>
-              <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}>Aderência</TableCell>
+              <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}><RotuloMetrica id="aderencia">Faixa</RotuloMetrica></TableCell>
               <TableCell align="center" sx={{ width: 52 }}>
                 <Tooltip title="Ver scores das 9 combinações">
                   <TableChartOutlinedIcon sx={{ fontSize: 15, color: 'text.secondary' }} />
@@ -164,7 +165,7 @@ export default function RankingTable({ candidatos, representacaoAtiva = 'llmEmbe
 
                   {/* Botão ver detalhes */}
                   <TableCell align="center">
-                    <Tooltip title={piloto ? 'Ver detalhes do currículo (piloto TF-IDF)' : 'Ver scores das 9 combinações'}>
+                    <Tooltip title={COLUNAS.acoes.texto}>
                       <IconButton
                         size="small"
                         onClick={() => abrirModal(c)}

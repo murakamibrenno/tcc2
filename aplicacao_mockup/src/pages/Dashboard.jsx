@@ -12,6 +12,7 @@ import TimerRoundedIcon from '@mui/icons-material/TimerRounded'
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
 import MetricCard from '../components/MetricCard'
+import { RotuloMetrica } from '../components/CabecalhoMetrica'
 import MethodComparisonChart from '../components/MethodComparisonChart'
 import StatusChip from '../components/StatusChip'
 import { dadosDashboard, dadosGraficoF1, dadosGraficoTempo } from '../data/metricasMock'
@@ -58,7 +59,7 @@ export default function Dashboard() {
         }}
       >
         {temDadosReais
-          ? `Experimento real: ${dash.totalCurriculos} currículos em inglês, 3 representações e 9 combinações. Métricas calculadas nos scripts Python.`
+          ? `Avaliação concluída: ${dash.totalCurriculos} currículos em inglês, 3 representações e 9 combinações.`
           : 'Explore vagas, currículos e rankings; execute o pipeline para carregar métricas reais.'}
       </Alert>
 
@@ -78,7 +79,7 @@ export default function Dashboard() {
           <MetricCard
             titulo="Vagas Cadastradas"
             valor={dash.vagasCadastradas}
-            subtitulo="Vaga piloto (3 métodos reais)"
+            subtitulo="Vaga de desenvolvedor backend"
             icone={<WorkRoundedIcon fontSize="small" />}
             corAccent="#D97706"
             delay={60}
@@ -88,7 +89,7 @@ export default function Dashboard() {
           <MetricCard
             titulo="Melhor F1 (CV)"
             valor={temDadosReais ? dash.melhorF1.toFixed(2) : '—'}
-            subtitulo={temDadosReais ? `Melhor combo no piloto (macro-F1)` : 'Execute pipeline'}
+            subtitulo={temDadosReais ? 'Melhor F1 macro na validação cruzada' : 'Execute pipeline'}
             icone={<EmojiEventsRoundedIcon fontSize="small" />}
             corAccent="#7C3AED"
             delay={120}
@@ -98,7 +99,7 @@ export default function Dashboard() {
           <MetricCard
             titulo="Melhor Combo"
             valor={temDadosReais ? dash.melhorMetodo.split('+').pop()?.trim() || 'XGBoost' : '—'}
-            subtitulo={temDadosReais ? dash.melhorMetodo : 'Pipeline pendente'}
+            subtitulo={temDadosReais ? dash.melhorMetodo : 'Aguardando o pipeline'}
             icone={<SpeedRoundedIcon fontSize="small" />}
             corAccent="#059669"
             delay={180}
@@ -114,7 +115,7 @@ export default function Dashboard() {
             }
             subtitulo={
               temDadosReais && grafTempo.length
-                ? `${grafTempo.reduce((a, b) => (a.valor < b.valor ? a : b)).valor}s (média piloto)`
+                ? `${grafTempo.reduce((a, b) => (a.valor < b.valor ? a : b)).valor} s nos 100 currículos`
                 : 'Inferência mais rápida'
             }
             icone={<TimerRoundedIcon fontSize="small" />}
@@ -126,7 +127,7 @@ export default function Dashboard() {
           <MetricCard
             titulo="Adequados"
             valor={dash.curriculosAdequados}
-            subtitulo="Ground truth no corpus piloto"
+            subtitulo="Rótulo Adequado nos 100 currículos"
             icone={<CheckCircleRoundedIcon fontSize="small" />}
             corAccent="#059669"
             delay={300}
@@ -184,7 +185,7 @@ export default function Dashboard() {
               valorKey="valor"
               nomeKey="nome"
               corKey="cor"
-              yDomain={[0, 4]}
+              yDomain={[0, Math.ceil(Math.max(...grafTempo.map((d) => d.valor || 0), 1) * 1.08)]}
               suffix="s"
               altura={220}
             />
@@ -205,10 +206,10 @@ export default function Dashboard() {
                 mb: 0.25,
               }}
             >
-              Top 5 Candidatos — Piloto TF-IDF
+              Primeiros currículos no TF-IDF
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.8rem' }}>
-              Ordenados pela similaridade cosseno TF-IDF (dados reais da base archive)
+              Ordenados pela similaridade de cosseno. Passe o cursor no título de cada coluna.
             </Typography>
           </Box>
 
@@ -216,11 +217,11 @@ export default function Dashboard() {
             <Table size="small">
               <TableHead>
                 <TableRow>
-                  <TableCell align="center" sx={{ width: 50 }}>#</TableCell>
-                  <TableCell>Candidato</TableCell>
-                  <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}>Área</TableCell>
-                  <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}>Classificação</TableCell>
-                  <TableCell align="center">Sim. cosseno</TableCell>
+                  <TableCell align="center" sx={{ width: 50 }}><RotuloMetrica id="posicao">#</RotuloMetrica></TableCell>
+                  <TableCell><RotuloMetrica id="candidato">Candidato</RotuloMetrica></TableCell>
+                  <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}><RotuloMetrica id="area">Área</RotuloMetrica></TableCell>
+                  <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}><RotuloMetrica id="classificacao">Classificação</RotuloMetrica></TableCell>
+                  <TableCell align="center"><RotuloMetrica id="similaridade">Similaridade</RotuloMetrica></TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>

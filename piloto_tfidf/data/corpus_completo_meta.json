@@ -1,0 +1,13 @@
+{
+  "total": 2484,
+  "sem_texto": 0,
+  "rotulos_manuais_preservados": 20,
+  "anotacao": "regra lexical do protocolo; 20 manuais do piloto preservados",
+  "distribuicao": {
+    "Adequado": 3,
+    "Parcialmente Adequado": 26,
+    "Inadequado": 2455
+  },
+  "fonte": "catalogo_archive.csv",
+  "nota": "A pasta da base força Inadequado fora de information-technology. A amostra de 20 concordou em 95%; a divergência conhecida é o id 21297521."
+}

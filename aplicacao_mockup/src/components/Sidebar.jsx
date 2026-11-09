@@ -10,6 +10,7 @@ import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded'
 import LeaderboardRoundedIcon from '@mui/icons-material/LeaderboardRounded'
 import BarChartRoundedIcon from '@mui/icons-material/BarChartRounded'
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded'
+import MenuBookRoundedIcon from '@mui/icons-material/MenuBookRounded'
 
 const NAVY = '#0B1929'
 const NAVY_LIGHT = '#122236'
@@ -25,6 +26,7 @@ const navItems = [
   { label: 'Ranking', path: '/ranking', icon: <LeaderboardRoundedIcon fontSize="small" /> },
   { label: 'Comparativo de Métodos', path: '/comparativo', icon: <BarChartRoundedIcon fontSize="small" /> },
   { label: 'Metodologia', path: '/metodologia', icon: <SchoolRoundedIcon fontSize="small" /> },
+  { label: 'Resultados', path: '/resultados', icon: <MenuBookRoundedIcon fontSize="small" /> },
   /* Rota /sobre mantida em AppRoutes para uso futuro — não listada no menu */
 ]
 

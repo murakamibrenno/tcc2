@@ -10,6 +10,7 @@ import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded'
 import StatusChip from './StatusChip'
 import { formatScore, formatCosseno, formatExperiencia, getInitials, getAvatarColor } from '../utils/formatters'
 import { getAderencia, getAderenciaPiloto } from '../utils/rankingUtils'
+import { RotuloMetrica, COLUNAS } from './CabecalhoMetrica'
 
 const AREA_COLORS = {
   Backend: { bg: '#DBEAFE', color: '#1E40AF' },
@@ -78,23 +79,23 @@ export default function CandidateTable({ curriculos, onVerCurriculo, onCompararM
           <TableHead>
             <TableRow>
               <TableCell align="center" sx={{ width: 56 }}>
-                <SortLabel column="posicao">#</SortLabel>
+                <Tooltip title={COLUNAS.posicao.texto} arrow><span><SortLabel column="posicao">#</SortLabel></span></Tooltip>
               </TableCell>
               <TableCell sx={{ minWidth: 240 }}>
-                <SortLabel column="nome">Currículo</SortLabel>
+                <Tooltip title={COLUNAS.curriculo.texto} arrow><span><SortLabel column="nome">Currículo</SortLabel></span></Tooltip>
               </TableCell>
               <TableCell sx={{ display: { xs: 'none', md: 'table-cell' } }}>
-                <SortLabel column="area">Categoria de origem</SortLabel>
+                <Tooltip title={COLUNAS.categoria.texto} arrow><span><SortLabel column="area">Categoria</SortLabel></span></Tooltip>
               </TableCell>
-              <TableCell>Classif. Manual</TableCell>
+              <TableCell><RotuloMetrica id="classificacao">Aderência</RotuloMetrica></TableCell>
               <TableCell align="center">
-                <Tooltip title="Similaridade cosseno TF-IDF entre a vaga e o currículo (dados reais)">
+                <Tooltip title={COLUNAS.similaridade.texto} arrow>
                   <span>
-                    <SortLabel column="scoreFinal">Sim. cosseno</SortLabel>
+                    <SortLabel column="scoreFinal">Similaridade</SortLabel>
                   </span>
                 </Tooltip>
               </TableCell>
-              <TableCell align="center">Ações</TableCell>
+              <TableCell align="center"><RotuloMetrica id="acoes">Ações</RotuloMetrica></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -156,7 +157,7 @@ export default function CandidateTable({ curriculos, onVerCurriculo, onCompararM
                     </Typography>
                   </TableCell>
                   <TableCell align="center">
-                    <Tooltip title="Ver detalhes do currículo (piloto TF-IDF)">
+                    <Tooltip title={COLUNAS.acoes.texto}>
                       <IconButton size="small" onClick={() => onVerCurriculo?.(c)} sx={{ color: '#0E7490' }}>
                         <VisibilityRoundedIcon fontSize="small" />
                       </IconButton>

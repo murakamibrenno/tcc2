@@ -1,7 +1,7 @@
 export const vagas = [
   {
     id: 4,
-    titulo: 'Piloto — Desenvolvedor de Software (Backend/Web)',
+    titulo: 'Desenvolvedor de Software (Backend/Web)',
     area: 'Backend',
     empresa: 'TechSolutions Ltd.',
     piloto: true,

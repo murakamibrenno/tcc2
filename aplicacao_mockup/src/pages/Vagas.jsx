@@ -157,7 +157,7 @@ export default function Vagas() {
                       />
                       {vaga.piloto && (
                         <Chip
-                          label="Dados reais · TF-IDF"
+                          label="Vaga da avaliação"
                           size="small"
                           sx={{
                             bgcolor: '#D1FAE5',

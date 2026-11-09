@@ -110,7 +110,7 @@ export default function Curriculos() {
           fontSize: '0.82rem',
         }}
       >
-        <strong>Dados reais</strong>: {pilotoMeta.totalCurriculos} currículos em inglês. A lista usa o ranking TF-IDF ({pilotoMeta.metodo}). Sentence-Transformers e embeddings de LLM estão no seletor da tela Ranking. Vinte rótulos são manuais e oitenta vêm de regra lexical.
+        {pilotoMeta.totalCurriculos} currículos em inglês, na ordem do TF-IDF ({pilotoMeta.metodo}). Sentence-Transformers e o Qwen estão no seletor da tela Ranking. Vinte rótulos são manuais e oitenta vêm da regra lexical.
       </Alert>
 
       {/* Filtros */}

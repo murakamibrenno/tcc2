@@ -2,6 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { Box, Typography, Chip, Breadcrumbs } from '@mui/material'
 import ScienceRoundedIcon from '@mui/icons-material/ScienceRounded'
+import { temDadosReais } from '../data/metricasReais'
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded'
 
 const TOPBAR_HEIGHT = 64
@@ -13,6 +14,7 @@ const PAGE_LABELS = {
   '/ranking': { title: 'Ranking de Candidatos', subtitle: 'Ranqueamento por método de representação textual' },
   '/comparativo': { title: 'Comparativo de Métodos', subtitle: 'Comparação de TF-IDF, Sentence-Transformers e LLM Embeddings' },
   '/metodologia': { title: 'Metodologia', subtitle: 'Fluxo metodológico da avaliação comparativa' },
+  '/resultados': { title: 'Resultados', subtitle: 'Começo, medição e discussão do experimento' },
   '/sobre': { title: 'Sobre', subtitle: 'Contexto, limitações e roadmap da aplicação' },
 }
 
@@ -88,32 +90,18 @@ export default function Topbar({ drawerWidth = 260 }) {
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
         <Chip
           icon={<ScienceRoundedIcon sx={{ fontSize: '14px !important' }} />}
-          label="Dados de exemplo"
+          label={temDadosReais ? 'Avaliação concluída' : 'Dados de exemplo'}
           size="small"
           sx={{
-            bgcolor: '#FEF3C7',
-            color: '#92400E',
+            bgcolor: temDadosReais ? '#D1FAE5' : '#FEF3C7',
+            color: temDadosReais ? '#065F46' : '#92400E',
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontWeight: 700,
             fontSize: '0.7rem',
-            border: '1px solid #FDE68A',
+            border: temDadosReais ? '1px solid #6EE7B7' : '1px solid #FDE68A',
             borderRadius: '6px',
             height: 28,
-            '& .MuiChip-icon': { color: '#D97706' },
-          }}
-        />
-        <Chip
-          label="v0.1"
-          size="small"
-          sx={{
-            bgcolor: '#E0F2F7',
-            color: '#0C6177',
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
-            fontWeight: 700,
-            fontSize: '0.7rem',
-            border: '1px solid #BAE6FD',
-            borderRadius: '6px',
-            height: 28,
+            '& .MuiChip-icon': { color: temDadosReais ? '#059669' : '#D97706' },
           }}
         />
       </Box>
