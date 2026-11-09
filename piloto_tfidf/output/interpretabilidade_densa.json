@@ -1,0 +1,172 @@
+{
+  "nota_geral": "Nas representações densas cada dimensão é anônima: não há lista lexical equivalente ao TF-IDF. A importância do XGBoost abaixo é diagnóstica (quais índices do vetor o modelo usa), não explicação por termos.",
+  "sentence_transformers": {
+    "modelo": "BAAI/bge-large-en-v1.5",
+    "shape": [
+      100,
+      1024
+    ],
+    "xgboost_top_dimensoes": [
+      {
+        "dimensao": 729,
+        "importancia": 0.037084,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 310,
+        "importancia": 0.029597,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 424,
+        "importancia": 0.026799,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 150,
+        "importancia": 0.024054,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 888,
+        "importancia": 0.023859,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 50,
+        "importancia": 0.023716,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 263,
+        "importancia": 0.023651,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 593,
+        "importancia": 0.023381,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 0,
+        "importancia": 0.023356,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 904,
+        "importancia": 0.023035,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 456,
+        "importancia": 0.022715,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 326,
+        "importancia": 0.022287,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 779,
+        "importancia": 0.021706,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 558,
+        "importancia": 0.020801,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 971,
+        "importancia": 0.020509,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      }
+    ]
+  },
+  "llm_embeddings": {
+    "modelo": "Qwen/Qwen2.5-0.5B",
+    "protocolo": "ultimo hidden state, media dos tokens, 512 tokens, L2",
+    "shape": [
+      100,
+      896
+    ],
+    "xgboost_top_dimensoes": [
+      {
+        "dimensao": 599,
+        "importancia": 0.041881,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 722,
+        "importancia": 0.037265,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 375,
+        "importancia": 0.032398,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 49,
+        "importancia": 0.02582,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 8,
+        "importancia": 0.02554,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 269,
+        "importancia": 0.025331,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 532,
+        "importancia": 0.025083,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 273,
+        "importancia": 0.024461,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 459,
+        "importancia": 0.024096,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 53,
+        "importancia": 0.023629,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 451,
+        "importancia": 0.023133,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 336,
+        "importancia": 0.022763,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 24,
+        "importancia": 0.022605,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 726,
+        "importancia": 0.02249,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      },
+      {
+        "dimensao": 438,
+        "importancia": 0.02188,
+        "nota": "Índice do vetor denso; não corresponde a uma palavra."
+      }
+    ]
+  }
+}

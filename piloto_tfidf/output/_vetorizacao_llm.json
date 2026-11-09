@@ -1,0 +1,18 @@
+{
+  "representacao": "LLM Embeddings",
+  "metodo_ranking": "LLM Embeddings",
+  "modelo": "Qwen/Qwen2.5-0.5B",
+  "protocolo_embedding": "ultimo hidden state, media dos tokens, 512 tokens, L2",
+  "device": "cpu",
+  "tempo_seg": 1810.7,
+  "memoria_rss_inicial_mib": 422.85,
+  "memoria_rss_pico_mib": 1548.52,
+  "memoria_rss_delta_mib": 1125.672,
+  "shape_curriculos": [
+    100,
+    896
+  ],
+  "cache_conferido": true,
+  "cache_max_abs_diff": 0.0,
+  "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo."
+}

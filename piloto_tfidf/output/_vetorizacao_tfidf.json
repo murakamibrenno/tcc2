@@ -1,0 +1,13 @@
+{
+  "representacao": "TF-IDF",
+  "metodo_ranking": "TF-IDF",
+  "modelo": "TfidfVectorizer(1-2, min_df=1, max_df=1.0, lowercase=True)",
+  "tempo_seg": 0.439,
+  "memoria_rss_inicial_mib": 150.14,
+  "memoria_rss_pico_mib": 166.4,
+  "memoria_rss_delta_mib": 16.262,
+  "n_documentos": 101,
+  "cache_conferido": null,
+  "cache_max_abs_diff": null,
+  "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo."
+}

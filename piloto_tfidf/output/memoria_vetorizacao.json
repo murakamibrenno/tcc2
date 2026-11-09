@@ -1,0 +1,52 @@
+{
+  "unidade_memoria": "MiB (RSS do processo Python, 1 MiB = 1024² bytes)",
+  "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo.",
+  "nota": "Cada representação foi medida em um processo novo, sem compartilhar RSS com BGE ou Qwen. O tempo inclui carga (densos), vaga, 100 currículos e cosseno.",
+  "tfidf": {
+    "representacao": "TF-IDF",
+    "metodo_ranking": "TF-IDF",
+    "modelo": "TfidfVectorizer(1-2, min_df=1, max_df=1.0, lowercase=True)",
+    "tempo_seg": 0.503,
+    "memoria_rss_inicial_mib": 150.12,
+    "memoria_rss_pico_mib": 167.01,
+    "memoria_rss_delta_mib": 16.895,
+    "n_documentos": 101,
+    "cache_conferido": null,
+    "cache_max_abs_diff": null,
+    "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo."
+  },
+  "sentence_transformers": {
+    "representacao": "Sentence-Transformers",
+    "metodo_ranking": "Sentence-Transformers",
+    "modelo": "BAAI/bge-large-en-v1.5",
+    "tempo_seg": 203.064,
+    "memoria_rss_inicial_mib": 441.71,
+    "memoria_rss_pico_mib": 1882.81,
+    "memoria_rss_delta_mib": 1441.094,
+    "shape_curriculos": [
+      100,
+      1024
+    ],
+    "cache_conferido": true,
+    "cache_max_abs_diff": 0.0,
+    "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo."
+  },
+  "llm_embeddings": {
+    "representacao": "LLM Embeddings",
+    "metodo_ranking": "LLM Embeddings",
+    "modelo": "Qwen/Qwen2.5-0.5B",
+    "protocolo_embedding": "ultimo hidden state, media dos tokens, 512 tokens, L2",
+    "device": "cpu",
+    "tempo_seg": 1810.7,
+    "memoria_rss_inicial_mib": 422.85,
+    "memoria_rss_pico_mib": 1548.52,
+    "memoria_rss_delta_mib": 1125.672,
+    "shape_curriculos": [
+      100,
+      896
+    ],
+    "cache_conferido": true,
+    "cache_max_abs_diff": 0.0,
+    "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo."
+  }
+}

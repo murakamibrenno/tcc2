@@ -65,7 +65,7 @@ export const COLUNAS = {
   },
   tempo: {
     titulo: 'Tempo de vetorização',
-    texto: 'Quanto a máquina levou para transformar os 100 currículos e a vaga em vetores, nesta CPU. Não inclui o treino do classificador. O TF-IDF termina em fração de segundo. O Sentence-Transformers leva minutos. O Qwen leva cerca de 25 minutos.',
+    texto: 'Segundos em processo Python novo: carga do modelo (nos densos), vetorização da vaga de referência e dos 100 currículos (truncamento 8.000) e cálculo do cosseno vaga × currículos. Não inclui treino do classificador.',
   },
   representacao: {
     titulo: 'Representação textual',
@@ -101,19 +101,27 @@ export const COLUNAS = {
   },
   tvetor: {
     titulo: 'Tempo de vetorização',
-    texto: 'Segundos para gerar os vetores dos 100 currículos. É o custo dominante do Sentence-Transformers e do Qwen. O TF-IDF é quase imediato.',
+    texto: 'Segundos no protocolo publicado: carga do modelo (densos), vaga, 100 currículos (8.000 caracteres) e cosseno. Mesmo valor dos cartões por representação.',
   },
   ttreino: {
     titulo: 'Tempo de treino',
-    texto: 'Segundos para ajustar o classificador nos vetores já prontos, dentro da validação cruzada. Em geral é pequeno perto da vetorização dos modelos densos.',
+    texto: 'Soma do tempo de fit nas cinco partes da validação cruzada estratificada. No TF-IDF o vocabulário é ajustado em cada parte; nos densos o vetor já estava em cache.',
   },
   tinfer: {
     titulo: 'Tempo de inferência',
-    texto: 'Segundos para aplicar o classificador já treinado e obter a classe de cada currículo. Quando a combinação não exportou esse tempo, a célula fica vazia.',
+    texto: 'Soma do predict e predict_proba nas cinco partes da validação cruzada, sobre os currículos de cada parte de teste.',
   },
   memoria: {
-    titulo: 'Memória',
-    texto: 'Leitura qualitativa do consumo de memória da representação: baixa no TF-IDF, mais alta nos modelos neurais. Não é uma medição em megabytes desta máquina.',
+    titulo: 'Memória (RSS)',
+    texto: 'Legado: pico de RSS durante o fit na CV. Na tabela de ajuste use o acréscimo (memoriaAjuste).',
+  },
+  memoriaAjuste: {
+    titulo: 'Acréscimo de RSS no ajuste',
+    texto: 'Aumento máximo do RSS do processo Python durante o fit em cada fold da validação cruzada (5 partes), em MiB. Não é o tamanho total do processo nem o peso do modelo de embedding já carregado.',
+  },
+  memvet: {
+    titulo: 'Acréscimo de RSS na vetorização',
+    texto: 'Aumento do RSS (pico menos RSS medido após importar as bibliotecas, antes de carregar o modelo de embedding), em MiB, no mesmo roteiro do tempo: carga (densos), vaga, 100 currículos, cosseno. Cada representação em processo separado.',
   },
   interpretabilidade: {
     titulo: 'Interpretabilidade',

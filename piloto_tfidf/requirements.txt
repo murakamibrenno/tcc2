@@ -5,3 +5,4 @@ sentence-transformers>=2.2.0
 torch>=2.0.0
 xgboost>=2.0.0
 scipy>=1.11.0
+psutil>=5.9.0

@@ -102,8 +102,8 @@ const dadosMAPNDCG = combinacoes.map((c) => ({ nome: c.labelCurto, MAP: c.map, N
 const dadosTempo = combinacoes.map((c) => ({
   nome: c.labelCurto,
   Vetorização: c.tempoVetorizacao,
-  Treinamento: c.tempoTreinamento,
-  Inferência: c.tempoInferencia,
+  Treinamento: c.tempoTreinamento ?? 0,
+  Inferência: typeof c.tempoInferencia === 'number' ? c.tempoInferencia : 0,
   cor: c.cor,
 }))
 const dadosScatter = combinacoes.map((c) => ({
@@ -539,7 +539,9 @@ export default function Comparativo() {
                       ...(!temDadosReais ? [['pk', 'P@k', 'center']] : []),
                       ['tvetor', 'T. vetor.', 'center'],
                       ['ttreino', 'T. treino', 'center'],
-                      ...(!temDadosReais ? [['tinfer', 'T. infer.', 'center'], ['memoria', 'Memória', 'center'], ['interpretabilidade', 'Leitura', 'center']] : []),
+                      ['tinfer', 'T. infer.', 'center'],
+                      ['memoriaAjuste', 'Δ RSS', 'center'],
+                      ...(!temDadosReais ? [['interpretabilidade', 'Leitura', 'center']] : []),
                     ].map(([id, rotulo, align]) => (
                       <CabecalhoMetrica
                         key={id}
@@ -581,41 +583,30 @@ export default function Comparativo() {
                           </Typography>
                         </TableCell>
                       ))}
-                      {(temDadosReais
-                        ? [c.tempoVetorizacao, c.tempoTreinamento]
-                        : [c.tempoVetorizacao, c.tempoTreinamento, c.tempoInferencia]
-                      ).map((val, j) => (
+                      {[c.tempoVetorizacao, c.tempoTreinamento, c.tempoInferencia].map((val, j) => (
                         <TableCell key={j} align="center">
                           <Typography sx={{ fontSize: '0.78rem', color: 'text.secondary' }}>
                             {typeof val === 'number' ? `${val.toFixed(val >= 10 ? 0 : 2)}s` : '—'}
                           </Typography>
                         </TableCell>
                       ))}
+                      <TableCell align="center">
+                        <Typography sx={{ fontSize: '0.78rem', color: 'text.secondary', fontVariantNumeric: 'tabular-nums' }}>
+                          {typeof c.memoriaRssDeltaMib === 'number' ? c.memoriaRssDeltaMib.toFixed(2) : '—'}
+                        </Typography>
+                      </TableCell>
                       {!temDadosReais && (
-                        <>
-                          <TableCell align="center">
-                            <Chip
-                              label={c.consumoMemoria || '—'}
-                              size="small"
-                              sx={{
-                                bgcolor: `${MEMCORES[c.consumoMemoria] || '#64748B'}18`,
-                                color: MEMCORES[c.consumoMemoria] || '#64748B',
-                                fontWeight: 700, fontSize: '0.68rem', borderRadius: '5px', height: 20,
-                              }}
-                            />
-                          </TableCell>
-                          <TableCell align="center">
-                            <Chip
-                              label={c.interpretabilidade || '—'}
-                              size="small"
-                              sx={{
-                                bgcolor: `${INTERPCORE[c.interpretabilidade] || '#64748B'}18`,
-                                color: INTERPCORE[c.interpretabilidade] || '#64748B',
-                                fontWeight: 700, fontSize: '0.68rem', borderRadius: '5px', height: 20,
-                              }}
-                            />
-                          </TableCell>
-                        </>
+                        <TableCell align="center">
+                          <Chip
+                            label={c.interpretabilidade || '—'}
+                            size="small"
+                            sx={{
+                              bgcolor: `${INTERPCORE[c.interpretabilidade] || '#64748B'}18`,
+                              color: INTERPCORE[c.interpretabilidade] || '#64748B',
+                              fontWeight: 700, fontSize: '0.68rem', borderRadius: '5px', height: 20,
+                            }}
+                          />
+                        </TableCell>
                       )}
                     </TableRow>
                   ))}

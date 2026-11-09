@@ -13,7 +13,11 @@
         "12472574",
         "18187364"
       ],
-      "tempo_vetorizacao_seg": 0.05
+      "tempo_vetorizacao_seg": 0.503,
+      "tempo_vetorizacao_seg_anterior": 0.05,
+      "tempo_vetorizacao_seg_protocolo_anterior": 0.55,
+      "memoria_vetorizacao_delta_mib": 16.895,
+      "memoria_vetorizacao_pico_mib": 167.01
     },
     {
       "metodo": "Sentence-Transformers",
@@ -28,7 +32,10 @@
         "26746496",
         "83816738"
       ],
-      "tempo_vetorizacao_seg": 183.352
+      "tempo_vetorizacao_seg": 203.064,
+      "tempo_vetorizacao_seg_protocolo_anterior": 183.352,
+      "memoria_vetorizacao_delta_mib": 1441.094,
+      "memoria_vetorizacao_pico_mib": 1882.81
     },
     {
       "metodo": "LLM Embeddings",
@@ -43,10 +50,13 @@
         "20674668",
         "37242217"
       ],
-      "tempo_vetorizacao_seg": 1515.25
+      "tempo_vetorizacao_seg": 1810.7,
+      "tempo_vetorizacao_seg_protocolo_anterior": 1515.25,
+      "memoria_vetorizacao_delta_mib": 1125.672,
+      "memoria_vetorizacao_pico_mib": 1548.52
     }
   ],
-  "geradoEm": "2026-11-02T23:35:56.544385",
+  "geradoEm": "2026-11-09T03:40:51.916185",
   "classificacao": [
     {
       "id": "tfidf_lr",
@@ -172,12 +182,16 @@
       "rocAuc": 0.8373,
       "ndcg": 0.702,
       "map": 0.6095,
-      "tempoVetorizacao": 0.0,
-      "tempoTreinamento": 6.89,
-      "tempoTotal": 6.89,
+      "tempoVetorizacao": 0.503,
+      "tempoTreinamento": 3.646,
+      "tempoTotal": 4.631,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.482,
+      "memoriaRssPicoMib": 177.67,
+      "memoriaRssDeltaMib": 15.16,
+      "tempoTreinoInferenciaLegado": 6.89
     },
     {
       "id": "tfidf_svm",
@@ -193,12 +207,16 @@
       "rocAuc": 0.7809,
       "ndcg": 0.702,
       "map": 0.6095,
-      "tempoVetorizacao": 0.0,
-      "tempoTreinamento": 10.0,
-      "tempoTotal": 10.0,
+      "tempoVetorizacao": 0.503,
+      "tempoTreinamento": 5.648,
+      "tempoTotal": 6.812,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.661,
+      "memoriaRssPicoMib": 178.21,
+      "memoriaRssDeltaMib": 5.402,
+      "tempoTreinoInferenciaLegado": 10.0
     },
     {
       "id": "tfidf_xgb",
@@ -214,12 +232,16 @@
       "rocAuc": 0.7668,
       "ndcg": 0.702,
       "map": 0.6095,
-      "tempoVetorizacao": 0.0,
-      "tempoTreinamento": 23.734,
-      "tempoTotal": 23.734,
+      "tempoVetorizacao": 0.503,
+      "tempoTreinamento": 14.221,
+      "tempoTotal": 15.525,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.801,
+      "memoriaRssPicoMib": 188.52,
+      "memoriaRssDeltaMib": 10.0,
+      "tempoTreinoInferenciaLegado": 23.734
     },
     {
       "id": "st_lr",
@@ -235,12 +257,16 @@
       "rocAuc": 0.8276,
       "ndcg": 0.9313,
       "map": 1.0,
-      "tempoVetorizacao": 179.907,
-      "tempoTreinamento": 0.231,
-      "tempoTotal": 180.138,
+      "tempoVetorizacao": 203.064,
+      "tempoTreinamento": 0.105,
+      "tempoTotal": 203.173,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.004,
+      "memoriaRssPicoMib": 182.01,
+      "memoriaRssDeltaMib": 0.961,
+      "tempoTreinoInferenciaLegado": 0.231
     },
     {
       "id": "st_svm",
@@ -256,12 +282,16 @@
       "rocAuc": 0.7927,
       "ndcg": 0.9313,
       "map": 1.0,
-      "tempoVetorizacao": 179.907,
-      "tempoTreinamento": 0.168,
-      "tempoTotal": 180.075,
+      "tempoVetorizacao": 203.064,
+      "tempoTreinamento": 0.088,
+      "tempoTotal": 203.162,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.01,
+      "memoriaRssPicoMib": 182.8,
+      "memoriaRssDeltaMib": 0.453,
+      "tempoTreinoInferenciaLegado": 0.168
     },
     {
       "id": "st_xgb",
@@ -277,12 +307,16 @@
       "rocAuc": 0.7936,
       "ndcg": 0.9313,
       "map": 1.0,
-      "tempoVetorizacao": 179.907,
-      "tempoTreinamento": 7.256,
-      "tempoTotal": 187.163,
+      "tempoVetorizacao": 203.064,
+      "tempoTreinamento": 4.024,
+      "tempoTotal": 207.124,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.036,
+      "memoriaRssPicoMib": 191.2,
+      "memoriaRssDeltaMib": 4.668,
+      "tempoTreinoInferenciaLegado": 7.256
     },
     {
       "id": "llm_lr",
@@ -298,12 +332,16 @@
       "rocAuc": 0.7398,
       "ndcg": 0.8508,
       "map": 0.5873,
-      "tempoVetorizacao": 1511.57,
-      "tempoTreinamento": 0.214,
-      "tempoTotal": 1511.784,
+      "tempoVetorizacao": 1810.7,
+      "tempoTreinamento": 0.087,
+      "tempoTotal": 1810.791,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.004,
+      "memoriaRssPicoMib": 191.2,
+      "memoriaRssDeltaMib": 0.0,
+      "tempoTreinoInferenciaLegado": 0.214
     },
     {
       "id": "llm_svm",
@@ -319,12 +357,16 @@
       "rocAuc": 0.8413,
       "ndcg": 0.8508,
       "map": 0.5873,
-      "tempoVetorizacao": 1511.57,
-      "tempoTreinamento": 0.151,
-      "tempoTotal": 1511.721,
+      "tempoVetorizacao": 1810.7,
+      "tempoTreinamento": 0.068,
+      "tempoTotal": 1810.776,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.008,
+      "memoriaRssPicoMib": 191.71,
+      "memoriaRssDeltaMib": 0.562,
+      "tempoTreinoInferenciaLegado": 0.151
     },
     {
       "id": "llm_xgb",
@@ -340,12 +382,16 @@
       "rocAuc": 0.8238,
       "ndcg": 0.8508,
       "map": 0.5873,
-      "tempoVetorizacao": 1511.57,
-      "tempoTreinamento": 6.498,
-      "tempoTotal": 1518.068,
+      "tempoVetorizacao": 1810.7,
+      "tempoTreinamento": 4.007,
+      "tempoTotal": 1814.747,
       "real": true,
       "rigoroso": true,
-      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE."
+      "observacao": "CV 5-fold estratificado nos 100 currículos. TF-IDF em Pipeline, sem vazamento de vocabulário. Embeddings de LLM extraídos do Qwen, não de um segundo BGE.",
+      "tempoInferencia": 0.04,
+      "memoriaRssPicoMib": 192.29,
+      "memoriaRssDeltaMib": 0.426,
+      "tempoTreinoInferenciaLegado": 6.498
     }
   ],
   "classificacaoRigorosa": [
@@ -355,7 +401,7 @@
       "representacao_key": "tfidf",
       "modelo_embedding": "TfidfVectorizer",
       "classificador": "Regressao Logistica",
-      "tempo_vetorizacao_seg": 0.0,
+      "tempo_vetorizacao_seg": 0.503,
       "sem_vazamento_tfidf": true,
       "f1_macro": 0.2879,
       "f1_weighted": 0.6564,
@@ -364,7 +410,10 @@
       "precision_adequado": 0.0,
       "recall_adequado": 0.0,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 6.89
+      "tempo_treino_inferencia_seg": 6.89,
+      "tempo_treino_seg": 3.646,
+      "tempo_inferencia_seg": 0.482,
+      "memoria_rss_pico_mib": 177.67
     },
     {
       "id": "tfidf_svm",
@@ -372,7 +421,7 @@
       "representacao_key": "tfidf",
       "modelo_embedding": "TfidfVectorizer",
       "classificador": "SVM",
-      "tempo_vetorizacao_seg": 0.0,
+      "tempo_vetorizacao_seg": 0.503,
       "sem_vazamento_tfidf": true,
       "f1_macro": 0.2879,
       "f1_weighted": 0.6564,
@@ -381,7 +430,10 @@
       "precision_adequado": 0.0,
       "recall_adequado": 0.0,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 10.0
+      "tempo_treino_inferencia_seg": 10.0,
+      "tempo_treino_seg": 5.648,
+      "tempo_inferencia_seg": 0.661,
+      "memoria_rss_pico_mib": 178.21
     },
     {
       "id": "tfidf_xgb",
@@ -389,7 +441,7 @@
       "representacao_key": "tfidf",
       "modelo_embedding": "TfidfVectorizer",
       "classificador": "XGBoost",
-      "tempo_vetorizacao_seg": 0.0,
+      "tempo_vetorizacao_seg": 0.503,
       "sem_vazamento_tfidf": true,
       "f1_macro": 0.5978,
       "f1_weighted": 0.7031,
@@ -398,7 +450,10 @@
       "precision_adequado": 1.0,
       "recall_adequado": 0.6667,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 23.734
+      "tempo_treino_inferencia_seg": 23.734,
+      "tempo_treino_seg": 14.221,
+      "tempo_inferencia_seg": 0.801,
+      "memoria_rss_pico_mib": 188.52
     },
     {
       "id": "st_lr",
@@ -406,7 +461,7 @@
       "representacao_key": "st",
       "modelo_embedding": "BAAI/bge-large-en-v1.5",
       "classificador": "Regressao Logistica",
-      "tempo_vetorizacao_seg": 179.907,
+      "tempo_vetorizacao_seg": 203.064,
       "sem_vazamento_tfidf": false,
       "f1_macro": 0.2879,
       "f1_weighted": 0.6564,
@@ -415,7 +470,10 @@
       "precision_adequado": 0.0,
       "recall_adequado": 0.0,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 0.231
+      "tempo_treino_inferencia_seg": 0.231,
+      "tempo_treino_seg": 0.105,
+      "tempo_inferencia_seg": 0.004,
+      "memoria_rss_pico_mib": 182.01
     },
     {
       "id": "st_svm",
@@ -423,7 +481,7 @@
       "representacao_key": "st",
       "modelo_embedding": "BAAI/bge-large-en-v1.5",
       "classificador": "SVM",
-      "tempo_vetorizacao_seg": 179.907,
+      "tempo_vetorizacao_seg": 203.064,
       "sem_vazamento_tfidf": false,
       "f1_macro": 0.2879,
       "f1_weighted": 0.6564,
@@ -432,7 +490,10 @@
       "precision_adequado": 0.0,
       "recall_adequado": 0.0,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 0.168
+      "tempo_treino_inferencia_seg": 0.168,
+      "tempo_treino_seg": 0.088,
+      "tempo_inferencia_seg": 0.01,
+      "memoria_rss_pico_mib": 182.8
     },
     {
       "id": "st_xgb",
@@ -440,7 +501,7 @@
       "representacao_key": "st",
       "modelo_embedding": "BAAI/bge-large-en-v1.5",
       "classificador": "XGBoost",
-      "tempo_vetorizacao_seg": 179.907,
+      "tempo_vetorizacao_seg": 203.064,
       "sem_vazamento_tfidf": false,
       "f1_macro": 0.6099,
       "f1_weighted": 0.7219,
@@ -449,7 +510,10 @@
       "precision_adequado": 1.0,
       "recall_adequado": 0.6667,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 7.256
+      "tempo_treino_inferencia_seg": 7.256,
+      "tempo_treino_seg": 4.024,
+      "tempo_inferencia_seg": 0.036,
+      "memoria_rss_pico_mib": 191.2
     },
     {
       "id": "llm_lr",
@@ -457,7 +521,7 @@
       "representacao_key": "llm",
       "modelo_embedding": "Qwen/Qwen2.5-0.5B",
       "classificador": "Regressao Logistica",
-      "tempo_vetorizacao_seg": 1511.57,
+      "tempo_vetorizacao_seg": 1810.7,
       "sem_vazamento_tfidf": false,
       "f1_macro": 0.2879,
       "f1_weighted": 0.6564,
@@ -466,7 +530,10 @@
       "precision_adequado": 0.0,
       "recall_adequado": 0.0,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 0.214
+      "tempo_treino_inferencia_seg": 0.214,
+      "tempo_treino_seg": 0.087,
+      "tempo_inferencia_seg": 0.004,
+      "memoria_rss_pico_mib": 191.2
     },
     {
       "id": "llm_svm",
@@ -474,7 +541,7 @@
       "representacao_key": "llm",
       "modelo_embedding": "Qwen/Qwen2.5-0.5B",
       "classificador": "SVM",
-      "tempo_vetorizacao_seg": 1511.57,
+      "tempo_vetorizacao_seg": 1810.7,
       "sem_vazamento_tfidf": false,
       "f1_macro": 0.2879,
       "f1_weighted": 0.6564,
@@ -483,7 +550,10 @@
       "precision_adequado": 0.0,
       "recall_adequado": 0.0,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 0.151
+      "tempo_treino_inferencia_seg": 0.151,
+      "tempo_treino_seg": 0.068,
+      "tempo_inferencia_seg": 0.008,
+      "memoria_rss_pico_mib": 191.71
     },
     {
       "id": "llm_xgb",
@@ -491,7 +561,7 @@
       "representacao_key": "llm",
       "modelo_embedding": "Qwen/Qwen2.5-0.5B",
       "classificador": "XGBoost",
-      "tempo_vetorizacao_seg": 1511.57,
+      "tempo_vetorizacao_seg": 1810.7,
       "sem_vazamento_tfidf": false,
       "f1_macro": 0.571,
       "f1_weighted": 0.7331,
@@ -500,7 +570,10 @@
       "precision_adequado": 0.5,
       "recall_adequado": 0.6667,
       "folds": 5,
-      "tempo_treino_inferencia_seg": 6.498
+      "tempo_treino_inferencia_seg": 6.498,
+      "tempo_treino_seg": 4.007,
+      "tempo_inferencia_seg": 0.04,
+      "memoria_rss_pico_mib": 192.29
     }
   ],
   "relatorioClassificacao": {
@@ -1085,11 +1158,11 @@
     }
   ],
   "interpretabilidadeTfidf": {
+    "corpus_n": 100,
+    "vetorizador_f1_cv": "TfidfVectorizer(1-2, min_df=1, max_df=1.0, lowercase=True)",
+    "filtro_lista_exibida": "Remove n-grama com qualquer stopword ENGLISH_STOP_WORDS, anos AAAA, token 'like', e termos em menos de 2 currículos (só na lista exibida).",
+    "aviso_leitura_tela": "Os modelos abaixo foram ajustados uma única vez nos 100 currículos para inspeção de termos. Não são o modelo da validação cruzada de 5 partes que gera o F1 macro. Com apenas 3 currículos Adequados, a lista é instável e não prova a causa do F1.",
     "termos_vaga_referencia": [
-      {
-        "termo": "relational databases",
-        "score_tfidf_vaga": 0.2568
-      },
       {
         "termo": "junior",
         "score_tfidf_vaga": 0.2206
@@ -1111,70 +1184,6 @@
         "score_tfidf_vaga": 0.1398
       },
       {
-        "termo": "or",
-        "score_tfidf_vaga": 0.1333
-      },
-      {
-        "termo": "and",
-        "score_tfidf_vaga": 0.1304
-      },
-      {
-        "termo": "restful apis",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "version control",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "databases mysql",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "in java",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "in agile",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "required skills",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "or service",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "docker",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "software developer",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "postgresql",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "postgresql oracle",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "mysql postgresql",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "backend and",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
-        "termo": "services or",
-        "score_tfidf_vaga": 0.1284
-      },
-      {
         "termo": "mid",
         "score_tfidf_vaga": 0.1178
       },
@@ -1185,6 +1194,74 @@
       {
         "termo": "microservices",
         "score_tfidf_vaga": 0.1178
+      },
+      {
+        "termo": "mode",
+        "score_tfidf_vaga": 0.1178
+      },
+      {
+        "termo": "git",
+        "score_tfidf_vaga": 0.1178
+      },
+      {
+        "termo": "multidisciplinary",
+        "score_tfidf_vaga": 0.1178
+      },
+      {
+        "termo": "apis",
+        "score_tfidf_vaga": 0.1178
+      },
+      {
+        "termo": "databases",
+        "score_tfidf_vaga": 0.1105
+      },
+      {
+        "termo": "spring",
+        "score_tfidf_vaga": 0.1103
+      },
+      {
+        "termo": "similar",
+        "score_tfidf_vaga": 0.1103
+      },
+      {
+        "termo": "oracle sql",
+        "score_tfidf_vaga": 0.1103
+      },
+      {
+        "termo": "github",
+        "score_tfidf_vaga": 0.1103
+      },
+      {
+        "termo": "automated testing",
+        "score_tfidf_vaga": 0.1103
+      },
+      {
+        "termo": "python",
+        "score_tfidf_vaga": 0.1045
+      },
+      {
+        "termo": "desired",
+        "score_tfidf_vaga": 0.1045
+      },
+      {
+        "termo": "hybrid",
+        "score_tfidf_vaga": 0.0997
+      },
+      {
+        "termo": "level",
+        "score_tfidf_vaga": 0.0979
+      },
+      {
+        "termo": "web applications",
+        "score_tfidf_vaga": 0.0957
+      },
+      {
+        "termo": "sql",
+        "score_tfidf_vaga": 0.0921
+      },
+      {
+        "termo": "integrate",
+        "score_tfidf_vaga": 0.0892
       }
     ],
     "termos_por_classe_lr": {
@@ -1192,422 +1269,1425 @@
         "termos_positivos": [
           {
             "termo": "net",
-            "peso": 0.3138
-          },
-          {
-            "termo": "the",
-            "peso": 0.2394
-          },
-          {
-            "termo": "like",
-            "peso": 0.2084
+            "peso": 0.3138,
+            "n_docs": 16
           },
           {
             "termo": "application",
-            "peso": 0.1895
+            "peso": 0.1895,
+            "n_docs": 42
           },
           {
             "termo": "framework",
-            "peso": 0.1829
+            "peso": 0.1829,
+            "n_docs": 14
           },
           {
             "termo": "java",
-            "peso": 0.1678
+            "peso": 0.1678,
+            "n_docs": 15
           },
           {
             "termo": "entity",
-            "peso": 0.1664
+            "peso": 0.1664,
+            "n_docs": 2
           },
           {
             "termo": "controls",
-            "peso": 0.1626
+            "peso": 0.1626,
+            "n_docs": 10
           },
           {
             "termo": "used",
-            "peso": 0.1622
+            "peso": 0.1622,
+            "n_docs": 38
           },
           {
             "termo": "database",
-            "peso": 0.1566
+            "peso": 0.1566,
+            "n_docs": 55
           },
           {
             "termo": "using",
-            "peso": 0.1538
+            "peso": 0.1538,
+            "n_docs": 48
           },
           {
             "termo": "asp net",
-            "peso": 0.1433
+            "peso": 0.1433,
+            "n_docs": 8
           },
           {
             "termo": "spring",
-            "peso": 0.1409
+            "peso": 0.1409,
+            "n_docs": 3
           },
           {
             "termo": "asp",
-            "peso": 0.1365
+            "peso": 0.1365,
+            "n_docs": 8
           },
           {
             "termo": "scrum",
-            "peso": 0.135
+            "peso": 0.135,
+            "n_docs": 7
+          },
+          {
+            "termo": "javascript",
+            "peso": 0.1283,
+            "n_docs": 12
+          },
+          {
+            "termo": "web",
+            "peso": 0.1207,
+            "n_docs": 45
           }
         ],
         "termos_negativos": [
           {
-            "termo": "and",
-            "peso": -0.1768
-          },
-          {
             "termo": "business",
-            "peso": -0.0569
+            "peso": -0.0569,
+            "n_docs": 74
           },
           {
             "termo": "technology",
-            "peso": -0.055
+            "peso": -0.055,
+            "n_docs": 70
           },
           {
             "termo": "support",
-            "peso": -0.0531
+            "peso": -0.0531,
+            "n_docs": 81
           },
           {
             "termo": "systems",
-            "peso": -0.0526
-          },
-          {
-            "termo": "it",
-            "peso": -0.0518
+            "peso": -0.0526,
+            "n_docs": 73
           },
           {
             "termo": "information",
-            "peso": -0.0499
+            "peso": -0.0499,
+            "n_docs": 74
           },
           {
             "termo": "network",
-            "peso": -0.0486
+            "peso": -0.0486,
+            "n_docs": 53
           },
           {
             "termo": "management",
-            "peso": -0.0468
+            "peso": -0.0468,
+            "n_docs": 94
           },
           {
             "termo": "customer",
-            "peso": -0.043
+            "peso": -0.043,
+            "n_docs": 59
           },
           {
             "termo": "company",
-            "peso": -0.0424
+            "peso": -0.0424,
+            "n_docs": 98
           },
           {
             "termo": "office",
-            "peso": -0.0376
+            "peso": -0.0376,
+            "n_docs": 53
           },
           {
             "termo": "state",
-            "peso": -0.0361
+            "peso": -0.0361,
+            "n_docs": 91
           },
           {
             "termo": "city",
-            "peso": -0.0351
+            "peso": -0.0351,
+            "n_docs": 91
           },
           {
             "termo": "marketing",
-            "peso": -0.0339
+            "peso": -0.0339,
+            "n_docs": 30
+          },
+          {
+            "termo": "information technology",
+            "peso": -0.0327,
+            "n_docs": 55
+          },
+          {
+            "termo": "city state",
+            "peso": -0.0318,
+            "n_docs": 88
           }
         ]
       },
       "Inadequado": {
         "termos_positivos": [
           {
-            "termo": "and",
-            "peso": 0.3427
-          },
-          {
             "termo": "cisco",
-            "peso": 0.1581
+            "peso": 0.1581,
+            "n_docs": 18
           },
           {
             "termo": "sales",
-            "peso": 0.1538
+            "peso": 0.1538,
+            "n_docs": 36
           },
           {
             "termo": "security",
-            "peso": 0.1299
-          },
-          {
-            "termo": "mdm",
-            "peso": 0.1208
+            "peso": 0.1299,
+            "n_docs": 52
           },
           {
             "termo": "care",
-            "peso": 0.1194
+            "peso": 0.1194,
+            "n_docs": 13
           },
           {
             "termo": "food",
-            "peso": 0.1098
+            "peso": 0.1098,
+            "n_docs": 8
           },
           {
             "termo": "01",
-            "peso": 0.1084
-          },
-          {
-            "termo": "or",
-            "peso": 0.1058
-          },
-          {
-            "termo": "de",
-            "peso": 0.1057
+            "peso": 0.1084,
+            "n_docs": 27
           },
           {
             "termo": "responsible",
-            "peso": 0.1035
-          },
-          {
-            "termo": "responsible for",
-            "peso": 0.1021
+            "peso": 0.1035,
+            "n_docs": 51
           },
           {
             "termo": "equipment",
-            "peso": 0.0969
+            "peso": 0.0969,
+            "n_docs": 31
           },
           {
             "termo": "hr",
-            "peso": 0.0941
+            "peso": 0.0941,
+            "n_docs": 11
           },
           {
             "termo": "safety",
-            "peso": 0.0894
+            "peso": 0.0894,
+            "n_docs": 18
+          },
+          {
+            "termo": "construction",
+            "peso": 0.0894,
+            "n_docs": 8
+          },
+          {
+            "termo": "financial",
+            "peso": 0.0884,
+            "n_docs": 33
+          },
+          {
+            "termo": "state",
+            "peso": 0.0861,
+            "n_docs": 91
+          },
+          {
+            "termo": "products",
+            "peso": 0.0859,
+            "n_docs": 38
+          },
+          {
+            "termo": "ï¼ city",
+            "peso": 0.0847,
+            "n_docs": 37
           }
         ],
         "termos_negativos": [
           {
-            "termo": "the",
-            "peso": -0.5201
-          },
-          {
             "termo": "net",
-            "peso": -0.402
+            "peso": -0.402,
+            "n_docs": 16
           },
           {
             "termo": "project",
-            "peso": -0.3604
+            "peso": -0.3604,
+            "n_docs": 61
           },
           {
             "termo": "asp",
-            "peso": -0.3394
+            "peso": -0.3394,
+            "n_docs": 8
           },
           {
             "termo": "application",
-            "peso": -0.33
+            "peso": -0.33,
+            "n_docs": 42
           },
           {
             "termo": "sql",
-            "peso": -0.2715
+            "peso": -0.2715,
+            "n_docs": 46
           },
           {
             "termo": "asp net",
-            "peso": -0.262
+            "peso": -0.262,
+            "n_docs": 8
           },
           {
             "termo": "database",
-            "peso": -0.2479
+            "peso": -0.2479,
+            "n_docs": 55
           },
           {
             "termo": "ms",
-            "peso": -0.2392
-          },
-          {
-            "termo": "to",
-            "peso": -0.2388
+            "peso": -0.2392,
+            "n_docs": 22
           },
           {
             "termo": "data",
-            "peso": -0.2308
+            "peso": -0.2308,
+            "n_docs": 76
           },
           {
             "termo": "drupal",
-            "peso": -0.2209
+            "peso": -0.2209,
+            "n_docs": 3
           },
           {
             "termo": "web",
-            "peso": -0.2097
+            "peso": -0.2097,
+            "n_docs": 45
           },
           {
             "termo": "business",
-            "peso": -0.2044
+            "peso": -0.2044,
+            "n_docs": 74
           },
           {
             "termo": "java",
-            "peso": -0.1975
+            "peso": -0.1975,
+            "n_docs": 15
+          },
+          {
+            "termo": "using",
+            "peso": -0.1974,
+            "n_docs": 48
+          },
+          {
+            "termo": "software",
+            "peso": -0.1931,
+            "n_docs": 72
           }
         ]
       },
       "Parcialmente Adequado": {
         "termos_positivos": [
           {
-            "termo": "the",
-            "peso": 0.2807
-          },
-          {
             "termo": "project",
-            "peso": 0.2697
+            "peso": 0.2697,
+            "n_docs": 61
           },
           {
             "termo": "ms",
-            "peso": 0.2667
+            "peso": 0.2667,
+            "n_docs": 22
           },
           {
             "termo": "business",
-            "peso": 0.2613
+            "peso": 0.2613,
+            "n_docs": 74
           },
           {
             "termo": "drupal",
-            "peso": 0.2366
+            "peso": 0.2366,
+            "n_docs": 3
           },
           {
             "termo": "sql",
-            "peso": 0.2112
+            "peso": 0.2112,
+            "n_docs": 46
           },
           {
             "termo": "asp",
-            "peso": 0.2029
+            "peso": 0.2029,
+            "n_docs": 8
           },
           {
             "termo": "software",
-            "peso": 0.2009
-          },
-          {
-            "termo": "safelite",
-            "peso": 0.2001
+            "peso": 0.2009,
+            "n_docs": 72
           },
           {
             "termo": "information",
-            "peso": 0.1926
-          },
-          {
-            "termo": "to",
-            "peso": 0.189
+            "peso": 0.1926,
+            "n_docs": 74
           },
           {
             "termo": "information technology",
-            "peso": 0.1883
-          },
-          {
-            "termo": "mission partner",
-            "peso": 0.1848
-          },
-          {
-            "termo": "system",
-            "peso": 0.1817
+            "peso": 0.1883,
+            "n_docs": 55
           },
           {
             "termo": "technology",
-            "peso": 0.1786
+            "peso": 0.1786,
+            "n_docs": 70
+          },
+          {
+            "termo": "systems",
+            "peso": 0.1763,
+            "n_docs": 73
+          },
+          {
+            "termo": "partner",
+            "peso": 0.1638,
+            "n_docs": 5
+          },
+          {
+            "termo": "sql server",
+            "peso": 0.1633,
+            "n_docs": 16
+          },
+          {
+            "termo": "requirements",
+            "peso": 0.1561,
+            "n_docs": 50
+          },
+          {
+            "termo": "disa",
+            "peso": 0.1449,
+            "n_docs": 2
           }
         ],
         "termos_negativos": [
           {
-            "termo": "and",
-            "peso": -0.1659
-          },
-          {
             "termo": "cisco",
-            "peso": -0.1338
+            "peso": -0.1338,
+            "n_docs": 18
           },
           {
             "termo": "sales",
-            "peso": -0.1238
+            "peso": -0.1238,
+            "n_docs": 36
           },
           {
             "termo": "security",
-            "peso": -0.1087
-          },
-          {
-            "termo": "responsible for",
-            "peso": -0.1047
+            "peso": -0.1087,
+            "n_docs": 52
           },
           {
             "termo": "responsible",
-            "peso": -0.1047
-          },
-          {
-            "termo": "mdm",
-            "peso": -0.1036
+            "peso": -0.1047,
+            "n_docs": 51
           },
           {
             "termo": "care",
-            "peso": -0.0987
+            "peso": -0.0987,
+            "n_docs": 13
           },
           {
             "termo": "01",
-            "peso": -0.098
+            "peso": -0.098,
+            "n_docs": 27
           },
           {
             "termo": "food",
-            "peso": -0.094
-          },
-          {
-            "termo": "de",
-            "peso": -0.0903
-          },
-          {
-            "termo": "of",
-            "peso": -0.0826
+            "peso": -0.094,
+            "n_docs": 8
           },
           {
             "termo": "safety",
-            "peso": -0.0772
+            "peso": -0.0772,
+            "n_docs": 18
           },
           {
             "termo": "equipment",
-            "peso": -0.0753
+            "peso": -0.0753,
+            "n_docs": 31
           },
           {
             "termo": "control",
-            "peso": -0.075
+            "peso": -0.075,
+            "n_docs": 43
+          },
+          {
+            "termo": "construction",
+            "peso": -0.0739,
+            "n_docs": 8
+          },
+          {
+            "termo": "hr",
+            "peso": -0.0736,
+            "n_docs": 11
+          },
+          {
+            "termo": "switches",
+            "peso": -0.0713,
+            "n_docs": 15
+          },
+          {
+            "termo": "used",
+            "peso": -0.0712,
+            "n_docs": 38
+          },
+          {
+            "termo": "contracts",
+            "peso": -0.0699,
+            "n_docs": 27
           }
         ]
       }
     },
+    "termos_por_classe_svm": {
+      "Adequado": {
+        "termos_positivos": [
+          {
+            "termo": "net",
+            "peso": 0.4172,
+            "n_docs": 16
+          },
+          {
+            "termo": "application",
+            "peso": 0.2383,
+            "n_docs": 42
+          },
+          {
+            "termo": "framework",
+            "peso": 0.2181,
+            "n_docs": 14
+          },
+          {
+            "termo": "entity",
+            "peso": 0.2113,
+            "n_docs": 2
+          },
+          {
+            "termo": "controls",
+            "peso": 0.2048,
+            "n_docs": 10
+          },
+          {
+            "termo": "used",
+            "peso": 0.2009,
+            "n_docs": 38
+          },
+          {
+            "termo": "asp",
+            "peso": 0.1999,
+            "n_docs": 8
+          },
+          {
+            "termo": "asp net",
+            "peso": 0.1999,
+            "n_docs": 8
+          },
+          {
+            "termo": "database",
+            "peso": 0.1947,
+            "n_docs": 55
+          },
+          {
+            "termo": "java",
+            "peso": 0.1865,
+            "n_docs": 15
+          },
+          {
+            "termo": "using",
+            "peso": 0.1835,
+            "n_docs": 48
+          },
+          {
+            "termo": "scrum",
+            "peso": 0.1608,
+            "n_docs": 7
+          },
+          {
+            "termo": "spring",
+            "peso": 0.1591,
+            "n_docs": 3
+          },
+          {
+            "termo": "javascript",
+            "peso": 0.1586,
+            "n_docs": 12
+          },
+          {
+            "termo": "web",
+            "peso": 0.1468,
+            "n_docs": 45
+          }
+        ],
+        "termos_negativos": [
+          {
+            "termo": "management",
+            "peso": -0.0598,
+            "n_docs": 94
+          },
+          {
+            "termo": "technology",
+            "peso": -0.0477,
+            "n_docs": 70
+          },
+          {
+            "termo": "company",
+            "peso": -0.0473,
+            "n_docs": 98
+          },
+          {
+            "termo": "business",
+            "peso": -0.0444,
+            "n_docs": 74
+          },
+          {
+            "termo": "customer",
+            "peso": -0.0405,
+            "n_docs": 59
+          },
+          {
+            "termo": "support",
+            "peso": -0.0405,
+            "n_docs": 81
+          },
+          {
+            "termo": "manager",
+            "peso": -0.0403,
+            "n_docs": 65
+          },
+          {
+            "termo": "systems",
+            "peso": -0.0401,
+            "n_docs": 73
+          },
+          {
+            "termo": "state",
+            "peso": -0.0398,
+            "n_docs": 91
+          },
+          {
+            "termo": "product",
+            "peso": -0.0376,
+            "n_docs": 41
+          },
+          {
+            "termo": "financial",
+            "peso": -0.0354,
+            "n_docs": 33
+          },
+          {
+            "termo": "care",
+            "peso": -0.0354,
+            "n_docs": 13
+          },
+          {
+            "termo": "information",
+            "peso": -0.0351,
+            "n_docs": 74
+          },
+          {
+            "termo": "requirements",
+            "peso": -0.0341,
+            "n_docs": 50
+          },
+          {
+            "termo": "office",
+            "peso": -0.0339,
+            "n_docs": 53
+          }
+        ]
+      },
+      "Inadequado": {
+        "termos_positivos": [
+          {
+            "termo": "net",
+            "peso": 0.3148,
+            "n_docs": 16
+          },
+          {
+            "termo": "framework",
+            "peso": 0.212,
+            "n_docs": 14
+          },
+          {
+            "termo": "entity",
+            "peso": 0.2113,
+            "n_docs": 2
+          },
+          {
+            "termo": "controls",
+            "peso": 0.1997,
+            "n_docs": 10
+          },
+          {
+            "termo": "used",
+            "peso": 0.1956,
+            "n_docs": 38
+          },
+          {
+            "termo": "java",
+            "peso": 0.1802,
+            "n_docs": 15
+          },
+          {
+            "termo": "application",
+            "peso": 0.1683,
+            "n_docs": 42
+          },
+          {
+            "termo": "scrum",
+            "peso": 0.1661,
+            "n_docs": 7
+          },
+          {
+            "termo": "database",
+            "peso": 0.1581,
+            "n_docs": 55
+          },
+          {
+            "termo": "using",
+            "peso": 0.1547,
+            "n_docs": 48
+          },
+          {
+            "termo": "spring",
+            "peso": 0.1531,
+            "n_docs": 3
+          },
+          {
+            "termo": "javascript",
+            "peso": 0.1445,
+            "n_docs": 12
+          },
+          {
+            "termo": "linq",
+            "peso": 0.1409,
+            "n_docs": 2
+          },
+          {
+            "termo": "worked",
+            "peso": 0.1371,
+            "n_docs": 44
+          },
+          {
+            "termo": "grid",
+            "peso": 0.1352,
+            "n_docs": 5
+          }
+        ],
+        "termos_negativos": [
+          {
+            "termo": "business",
+            "peso": -0.0978,
+            "n_docs": 74
+          },
+          {
+            "termo": "information",
+            "peso": -0.0785,
+            "n_docs": 74
+          },
+          {
+            "termo": "ms",
+            "peso": -0.0765,
+            "n_docs": 22
+          },
+          {
+            "termo": "support",
+            "peso": -0.0762,
+            "n_docs": 81
+          },
+          {
+            "termo": "drupal",
+            "peso": -0.0755,
+            "n_docs": 3
+          },
+          {
+            "termo": "technology",
+            "peso": -0.0713,
+            "n_docs": 70
+          },
+          {
+            "termo": "systems",
+            "peso": -0.0677,
+            "n_docs": 73
+          },
+          {
+            "termo": "sql server",
+            "peso": -0.0659,
+            "n_docs": 16
+          },
+          {
+            "termo": "requirements",
+            "peso": -0.0589,
+            "n_docs": 50
+          },
+          {
+            "termo": "sharepoint",
+            "peso": -0.0584,
+            "n_docs": 18
+          },
+          {
+            "termo": "marketing",
+            "peso": -0.0584,
+            "n_docs": 30
+          },
+          {
+            "termo": "office",
+            "peso": -0.0551,
+            "n_docs": 53
+          },
+          {
+            "termo": "information technology",
+            "peso": -0.0542,
+            "n_docs": 55
+          },
+          {
+            "termo": "management",
+            "peso": -0.0533,
+            "n_docs": 94
+          },
+          {
+            "termo": "ms sql",
+            "peso": -0.0458,
+            "n_docs": 8
+          }
+        ]
+      },
+      "Parcialmente Adequado": {
+        "termos_positivos": [
+          {
+            "termo": "security",
+            "peso": 0.2569,
+            "n_docs": 52
+          },
+          {
+            "termo": "responsible",
+            "peso": 0.2066,
+            "n_docs": 51
+          },
+          {
+            "termo": "cisco",
+            "peso": 0.1939,
+            "n_docs": 18
+          },
+          {
+            "termo": "01",
+            "peso": 0.1673,
+            "n_docs": 27
+          },
+          {
+            "termo": "sales",
+            "peso": 0.1666,
+            "n_docs": 36
+          },
+          {
+            "termo": "care",
+            "peso": 0.1527,
+            "n_docs": 13
+          },
+          {
+            "termo": "financial",
+            "peso": 0.14,
+            "n_docs": 33
+          },
+          {
+            "termo": "contracts",
+            "peso": 0.1377,
+            "n_docs": 27
+          },
+          {
+            "termo": "repair",
+            "peso": 0.1311,
+            "n_docs": 15
+          },
+          {
+            "termo": "architect",
+            "peso": 0.1272,
+            "n_docs": 8
+          },
+          {
+            "termo": "air",
+            "peso": 0.1253,
+            "n_docs": 4
+          },
+          {
+            "termo": "construction",
+            "peso": 0.123,
+            "n_docs": 8
+          },
+          {
+            "termo": "peoplesoft",
+            "peso": 0.1226,
+            "n_docs": 4
+          },
+          {
+            "termo": "control",
+            "peso": 0.1217,
+            "n_docs": 43
+          },
+          {
+            "termo": "certified",
+            "peso": 0.1205,
+            "n_docs": 27
+          }
+        ],
+        "termos_negativos": [
+          {
+            "termo": "asp",
+            "peso": -0.5011,
+            "n_docs": 8
+          },
+          {
+            "termo": "ms",
+            "peso": -0.4651,
+            "n_docs": 22
+          },
+          {
+            "termo": "project",
+            "peso": -0.4399,
+            "n_docs": 61
+          },
+          {
+            "termo": "drupal",
+            "peso": -0.4177,
+            "n_docs": 3
+          },
+          {
+            "termo": "sql",
+            "peso": -0.4061,
+            "n_docs": 46
+          },
+          {
+            "termo": "net",
+            "peso": -0.4042,
+            "n_docs": 16
+          },
+          {
+            "termo": "business",
+            "peso": -0.3661,
+            "n_docs": 74
+          },
+          {
+            "termo": "application",
+            "peso": -0.3448,
+            "n_docs": 42
+          },
+          {
+            "termo": "asp net",
+            "peso": -0.3382,
+            "n_docs": 8
+          },
+          {
+            "termo": "sql server",
+            "peso": -0.3255,
+            "n_docs": 16
+          },
+          {
+            "termo": "software",
+            "peso": -0.2885,
+            "n_docs": 72
+          },
+          {
+            "termo": "partner",
+            "peso": -0.2796,
+            "n_docs": 5
+          },
+          {
+            "termo": "information technology",
+            "peso": -0.2487,
+            "n_docs": 55
+          },
+          {
+            "termo": "disa",
+            "peso": -0.2451,
+            "n_docs": 2
+          },
+          {
+            "termo": "information",
+            "peso": -0.242,
+            "n_docs": 74
+          }
+        ]
+      }
+    },
+    "xgboost_importancia_global": {
+      "nota": "Importância sem sinal; indica magnitude, não empurra nem afasta da vaga.",
+      "top_atributos": [
+        {
+          "termo": "life",
+          "importancia": 0.0341,
+          "n_docs": 15
+        },
+        {
+          "termo": "number",
+          "importancia": 0.0333,
+          "n_docs": 13
+        },
+        {
+          "termo": "stakeholder",
+          "importancia": 0.0327,
+          "n_docs": 5
+        },
+        {
+          "termo": "various",
+          "importancia": 0.0272,
+          "n_docs": 40
+        },
+        {
+          "termo": "html",
+          "importancia": 0.0238,
+          "n_docs": 19
+        },
+        {
+          "termo": "worked",
+          "importancia": 0.0208,
+          "n_docs": 44
+        },
+        {
+          "termo": "operating",
+          "importancia": 0.0207,
+          "n_docs": 45
+        },
+        {
+          "termo": "requests",
+          "importancia": 0.0205,
+          "n_docs": 31
+        },
+        {
+          "termo": "software development",
+          "importancia": 0.02,
+          "n_docs": 19
+        },
+        {
+          "termo": "features",
+          "importancia": 0.0196,
+          "n_docs": 20
+        },
+        {
+          "termo": "modules",
+          "importancia": 0.0186,
+          "n_docs": 12
+        },
+        {
+          "termo": "bug",
+          "importancia": 0.0185,
+          "n_docs": 6
+        },
+        {
+          "termo": "reader",
+          "importancia": 0.0178,
+          "n_docs": 4
+        },
+        {
+          "termo": "work",
+          "importancia": 0.0174,
+          "n_docs": 72
+        },
+        {
+          "termo": "task",
+          "importancia": 0.0149,
+          "n_docs": 15
+        }
+      ]
+    },
+    "classe_adequado": {
+      "regressao_logistica": {
+        "termos_positivos": [
+          {
+            "termo": "net",
+            "peso": 0.3138,
+            "n_docs": 16
+          },
+          {
+            "termo": "application",
+            "peso": 0.1895,
+            "n_docs": 42
+          },
+          {
+            "termo": "framework",
+            "peso": 0.1829,
+            "n_docs": 14
+          },
+          {
+            "termo": "java",
+            "peso": 0.1678,
+            "n_docs": 15
+          },
+          {
+            "termo": "entity",
+            "peso": 0.1664,
+            "n_docs": 2
+          },
+          {
+            "termo": "controls",
+            "peso": 0.1626,
+            "n_docs": 10
+          },
+          {
+            "termo": "used",
+            "peso": 0.1622,
+            "n_docs": 38
+          },
+          {
+            "termo": "database",
+            "peso": 0.1566,
+            "n_docs": 55
+          },
+          {
+            "termo": "using",
+            "peso": 0.1538,
+            "n_docs": 48
+          },
+          {
+            "termo": "asp net",
+            "peso": 0.1433,
+            "n_docs": 8
+          },
+          {
+            "termo": "spring",
+            "peso": 0.1409,
+            "n_docs": 3
+          },
+          {
+            "termo": "asp",
+            "peso": 0.1365,
+            "n_docs": 8
+          },
+          {
+            "termo": "scrum",
+            "peso": 0.135,
+            "n_docs": 7
+          },
+          {
+            "termo": "javascript",
+            "peso": 0.1283,
+            "n_docs": 12
+          },
+          {
+            "termo": "web",
+            "peso": 0.1207,
+            "n_docs": 45
+          }
+        ],
+        "termos_negativos": [
+          {
+            "termo": "business",
+            "peso": -0.0569,
+            "n_docs": 74
+          },
+          {
+            "termo": "technology",
+            "peso": -0.055,
+            "n_docs": 70
+          },
+          {
+            "termo": "support",
+            "peso": -0.0531,
+            "n_docs": 81
+          },
+          {
+            "termo": "systems",
+            "peso": -0.0526,
+            "n_docs": 73
+          },
+          {
+            "termo": "information",
+            "peso": -0.0499,
+            "n_docs": 74
+          },
+          {
+            "termo": "network",
+            "peso": -0.0486,
+            "n_docs": 53
+          },
+          {
+            "termo": "management",
+            "peso": -0.0468,
+            "n_docs": 94
+          },
+          {
+            "termo": "customer",
+            "peso": -0.043,
+            "n_docs": 59
+          },
+          {
+            "termo": "company",
+            "peso": -0.0424,
+            "n_docs": 98
+          },
+          {
+            "termo": "office",
+            "peso": -0.0376,
+            "n_docs": 53
+          },
+          {
+            "termo": "state",
+            "peso": -0.0361,
+            "n_docs": 91
+          },
+          {
+            "termo": "city",
+            "peso": -0.0351,
+            "n_docs": 91
+          },
+          {
+            "termo": "marketing",
+            "peso": -0.0339,
+            "n_docs": 30
+          },
+          {
+            "termo": "information technology",
+            "peso": -0.0327,
+            "n_docs": 55
+          },
+          {
+            "termo": "city state",
+            "peso": -0.0318,
+            "n_docs": 88
+          }
+        ]
+      },
+      "svm_linear": {
+        "termos_positivos": [
+          {
+            "termo": "net",
+            "peso": 0.4172,
+            "n_docs": 16
+          },
+          {
+            "termo": "application",
+            "peso": 0.2383,
+            "n_docs": 42
+          },
+          {
+            "termo": "framework",
+            "peso": 0.2181,
+            "n_docs": 14
+          },
+          {
+            "termo": "entity",
+            "peso": 0.2113,
+            "n_docs": 2
+          },
+          {
+            "termo": "controls",
+            "peso": 0.2048,
+            "n_docs": 10
+          },
+          {
+            "termo": "used",
+            "peso": 0.2009,
+            "n_docs": 38
+          },
+          {
+            "termo": "asp",
+            "peso": 0.1999,
+            "n_docs": 8
+          },
+          {
+            "termo": "asp net",
+            "peso": 0.1999,
+            "n_docs": 8
+          },
+          {
+            "termo": "database",
+            "peso": 0.1947,
+            "n_docs": 55
+          },
+          {
+            "termo": "java",
+            "peso": 0.1865,
+            "n_docs": 15
+          },
+          {
+            "termo": "using",
+            "peso": 0.1835,
+            "n_docs": 48
+          },
+          {
+            "termo": "scrum",
+            "peso": 0.1608,
+            "n_docs": 7
+          },
+          {
+            "termo": "spring",
+            "peso": 0.1591,
+            "n_docs": 3
+          },
+          {
+            "termo": "javascript",
+            "peso": 0.1586,
+            "n_docs": 12
+          },
+          {
+            "termo": "web",
+            "peso": 0.1468,
+            "n_docs": 45
+          }
+        ],
+        "termos_negativos": [
+          {
+            "termo": "management",
+            "peso": -0.0598,
+            "n_docs": 94
+          },
+          {
+            "termo": "technology",
+            "peso": -0.0477,
+            "n_docs": 70
+          },
+          {
+            "termo": "company",
+            "peso": -0.0473,
+            "n_docs": 98
+          },
+          {
+            "termo": "business",
+            "peso": -0.0444,
+            "n_docs": 74
+          },
+          {
+            "termo": "customer",
+            "peso": -0.0405,
+            "n_docs": 59
+          },
+          {
+            "termo": "support",
+            "peso": -0.0405,
+            "n_docs": 81
+          },
+          {
+            "termo": "manager",
+            "peso": -0.0403,
+            "n_docs": 65
+          },
+          {
+            "termo": "systems",
+            "peso": -0.0401,
+            "n_docs": 73
+          },
+          {
+            "termo": "state",
+            "peso": -0.0398,
+            "n_docs": 91
+          },
+          {
+            "termo": "product",
+            "peso": -0.0376,
+            "n_docs": 41
+          },
+          {
+            "termo": "financial",
+            "peso": -0.0354,
+            "n_docs": 33
+          },
+          {
+            "termo": "care",
+            "peso": -0.0354,
+            "n_docs": 13
+          },
+          {
+            "termo": "information",
+            "peso": -0.0351,
+            "n_docs": 74
+          },
+          {
+            "termo": "requirements",
+            "peso": -0.0341,
+            "n_docs": 50
+          },
+          {
+            "termo": "office",
+            "peso": -0.0339,
+            "n_docs": 53
+          }
+        ]
+      },
+      "xgboost_top": [
+        {
+          "termo": "life",
+          "importancia": 0.0341,
+          "n_docs": 15
+        },
+        {
+          "termo": "number",
+          "importancia": 0.0333,
+          "n_docs": 13
+        },
+        {
+          "termo": "stakeholder",
+          "importancia": 0.0327,
+          "n_docs": 5
+        },
+        {
+          "termo": "various",
+          "importancia": 0.0272,
+          "n_docs": 40
+        },
+        {
+          "termo": "html",
+          "importancia": 0.0238,
+          "n_docs": 19
+        },
+        {
+          "termo": "worked",
+          "importancia": 0.0208,
+          "n_docs": 44
+        },
+        {
+          "termo": "operating",
+          "importancia": 0.0207,
+          "n_docs": 45
+        },
+        {
+          "termo": "requests",
+          "importancia": 0.0205,
+          "n_docs": 31
+        },
+        {
+          "termo": "software development",
+          "importancia": 0.02,
+          "n_docs": 19
+        },
+        {
+          "termo": "features",
+          "importancia": 0.0196,
+          "n_docs": 20
+        },
+        {
+          "termo": "modules",
+          "importancia": 0.0186,
+          "n_docs": 12
+        },
+        {
+          "termo": "bug",
+          "importancia": 0.0185,
+          "n_docs": 6
+        },
+        {
+          "termo": "reader",
+          "importancia": 0.0178,
+          "n_docs": 4
+        },
+        {
+          "termo": "work",
+          "importancia": 0.0174,
+          "n_docs": 72
+        },
+        {
+          "termo": "task",
+          "importancia": 0.0149,
+          "n_docs": 15
+        }
+      ]
+    },
     "tfidf_medio_por_classe": {
       "Adequado": [
         {
-          "termo": "the",
-          "tfidf_medio": 0.1985
-        },
-        {
-          "termo": "and",
-          "tfidf_medio": 0.1948
-        },
-        {
           "termo": "net",
           "tfidf_medio": 0.141
-        },
-        {
-          "termo": "to",
-          "tfidf_medio": 0.1407
-        },
-        {
-          "termo": "of",
-          "tfidf_medio": 0.1006
         },
         {
           "termo": "application",
           "tfidf_medio": 0.0926
         },
         {
-          "termo": "for",
-          "tfidf_medio": 0.0899
-        },
-        {
-          "termo": "like",
-          "tfidf_medio": 0.0815
-        },
-        {
           "termo": "database",
           "tfidf_medio": 0.081
-        },
-        {
-          "termo": "in",
-          "tfidf_medio": 0.0774
         },
         {
           "termo": "framework",
@@ -1628,37 +2708,37 @@
         {
           "termo": "entity",
           "tfidf_medio": 0.0704
+        },
+        {
+          "termo": "data",
+          "tfidf_medio": 0.0668
+        },
+        {
+          "termo": "java",
+          "tfidf_medio": 0.0668
+        },
+        {
+          "termo": "asp net",
+          "tfidf_medio": 0.0666
+        },
+        {
+          "termo": "asp",
+          "tfidf_medio": 0.0666
+        },
+        {
+          "termo": "project",
+          "tfidf_medio": 0.0626
+        },
+        {
+          "termo": "web",
+          "tfidf_medio": 0.0614
+        },
+        {
+          "termo": "scrum",
+          "tfidf_medio": 0.0561
         }
       ],
       "Inadequado": [
-        {
-          "termo": "and",
-          "tfidf_medio": 0.2793
-        },
-        {
-          "termo": "to",
-          "tfidf_medio": 0.1122
-        },
-        {
-          "termo": "of",
-          "tfidf_medio": 0.0936
-        },
-        {
-          "termo": "the",
-          "tfidf_medio": 0.0787
-        },
-        {
-          "termo": "for",
-          "tfidf_medio": 0.0591
-        },
-        {
-          "termo": "in",
-          "tfidf_medio": 0.0546
-        },
-        {
-          "termo": "with",
-          "tfidf_medio": 0.041
-        },
         {
           "termo": "management",
           "tfidf_medio": 0.0292
@@ -1688,35 +2768,39 @@
           "tfidf_medio": 0.0244
         },
         {
-          "termo": "on",
-          "tfidf_medio": 0.0244
+          "termo": "information",
+          "tfidf_medio": 0.0239
+        },
+        {
+          "termo": "systems",
+          "tfidf_medio": 0.0238
+        },
+        {
+          "termo": "support",
+          "tfidf_medio": 0.0227
+        },
+        {
+          "termo": "business",
+          "tfidf_medio": 0.0221
+        },
+        {
+          "termo": "sales",
+          "tfidf_medio": 0.0196
+        },
+        {
+          "termo": "customer",
+          "tfidf_medio": 0.0184
+        },
+        {
+          "termo": "software",
+          "tfidf_medio": 0.0182
+        },
+        {
+          "termo": "security",
+          "tfidf_medio": 0.0179
         }
       ],
       "Parcialmente Adequado": [
-        {
-          "termo": "and",
-          "tfidf_medio": 0.2563
-        },
-        {
-          "termo": "to",
-          "tfidf_medio": 0.1298
-        },
-        {
-          "termo": "the",
-          "tfidf_medio": 0.1174
-        },
-        {
-          "termo": "of",
-          "tfidf_medio": 0.0902
-        },
-        {
-          "termo": "for",
-          "tfidf_medio": 0.0671
-        },
-        {
-          "termo": "in",
-          "tfidf_medio": 0.0545
-        },
         {
           "termo": "project",
           "tfidf_medio": 0.0435
@@ -1724,10 +2808,6 @@
         {
           "termo": "business",
           "tfidf_medio": 0.0431
-        },
-        {
-          "termo": "with",
-          "tfidf_medio": 0.0419
         },
         {
           "termo": "information",
@@ -1750,12 +2830,39 @@
           "tfidf_medio": 0.0352
         },
         {
-          "termo": "system",
-          "tfidf_medio": 0.0351
+          "termo": "data",
+          "tfidf_medio": 0.0328
+        },
+        {
+          "termo": "sql",
+          "tfidf_medio": 0.0315
+        },
+        {
+          "termo": "support",
+          "tfidf_medio": 0.0296
+        },
+        {
+          "termo": "information technology",
+          "tfidf_medio": 0.0292
+        },
+        {
+          "termo": "ms",
+          "tfidf_medio": 0.027
+        },
+        {
+          "termo": "application",
+          "tfidf_medio": 0.0267
+        },
+        {
+          "termo": "company",
+          "tfidf_medio": 0.0246
+        },
+        {
+          "termo": "database",
+          "tfidf_medio": 0.0244
         }
       ]
-    },
-    "nota": "LR treinado no corpus piloto completo (n=20) — exploratorio."
+    }
   },
   "revisaoAmostra": {
     "n_automaticos": 80,
@@ -1861,5 +2968,326 @@
         "n_teste": 20
       }
     ]
-  }
+  },
+  "interpretabilidadeDensa": {
+    "nota_geral": "Nas representações densas cada dimensão é anônima: não há lista lexical equivalente ao TF-IDF. A importância do XGBoost abaixo é diagnóstica (quais índices do vetor o modelo usa), não explicação por termos.",
+    "sentence_transformers": {
+      "modelo": "BAAI/bge-large-en-v1.5",
+      "shape": [
+        100,
+        1024
+      ],
+      "xgboost_top_dimensoes": [
+        {
+          "dimensao": 729,
+          "importancia": 0.037084,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 310,
+          "importancia": 0.029597,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 424,
+          "importancia": 0.026799,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 150,
+          "importancia": 0.024054,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 888,
+          "importancia": 0.023859,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 50,
+          "importancia": 0.023716,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 263,
+          "importancia": 0.023651,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 593,
+          "importancia": 0.023381,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 0,
+          "importancia": 0.023356,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 904,
+          "importancia": 0.023035,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 456,
+          "importancia": 0.022715,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 326,
+          "importancia": 0.022287,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 779,
+          "importancia": 0.021706,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 558,
+          "importancia": 0.020801,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 971,
+          "importancia": 0.020509,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        }
+      ]
+    },
+    "llm_embeddings": {
+      "modelo": "Qwen/Qwen2.5-0.5B",
+      "protocolo": "ultimo hidden state, media dos tokens, 512 tokens, L2",
+      "shape": [
+        100,
+        896
+      ],
+      "xgboost_top_dimensoes": [
+        {
+          "dimensao": 599,
+          "importancia": 0.041881,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 722,
+          "importancia": 0.037265,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 375,
+          "importancia": 0.032398,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 49,
+          "importancia": 0.02582,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 8,
+          "importancia": 0.02554,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 269,
+          "importancia": 0.025331,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 532,
+          "importancia": 0.025083,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 273,
+          "importancia": 0.024461,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 459,
+          "importancia": 0.024096,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 53,
+          "importancia": 0.023629,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 451,
+          "importancia": 0.023133,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 336,
+          "importancia": 0.022763,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 24,
+          "importancia": 0.022605,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 726,
+          "importancia": 0.02249,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        },
+        {
+          "dimensao": 438,
+          "importancia": 0.02188,
+          "nota": "Índice do vetor denso; não corresponde a uma palavra."
+        }
+      ]
+    }
+  },
+  "custoClassificacao": {
+    "unidade_memoria_ajuste": "MiB: acréscimo máximo de RSS do processo Python durante o fit em cada fold (CV 5). Vetorização medida em memoria_vetorizacao.json (processos separados).",
+    "unidade_tempo": "segundos (soma dos 5 folds)",
+    "combinacoes": [
+      {
+        "id": "tfidf_lr",
+        "representacao_key": "tfidf",
+        "f1_macro_cv": 0.2879,
+        "tempo_treino_seg": 3.646,
+        "tempo_inferencia_seg": 0.482,
+        "memoria_rss_pico_mib": 177.67,
+        "memoria_rss_delta_mib": 15.16,
+        "tempo_treino_inferencia_seg_legado": 6.89
+      },
+      {
+        "id": "tfidf_svm",
+        "representacao_key": "tfidf",
+        "f1_macro_cv": 0.2879,
+        "tempo_treino_seg": 5.648,
+        "tempo_inferencia_seg": 0.661,
+        "memoria_rss_pico_mib": 178.21,
+        "memoria_rss_delta_mib": 5.402,
+        "tempo_treino_inferencia_seg_legado": 10.0
+      },
+      {
+        "id": "tfidf_xgb",
+        "representacao_key": "tfidf",
+        "f1_macro_cv": 0.5978,
+        "tempo_treino_seg": 14.221,
+        "tempo_inferencia_seg": 0.801,
+        "memoria_rss_pico_mib": 188.52,
+        "memoria_rss_delta_mib": 10.0,
+        "tempo_treino_inferencia_seg_legado": 23.734
+      },
+      {
+        "id": "st_lr",
+        "representacao_key": "st",
+        "f1_macro_cv": 0.2879,
+        "tempo_treino_seg": 0.105,
+        "tempo_inferencia_seg": 0.004,
+        "memoria_rss_pico_mib": 182.01,
+        "memoria_rss_delta_mib": 0.961,
+        "tempo_treino_inferencia_seg_legado": 0.231
+      },
+      {
+        "id": "st_svm",
+        "representacao_key": "st",
+        "f1_macro_cv": 0.2879,
+        "tempo_treino_seg": 0.088,
+        "tempo_inferencia_seg": 0.01,
+        "memoria_rss_pico_mib": 182.8,
+        "memoria_rss_delta_mib": 0.453,
+        "tempo_treino_inferencia_seg_legado": 0.168
+      },
+      {
+        "id": "st_xgb",
+        "representacao_key": "st",
+        "f1_macro_cv": 0.6099,
+        "tempo_treino_seg": 4.024,
+        "tempo_inferencia_seg": 0.036,
+        "memoria_rss_pico_mib": 191.2,
+        "memoria_rss_delta_mib": 4.668,
+        "tempo_treino_inferencia_seg_legado": 7.256
+      },
+      {
+        "id": "llm_lr",
+        "representacao_key": "llm",
+        "f1_macro_cv": 0.2879,
+        "tempo_treino_seg": 0.087,
+        "tempo_inferencia_seg": 0.004,
+        "memoria_rss_pico_mib": 191.2,
+        "memoria_rss_delta_mib": 0.0,
+        "tempo_treino_inferencia_seg_legado": 0.214
+      },
+      {
+        "id": "llm_svm",
+        "representacao_key": "llm",
+        "f1_macro_cv": 0.2879,
+        "tempo_treino_seg": 0.068,
+        "tempo_inferencia_seg": 0.008,
+        "memoria_rss_pico_mib": 191.71,
+        "memoria_rss_delta_mib": 0.562,
+        "tempo_treino_inferencia_seg_legado": 0.151
+      },
+      {
+        "id": "llm_xgb",
+        "representacao_key": "llm",
+        "f1_macro_cv": 0.571,
+        "tempo_treino_seg": 4.007,
+        "tempo_inferencia_seg": 0.04,
+        "memoria_rss_pico_mib": 192.29,
+        "memoria_rss_delta_mib": 0.426,
+        "tempo_treino_inferencia_seg_legado": 6.498
+      }
+    ]
+  },
+  "memoriaVetorizacao": {
+    "unidade_memoria": "MiB (RSS do processo Python, 1 MiB = 1024² bytes)",
+    "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo.",
+    "nota": "Cada representação foi medida em um processo novo, sem compartilhar RSS com BGE ou Qwen. O tempo inclui carga (densos), vaga, 100 currículos e cosseno.",
+    "tfidf": {
+      "representacao": "TF-IDF",
+      "metodo_ranking": "TF-IDF",
+      "modelo": "TfidfVectorizer(1-2, min_df=1, max_df=1.0, lowercase=True)",
+      "tempo_seg": 0.503,
+      "memoria_rss_inicial_mib": 150.12,
+      "memoria_rss_pico_mib": 167.01,
+      "memoria_rss_delta_mib": 16.895,
+      "n_documentos": 101,
+      "cache_conferido": null,
+      "cache_max_abs_diff": null,
+      "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo."
+    },
+    "sentence_transformers": {
+      "representacao": "Sentence-Transformers",
+      "metodo_ranking": "Sentence-Transformers",
+      "modelo": "BAAI/bge-large-en-v1.5",
+      "tempo_seg": 203.064,
+      "memoria_rss_inicial_mib": 441.71,
+      "memoria_rss_pico_mib": 1882.81,
+      "memoria_rss_delta_mib": 1441.094,
+      "shape_curriculos": [
+        100,
+        1024
+      ],
+      "cache_conferido": true,
+      "cache_max_abs_diff": 0.0,
+      "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo."
+    },
+    "llm_embeddings": {
+      "representacao": "LLM Embeddings",
+      "metodo_ranking": "LLM Embeddings",
+      "modelo": "Qwen/Qwen2.5-0.5B",
+      "protocolo_embedding": "ultimo hidden state, media dos tokens, 512 tokens, L2",
+      "device": "cpu",
+      "tempo_seg": 1810.7,
+      "memoria_rss_inicial_mib": 422.85,
+      "memoria_rss_pico_mib": 1548.52,
+      "memoria_rss_delta_mib": 1125.672,
+      "shape_curriculos": [
+        100,
+        896
+      ],
+      "cache_conferido": true,
+      "cache_max_abs_diff": 0.0,
+      "protocolo_medicao": "Processo Python novo: RSS inicial; carga do modelo (se denso); TfidfVectorizer ou encode da vaga + 100 currículos (truncamento 8000); similaridade de cosseno vaga × cada currículo."
+    }
+  },
+  "classificacao_nota": "A chave classificacao guarda experimentos preliminares (inclui llm_* com BGE base e F1 0,7568). Não usar no artigo; a interface lê classificacaoRigorosa e combinacoes9."
 }

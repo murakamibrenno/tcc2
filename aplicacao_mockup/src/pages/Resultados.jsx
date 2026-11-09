@@ -64,7 +64,42 @@ const rhoStLlm = correlacao.find(
   (c) => c.metodo_a === 'Sentence-Transformers' && c.metodo_b === 'LLM Embeddings',
 )
 
+const CLASSE_POR_INDICE = { 0: 'Adequado', 1: 'Inadequado', 2: 'Parcialmente Adequado', '0': 'Adequado', '1': 'Inadequado', '2': 'Parcialmente Adequado' }
+const custo = metricasReais.custoClassificacao
+const memVet = metricasReais.memoriaVetorizacao
+const interpTfidf = metricasReais.interpretabilidadeTfidf
+const interpDensa = metricasReais.interpretabilidadeDensa
+const combinacoes9 = metricasReais.combinacoes9 ?? []
+const relClass = metricasReais.relatorioClassificacao?.combinacoes ?? {}
+
+function mib(v) {
+  if (typeof v !== 'number') return '—'
+  return `${num(v, Math.abs(v) < 10 ? 2 : 1)} MiB`
+}
+
+function deltaVet(chave) {
+  const b = memVet?.[chave]
+  return typeof b?.memoria_rss_delta_mib === 'number' ? b.memoria_rss_delta_mib : null
+}
+
+const FRASE_PROTOCOLO_VET =
+  memVet?.protocolo_medicao ??
+  'Cada representação foi medida em processo Python separado: carga do modelo (nos densos), vaga de referência, 100 currículos (8.000 caracteres) e cosseno vaga × currículos.'
+
+function linhasPrecisaoRecall() {
+  return rigorosa.map((linha) => {
+    const report = relClass[linha.id]?.classification_report ?? {}
+    const classes = ['0', '2', '1'].map((k) => ({
+      nome: CLASSE_POR_INDICE[k],
+      precisao: report[k]?.precision,
+      recall: report[k]?.recall,
+    }))
+    return { id: linha.id, representacao: linha.representacao, classificador: linha.classificador, classes }
+  })
+}
+
 export default function Resultados() {
+  const prPorClasse = linhasPrecisaoRecall()
   return (
     <Box>
       <Box sx={{ mb: 3, maxWidth: 820 }}>
@@ -211,6 +246,71 @@ export default function Resultados() {
           </Table>
         </TableContainer>
 
+        {custo && (
+          <>
+            <Typography sx={{ fontFamily: "'Fraunces', serif", fontWeight: 600, mt: 3, mb: 0.75 }}>
+              Custo computacional
+            </Typography>
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5, lineHeight: 1.65, maxWidth: 820 }}>
+              Vetorização: {FRASE_PROTOCOLO_VET} Treino e inferência: soma das cinco partes da
+              validação cruzada. Na tabela de ajuste, a memória é o acréscimo de RSS durante o fit,
+              não o tamanho total do processo.
+            </Typography>
+            <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #E5E7EB', borderRadius: '12px', mb: 2 }}>
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    <CabecalhoMetrica id="representacao">Representação</CabecalhoMetrica>
+                    <CabecalhoMetrica id="tempo">Vetorização</CabecalhoMetrica>
+                    <CabecalhoMetrica id="memvet">Δ RSS vetorização</CabecalhoMetrica>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell sx={{ fontWeight: 700, color: COR['TF-IDF'] }}>TF-IDF</TableCell>
+                    <TableCell>{tempo(tfidf?.tempo_vetorizacao_seg)}</TableCell>
+                    <TableCell>{mib(deltaVet('tfidf'))}</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ fontWeight: 700, color: COR['Sentence-Transformers'] }}>Sentence-Transformers</TableCell>
+                    <TableCell>{tempo(st?.tempo_vetorizacao_seg)}</TableCell>
+                    <TableCell>{mib(deltaVet('sentence_transformers'))}</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell sx={{ fontWeight: 700, color: COR['LLM Embeddings'] }}>LLM Embeddings</TableCell>
+                    <TableCell>{tempo(llm?.tempo_vetorizacao_seg)}</TableCell>
+                    <TableCell>{mib(deltaVet('llm_embeddings'))}</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #E5E7EB', borderRadius: '12px', mb: 3 }}>
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    <CabecalhoMetrica id="representacao">Combinação</CabecalhoMetrica>
+                    <CabecalhoMetrica id="ttreino">Treino</CabecalhoMetrica>
+                    <CabecalhoMetrica id="tinfer">Inferência</CabecalhoMetrica>
+                    <CabecalhoMetrica id="memoriaAjuste">Δ RSS no ajuste</CabecalhoMetrica>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {combinacoes9.map((c) => (
+                    <TableRow key={c.id}>
+                      <TableCell sx={{ fontSize: '0.82rem', fontWeight: 600 }}>
+                        {c.labelCurto ?? `${c.representacao} · ${c.modelo}`}
+                      </TableCell>
+                      <TableCell>{typeof c.tempoTreinamento === 'number' ? `${num(c.tempoTreinamento, c.tempoTreinamento < 10 ? 2 : 1)} s` : '—'}</TableCell>
+                      <TableCell>{typeof c.tempoInferencia === 'number' ? `${num(c.tempoInferencia, 3)} s` : '—'}</TableCell>
+                      <TableCell>{mib(c.memoriaRssDeltaMib)}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </>
+        )}
+
         <Typography sx={{ fontFamily: "'Fraunces', serif", fontWeight: 600, mb: 1.25 }}>
           Cinco currículos, três filas
         </Typography>
@@ -260,10 +360,11 @@ export default function Resultados() {
         <Typography variant="body1" sx={{ lineHeight: 1.75, mb: 2 }}>
           O Sentence-Transformers é a melhor fila de leitura. O MAP de {num(st?.MAP)} significa
           que os três Adequados ocupam as três primeiras posições. O P@5 de {num(st?.['P@5'])} significa
-          que os cinco primeiros são, no mínimo, parciais. A vetorização dos 100 textos levou {tempo(st?.tempo_vetorizacao_seg)}.
+          que os cinco primeiros são, no mínimo, parciais. A vetorização, no mesmo roteiro
+          (vaga, 100 currículos, cosseno), levou {tempo(st?.tempo_vetorizacao_seg)} no Sentence-Transformers.
         </Typography>
         <Typography variant="body1" sx={{ lineHeight: 1.75, mb: 2 }}>
-          O TF-IDF responde em {tempo(tfidf?.tempo_vetorizacao_seg)} e é o único que mostra as palavras
+          O TF-IDF responde em {tempo(tfidf?.tempo_vetorizacao_seg)} nesse roteiro e é o único que mostra as palavras
           responsáveis pela nota. O custo dessa transparência está no Sales Manager, rótulo Inadequado,
           na {sales?.['pos_TF-IDF']}ª posição. O currículo de vendas compartilha vocabulário com a vaga
           sem ser um perfil de desenvolvimento. No Sentence-Transformers ele cai para a {sales?.['pos_Sentence-Transformers']}ª;
@@ -290,6 +391,76 @@ export default function Resultados() {
           Extrair um embedding de um LLM generativo, sem treino de recuperação, não entrega esse
           ganho: custa mais, comprime as notas e deixa Adequados fora das primeiras posições.
         </Typography>
+      </Section>
+
+      <Section kicker="Interpretabilidade" titulo="O que dá para ler no vetor">
+        <Typography variant="body1" sx={{ lineHeight: 1.75, mb: 1.5, fontWeight: 600, color: '#92400E' }}>
+          {interpTfidf?.aviso_leitura_tela ??
+            'Modelos lidos uma vez nos 100 currículos; não são o da validação cruzada de 5 partes; com 3 Adequados a lista é instável e não prova o motivo do F1.'}
+        </Typography>
+        <Typography variant="body1" sx={{ lineHeight: 1.75, mb: 2 }}>
+          No TF-IDF cada dimensão é um termo do vocabulário: os coeficientes da regressão logística
+          e da SVM linear sugerem o que empurra ou afasta da classe Adequado nas listas abaixo
+          (com filtro de stopwords e termos raros só na exibição). O XGBoost traz importância sem
+          sinal. Nos embeddings densos não há lista lexical.
+        </Typography>
+        {interpTfidf?.classe_adequado && (
+          <Grid container spacing={2} sx={{ mb: 2 }}>
+            <Grid item xs={12} md={6}>
+              <Paper elevation={0} sx={{ p: 2, borderRadius: '12px', border: `1px solid ${COR['TF-IDF']}44` }}>
+                <Typography sx={{ fontWeight: 700, color: COR['TF-IDF'], mb: 1 }}>TF-IDF · Regressão logística (Adequado)</Typography>
+                <ListaTermos titulo="Termos que favorecem" itens={interpTfidf.classe_adequado.regressao_logistica?.termos_positivos} campo="peso" />
+                <ListaTermos titulo="Termos que afastam" itens={interpTfidf.classe_adequado.regressao_logistica?.termos_negativos} campo="peso" negativo />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Paper elevation={0} sx={{ p: 2, borderRadius: '12px', border: `1px solid ${COR['TF-IDF']}44` }}>
+                <Typography sx={{ fontWeight: 700, color: COR['TF-IDF'], mb: 1 }}>TF-IDF · SVM linear (Adequado)</Typography>
+                <ListaTermos titulo="Termos que favorecem" itens={interpTfidf.classe_adequado.svm_linear?.termos_positivos} campo="peso" />
+                <ListaTermos titulo="Termos que afastam" itens={interpTfidf.classe_adequado.svm_linear?.termos_negativos} campo="peso" negativo />
+              </Paper>
+            </Grid>
+            <Grid item xs={12}>
+              <Paper elevation={0} sx={{ p: 2, borderRadius: '12px', border: '1px solid #E5E7EB' }}>
+                <Typography sx={{ fontWeight: 700, mb: 1 }}>TF-IDF · XGBoost (importância global)</Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                  {interpTfidf.xgboost_importancia_global?.nota}
+                </Typography>
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75 }}>
+                  {(interpTfidf.classe_adequado.xgboost_top ?? []).slice(0, 12).map((t) => (
+                    <Chip key={t.termo} size="small" label={`${t.termo} (${num(t.importancia, 4)})`} sx={{ fontSize: '0.72rem' }} />
+                  ))}
+                </Box>
+              </Paper>
+            </Grid>
+          </Grid>
+        )}
+        {interpDensa && (
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <Paper elevation={0} sx={{ p: 2, borderRadius: '12px', border: `1px solid ${COR['Sentence-Transformers']}44` }}>
+                <Typography sx={{ fontWeight: 700, color: COR['Sentence-Transformers'], mb: 1 }}>
+                  Sentence-Transformers ({interpDensa.sentence_transformers?.shape?.[1] ?? 1024} dimensões)
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.65 }}>
+                  {interpDensa.nota_geral} A leitura comparativa usa a posição na fila, não os
+                  coeficientes do classificador.
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Paper elevation={0} sx={{ p: 2, borderRadius: '12px', border: `1px solid ${COR['LLM Embeddings']}44` }}>
+                <Typography sx={{ fontWeight: 700, color: COR['LLM Embeddings'], mb: 1 }}>
+                  Qwen ({interpDensa.llm_embeddings?.shape?.[1] ?? 896} dimensões)
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.65 }}>
+                  Cada dimensão é anônima: não há termos correspondentes. A leitura comparativa é a
+                  posição na fila (por exemplo o Sales Manager na {sales?.['pos_LLM Embeddings']}ª posição).
+                </Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+        )}
       </Section>
 
       <Section
@@ -321,6 +492,52 @@ export default function Resultados() {
             </Grid>
           ))}
         </Grid>
+        {prPorClasse.length > 0 && (
+          <>
+            <Typography variant="body1" sx={{ lineHeight: 1.75, mb: 1 }}>
+              A tabela abaixo repete a precisão e o recall por classe do relatório da validação cruzada
+              de 5 partes. Os índices internos 0, 1 e 2 correspondem a Adequado, Inadequado e
+              Parcialmente Adequado (ordem alfabética do codificador).
+            </Typography>
+            <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #E5E7EB', borderRadius: '12px', mb: 2, overflowX: 'auto' }}>
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    <CabecalhoMetrica id="representacao">Representação</CabecalhoMetrica>
+                    <CabecalhoMetrica id="modelo">Classificador</CabecalhoMetrica>
+                    {['Adequado', 'Parcialmente Adequado', 'Inadequado'].map((nome) => (
+                      <TableCell key={nome} align="center" colSpan={2} sx={{ fontWeight: 700, fontSize: '0.75rem', color: COR[nome] ?? 'text.primary' }}>
+                        {nome}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                  <TableRow>
+                    <TableCell />
+                    <TableCell />
+                    {['Adequado', 'Parcialmente Adequado', 'Inadequado'].flatMap((nome) => [
+                      <TableCell key={`${nome}-p`} align="center" sx={{ fontSize: '0.7rem', fontWeight: 600 }}>P</TableCell>,
+                      <TableCell key={`${nome}-r`} align="center" sx={{ fontSize: '0.7rem', fontWeight: 600 }}>R</TableCell>,
+                    ])}
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {prPorClasse.map((linha) => (
+                    <TableRow key={linha.id}>
+                      <TableCell sx={{ fontSize: '0.8rem', fontWeight: 600, color: COR[linha.representacao] }}>{linha.representacao}</TableCell>
+                      <TableCell sx={{ fontSize: '0.78rem' }}>{linha.classificador}</TableCell>
+                      {linha.classes.map((c) => (
+                        <React.Fragment key={`${linha.id}-${c.nome}`}>
+                          <TableCell align="center">{num(c.precisao)}</TableCell>
+                          <TableCell align="center">{num(c.recall)}</TableCell>
+                        </React.Fragment>
+                      ))}
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </>
+        )}
         {holdout && (
           <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.7 }}>
             Numa medida em separado, o classificador aprende em {holdout.n_treino} currículos e é avaliado
@@ -375,6 +592,29 @@ function Section({ kicker, titulo, children }) {
         {titulo}
       </Typography>
       {children}
+    </Box>
+  )
+}
+
+function ListaTermos({ titulo, itens, campo, negativo = false }) {
+  if (!itens?.length) return null
+  return (
+    <Box sx={{ mb: 1.25 }}>
+      <Typography variant="body2" sx={{ fontWeight: 700, mb: 0.5, fontSize: '0.78rem' }}>{titulo}</Typography>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+        {itens.slice(0, 10).map((t) => (
+          <Chip
+            key={t.termo}
+            size="small"
+            label={`${t.termo} (${num(t[campo], 3)})`}
+            sx={{
+              fontSize: '0.68rem',
+              bgcolor: negativo ? '#FEE2E2' : '#D1FAE5',
+              color: negativo ? '#991B1B' : '#065F46',
+            }}
+          />
+        ))}
+      </Box>
     </Box>
   )
 }

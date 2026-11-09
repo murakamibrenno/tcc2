@@ -1,0 +1,96 @@
+{
+  "unidade_memoria_ajuste": "MiB: acréscimo máximo de RSS do processo Python durante o fit em cada fold (CV 5). Vetorização medida em memoria_vetorizacao.json (processos separados).",
+  "unidade_tempo": "segundos (soma dos 5 folds)",
+  "combinacoes": [
+    {
+      "id": "tfidf_lr",
+      "representacao_key": "tfidf",
+      "f1_macro_cv": 0.2879,
+      "tempo_treino_seg": 3.646,
+      "tempo_inferencia_seg": 0.482,
+      "memoria_rss_pico_mib": 177.67,
+      "memoria_rss_delta_mib": 15.16,
+      "tempo_treino_inferencia_seg_legado": 6.89
+    },
+    {
+      "id": "tfidf_svm",
+      "representacao_key": "tfidf",
+      "f1_macro_cv": 0.2879,
+      "tempo_treino_seg": 5.648,
+      "tempo_inferencia_seg": 0.661,
+      "memoria_rss_pico_mib": 178.21,
+      "memoria_rss_delta_mib": 5.402,
+      "tempo_treino_inferencia_seg_legado": 10.0
+    },
+    {
+      "id": "tfidf_xgb",
+      "representacao_key": "tfidf",
+      "f1_macro_cv": 0.5978,
+      "tempo_treino_seg": 14.221,
+      "tempo_inferencia_seg": 0.801,
+      "memoria_rss_pico_mib": 188.52,
+      "memoria_rss_delta_mib": 10.0,
+      "tempo_treino_inferencia_seg_legado": 23.734
+    },
+    {
+      "id": "st_lr",
+      "representacao_key": "st",
+      "f1_macro_cv": 0.2879,
+      "tempo_treino_seg": 0.105,
+      "tempo_inferencia_seg": 0.004,
+      "memoria_rss_pico_mib": 182.01,
+      "memoria_rss_delta_mib": 0.961,
+      "tempo_treino_inferencia_seg_legado": 0.231
+    },
+    {
+      "id": "st_svm",
+      "representacao_key": "st",
+      "f1_macro_cv": 0.2879,
+      "tempo_treino_seg": 0.088,
+      "tempo_inferencia_seg": 0.01,
+      "memoria_rss_pico_mib": 182.8,
+      "memoria_rss_delta_mib": 0.453,
+      "tempo_treino_inferencia_seg_legado": 0.168
+    },
+    {
+      "id": "st_xgb",
+      "representacao_key": "st",
+      "f1_macro_cv": 0.6099,
+      "tempo_treino_seg": 4.024,
+      "tempo_inferencia_seg": 0.036,
+      "memoria_rss_pico_mib": 191.2,
+      "memoria_rss_delta_mib": 4.668,
+      "tempo_treino_inferencia_seg_legado": 7.256
+    },
+    {
+      "id": "llm_lr",
+      "representacao_key": "llm",
+      "f1_macro_cv": 0.2879,
+      "tempo_treino_seg": 0.087,
+      "tempo_inferencia_seg": 0.004,
+      "memoria_rss_pico_mib": 191.2,
+      "memoria_rss_delta_mib": 0.0,
+      "tempo_treino_inferencia_seg_legado": 0.214
+    },
+    {
+      "id": "llm_svm",
+      "representacao_key": "llm",
+      "f1_macro_cv": 0.2879,
+      "tempo_treino_seg": 0.068,
+      "tempo_inferencia_seg": 0.008,
+      "memoria_rss_pico_mib": 191.71,
+      "memoria_rss_delta_mib": 0.562,
+      "tempo_treino_inferencia_seg_legado": 0.151
+    },
+    {
+      "id": "llm_xgb",
+      "representacao_key": "llm",
+      "f1_macro_cv": 0.571,
+      "tempo_treino_seg": 4.007,
+      "tempo_inferencia_seg": 0.04,
+      "memoria_rss_pico_mib": 192.29,
+      "memoria_rss_delta_mib": 0.426,
+      "tempo_treino_inferencia_seg_legado": 6.498
+    }
+  ]
+}
