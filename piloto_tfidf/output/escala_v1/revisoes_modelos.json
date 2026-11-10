@@ -1,0 +1,10 @@
+{
+  "bge": {
+    "modelo": "BAAI/bge-large-en-v1.5",
+    "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09"
+  },
+  "qwen": {
+    "modelo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  }
+}
