@@ -1,5 +1,7 @@
 # Validação da parte prática do TCC2
 
+Atualização vigente: o autor autorizou a IA a anotar os 100 casos reservados, com auditoria humana limitada de cinco casos ainda pendente. Foram anotados 4 Adequados, 38 Parciais e 58 Inadequados; três versões relacionadas ao desenvolvimento ficaram fora da avaliação principal, com 97 elegíveis. Isso não constitui teste humano independente. [Método, evidências e limitações](piloto_tfidf/validation/REVISAO_TESTE_IA_E_AUDITORIA.md). Os estados anteriores abaixo são históricos.
+
 Estado vigente: [revisão dos 201 novos casos e repetição dos experimentos](piloto_tfidf/output/desenvolvimento_v2/README.md). A coleção utilizável já passou pelas três representações; o desenvolvimento tem 294 casos, seis dúvidas excluídas e 18 avaliações exploratórias (nove combinações em duas condições). Teste humano de 100 casos, adjudicação das dúvidas, ranking julgado e integração final continuam pendentes. Os diagnósticos abaixo são históricos.
 
 Atualização aprovada em 10/11/2026: execução na coleção de 2.484 documentos e qualidade em subconjunto revisado independente, preservando o desenho comparativo do artigo. O detalhamento vigente está em PLANEJAMENTO_TCC2_ESCALA_E_QUALIDADE.md. O diagnóstico abaixo permanece como histórico; não representa resultados novos.

@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "data": "2026-11-10",
+  "grupo_corrigido": "grupo_historico_nexio_28762662",
+  "ids": [
+    "28762662",
+    "11981094",
+    "28078163",
+    "31677347",
+    "64468610"
+  ],
+  "motivo": "Projetos Nexio/Hercules, equipes em Naperville/Beijing e períodos profissionais substancialmente coincidentes; relação documental conservadora, sem afirmar identidade pessoal.",
+  "decisao": "Manter o desenvolvimento congelado e excluir 11981094, 28078163 e 31677347 da avaliação principal da coorte reservada. Nenhuma alteração de rótulo ou retreinamento decorreu dessa correção.",
+  "momento": "Antes de consultar predições dos classificadores na coorte reservada.",
+  "limite": "A triagem original por Jaccard de palavras >=0.90 não capturou todo o componente. A revisão contextual complementa a triagem; não garante ausência de outras versões.",
+  "registros": [
+    {
+      "id": "28762662",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/28762662.txt",
+      "sha256_texto_utf8_lf": "b093bd2e4c3fd726bb3e09f6f27ae7abf8e04c7b08e0a9553dd203804a4ab3eb",
+      "evidencias_contextuais": [
+        " REST API and URI specification document for Hercules web service. Reuse Innovation\" award at Harris Corporation for reuse of the core IP from NLE produc",
+        "use of the core IP from NLE product suite in Nexio server product suite. The editing IP reuse contributed to the Server business unit turnaround. Cons",
+        "ed team of 6 from Northridge, team of 8 from Naperville, and team of 8 (indirect report) from Beijing. Scrum development methods since 2014, team of 3 to 6"
+      ],
+      "papel_original": "desenvolvimento_novo_sem_rotulo"
+    },
+    {
+      "id": "11981094",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/11981094.txt",
+      "sha256_texto_utf8_lf": "4cd24bf5ed57cb3f3666cff37ddabb8e6a10fb7e6474e59f3c22920fc971f2e3",
+      "evidencias_contextuais": [
+        "REST API, and URI specification document for Hercules web service, and 10 JSON protocol API documents for 3rd party and in-house use. Selected hands-on p",
+        "cumentation. BCD spinoff as Imagine in 2013) Nexio video servers and applications run in various nodes of Nexio LAN to facilitate collaborative video ",
+        " Led team of 22 developers from Burbank (6), Naperville (8), and Beijing (8 indirect), introduced peer reviews, repurposed components, and all 3 teams coll"
+      ],
+      "papel_original": "teste_humano_reservado"
+    },
+    {
+      "id": "28078163",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/28078163.txt",
+      "sha256_texto_utf8_lf": "22a769f9855d79b14807fe3c6d09bfffa067363a08550ab63a50e10104240ec8",
+      "evidencias_contextuais": [
+        "ces, and selected hands-on projects include: Hercules web service for web player solution based off MPEG-DASH Created C++ engine to process URI, handle s",
+        "cumentation. BCD spinoff as Imagine in 2013) Nexio video servers and applications facilitate collaborative workflow in Nexio LAN with video servers, s",
+        ". Led team of 6 from Burbank, team of 8 from Naperville, and team of 8 (indirect report) from Beijing. Introduced peer reviews, repurposed components, and "
+      ],
+      "papel_original": "teste_humano_reservado"
+    },
+    {
+      "id": "31677347",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/31677347.txt",
+      "sha256_texto_utf8_lf": "70816cd1d1406e9b24da0cf9bb3cabd63337c397a16ebbf3af92b2723a568a50",
+      "evidencias_contextuais": [
+        "ces, and selected hands-on projects include: Hercules web service for web player solution based off MPEG-DASH Created C++ engine to process URI, handle s",
+        "cumentation. BCD spinoff as Imagine in 2013) Nexio video servers and applications facilitate collaborative workflow in Nexio LAN with video servers, s",
+        "ed team of 6 from Northridge, team of 8 from Naperville, and team of 8 (indirect report) from Beijing. Adopted Scrum since 2014, ScrumMaster, team of 3 to "
+      ],
+      "papel_original": "teste_humano_reservado"
+    },
+    {
+      "id": "64468610",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/64468610.txt",
+      "sha256_texto_utf8_lf": "c2519206342e8eb9840439c60fafedfcc830c0325c14007429a106bf76c6bbbd",
+      "evidencias_contextuais": [
+        "ces, and selected hands-on projects include: Hercules web service for web player solution based off MPEG-DASH Created C++ engine to process URI, handle s",
+        "cumentation. BCD spinoff as Imagine in 2013) Nexio video servers and applications facilitate collaborative workflow in Nexio LAN with video servers, s",
+        ". Led team of 6 from Burbank, team of 8 from Naperville, and team of 8 (indirect report) from Beijing. Introduced peer reviews, repurposed components, and "
+      ],
+      "papel_original": "fora_subconjunto"
+    }
+  ]
+}

@@ -1,0 +1,3737 @@
+{
+  "schema": 1,
+  "versao": "revisao_teste_ia_100_v1",
+  "data": "2026-11-10",
+  "origem_selecao": "validacao_ampliada_v1; IDs preservados, elegibilidade corrigida com evidência documental.",
+  "sha256_selecao_original": "a6d8f93a8a1fb593b26db542616ff8bc7d6ea320f2835a6a41e53f326b913ebc",
+  "metodo": "Anotação da IA com busca no texto integral, análise contextual de trechos e leitura ampliada de casos técnicos/ambíguos. Não equivale a leitura humana integral nem a anotação independente dos rótulos de desenvolvimento. Sem consulta a previsões dos classificadores nesta coorte antes do congelamento das decisões.",
+  "limitacao": "A mesma IA participou da anotação do desenvolvimento e da coorte reservada. Métricas futuras só medem concordância exploratória com esta referência. Auditoria humana pequena, intencional e com sugestões visíveis não é teste humano independente nem permite extrapolar taxa de concordância.",
+  "n_anotados": 100,
+  "n_elegiveis_avaliacao_principal": 97,
+  "n_excluidos_relacao_com_desenvolvimento": 3,
+  "n_auditados_pelo_autor": 0,
+  "distribuicao_todos": {
+    "Inadequado": 58,
+    "Parcialmente Adequado": 38,
+    "Adequado": 4
+  },
+  "distribuicao_elegiveis": {
+    "Inadequado": 58,
+    "Parcialmente Adequado": 35,
+    "Adequado": 4
+  },
+  "auditoria_planejada": {
+    "n": 5,
+    "ids": [
+      "23464505",
+      "10624813",
+      "62994611",
+      "47603843",
+      "18297650"
+    ],
+    "selecao": "Intencional para cobrir dois adequados de senioridades distintas, dois parciais e um falso positivo lexical de recrutamento, sem consultar erros dos modelos. Não é amostra aleatória representativa.",
+    "estado": "aguarda_conferencia_do_autor",
+    "sugestoes_ia_visiveis": true,
+    "independente": false
+  },
+  "registros": [
+    {
+      "id": "15289348",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Oracle InfoLease é aplicação financeira; API descreve processo de contas a pagar. Não comprovam SQL ou serviço de software.",
+      "grupo_documental_original": "grupo_15289348",
+      "grupo_documental_corrigido": "grupo_15289348",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/accountant/15289348.txt",
+      "sha256_texto_utf8_lf": "2132a7dd89cde2ce74c3e550556913273b272bd7ce86b5cea93b8fd37d74914b",
+      "caracteres_texto_integral": 8602
+    },
+    {
+      "id": "15821633",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_15821633",
+      "grupo_documental_corrigido": "grupo_15821633",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/accountant/15821633.txt",
+      "sha256_texto_utf8_lf": "af4cc1a67863383f6ee0c64e9537582c77dcb7e72d1bff44de5f39978694f4c7",
+      "caracteres_texto_integral": 6439
+    },
+    {
+      "id": "21338490",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_21338490",
+      "grupo_documental_corrigido": "grupo_21338490",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/accountant/21338490.txt",
+      "sha256_texto_utf8_lf": "059266c64991c36d51fba9ea00bca64f03a4db1c93a9ec7aaf4121c9561d687e",
+      "caracteres_texto_integral": 5051
+    },
+    {
+      "id": "23246831",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_23246831",
+      "grupo_documental_corrigido": "grupo_23246831",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/accountant/23246831.txt",
+      "sha256_texto_utf8_lf": "791bcfd48ce8c55881c977da8cf76040b3d95250e89002ef22ac82f285e8d4cb",
+      "caracteres_texto_integral": 5594
+    },
+    {
+      "id": "24703009",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_24703009",
+      "grupo_documental_corrigido": "grupo_24703009",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/accountant/24703009.txt",
+      "sha256_texto_utf8_lf": "4f556fe64072e9aabce297ad90e816710b2069b1fd2cf63fc586422816035356",
+      "caracteres_texto_integral": 5966
+    },
+    {
+      "id": "15958967",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_15958967",
+      "grupo_documental_corrigido": "grupo_15958967",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/advocate/15958967.txt",
+      "sha256_texto_utf8_lf": "60122cf26ba6ff0c18a72f50245e781d4c9559a808ed8a8ea203cce14c906e96",
+      "caracteres_texto_integral": 7377
+    },
+    {
+      "id": "11813872",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Oracle Exadata, Amazon Redshift, SQL,Python,Java"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "ortfolio and investment management Deep expertise in Oracle Exadata, Amazon Redshift, SQL,Python,Java,Apache Ignite, AWS and related technologies. Basic Experience in Data Science related technologies e.g. Pandas, Matplotlib etc. Agile developmen"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_11813872",
+      "grupo_documental_corrigido": "grupo_11813872",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/agriculture/11813872.txt",
+      "sha256_texto_utf8_lf": "143a9227055580b662f6a5afe8b9b13df3e2aca1937db4dfeb6207686927388c",
+      "caracteres_texto_integral": 8648
+    },
+    {
+      "id": "15546686",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_15546686",
+      "grupo_documental_corrigido": "grupo_15546686",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/agriculture/15546686.txt",
+      "sha256_texto_utf8_lf": "338c3e9187868e78e7d2e432560d453db7faeba27387f2af829f3aa3c21e2f2d",
+      "caracteres_texto_integral": 3458
+    },
+    {
+      "id": "62994611",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "SQL, 5 years of experience"
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "Integration of marketplace APIs."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "design an Internal Marketing System using c#,SQL"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "3 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_62994611",
+      "grupo_documental_corrigido": "grupo_62994611",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/agriculture/62994611.txt",
+      "sha256_texto_utf8_lf": "8132acbdad200fb1dce5a491e231347786e91e883dd26ef167c0246cdbb383d3",
+      "caracteres_texto_integral": 7987
+    },
+    {
+      "id": "10876132",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_10876132",
+      "grupo_documental_corrigido": "grupo_10876132",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/apparel/10876132.txt",
+      "sha256_texto_utf8_lf": "4a9c34ab14d2e60c324bd55a734b9627c2fef4ea9ba3b3afdbbf8e5ca3e2a8d5",
+      "caracteres_texto_integral": 5501
+    },
+    {
+      "id": "15746146",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_15746146",
+      "grupo_documental_corrigido": "grupo_15746146",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/apparel/15746146.txt",
+      "sha256_texto_utf8_lf": "bb4014f695bd7525725b1c91da5c8129d8030544d675be828c02faafe54e62fb",
+      "caracteres_texto_integral": 4829
+    },
+    {
+      "id": "21867728",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "API data imports"
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "API data imports é integração técnica explícita; Oracle Sales/Marketing Cloud não comprova SQL e não há programação confirmada.",
+      "grupo_documental_original": "grupo_21867728",
+      "grupo_documental_corrigido": "grupo_21867728",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/arts/21867728.txt",
+      "sha256_texto_utf8_lf": "bf1efbe21f7dfb31547be82b0f8926e30b526599954e1e4e7c371531747e7339",
+      "caracteres_texto_integral": 6152
+    },
+    {
+      "id": "28629430",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Illustrator & Photoshop; Dreamweaver Microsoft Office: Excel, Word, Access & PowerPoint; MySQL, Citrix, Retrieve, HTML, Dynamic HTML Photography, Illustration, oil and acrylic painting, drawing & mural work, tile working Furniture restoration a"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Basic knowledge of JavaScript and Eclipse"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_28629430",
+      "grupo_documental_corrigido": "grupo_28629430",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/arts/28629430.txt",
+      "sha256_texto_utf8_lf": "e07a5563e6ef373ac6aab0694c8054abbacf8ea11f29a581f9867f127c6ede54",
+      "caracteres_texto_integral": 7368
+    },
+    {
+      "id": "37472265",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_37472265",
+      "grupo_documental_corrigido": "grupo_37472265",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/arts/37472265.txt",
+      "sha256_texto_utf8_lf": "71176ee160d4716be7b10a83a572e1694355a967482b3ab057c2941cd2cb8fa0",
+      "caracteres_texto_integral": 5366
+    },
+    {
+      "id": "79432080",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Programming refere-se a programação televisiva.",
+      "grupo_documental_original": "grupo_79432080",
+      "grupo_documental_corrigido": "grupo_79432080",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/arts/79432080.txt",
+      "sha256_texto_utf8_lf": "abac954a02c696edbe47d3af012a37c6d31bfae72428d5660f2efbfd9c5b9741",
+      "caracteres_texto_integral": 7187
+    },
+    {
+      "id": "11797122",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_11797122",
+      "grupo_documental_corrigido": "grupo_11797122",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/automobile/11797122.txt",
+      "sha256_texto_utf8_lf": "dc96f933d5c4a6c49ee415c52950f550784c06ed199507f515df98485d8006d4",
+      "caracteres_texto_integral": 7548
+    },
+    {
+      "id": "22946204",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Python (3+ yrs), Java (3+ yrs), MATLAB (Simulink) (5+ yrs), R (2 yrs), Processing (2yrs), SQL(4+ yrs), PLC(2 yrs) Doc. Editing: Word/PPT/Excel, Pages/Numbers/Keynote, LATEX Mechanical Design: AutoCAD (6 yrs), Solidworks (5+ yrs) Mechanical Ski"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "--- PAGE 1 --- Highlights Prog. Languages: C (5+ yrs), Python (3+ yrs), Java (3+ yrs), MATLAB (Simulink) (5+ yrs), R (2 yrs), Processing (2yrs), SQL(4+ yrs), PLC(2 yrs) Doc. Editing: Word/PPT/Excel, Pages/Number"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_22946204",
+      "grupo_documental_corrigido": "grupo_22946204",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/automobile/22946204.txt",
+      "sha256_texto_utf8_lf": "62276f7f0ac83616276b23fe3395ae04a5aed8b70a5378450f0fc6dd5dead601",
+      "caracteres_texto_integral": 5592
+    },
+    {
+      "id": "10945968",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Rest é expressão geográfica; gestão de equipe Java não demonstra, por si, programação própria.",
+      "grupo_documental_original": "grupo_10945968",
+      "grupo_documental_corrigido": "grupo_10945968",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/aviation/10945968.txt",
+      "sha256_texto_utf8_lf": "7089080b0bd0a35c42fe96b3742ebc6e2a69b6abd844936256e4db4248b51fe7",
+      "caracteres_texto_integral": 4836
+    },
+    {
+      "id": "22232367",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Maintenance Program. Regularly prepared highly detailed data summaries and reports using SQL ad hocs, spreadsheet, graphical, narrative, and oral presentations. Increased analytical focus on vital source documents led to a 50% decrease in com"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Python"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_22232367",
+      "grupo_documental_corrigido": "grupo_22232367",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/aviation/22232367.txt",
+      "sha256_texto_utf8_lf": "713a939f5130b64e4a029572125e8e8c4ecf3101a90a6fac5d01d81cb5f80f45",
+      "caracteres_texto_integral": 6471
+    },
+    {
+      "id": "23464505",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Design patterns, SQL, Pl/SQL"
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "Consuming and producing SOAP and Restful web services"
+        },
+        "git": {
+          "atende": true,
+          "evidencia": "tomcat, JBOSS, Git"
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Designing and implementing Leave Management System"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": true,
+      "justificativa": "Quatro requisitos e desenvolvimento de aplicações demonstrados.",
+      "grupo_documental_original": "grupo_23464505",
+      "grupo_documental_corrigido": "grupo_23464505",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/aviation/23464505.txt",
+      "sha256_texto_utf8_lf": "eecb683b070eaaaa751dfbcf80413fc1776c612691c292e59f89dee82c85711b",
+      "caracteres_texto_integral": 3187
+    },
+    {
+      "id": "17823436",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "BUSINESS ANALYST SR. TECHNICAL BUSINESS ANALYST Highlights C, C++, core java Back Ends : Oracle 9i, 10g, 11gRII,MS SQL Server-2005,IBM DB2 Computer Tech. : UML Web Designing : HTML, XML Operating Systems : Windows 9X/XP/2000/2003 Server, Linux R"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "--- PAGE 1 --- BUSINESS ANALYST SR. TECHNICAL BUSINESS ANALYST Highlights C, C++, core java Back Ends : Oracle 9i, 10g, 11gRII,MS SQL Server-2005,IBM DB2 Computer Tech. : UML Web Designing : HTML, XML Operating Systems : Windows 9"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_17823436",
+      "grupo_documental_corrigido": "grupo_17823436",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/banking/17823436.txt",
+      "sha256_texto_utf8_lf": "f0667f9b75e3debb44aa8c1b6e71c444ec41de172333fc188dff78ed0e8763c0",
+      "caracteres_texto_integral": 7712
+    },
+    {
+      "id": "18369400",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_18369400",
+      "grupo_documental_corrigido": "grupo_18369400",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/banking/18369400.txt",
+      "sha256_texto_utf8_lf": "d607c21ba521704731e4c16ab6b4711d272ca587174a9460a9b95c9f46574f14",
+      "caracteres_texto_integral": 4616
+    },
+    {
+      "id": "34953092",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "communicate clearly and effectively. Skills Programming Language: C/C++, Python, MATLAB, SQL, R, LUA, VBA Machine Learning: Supervised Learning, Unsupervised Learning, Deep Neural Networks Finance: Corporate Banking, Financial Forecasting, Fi"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "ERN Objective Dynamic and self-motivated Financial Data Analyst with diverse expertise in programming, mathematics and finance. Has extensive experience of assisting in the development and upgrading of database systems and analytical techniques. A qui"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_34953092",
+      "grupo_documental_corrigido": "grupo_34953092",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/banking/34953092.txt",
+      "sha256_texto_utf8_lf": "6eaf7b4c256aeebe984dfe72cc06e5693b5c3c2b6e09fe5dafa5453a23807a4f",
+      "caracteres_texto_integral": 2950
+    },
+    {
+      "id": "36302399",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_36302399",
+      "grupo_documental_corrigido": "grupo_36302399",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/banking/36302399.txt",
+      "sha256_texto_utf8_lf": "22cec63093e33ee765b18ddedfe0f3b9ac17bedcc5866bc4047c52cc4b3e6693",
+      "caracteres_texto_integral": 7113
+    },
+    {
+      "id": "39247950",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "--- PAGE 1 --- SOFTWARE ENGINEER Qualifications C# 3.0, PL/SQL, JavaScript, HTML 4, CSS 2 Framework: .NET 3.5 Database: SQL Server 2008, Oracle 9i Operating systems: Windows 98/XP, Windows server 2000/2005, UNIX"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "C# 3.0"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Visual SourceSafe não comprova Git.",
+      "grupo_documental_original": "grupo_39247950",
+      "grupo_documental_corrigido": "grupo_39247950",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/banking/39247950.txt",
+      "sha256_texto_utf8_lf": "423adca604f35e59384a372eaa8a0014fbdabf9a10f9ff573c440014616da8a1",
+      "caracteres_texto_integral": 5226
+    },
+    {
+      "id": "54421668",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_54421668",
+      "grupo_documental_corrigido": "grupo_54421668",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/banking/54421668.txt",
+      "sha256_texto_utf8_lf": "bbaf4db2c836221f26b5eb10ca33afc260c6c6c34d8de9af0aea6380448b4046",
+      "caracteres_texto_integral": 11178
+    },
+    {
+      "id": "71422121",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "writing SQL queries to extract data for validation"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "SQL de testes está explícito. .NET aparece como ambiente/software testado; não demonstra programação ou formação em desenvolvimento.",
+      "grupo_documental_original": "grupo_71422121",
+      "grupo_documental_corrigido": "grupo_71422121",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/banking/71422121.txt",
+      "sha256_texto_utf8_lf": "925f648046c8b78d1be8eb9d05e8536232692f031929fe9dad94db3251592246",
+      "caracteres_texto_integral": 9504
+    },
+    {
+      "id": "77156708",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "# 1796859 Business development expertise Project Management Confluence, Jira, Salesforce, SQL Sales professional Financial Analysis Strategic plans Google G Suite, Keynote, Microsoft Office Technology-savvy Accounting, Recruitment Banking, Sal"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "SQL está listado, mas sem outros requisitos técnicos confirmados. A conclusão Inadequado permanece mesmo se a sigla não se referir ao banco.",
+      "grupo_documental_original": "grupo_77156708",
+      "grupo_documental_corrigido": "grupo_77156708",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/banking/77156708.txt",
+      "sha256_texto_utf8_lf": "806bd7e823a099bfb1eb6be0ba1b1ca91915cd7b0aaa95f8c341f0738ca291e0",
+      "caracteres_texto_integral": 6899
+    },
+    {
+      "id": "26829350",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Oracle é ferramenta de compras/ERP; rest of the AP team é expressão comum.",
+      "grupo_documental_original": "grupo_26829350",
+      "grupo_documental_corrigido": "grupo_26829350",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/bpo/26829350.txt",
+      "sha256_texto_utf8_lf": "4feb57503c7a48eb09ca8483c1cfebc4fc3ad86e3ac1d56bc4350bfc20851c01",
+      "caracteres_texto_integral": 7260
+    },
+    {
+      "id": "10704573",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_10704573",
+      "grupo_documental_corrigido": "grupo_10704573",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/business-development/10704573.txt",
+      "sha256_texto_utf8_lf": "512f6a823beb0c92592c2cdf0626c5c46b69183ca4f98106adb4b27e1e17ad33",
+      "caracteres_texto_integral": 7445
+    },
+    {
+      "id": "24412546",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_24412546",
+      "grupo_documental_corrigido": "grupo_24412546",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/business-development/24412546.txt",
+      "sha256_texto_utf8_lf": "ac35e8f94238c2a90ba12639ba82717f343a7338027c426c3b816e093cdbb7f6",
+      "caracteres_texto_integral": 7968
+    },
+    {
+      "id": "25397102",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "sting Drafted financial and resource planning reports using optimization software such as Oracle, SQL, JIRA, and SAP Qualifications Adobe, Customer Relations, Document reports, Budgeting, Cross-functional Team Leadership, Business Analysis, Acce"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Python"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_25397102",
+      "grupo_documental_corrigido": "grupo_25397102",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/business-development/25397102.txt",
+      "sha256_texto_utf8_lf": "3207c08a91348c66e27d44e6e0c619f0db9e7191b7d978efeae2947ec5ac8194",
+      "caracteres_texto_integral": 3433
+    },
+    {
+      "id": "27213082",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_27213082",
+      "grupo_documental_corrigido": "grupo_27213082",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/business-development/27213082.txt",
+      "sha256_texto_utf8_lf": "4095ab3dd9d158ef3b1b3fe2c38f451e9ec67e29473f54287b0f94344f2931ca",
+      "caracteres_texto_integral": 6108
+    },
+    {
+      "id": "32042584",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "lems. Highlights Proficient using Statistical Analysis Software (SAS), R, SAS Data Miner, SQL, Relational Databases, and Microsoft Office programs. *Experienced in statistical analyses, sampling techniques, research design, C-level presentatio"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "logistic procedures of SAS"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_32042584",
+      "grupo_documental_corrigido": "grupo_32042584",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/business-development/32042584.txt",
+      "sha256_texto_utf8_lf": "48559ba9bef2261edf011f7e82915119d0e3fc7c7dfecd56231ce297a2505404",
+      "caracteres_texto_integral": 3568
+    },
+    {
+      "id": "23032276",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_23032276",
+      "grupo_documental_corrigido": "grupo_23032276",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/chef/23032276.txt",
+      "sha256_texto_utf8_lf": "071ac1f866c64e3a2f0c48ca65c41c0f3991abf414cb6028cb58e79e77e2226e",
+      "caracteres_texto_integral": 11884
+    },
+    {
+      "id": "38309905",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_38309905",
+      "grupo_documental_corrigido": "grupo_38309905",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/chef/38309905.txt",
+      "sha256_texto_utf8_lf": "04d24c21d7f06d73459fb32025986b0aaa2c407da4354efedbe5664283c6b635",
+      "caracteres_texto_integral": 5329
+    },
+    {
+      "id": "47603843",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "Android SDK, Google APIs"
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Android Studio, Java, XML"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Há desenvolvimento Android próprio em Java e experiência com Google APIs. Bancos genéricos/Firebase não comprovam SQL; Git não identificado. Caso incluído na auditoria humana por exigir interpretação do requisito de serviços.",
+      "grupo_documental_original": "grupo_47603843",
+      "grupo_documental_corrigido": "grupo_47603843",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/chef/47603843.txt",
+      "sha256_texto_utf8_lf": "775ff0434b103090a1599b8ed74cac8eba12453511d0b80031d792457522a604",
+      "caracteres_texto_integral": 2204
+    },
+    {
+      "id": "34544955",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_34544955",
+      "grupo_documental_corrigido": "grupo_34544955",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/construction/34544955.txt",
+      "sha256_texto_utf8_lf": "e7f55a87fced606aaed49fbe54711fe30efe69322bb0bc50013726ceecda9f9c",
+      "caracteres_texto_integral": 6186
+    },
+    {
+      "id": "15281412",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "al Studio XSD and XML structures. Managed Team Foundation Server deployments for .Net and SQL Database changes. Experienced with Visual Studio TFS source control and Data Backlog Items. Coordinated group meetings, multiple project production i"
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "Developed/Maintained Web Services for Underwriting Rules Engine."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "education and experience, while offering upward growth and opportunity. Skills Microsoft .Net Visual Basic and C# Blaze Advisor .net Rules Engine HTML, JavaScript Visual Basic 5.0 and C++ programming - Introduction and advanced concepts. Exper"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "TFS source control não comprova Git; SQL, web services e programação estão explícitos.",
+      "grupo_documental_original": "grupo_15281412",
+      "grupo_documental_corrigido": "grupo_15281412",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/15281412.txt",
+      "sha256_texto_utf8_lf": "da1ec4389e24f6c1ec95b4473c0634cf80846e14c88a92a774bb6fc4fa0f6e54",
+      "caracteres_texto_integral": 6711
+    },
+    {
+      "id": "20314980",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "tudio VDI ASP.NET/VB.NET/C#/VBScript Microsoft BitLocker Administration and Monitoring MS SQL Server App Compat Spanish UE-V Accomplishments MCTS: Windows 7, Configuration and MCTS: Windows 7 MCTS: Office 2010, Deployment. Experience Consultan"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "positive impact in enterprise desktop management, infrastructure, systems administration, programming and automation, enterprise architecture, and project management. Highlights Windows OS VMware Server/View IIS Leadership System Center Configuration"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_20314980",
+      "grupo_documental_corrigido": "grupo_20314980",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/20314980.txt",
+      "sha256_texto_utf8_lf": "424ab158f20db78ccff4ddbbe2ba9d19bb30b7d9cec0b478c4f6728a7b21bfa0",
+      "caracteres_texto_integral": 12717
+    },
+    {
+      "id": "21156767",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "g successful business solutions that drive productivity and growth. Offering expertise in SQL, Data Visualization, Scripting language and more than 6 years of experience in the software industry. Experience Principal Consultant Company Name |"
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "Embed BI reports to Customer Application using .NET Framework, JavaScript. Which uses Web APIs to access BI reports. Create and Peer review SQL queries for ad hoc data reporting. Managed junior developer by delivering consistent coaching and co"
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Embed BI reports to Customer Application using .NET Framework, JavaScript."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "3 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_21156767",
+      "grupo_documental_corrigido": "grupo_21156767",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/21156767.txt",
+      "sha256_texto_utf8_lf": "4be2a5ac7ac8cb5eeb3387c83f7edc4742417b25035f960746fbab0e41990abf",
+      "caracteres_texto_integral": 5222
+    },
+    {
+      "id": "26291616",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Administer SQL Server and PCDocs databases."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Amazon Web Services é plataforma de nuvem; não comprova REST/web services de integração. Há administração SQL, sem programação confirmada.",
+      "grupo_documental_original": "grupo_26291616",
+      "grupo_documental_corrigido": "grupo_26291616",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/26291616.txt",
+      "sha256_texto_utf8_lf": "ec357ea4906048555cfc8f6cb1cf08f3c7e01845bf9b151653e05af272b33120",
+      "caracteres_texto_integral": 6213
+    },
+    {
+      "id": "29196643",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "used the tools at work place and academic front prudently. Basic and working knowledge in SQL (Structured Query Language), Core Java, HTML, SAP MM module Worked on operating systems like Windows 7, Windows Vista, Windows XP, and Apple OS X. St"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "mic front prudently. Basic and working knowledge in SQL (Structured Query Language), Core Java, HTML, SAP MM module Worked on operating systems like Windows 7, Windows Vista, Windows XP, and Apple OS X. Strong Interpersonal skills, leadership s"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_29196643",
+      "grupo_documental_corrigido": "grupo_29196643",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/29196643.txt",
+      "sha256_texto_utf8_lf": "7586e52b44b3ac9010ae9dc0374cf0c6cd1e7f5ce36cd0e8af457423f099dd40",
+      "caracteres_texto_integral": 7042
+    },
+    {
+      "id": "39441617",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "MS-SQL 200-2012, MySQL and PHP"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "ase design Custom Front-End Systems design Development Environment Software: C, Microsoft Visual Basic, Visual Studio Enterprise Resource Planning (ERP) Software: Oracle E-Business Suite, Microsoft Dynamics GP, Sage Pro, MAS90 Object or Component Orien"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_39441617",
+      "grupo_documental_corrigido": "grupo_39441617",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/39441617.txt",
+      "sha256_texto_utf8_lf": "74a54b248b86e429b6d8cdc98ee233e654377eaa28b1ec2d915212590116e01a",
+      "caracteres_texto_integral": 8910
+    },
+    {
+      "id": "43311839",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Databases MS SQL Server 2000/2005/2008/2014, Oracle"
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "Created a RESTFUL WCF Service"
+        },
+        "git": {
+          "atende": true,
+          "evidencia": "IBM Rational Team Concert, GitHub"
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Designed and developed web forms using ASP.NET and C#.NET."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": true,
+      "justificativa": "Quatro requisitos e desenvolvimento de aplicações demonstrados.",
+      "grupo_documental_original": "grupo_43311839",
+      "grupo_documental_corrigido": "grupo_43311839",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/43311839.txt",
+      "sha256_texto_utf8_lf": "bef9bab0a7d09c8c7ab4ce1e278c167eb24840eb38f0cf602c9a8bf0235887d7",
+      "caracteres_texto_integral": 11872
+    },
+    {
+      "id": "43378989",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Point, Microsoft Visio Professional, Windows 7, Windows 8, Microsoft Windows XP, MS Word, MySQL, Network, Networks, object-oriented design, Oracle, Peripherals, coding, programming, RAID, Router, Servers, Servlet, Microsoft SQL Server, SQL Serve"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "tant Mar 2014 to May 2017 Company Name ï¼​ City , State Provided object-oriented design, programming and implementation support to the customer Billing system written in Java Design database system for e-commerce website with persistence EJB platform"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "API isolado na lista de habilidades não identifica serviço web/REST ou integração. SQL e programação Java estão confirmados.",
+      "grupo_documental_original": "grupo_43378989",
+      "grupo_documental_corrigido": "grupo_43378989",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/43378989.txt",
+      "sha256_texto_utf8_lf": "70fb2bd151dd5d31d7c6e1023a79200d682f2aa8bd4af9a94ab5b6d40701390a",
+      "caracteres_texto_integral": 2310
+    },
+    {
+      "id": "51724595",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "ion *Siebel Tools 8.1.1.10, Siebel Administration, eScript, VBScript and Java Script *VB, SQL, MS Excel, Word and Power Point, Access. Work Experience Company Name September 2010 to March 2015 Consultant City , State Client-Healthcare Company"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "eScript, VBScript and Java Script"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_51724595",
+      "grupo_documental_corrigido": "grupo_51724595",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/51724595.txt",
+      "sha256_texto_utf8_lf": "f8da7f2ce397ce693889a5427fff333e61100b05e9ab12d64c112752713d223e",
+      "caracteres_texto_integral": 6850
+    },
+    {
+      "id": "65062795",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "keep track of Inventory Movement. Worked on back-end testing of the databases by writing SQL Queries to join the tables, verify the data, etc. Environment: Manhattan Associates WMOS 2013, SQL Server 11.02 Client: Li&Fung(2013) Company Name"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "niversity , City , State , India Graduated with First Class Distinction. Technical Skills Programming Languages: Java Web Technologies: HTML5, CSS3, Java Script, PHP, JQuery Development IDE: Eclipse, Microsoft Visual Studio 2012, Matlab Database: Micr"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_65062795",
+      "grupo_documental_corrigido": "grupo_65062795",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/65062795.txt",
+      "sha256_texto_utf8_lf": "e2a5b1ba8be584bf479874d5b923654576a6c1b8933a467c9ba1d30266bb6d53",
+      "caracteres_texto_integral": 4742
+    },
+    {
+      "id": "88907739",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "oject Management, proposals, quality, Requirement, Research, RFP, Scrum, SDLC, Speech, MS SQL, Strategy, Strategy Development, Vendor Management, Vendor Management, Visio, websites Business skills: Business Strategy, Product Strategy, Consulti"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "C#"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_88907739",
+      "grupo_documental_corrigido": "grupo_88907739",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/88907739.txt",
+      "sha256_texto_utf8_lf": "174485489c37b95e617a9b06deb00b5ec6686d2939ff7b692a44c9147fa92343",
+      "caracteres_texto_integral": 6442
+    },
+    {
+      "id": "91189201",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "SKILLS AND ACTIVITIES Volunteer English Teacher for \"Teach India\"; Challenge for Charity; SQL, SPSS, Tableau, MS Excel, Power Point. Accomplishments Evert McCabe Fellowship, Rick and Marilyn Wong Scholarship, Business Technology Club Board mem"
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "Owned development, testing and maintenance of 4 mission critical Web Services"
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Defense.Net é nome de empresa, não linguagem .NET. SQL e web services estão explícitos; a propriedade/gestão do produto não demonstra outra linguagem de programação.",
+      "grupo_documental_original": "grupo_91189201",
+      "grupo_documental_corrigido": "grupo_91189201",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/consultant/91189201.txt",
+      "sha256_texto_utf8_lf": "8cff50ce4ce789f29e8a8612027dfea0af033096b6905d339856a04f439b09c7",
+      "caracteres_texto_integral": 4834
+    },
+    {
+      "id": "15471999",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_15471999",
+      "grupo_documental_corrigido": "grupo_15471999",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/designer/15471999.txt",
+      "sha256_texto_utf8_lf": "3022951b5052803e179b1dfcf099dac6f88e0ed49056db6e6f84295b18f8b523",
+      "caracteres_texto_integral": 5593
+    },
+    {
+      "id": "29524570",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": ") Care Assistant in BUPA care home, Glasgow. Specific skills: Langages: C & C# Data base: ORACLE, SQL Web Technologies: ASP.NET, HTML5, CSS3, Dream weaver. Currently Quality specialist , 07/2015 to Current City Preparation of the Elemental impu"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Langages: C & C#"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "API é insumo farmacêutico; SQL e C# estão declarados em habilidades técnicas.",
+      "grupo_documental_original": "grupo_29524570",
+      "grupo_documental_corrigido": "grupo_29524570",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/designer/29524570.txt",
+      "sha256_texto_utf8_lf": "0aaaaf7c6fd2dcef6c4f926502cf15c3b06c04c20823cc51e9b6ae870657da4b",
+      "caracteres_texto_integral": 5010
+    },
+    {
+      "id": "85101052",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Database : MySQL Server"
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "Knowledge in working with WebServices."
+        },
+        "git": {
+          "atende": true,
+          "evidencia": "Tools : Git, Eclipse, Rally"
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "IT experience as Software developer in Java/J2EE Technologies"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": true,
+      "justificativa": "Quatro requisitos e desenvolvimento de aplicações demonstrados.",
+      "grupo_documental_original": "grupo_85101052",
+      "grupo_documental_corrigido": "grupo_85101052",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/designer/85101052.txt",
+      "sha256_texto_utf8_lf": "cb0b53c13ed6219dc418954ee420d9351f87309aea96fb862ad549a30449b1e5",
+      "caracteres_texto_integral": 5702
+    },
+    {
+      "id": "14761906",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_14761906",
+      "grupo_documental_corrigido": "grupo_14761906",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/digital-media/14761906.txt",
+      "sha256_texto_utf8_lf": "ab3598fb761eb2e1421832d024dd9d62cb4e262b846d70f111f83cd6f274aadc",
+      "caracteres_texto_integral": 4743
+    },
+    {
+      "id": "16893572",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "stom data sets of 10,000 to 20 million records, and detailed analytical reports utilizing MySQL and the Social123 virtual platform. Data Director/Digital Strategist November 2014 to October 2015 Company Name ï¼​ City , State Initially hired to"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "LinkedIn, Facebook, Twitter, Google+, Pinterest, Wordpress, Instagram, YouTube HTML, CSS, JavaScript, PHP, SEO, Keywords Experience Digital Marketing Manager November 2016 to Current Company Name ï¼​ City , State Acquired to strategize, build, and m"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_16893572",
+      "grupo_documental_corrigido": "grupo_16893572",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/digital-media/16893572.txt",
+      "sha256_texto_utf8_lf": "ce5df87fe649e09c7556ca297478a0c949273546dac2cd81c67967375ff497a3",
+      "caracteres_texto_integral": 6492
+    },
+    {
+      "id": "17132168",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Oracle é produto comercializado; rest of local account é expressão comum.",
+      "grupo_documental_original": "grupo_17132168",
+      "grupo_documental_corrigido": "grupo_17132168",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/digital-media/17132168.txt",
+      "sha256_texto_utf8_lf": "3ec35d4bff8a2b7f634b66c640015113eb43a5b2b14d6e4f3d5987a3f33f857a",
+      "caracteres_texto_integral": 6029
+    },
+    {
+      "id": "17562754",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_17562754",
+      "grupo_documental_corrigido": "grupo_17562754",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/digital-media/17562754.txt",
+      "sha256_texto_utf8_lf": "e2cf878d68692c0380c7181f62d79e27e4d1b9349e594ada0756ce6d40283cda",
+      "caracteres_texto_integral": 6218
+    },
+    {
+      "id": "25525152",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_25525152",
+      "grupo_documental_corrigido": "grupo_25525152",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/digital-media/25525152.txt",
+      "sha256_texto_utf8_lf": "439c3c35fef1415ba1c5cbc25b134a12d98bc8dcdbbf01d22576a31ebb36c229",
+      "caracteres_texto_integral": 2364
+    },
+    {
+      "id": "27981289",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "cing technical solution creation--From finance department tools creation to client facing web services creation. I have also started to help PMA Media implement a scrum process for all technical development, with an agile approach to user discovery. P"
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Javascript, PhP, Html/Css, VBA"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_27981289",
+      "grupo_documental_corrigido": "grupo_27981289",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/digital-media/27981289.txt",
+      "sha256_texto_utf8_lf": "5b84f358136a0147a83971514fe8715f974ed34fb094efc75ccf80e4a1ef96af",
+      "caracteres_texto_integral": 3657
+    },
+    {
+      "id": "37739183",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_37739183",
+      "grupo_documental_corrigido": "grupo_37739183",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/digital-media/37739183.txt",
+      "sha256_texto_utf8_lf": "9ce2d195d19f5210d56de1ce7ab704aed542e381576021759239d8dfdbf48cf6",
+      "caracteres_texto_integral": 12705
+    },
+    {
+      "id": "42156237",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "ower Pivot, Qlikview Desktop, Minitab, Tableau, Google Analytics, JIRA, Salesforce, TSQL, SQL, HTML, PHP, JavaScript, MS Access, MS Visio, MS Project. In progress - R, Python. Experience 07/2016 to Current Senior Digital Marketing Analyst Comp"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Qlikview Desktop, Minitab, Tableau, Google Analytics, JIRA, Salesforce, TSQL, SQL, HTML, PHP, JavaScript, MS Access, MS Visio, MS Project. In progress - R, Python. Experience 07/2016 to Current Senior Digital Marketing Analyst Company Name ï¼"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_42156237",
+      "grupo_documental_corrigido": "grupo_42156237",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/digital-media/42156237.txt",
+      "sha256_texto_utf8_lf": "a9cd69c37b6b223ba1d828e1d8188a5b7b37771a30922e4f6541e4f864fc1f0b",
+      "caracteres_texto_integral": 2828
+    },
+    {
+      "id": "10624813",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "PL/SQL"
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "REST and SOAP services"
+        },
+        "git": {
+          "atende": true,
+          "evidencia": "GitHub"
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Responsible for web based PCI compliant e-commerce software"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": true,
+      "justificativa": "Quatro requisitos e desenvolvimento de aplicações demonstrados.",
+      "grupo_documental_original": "grupo_10624813",
+      "grupo_documental_corrigido": "grupo_10624813",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/10624813.txt",
+      "sha256_texto_utf8_lf": "47697ca87973ebd3c5f6b9828583fd41da942571f63671f51acf56aaec8b0f5d",
+      "caracteres_texto_integral": 6651
+    },
+    {
+      "id": "11981094",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": ", Windows, OOP, STL, WinAPI, MFC, threads, ATL, IPC, FTP, TCP, HTTP, XML, JSON, services, web services, REST API, SOA, media formats and standards, codec SDK, MPEG-DASH, API design and documentation. BCD spinoff as Imagine in 2013) Nexio video servers"
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "ence 09/2009 to Current Software Engineering Manager Company Name ï¼​ City , State Visual C++, Windows, OOP, STL, WinAPI, MFC, threads, ATL, IPC, FTP, TCP, HTTP, XML, JSON, services, web services, REST API, SOA, media formats and standards, co"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Histórico Nexio/Hercules e períodos profissionais coincidem substancialmente com 28762662 do desenvolvimento; excluir da avaliação principal. Mercurial não comprova Git.",
+      "grupo_documental_original": "grupo_11981094",
+      "grupo_documental_corrigido": "grupo_historico_nexio_28762662",
+      "elegivel_avaliacao_principal": false,
+      "motivo_exclusao": "Relação documental substancial com desenvolvimento 28762662; conferida antes de consultar previsões da coorte.",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/11981094.txt",
+      "sha256_texto_utf8_lf": "4cd24bf5ed57cb3f3666cff37ddabb8e6a10fb7e6474e59f3c22920fc971f2e3",
+      "caracteres_texto_integral": 5788
+    },
+    {
+      "id": "12011623",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "skilled graduate with Analytics degree with a very good experience in SAS, Web scraping, SQL, Predictive modelling and data visualization. Excellent ability in identifying data requirements for analysis, data cleaning, munging and model build"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "SAS"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_12011623",
+      "grupo_documental_corrigido": "grupo_12011623",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/12011623.txt",
+      "sha256_texto_utf8_lf": "14f0929d72a41891cc78ade21adf54a3e8180167c17d2c8f99ff71aa8f6e1d17",
+      "caracteres_texto_integral": 6746
+    },
+    {
+      "id": "20566550",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "ications and Credentials Scrum Fundamentals Certified Data Science Fundamentals Certified Oracle SQL Developer Advanced SQL: SQL Expert (under progress) Experience Engineering intern Feb 2017 to Apr 2017 Company Name ï¼​ City , State Achievement"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "tralia and New Zealand Citizen â€‹Currently Living in Sydney Australia . Knowledge Base C/Python R STK CATIA ANSYS LaTeX SolidWorks Microsoft Office Microsoft Project Academic Background High School Diploma , MATHEMATICS,PHYSICS,CHEMISTRY,ENGINEE"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_20566550",
+      "grupo_documental_corrigido": "grupo_20566550",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/20566550.txt",
+      "sha256_texto_utf8_lf": "8b036f7a442d389e08cc47efa58d97635c2c5a870b27a1dfd02a9388c315bcc5",
+      "caracteres_texto_integral": 7055
+    },
+    {
+      "id": "21038022",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "s, Microsoft Access 2010, Visual Studio 2008- 2010, Microsoft Project, Netbeans, TextPad, SQL Server 2008, PowerSteering, Tango. Computer Language Experience - HTML, Css, Java, Java Script, C++, VB.NET, ASP.NET In BSIT degree program, complete"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Computer Language Experience - HTML, Css, Java, Java Script, C++, VB.NET, ASP.NET"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_21038022",
+      "grupo_documental_corrigido": "grupo_21038022",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/21038022.txt",
+      "sha256_texto_utf8_lf": "eaa5f10ba7fe085e39964f73e23842257abd6bf14a15d2d0e01dce79dccd0769",
+      "caracteres_texto_integral": 8270
+    },
+    {
+      "id": "21629057",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Assembly refere-se à montagem de sistemas, não linguagem de programação.",
+      "grupo_documental_original": "grupo_21629057",
+      "grupo_documental_corrigido": "grupo_21629057",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/21629057.txt",
+      "sha256_texto_utf8_lf": "f1c64df4fd9934836968e6b038cf8aee29d45645b70c1dc459c9e74439f43fb9",
+      "caracteres_texto_integral": 7450
+    },
+    {
+      "id": "23234047",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "IEC 61131 (Ladder Logic, Functional Block Diagram, Structured Text, Instruction List. ), Java, C, Visual Basic, VHDL, PSpice, Assembly (Intel, Motorola, TI), Labview. Software Packages: AutoCAD, Inventor, Matlab, Microsoft Office, PSIM, Easy P"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "API indica normas de engenharia; linguagens de programação estão explícitas.",
+      "grupo_documental_original": "grupo_23234047",
+      "grupo_documental_corrigido": "grupo_23234047",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/23234047.txt",
+      "sha256_texto_utf8_lf": "36b8e23751de09b353b253f053b880bc1a6903b193743f1f9b2f9e25d04f6eb3",
+      "caracteres_texto_integral": 5658
+    },
+    {
+      "id": "24647794",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "ope | Logic analyzer | Multimeters | Applications: MS Visual Studio | MS Office | MAC OS| Matlab | Simulink | Mathcad | Verilog | Orcad | PSPICE | SolidWorks| AutoCAD | Inventor | PowerWorld | ETAP | HelioScope | Programming: C++ | C# | C languag"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "1 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_24647794",
+      "grupo_documental_corrigido": "grupo_24647794",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/24647794.txt",
+      "sha256_texto_utf8_lf": "7fa3ebeb3b877b8b950c988a478a2fc9046e881b336891011fe8dfb9fd7a714b",
+      "caracteres_texto_integral": 4933
+    },
+    {
+      "id": "28078163",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "indows, STL, OOP, MFC, threads, file maps, ATL, IPC, FTP, TCP, HTTP, XML, JSON, services, web services, REST API, SOA, media formats and standards, codec SDK and integration, MPEG-DASH, API design and documentation. BCD spinoff as Imagine in 2013) Nexi"
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "e September 2009 to Current Company Name City , State Software Engineering Manager Visual C++, Windows, STL, OOP, MFC, threads, file maps, ATL, IPC, FTP, TCP, HTTP, XML, JSON, services, web services, REST API, SOA, media formats and standards,"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Histórico Nexio/Hercules e períodos profissionais coincidem substancialmente com 28762662 do desenvolvimento; excluir da avaliação principal. Mercurial não comprova Git.",
+      "grupo_documental_original": "grupo_28078163",
+      "grupo_documental_corrigido": "grupo_historico_nexio_28762662",
+      "elegivel_avaliacao_principal": false,
+      "motivo_exclusao": "Relação documental substancial com desenvolvimento 28762662; conferida antes de consultar previsões da coorte.",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/28078163.txt",
+      "sha256_texto_utf8_lf": "22a769f9855d79b14807fe3c6d09bfffa067363a08550ab63a50e10104240ec8",
+      "caracteres_texto_integral": 6202
+    },
+    {
+      "id": "31677347",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": true,
+          "evidencia": "indows, STL, OOP, MFC, threads, file maps, ATL, IPC, FTP, TCP, HTTP, XML, JSON, services, web services, REST API, SOA, media formats and standards, codec SDK and integration, MPEG-DASH, API design and documentation. BCD spinoff as Imagine in 2013) Nexi"
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "tware Engineering Manager September 2009 to Current Company Name ï¼​ City , State Visual C++, Windows, STL, OOP, MFC, threads, file maps, ATL, IPC, FTP, TCP, HTTP, XML, JSON, services, web services, REST API, SOA, media formats and standards,"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Histórico Nexio/Hercules coincide com desenvolvimento apesar do resumo de RH; não usar resumo/categoria como veto. Excluir da avaliação principal por relação documental.",
+      "grupo_documental_original": "grupo_31677347",
+      "grupo_documental_corrigido": "grupo_historico_nexio_28762662",
+      "elegivel_avaliacao_principal": false,
+      "motivo_exclusao": "Relação documental substancial com desenvolvimento 28762662; conferida antes de consultar previsões da coorte.",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/31677347.txt",
+      "sha256_texto_utf8_lf": "70816cd1d1406e9b24da0cf9bb3cabd63337c397a16ebbf3af92b2723a568a50",
+      "caracteres_texto_integral": 6448
+    },
+    {
+      "id": "32081266",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "ORS, eCHIMP, Eclipsys, EHRs, EPIC, HBOC, MACESS, IDX, I-MAX --- PAGE 3 --- FACET, HEAT, SQL Server 2005, Cognos, ER/Studio, Mini-tab, Oracle, SAS, SharePoint Foundation 2007/2010, SPSS, and pcAnywhere. User Level: Advanced user of the Micros"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "analysis, design, coding, and testing for a centrally hosted web solution application"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_32081266",
+      "grupo_documental_corrigido": "grupo_32081266",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/32081266.txt",
+      "sha256_texto_utf8_lf": "298000d995a186860bc17ab199cc81858dcefbf34bf17807c1864b9443d25d63",
+      "caracteres_texto_integral": 10431
+    },
+    {
+      "id": "35389360",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "ed Network Administration: Advanced Web Development: Advanced PHP, HTML HTML5, Css, Css3, Mysql, java, Php Frameworks, & Jquery:: Advanced Sales: Advanced VPN: Advanced Linux: Intermediate Skills A+, account management, Accounting, alpha, Applic"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "re: Expert Verbal Communication: Expert Technical Support: Expert Team Leadership: Expert Programming Languages: Expert On-call tech support: Expert Windows & Mac OS: Expert Wiring/Wire Spicing: Cat3, Cat5, Cat5e, Coaxial : Expert Management: Expert V"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_35389360",
+      "grupo_documental_corrigido": "grupo_35389360",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/35389360.txt",
+      "sha256_texto_utf8_lf": "b79da981f9092472bdde32ea084f7814469600889a94d29f3dda3ce903c98bf2",
+      "caracteres_texto_integral": 10123
+    },
+    {
+      "id": "37335325",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": true,
+          "evidencia": "ion and usage including, Jira, Rally, Clear Quest, Quality Center, ProtexIP, Sub-version, GIT, RTC, Bugzilla, Quality Center, Jenkins, Gerrit and others Experience in testing software as a service (SaaS) applications Design performance and str"
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "development of 10 different SDK test tools using C/C++, C#, Java"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_37335325",
+      "grupo_documental_corrigido": "grupo_37335325",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/37335325.txt",
+      "sha256_texto_utf8_lf": "dbc0fe36c8f6d34de60d63c0d287e770b46ca3c58d673d140d8f3d1a46849f6b",
+      "caracteres_texto_integral": 8919
+    },
+    {
+      "id": "47549345",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "d of Electrical/Instrumentation & Control Engineering for Spring & Summer 2017 Highlights MATLAB, Simulink, Siemens PSS@E, Power World, ETAP, LabVIEW, Multisim, RT-LAB, C++, MS office. Certificate in Industrial Automation & Control from Apollo Kn"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "API indica normas industriais; C++/programação declarados.",
+      "grupo_documental_original": "grupo_47549345",
+      "grupo_documental_corrigido": "grupo_47549345",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/47549345.txt",
+      "sha256_texto_utf8_lf": "a8a41e8f355e8d67f2ed8cc936d89594747b4ba796f91b28f82d096bd04fc336",
+      "caracteres_texto_integral": 3991
+    },
+    {
+      "id": "82246962",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "Scripting for test automation Solaris 10 OS, Linux Mandrake and Red Hat OS Configuration SQL Server Configuration UNIX Script & Shell Programming Networking Essentials Networking Cabling Cat5e, Cat6 and Fiber Optic TCP/IP and OSI Layers Knowl"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Python Scripting for test automation"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_82246962",
+      "grupo_documental_corrigido": "grupo_82246962",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/engineering/82246962.txt",
+      "sha256_texto_utf8_lf": "1f91e69a3bcce59744d3af098786a39ed417ba37f4f7a013e878ecf6638b903d",
+      "caracteres_texto_integral": 7517
+    },
+    {
+      "id": "15224503",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_15224503",
+      "grupo_documental_corrigido": "grupo_15224503",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/finance/15224503.txt",
+      "sha256_texto_utf8_lf": "460fa0f59b0596e4310948c1b2298f57445dc12c2005f4fe083c1ec49d106a76",
+      "caracteres_texto_integral": 5630
+    },
+    {
+      "id": "15792052",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_15792052",
+      "grupo_documental_corrigido": "grupo_15792052",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/finance/15792052.txt",
+      "sha256_texto_utf8_lf": "151c56dc667391a6f658268d553c16aa81c9bdf61687721d2eef04c9aa63bc09",
+      "caracteres_texto_integral": 5292
+    },
+    {
+      "id": "24611721",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_24611721",
+      "grupo_documental_corrigido": "grupo_24611721",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/finance/24611721.txt",
+      "sha256_texto_utf8_lf": "778422a080063821202ad4c82015e7c08975ba619ed87bb50421e54aac9dd9d2",
+      "caracteres_texto_integral": 4848
+    },
+    {
+      "id": "24670867",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Oracle financeiro e coding de lançamentos contábeis não comprovam SQL/programação.",
+      "grupo_documental_original": "grupo_24670867",
+      "grupo_documental_corrigido": "grupo_24670867",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/finance/24670867.txt",
+      "sha256_texto_utf8_lf": "63457cba5145406f636e9654de5940d0986eb9bd169d06449a4ddc212590d7da",
+      "caracteres_texto_integral": 9238
+    },
+    {
+      "id": "17431847",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_17431847",
+      "grupo_documental_corrigido": "grupo_17431847",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/fitness/17431847.txt",
+      "sha256_texto_utf8_lf": "4bf5d23fb5a2aed4987c7e0a42cb9dfabab3945b80ac36c2e52e6b8879c28370",
+      "caracteres_texto_integral": 4860
+    },
+    {
+      "id": "23063986",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Programming é planejamento de lazer.",
+      "grupo_documental_original": "grupo_23063986",
+      "grupo_documental_corrigido": "grupo_23063986",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/fitness/23063986.txt",
+      "sha256_texto_utf8_lf": "889f159c8bbf84721247ed47232a88094cd733bd4f7b3ec0c3ec7eb126a8a317",
+      "caracteres_texto_integral": 6696
+    },
+    {
+      "id": "13575312",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "mentation Project finance Multi-tasking Organized Project planning Microsoft Office Suite SQL and databases Data mapping Test case scenarios Quality assurance Testing plans Bug tracking Report delivery Work History Project Manager , 07/2013 to"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "C++"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_13575312",
+      "grupo_documental_corrigido": "grupo_13575312",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/healthcare/13575312.txt",
+      "sha256_texto_utf8_lf": "e5a172d3d16e320dac04a4d93204bfcecbf1dac7f53efd9266c8f458a4bbcf9e",
+      "caracteres_texto_integral": 7378
+    },
+    {
+      "id": "22008817",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_22008817",
+      "grupo_documental_corrigido": "grupo_22008817",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/healthcare/22008817.txt",
+      "sha256_texto_utf8_lf": "c5ce2d4a6d1615cce50c7cc7a54c8979735b2c470412ca1547f355db34035d31",
+      "caracteres_texto_integral": 8274
+    },
+    {
+      "id": "24550866",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Coding é codificação clínica/CPT/ICD.",
+      "grupo_documental_original": "grupo_24550866",
+      "grupo_documental_corrigido": "grupo_24550866",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/healthcare/24550866.txt",
+      "sha256_texto_utf8_lf": "a4e4d03a0760a3cc4635980394d5ad6e267ebbaf1d304ce624611d35e41bcc1c",
+      "caracteres_texto_integral": 5288
+    },
+    {
+      "id": "29134372",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Oracle 11i é administração financeira funcional; swift reimbursements não é linguagem Swift.",
+      "grupo_documental_original": "grupo_29134372",
+      "grupo_documental_corrigido": "grupo_29134372",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/healthcare/29134372.txt",
+      "sha256_texto_utf8_lf": "41763678869ef4f5802415204be204a31a93efa8801c03a247bc258d8b088480",
+      "caracteres_texto_integral": 5896
+    },
+    {
+      "id": "18297650",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Java, SQL e .NET descrevem as competências dos profissionais recrutados, sem comprovação dessas competências como prática técnica do próprio candidato. Não é reprovação por categoria de RH.",
+      "grupo_documental_original": "grupo_18297650",
+      "grupo_documental_corrigido": "grupo_18297650",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/hr/18297650.txt",
+      "sha256_texto_utf8_lf": "3af86f08077276a190ad2f7c4e917614445290801dcd5cd2b55f690ee351390d",
+      "caracteres_texto_integral": 10177
+    },
+    {
+      "id": "21265194",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_21265194",
+      "grupo_documental_corrigido": "grupo_21265194",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/hr/21265194.txt",
+      "sha256_texto_utf8_lf": "cb4ab73182366fb108183a26ce8c4fca5cd2588ca2a2e6d517043c1a6f421229",
+      "caracteres_texto_integral": 9032
+    },
+    {
+      "id": "29075857",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "hing & Mentoring Business Intelligence SDLC People Management Team Building Data Analysis Oracle SQL/MS Access Progress RDB Power Point Data Warehousing HP Quality Center MS Test Rational software QA and PM templates MS Word/Excel MS Project Visi"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "1 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_29075857",
+      "grupo_documental_corrigido": "grupo_29075857",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/information-technology/29075857.txt",
+      "sha256_texto_utf8_lf": "c2c56743a93bf0789a80fbcb3ec0e68f8e92bac4127c8be975eb2387555742e0",
+      "caracteres_texto_integral": 9321
+    },
+    {
+      "id": "29975124",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "lication. Installed and configured Infor Enterprise Asset Management 11.1 application and SQL Server database. Led System Administration team to design and configure user security for Infor Public Sector application. Led configuration requirem"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "Developed new applications using Access and Visual basic for Application"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_29975124",
+      "grupo_documental_corrigido": "grupo_29975124",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/information-technology/29975124.txt",
+      "sha256_texto_utf8_lf": "7cdebac78f48df85e94b484a9f55ed15534b325267f51002d4ff8f6e7a8bcf89",
+      "caracteres_texto_integral": 6073
+    },
+    {
+      "id": "36434348",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Parcialmente Adequado",
+      "criterios": {
+        "sql": {
+          "atende": true,
+          "evidencia": "ples (SDLC) Windows Server 2012 Project Management Active Directory System administration SQL Help desk administration Microsoft Office Database Design SAP Business Objects/Web Intelligence Microsoft SharePoint ASP.net, business operations, C+"
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": true,
+          "evidencia": "C++"
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "2 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_36434348",
+      "grupo_documental_corrigido": "grupo_36434348",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/information-technology/36434348.txt",
+      "sha256_texto_utf8_lf": "8d050e2ac2696c2a5cade75a9f06c7b8e6e4611fabaa818f52404260d35cfe1d",
+      "caracteres_texto_integral": 5604
+    },
+    {
+      "id": "38753827",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_38753827",
+      "grupo_documental_corrigido": "grupo_38753827",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/information-technology/38753827.txt",
+      "sha256_texto_utf8_lf": "a23971791edb200919032802472463ba292a5ff6ff8af398262f8abbef1436ad",
+      "caracteres_texto_integral": 9802
+    },
+    {
+      "id": "14278888",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_14278888",
+      "grupo_documental_corrigido": "grupo_14278888",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/public-relations/14278888.txt",
+      "sha256_texto_utf8_lf": "073f133d8a74281884bea0add7804cf40e7afe75f29801749aa2e77c976aa859",
+      "caracteres_texto_integral": 5622
+    },
+    {
+      "id": "19147494",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_19147494",
+      "grupo_documental_corrigido": "grupo_19147494",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/sales/19147494.txt",
+      "sha256_texto_utf8_lf": "a5159c632c5b22634f509ebe4fcfe0d094cd216967519988eb91561c89c2048d",
+      "caracteres_texto_integral": 5715
+    },
+    {
+      "id": "30529547",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_30529547",
+      "grupo_documental_corrigido": "grupo_30529547",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/sales/30529547.txt",
+      "sha256_texto_utf8_lf": "e672724586b5a11ab2990cacf50475fc2adafe92f242b4a6d0321abe7a89f7e2",
+      "caracteres_texto_integral": 2499
+    },
+    {
+      "id": "79376680",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_79376680",
+      "grupo_documental_corrigido": "grupo_79376680",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/sales/79376680.txt",
+      "sha256_texto_utf8_lf": "2f6d4756269edd65eed3665f4494920def81dd7cf7fe439bcacfd344842ea78a",
+      "caracteres_texto_integral": 5320
+    },
+    {
+      "id": "21773106",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_21773106",
+      "grupo_documental_corrigido": "grupo_21773106",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/teacher/21773106.txt",
+      "sha256_texto_utf8_lf": "46db2adb92fa2c4bc3717855c68e0924a1102464e0c9a2c387d82f3fba099af4",
+      "caracteres_texto_integral": 6703
+    },
+    {
+      "id": "25588694",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_25588694",
+      "grupo_documental_corrigido": "grupo_25588694",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/teacher/25588694.txt",
+      "sha256_texto_utf8_lf": "2b1ffd280257da50e1f2758ad739cad502f50913eb2daa779ff5bcb40b3c26b4",
+      "caracteres_texto_integral": 3081
+    },
+    {
+      "id": "29486525",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "0 requisito(s) confirmado(s); categoria e senioridade não usadas como veto.",
+      "grupo_documental_original": "grupo_29486525",
+      "grupo_documental_corrigido": "grupo_29486525",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/teacher/29486525.txt",
+      "sha256_texto_utf8_lf": "d549c8bb331d95e520c97f17312b41c8bb4ed76e5e77beef95e5f28b79c1d77e",
+      "caracteres_texto_integral": 4988
+    },
+    {
+      "id": "37402097",
+      "anotador": "assistente_IA",
+      "ratificado_individualmente_pelo_autor": false,
+      "status": "anotado_ia_aguarda_auditoria_limitada",
+      "rotulo_ia": "Inadequado",
+      "criterios": {
+        "sql": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "servicos": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "git": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        },
+        "programacao": {
+          "atende": false,
+          "evidencia": "",
+          "observacao": "Não confirmado na conferência contextual."
+        }
+      },
+      "criterio_completo_de_adequacao_confirmado": false,
+      "justificativa": "Coding refere-se a faturamento médico/CPT/ICD.",
+      "grupo_documental_original": "grupo_37402097",
+      "grupo_documental_corrigido": "grupo_37402097",
+      "elegivel_avaliacao_principal": true,
+      "motivo_exclusao": "",
+      "fonte_texto": "curriculos_processados/extracted_text_en/teacher/37402097.txt",
+      "sha256_texto_utf8_lf": "697985e3aa2725eec539997630761c44aedb8ce636424b680396ddcab6ebc440",
+      "caracteres_texto_integral": 2626
+    }
+  ],
+  "sha256_registros": "37d46deff944c51ff93aee82ccee7952fbc9cde3415e69c9cb6081d54c250483"
+}

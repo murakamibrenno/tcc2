@@ -1,5 +1,7 @@
 # Desenvolvimento ampliado e repetição dos experimentos
 
+Nota posterior: a proveniência dos 100 casos reservados foi alterada sob autorização do autor; agora são anotações da IA com auditoria humana limitada ainda pendente. Os resultados deste arquivo continuam sendo exclusivamente do desenvolvimento. Ver [protocolo vigente](../../validation/REVISAO_TESTE_IA_E_AUDITORIA.md).
+
 ## Revisão dos 201 novos casos
 
 A IA conferiu os 201 casos com buscas no texto integral e revisão contextual de trechos. Não equivale a leitura humana integral nem a nova referência humana independente. As evidências e os hashes estão em `validation/revisao_desenvolvimento_201_v1.json`. O consolidado verificável está em `data/desenvolvimento_revisado_v2/manifesto.json`.
