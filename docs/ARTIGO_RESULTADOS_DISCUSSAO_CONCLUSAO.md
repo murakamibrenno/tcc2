@@ -156,7 +156,7 @@ A revisão de documentos semelhantes e as exclusões reduziram sobreposição co
 
 O truncamento de 8.000 caracteres e de 512 tokens nos densos pode excluir evidências relevantes. Os encoders foram congelados, e a representação Qwen usa pooling médio de um modelo generativo. Sem ablação sistemática de janelas, pooling e modelos, essas escolhas não podem ser isoladas como causas do resultado. Novas configurações não devem ser otimizadas repetidamente nos mesmos 97 casos como se constituíssem teste inédito.
 
-Os custos refletem hardware misto e repetições distintas; a análise de interpretabilidade cobre cinco exemplos e modelos selecionados após a avaliação. Não houve teste de significância ou validação de calibração. Além disso, a inspeção visual completa do protótipo permanece pendente, embora os testes técnicos tenham verificado seus dados e a renderização em servidor. Essas restrições delimitam o alcance da demonstração e não devem ser ocultadas pela apresentação gráfica.
+Os custos refletem hardware misto e repetições distintas; a análise de interpretabilidade cobre cinco exemplos e modelos selecionados após a avaliação. Não houve teste de significância ou validação de calibração. Capturas atuais permitiram inspecionar a apresentação estática do protótipo em desktop; testes interativos completos e a conferência em telas menores permanecem pendentes. Essas restrições delimitam o alcance da demonstração e não devem ser ocultadas pela apresentação gráfica.
 
 ### Síntese da discussão
 

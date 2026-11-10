@@ -1,0 +1,98 @@
+[
+  {
+    "numero_recebido": 1,
+    "arquivo": "01_dashboard.png",
+    "sha256": "4fa5a535419efd4b99f796fc8428077ea295b8a80ed52ce2046985f973d05f44",
+    "bytes": 417674,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 2,
+    "arquivo": "02_vaga.png",
+    "sha256": "7a9f389fb193954aaaa39477ef07c6902237eff853da1fc2e1f0f57e04bc5d8d",
+    "bytes": 366694,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 3,
+    "arquivo": "03_curriculos_inicio.png",
+    "sha256": "ffca8b4d0e128263c45702adb0e28c6723955f5347d5a6baf7d61cfe03874254",
+    "bytes": 410800,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 4,
+    "arquivo": "04_curriculos_paginacao.png",
+    "sha256": "45e0ef5a1324319a341814b4cdfdd6c7d21d369f29f9e8ad67d6a165832bf2b2",
+    "bytes": 426605,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 5,
+    "arquivo": "05_ranking_inicio.png",
+    "sha256": "b570e312201eaa9ac816f2b70fb03863f4865facf9ce5910fb345dee0d7d62f9",
+    "bytes": 414996,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 6,
+    "arquivo": "06_ranking_paginacao.png",
+    "sha256": "a7aa5cc23738d3b2ebd6a12327bd401f51829f69f2f378e03c9fc0f89b77b29c",
+    "bytes": 430247,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 7,
+    "arquivo": "07_comparativo_original.png",
+    "sha256": "2b5d59f36e87b6af5b5c0da66fbc9ce9f67175eaa7c216db5a0d4cfd29ff1a64",
+    "bytes": 375576,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 8,
+    "arquivo": "08_matriz_tfidf_lr_original.png",
+    "sha256": "01944f893315635977e120ffef13d7cd1720deee76c1cb8a99c75e6e478d9974",
+    "bytes": 379806,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 9,
+    "arquivo": "09_resultados_f1.png",
+    "sha256": "18515a260a5209596f57a9db0e34b7ef5e29302b15dce99a85c9aaf638e86292",
+    "bytes": 370267,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 10,
+    "arquivo": "10_resultados_ranking_custo.png",
+    "sha256": "924902a9bce8ee9693b724008c47e8daebdb53af95e77b847a89ea39540e1023",
+    "bytes": 395394,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 11,
+    "arquivo": "11_interpretabilidade_local.png",
+    "sha256": "e2365a18fc413bf012417027a3cd2d0371fdcea3a672fcb36bd30ef400e91eb3",
+    "bytes": 365153,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  },
+  {
+    "numero_recebido": 12,
+    "arquivo": "12_interpretabilidade_global.png",
+    "sha256": "6d66e3dd9e07ef96f9ed60d829f57778c8621a178d96e66b394fc93ddb4fceb6",
+    "bytes": 362704,
+    "origem": "Captura da aplicação fornecida pelo autor no chat em 10/11/2026",
+    "alteracao_bitmap": false
+  }
+]

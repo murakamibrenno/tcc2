@@ -1,15 +1,18 @@
 {
   "data": "2026-11-10",
-  "arquivo": "Artigo_TCC2_redacao_final.docx",
-  "sha256_docx": "b4e1dc0a18efe9f7ef2be0ecd1864c42b93d07c0e894c647ed54197ba6a7c25a",
-  "bytes_docx": 3569960,
-  "paginas_fisicas_renderizadas": 70,
+  "arquivo": "Artigo_TCC2_com_telas_atuais.docx",
+  "sha256_docx": "c45bc5af2c81ea6f4900e407f2f01c6412d9c5be782d4cbb4aaa242ff1aa7cf3",
+  "bytes_docx": 5792022,
+  "paginas_fisicas_renderizadas": 74,
   "imagens_inline_preservadas": 13,
   "novas_tabelas_docx": 6,
-  "entradas_indices_conferidas": 70,
+  "entradas_indices_conferidas": 76,
   "drive_file_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
   "branch": "codex/validacao-pratica-tcc2-20261110",
-  "estado": "Redação final integrada para revisão do autor e orientador; verificação visual da aplicação e revisão institucional pendentes.",
+  "estado": "Redação e telas atuais integradas para revisão do autor e orientador; inspeção estática desktop concluída sobre capturas do autor. Testes interativos completos, telas menores e revisão institucional pendentes.",
   "protocolo": "Resultados primários preservados; ROC-AUC complementar posterior sem alteração de previsões.",
-  "verificacao_documento": "Renderização e inspeção das páginas alteradas; páginas preservadas conferidas por equivalência visual e de arquivo. Sumário e listas conferidos com páginas impressas."
+  "verificacao_documento": "Renderização e inspeção das páginas alteradas; páginas preservadas conferidas por equivalência visual e de arquivo. Sumário e listas conferidos com páginas impressas.",
+  "novas_capturas_inline": 6,
+  "total_imagens_inline": 19,
+  "capturas_originais_arquivadas": 12
 }

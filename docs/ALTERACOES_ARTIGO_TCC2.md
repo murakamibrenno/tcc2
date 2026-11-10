@@ -20,4 +20,11 @@ O capítulo de resultados, discussão e conclusão está em [ARTIGO_RESULTADOS_D
 
 Os resultados primários não foram substituídos. ROC-AUC foi operacionalizada como complemento posterior, previamente prevista no artigo, sem reotimização ou nova seleção pelos 97. As previsões das dezoito configurações foram reproduzidas e preservadas.
 
-Permanecem para a entrega institucional: conferência visual e interativa da aplicação, eventuais capturas das telas atuais, revisão do autor e orientador e conferência das normas. O navegador recusou a abertura da página local na sessão anterior; não foi feita inspeção visual por outra via. As treze figuras históricas do artigo foram preservadas e contextualizadas, sem inventar capturas novas.
+## Telas atuais incorporadas
++
++Foram recebidas e arquivadas doze capturas reais do autor. Seis imagens complementares compõem as Figuras 14–19, com parágrafos de apresentação, legendas e fonte: dashboard, ranking da coleção, matriz original TF-IDF com Regressão Logística, gráfico das dezoito condições, qualidade/custo e explicação lexical local. As Figuras 1–13 foram preservadas, mantendo a identificação histórica das telas do TCC1.
++
++Sumário e listas foram atualizados conforme a paginação renderizada. Os valores detalhados seguem nas tabelas editáveis do Capítulo 5. O comparativo recebido está na condição Original; não foi apresentado como resultado com pesos. Não houve mudança em modelos, rótulos, previsões ou métricas.
++
++A inspeção visual foi estática, sobre imagens fornecidas pelo autor. Testes interativos completos, telas menores, revisão do autor e orientador e conferência das normas permanecem pendentes. O navegador continuou recusando acesso na sessão; as capturas foram enviadas pelo autor, sem contorno dessa restrição. Os arquivos e hashes constam de [capturas atuais](capturas_curriculorank_20261110/README.md).
++
