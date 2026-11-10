@@ -1,29 +1,29 @@
-# Revisão do lote 8
+# Revisão do lote 9
 
-Lote 7 aprovado pelo autor em 10/11/2026. No piloto de 100 documentos há 40 rótulos aprovados e 60 pendentes, em seis lotes de dez incluindo este. Quatro documentos dos pares complementares também têm decisões aprovadas e são contados separadamente. Os itens abaixo continuam como propostas, sem aplicação às métricas históricas.
+Lote 8 aprovado pelo autor em 10/11/2026. No piloto há 50 de 100 currículos aprovados e 50 pendentes: cinco lotes de dez incluindo este. Os quatro documentos de pares complementares são contados separadamente. As propostas abaixo não foram aplicadas aos resultados históricos.
 
-## Propostas para aprovação
+## Propostas aguardando aprovação
 
-1. **41344156 — Parcialmente Adequado**. SQL Server; SQL databases; ASP.Net; VB.NET; Application Developer ... build ... ETL commission database system. SQL e programação evidenciados. ETL e integração de CRM não comprovam APIs/web services; Git não identificado.
+1. **51639418 — Inadequado**. Databases (SQL, DB2, ORACLE, ADABAS); supervision ... Programming & Applications; taught ... Programming Tools. SQL declarado. Supervisionar programadores e ensinar ferramentas genéricas não identifica linguagem; sem Git ou APIs/web services evidenciados.
 
-2. **46260230 — Inadequado**. Hardware repair; Network Administration; Application software testing; Database management. Atividades de suporte e teste sem linguagem de programação, SQL, Git ou APIs/web services evidenciados. Gerenciamento genérico de banco não comprova SQL.
+2. **31243710 — Inadequado**. Databases SQL, MySQL; programming routers, switches; BrainTree PACS/C-Arm; C isolado em Skills. SQL evidenciado. Programar/configurar roteadores não comprova desenvolvimento de aplicações. A letra C isolada pode vir de C-Arm e não sustenta linguagem C. Sem Git ou APIs/web services.
 
-3. **39413067 — Parcialmente Adequado**. MS SQL; SQL; C++, Java, C#, PHP, Visual Basic; Writing batch scripts. SQL e programação explicitados; sem Git e APIs/web services identificados.
+3. **20879311 — Inadequado**. Uploaded data to appropriate SQL databases; Information Security Risk Management; infrastructure; Data/Systems Administrator. SQL evidenciado. Envio de dados e administração de infraestrutura não comprovam linguagem, Git ou implementação de serviços/APIs.
 
-4. **30223363 — Parcialmente Adequado**. SQL; MS SQL Server 2005/2008; Oracle; C, C++, Core Java, Perl; PHP. SQL e linguagens declarados, com formação em banco web/PHP. Integração de dados e campanhas não comprovam APIs; sem Git identificado.
+4. **19796840 — Inadequado**. SQL Developer; Oracle; TOAD; SOX/SAS70 audit compliance. SQL/Oracle declarados. Atuação em auditoria, segurança e PeopleSoft sem linguagem, Git ou APIs/web services identificados. SAS70 refere-se ao contexto de auditoria, não comprova a linguagem SAS.
 
-5. **25959103 — Inadequado**. installation, configuration and support ... MS SQL database. SQL evidenciado. Suporte, instalação e integração genérica de software não comprovam linguagem, Git ou serviços/APIs.
+5. **19850482 — Inadequado**. Market Data & Trading Systems: Open Bloomberg and Server API; technology infrastructure; vendor relationships; FIX connections. Menção a API de produto financeiro, sem implementação descrita. Não foram identificados SQL, linguagem ou Git; mesmo contando essa menção como um requisito, a classe permanece Inadequado.
 
-6. **26801767 — Inadequado**. Cobol; Fortran; Pascal; UNIX and C; relational database; DBase IV; EDI. Linguagens declaradas, mas sem SQL ou tecnologia SQL identificada. Referência genérica a banco relacional não demonstra SQL. Sem Git ou implementação de APIs/web services.
+6. **11957080 — Parcialmente Adequado**. Install, configure, and support ... SQL compliant database software; Course ... Developing MS ASP.NET Web Applications Using Visual Studio; Create macros. SQL e formação específica em desenvolvimento de aplicações ASP.NET sustentam aderência parcial conforme o protocolo que admite .NET em contexto de desenvolvimento. Evidência formativa, sem inferir C# ou VBA nem experiência profissional de implementação. Sem Git e APIs/web services. Caso de fronteira a confirmar pelo autor.
 
-7. **24020470 — Inadequado**. Database servers; CMS: Joomla, WordPress; hardware repair. Infraestrutura, suporte e uso de CMS sem linguagem, SQL, Git ou APIs/web services explicitados.
+7. **13836471 — Parcialmente Adequado**. Sybase SQL Anywhere; Microsoft SQL Server; Maintenance and Creation of desktop applications (Power Builder 6.5, Power Builder 9.0). SQL e desenvolvimento explícito de aplicações em tecnologia identificada (PowerBuilder). Não inferir linguagem específica não citada. Sem Git ou APIs/web services evidenciados.
 
-8. **28897981 — Parcialmente Adequado**. MySQL; Designed and proto-typed ... tracking system ... PHP; transform web services to a Content Management System, using Drupal. MySQL e PHP implementados em projeto. Migração de conteúdo para CMS não comprova desenvolvimento de API/web service; sem Git identificado.
+8. **15802627 — Inadequado**. Network Security; IT Operational Management; guided ... development ... case management application. Gestão de infraestrutura e orientação de desenvolvimento, sem SQL, linguagem, Git ou implementação de APIs/web services evidenciados.
 
-9. **10247517 — Inadequado**. Microsoft SQL; developing an automated script for retrieving data from an outside server. SQL declarado. O script não identifica linguagem, mantendo a exigência aplicada aos casos anteriores. Sem Git ou APIs/web services explicitados. Não confundir configurar imagens de computadores com programação.
+9. **14789139 — Inadequado**. SQL em Skills; Managed ... Web-based workflow ... custom application; interfaces to PACS, Pyxis. SQL declarado. Gestão de aplicações e interfaces sem linguagem ou especificação de API/web service não comprova os demais requisitos; Git não identificado.
 
-10. **79541391 — Parcialmente Adequado**. Create and run queries in SQL; Develop, Create and Maintain ... online library ... vb script & ASP.net. SQL e desenvolvimento explícito. Testes de integração SAP não comprovam APIs/web services implementados; sem Git identificado.
+10. **19201175 — Inadequado**. install hardware, patch software and configure internal systems; hardware and software support. Suporte e instalação sem evidências de SQL, linguagem, Git ou APIs/web services. Ser recém-formado não causa reprovação.
 
 ## Fonte e critérios
 
-Leitura dos TXT completos de cleaned_text_en_readable, cujos hashes de árvore Git foram conferidos contra a main em 5fbdaee. Os casos deste lote não estão entre os cinco textos com cobertura lexical abaixo de 99%. Usar extracted_text_en e PDF em ambiguidades. Ausência de menção significa falta de evidência no documento, não incapacidade da pessoa. Categoria e senioridade não causam reprovação. Permanecem quatro requisitos: SQL, serviços/APIs, Git e linguagem de programação. Propostas não equivalem a decisões humanas; os rótulos aprovados serão usados na reexecução e então integrados ao artigo com os resultados correspondentes.
+Textos readable completos da main 5fbdaee, previamente conferidos por hash de árvore Git. Nenhum caso deste lote está entre os cinco textos limpos com perda lexical acima de 1%. Categoria e senioridade não causam reprovação. Não identificar linguagem a partir de sigla ambígua ou letra isolada. Formação em desenvolvimento e implementação contextualizada em tecnologia identificada são evidências de força diferente; os casos 11957080 e 13836471 explicitam isso e aguardam confirmação do autor. Não inferir linguagem específica ausente. A revisão assistida pela IA permanece dependente de decisão do autor. Depois de consolidar o conjunto, recalcular métricas e integrar método, resultados e discussão na mesma versão do artigo.
