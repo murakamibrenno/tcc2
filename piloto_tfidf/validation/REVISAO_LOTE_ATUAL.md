@@ -1,29 +1,119 @@
-# Revisão do lote 9
+# Revisão do piloto concluída
 
-Lote 8 aprovado pelo autor em 10/11/2026. No piloto há 50 de 100 currículos aprovados e 50 pendentes: cinco lotes de dez incluindo este. Os quatro documentos de pares complementares são contados separadamente. As propostas abaixo não foram aplicadas aos resultados históricos.
+Revisão concluída em 10/11/2026 conforme a rubrica técnica e as autorizações registradas. Não há lotes do piloto aguardando aprovação. A conclusão desta etapa não significa conclusão da avaliação científica final.
 
-## Propostas aguardando aprovação
+## Composição e proveniência
 
-1. **51639418 — Inadequado**. Databases (SQL, DB2, ORACLE, ADABAS); supervision ... Programming & Applications; taught ... Programming Tools. SQL declarado. Supervisionar programadores e ensinar ferramentas genéricas não identifica linguagem; sem Git ou APIs/web services evidenciados.
+- 100 documentos do piloto com decisão registrada; 99 mantidos após excluir 26746496 como versão de 16186411.
+- 60 propostas ratificadas caso a caso pelo autor; 40 classificações pela IA sob autorização antecipada, sem ratificação individual. Não descrever todos como anotação humana.
+- Referência retida: 3 Adequados, 27 Parcialmente Adequados e 69 Inadequados. Essas são contagens de rótulos, não métricas preditivas.
+- Os quatro documentos dos dois pares complementares foram ratificados separadamente; permanecem 16850314 e 19147603 como representantes, com exclusão de 37473139 e 28398216 na avaliação principal.
+- A referência do piloto serve ao desenvolvimento. Os casos discutidos não constituem um teste final independente.
 
-2. **31243710 — Inadequado**. Databases SQL, MySQL; programming routers, switches; BrainTree PACS/C-Arm; C isolado em Skills. SQL evidenciado. Programar/configurar roteadores não comprova desenvolvimento de aplicações. A letra C isolada pode vir de C-Arm e não sustenta linguagem C. Sem Git ou APIs/web services.
+## Arquivos versionados
 
-3. **20879311 — Inadequado**. Uploaded data to appropriate SQL databases; Information Security Risk Management; infrastructure; Data/Systems Administrator. SQL evidenciado. Envio de dados e administração de infraestrutura não comprovam linguagem, Git ou implementação de serviços/APIs.
+O registro detalhado está em revisao_adjudicada.json. O manifesto e o CSV de referência estão em ../data/revisao_piloto_v1/. Eles apontam para os TXT integrais versionados, identificam hashes, inclusão e tipo de decisão. O corpus histórico e os resultados publicados permanecem preservados para comparação e auditoria.
 
-4. **19796840 — Inadequado**. SQL Developer; Oracle; TOAD; SOX/SAS70 audit compliance. SQL/Oracle declarados. Atuação em auditoria, segurança e PeopleSoft sem linguagem, Git ou APIs/web services identificados. SAS70 refere-se ao contexto de auditoria, não comprova a linguagem SAS.
+## Decisões sob autorização antecipada
 
-5. **19850482 — Inadequado**. Market Data & Trading Systems: Open Bloomberg and Server API; technology infrastructure; vendor relationships; FIX connections. Menção a API de produto financeiro, sem implementação descrita. Não foram identificados SQL, linguagem ou Git; mesmo contando essa menção como um requisito, a classe permanece Inadequado.
+- **20024870 — Parcialmente Adequado**. SQL; PHP, Java, C#, Visual Basic; built and designed official website. SQL e linguagens declaradas; sem Git ou APIs/web services.
 
-6. **11957080 — Parcialmente Adequado**. Install, configure, and support ... SQL compliant database software; Course ... Developing MS ASP.NET Web Applications Using Visual Studio; Create macros. SQL e formação específica em desenvolvimento de aplicações ASP.NET sustentam aderência parcial conforme o protocolo que admite .NET em contexto de desenvolvimento. Evidência formativa, sem inferir C# ou VBA nem experiência profissional de implementação. Sem Git e APIs/web services. Caso de fronteira a confirmar pelo autor.
+- **18159866 — Inadequado**. Oracle applications; Oracle ERP; gestão global de tecnologia. Implantação de ERP e gestão não identificam linguagem, Git ou implementação de serviços. Mesmo reconhecendo Oracle como banco, não há dois requisitos.
 
-7. **13836471 — Parcialmente Adequado**. Sybase SQL Anywhere; Microsoft SQL Server; Maintenance and Creation of desktop applications (Power Builder 6.5, Power Builder 9.0). SQL e desenvolvimento explícito de aplicações em tecnologia identificada (PowerBuilder). Não inferir linguagem específica não citada. Sem Git ou APIs/web services evidenciados.
+- **17111768 — Inadequado**. RDBMS such as Oracle and Microsoft SQL; Planning, Programming, Budgeting and Execution. SQL evidenciado. Programming é planejamento orçamentário, não linguagem de programação; sem Git ou APIs.
 
-8. **15802627 — Inadequado**. Network Security; IT Operational Management; guided ... development ... case management application. Gestão de infraestrutura e orientação de desenvolvimento, sem SQL, linguagem, Git ou implementação de APIs/web services evidenciados.
+- **17688766 — Inadequado**. Experience with SQL, SaaS and Hyper-V. SQL declarado; sem linguagem, Git ou serviços/APIs implementados.
 
-9. **14789139 — Inadequado**. SQL em Skills; Managed ... Web-based workflow ... custom application; interfaces to PACS, Pyxis. SQL declarado. Gestão de aplicações e interfaces sem linguagem ou especificação de API/web service não comprova os demais requisitos; Git não identificado.
+- **13385306 — Parcialmente Adequado**. I personally rewrote their utility and security library from VB.NET to C#; SQL Server; TFS. SQL e programação explícitos. TFS não comprova Git; sem APIs/web services identificados.
 
-10. **19201175 — Inadequado**. install hardware, patch software and configure internal systems; hardware and software support. Suporte e instalação sem evidências de SQL, linguagem, Git ou APIs/web services. Ser recém-formado não causa reprovação.
+- **10840430 — Inadequado**. DoD planning, programming, budgeting and execution (PPBE); INFOSEC/NETOPS. Programming refere-se a planejamento e orçamento. Sem SQL, linguagem, Git ou serviços/APIs. Texto bruto conferido por alerta de limpeza.
 
-## Fonte e critérios
+- **11580408 — Inadequado**. Microsoft SQL; Navision proprietary C/side database. SQL evidenciado. C/side de Navision e letra C isolada não comprovam linguagem C. Sem linguagem explícita, Git ou APIs.
 
-Textos readable completos da main 5fbdaee, previamente conferidos por hash de árvore Git. Nenhum caso deste lote está entre os cinco textos limpos com perda lexical acima de 1%. Categoria e senioridade não causam reprovação. Não identificar linguagem a partir de sigla ambígua ou letra isolada. Formação em desenvolvimento e implementação contextualizada em tecnologia identificada são evidências de força diferente; os casos 11957080 e 13836471 explicitam isso e aguardam confirmação do autor. Não inferir linguagem específica ausente. A revisão assistida pela IA permanece dependente de decisão do autor. Depois de consolidar o conjunto, recalcular métricas e integrar método, resultados e discussão na mesma versão do artigo.
+- **91635250 — Inadequado**. Infrastructure; hardware troubleshooting; automated performance test scripts. Scripts/testes sem linguagem identificada; sem SQL, Git ou serviços/APIs evidenciados.
+
+- **57002858 — Inadequado**. Implemented and maintained a SQL Cluster. SQL evidenciado; demais atividades de infraestrutura sem linguagem, Git ou serviços/APIs.
+
+- **17306905 — Inadequado**. Relational database management; QuickBooks; C isolado em Skills. Bancos genéricos e ferramentas contábeis não comprovam SQL ou linguagem. C isolado não é evidência contextual de programação. Sem Git ou APIs.
+
+- **44115326 — Parcialmente Adequado**. SQL Server and Oracle Databases; Developing Korn and Bash shell-scripts; PERL; Amazon SimpleDB web service. SQL e desenvolvimento de scripts explícitos. Experiência com serviços de nuvem não será equiparada automaticamente à implementação de APIs; Git não identificado.
+
+- **37292350 — Inadequado**. Program Support Assistant; accounting claims; training and content management. Nenhum dos quatro requisitos técnicos evidenciado; program refere-se a programas de trabalho.
+
+- **17714174 — Inadequado**. Account Manager/Business Development; health care solutions; sales. Sem SQL, linguagem, Git ou APIs/web services evidenciados.
+
+- **16244633 — Inadequado**. Sales & Customer Service; Human Resource Development; employee relations. Sem SQL, linguagem, Git ou APIs/web services evidenciados.
+
+- **51508889 — Parcialmente Adequado**. Core Java; SQL Server; Oracle PL/SQL; developed shell scripts; TIBCO MDM/EMS integrations. SQL e programação explícitos. Integração TIBCO não basta para inferir REST; sem Git identificado. Mesmo contando integração de serviços, permanece parcial.
+
+- **29221006 — Inadequado**. Aviation Safety Assistant; administrative correspondence; clerical support. Sem os quatro requisitos técnicos evidenciados.
+
+- **27710853 — Inadequado**. Project managing Global Biostatistics and Programming; BPO service delivery. Gestão da área de programação não identifica linguagem; sem SQL, Git ou serviços/APIs.
+
+- **12230301 — Inadequado**. Station websites, programming; script video; radio and TV commercials. Programação de emissora e roteiro audiovisual não comprovam linguagem de software. Sem SQL, Git ou APIs.
+
+- **65373280 — Inadequado**. Executive Chef; culinary operations and kitchen management. Sem os quatro requisitos técnicos evidenciados.
+
+- **39908485 — Inadequado**. Construction Project Manager; construction teams and cost estimation. Sem os quatro requisitos técnicos evidenciados.
+
+- **26167298 — Inadequado**. Marketing Consultant; campaign tools; HTML; Software Life Cycle. HTML e ferramentas de marketing não comprovam linguagem de programação. Sem SQL, Git ou APIs.
+
+- **11155153 — Inadequado**. Mechanical Designer; AutoCAD, SolidWorks, CADDS4X. Uso de CAD não comprova programação, SQL, Git ou APIs.
+
+- **23085604 — Inadequado**. Chief System Architect; broadcast rights; script approval; travel programming. As menções a script e programming estão no contexto audiovisual. Sem linguagem, SQL, Git ou APIs evidenciados.
+
+- **13264796 — Parcialmente Adequado**. Built new e-commerce platform on Ruby and Rails; performed web services design ... .Net. Programação e serviços web evidenciados, apesar da categoria da base. Sem SQL ou Git identificado.
+
+- **15011085 — Inadequado**. SuperUser ... Oracle, OBIEE, EssBase, Business Objects. Uso de Oracle em relatórios não comprova implementação de programação. Mesmo contando banco como um requisito, sem Git/serviços/linguagem para chegar a dois.
+
+- **34792238 — Inadequado**. Wellness Director; fitness and health education. Sem os quatro requisitos técnicos evidenciados.
+
+- **28670024 — Inadequado**. Healthcare Provider; Health Informatics and Analytics graduate student. Formação genérica em informática em saúde não comprova os quatro requisitos.
+
+- **20806155 — Inadequado**. HR Specialist; RPA coding and remarks; incorrect event coding. Coding refere-se a registros e eventos administrativos de pessoal; não evidencia linguagem. Sem SQL, Git ou APIs.
+
+- **11842274 — Inadequado**. Bartender; marketing/public relations; stock and hospitality. Sem os quatro requisitos técnicos evidenciados.
+
+- **17704246 — Inadequado**. Programmed general maintenance machinery including lathes and band saws. Configurar máquinas sem linguagem identificada não comprova programação de aplicações. Sem SQL, Git ou APIs.
+
+- **37660306 — Inadequado**. Guest Teacher; Floral Designer; floral purchasing. Sem os quatro requisitos técnicos evidenciados.
+
+- **17342969 — Inadequado**. Director of Ship Construction; lean operations and manufacturing. Sem os quatro requisitos técnicos evidenciados.
+
+- **19072267 — Inadequado**. Develop and seek funding for new programming; Spring Gathering Luncheon. Programas educacionais e evento na primavera não comprovam linguagem ou framework Spring. Sem SQL, Git ou APIs.
+
+- **12472574 — Parcialmente Adequado**. Oracle/SQL; Visual Basic; C++; Java and JavaScript declared in Skills; QA engineering. SQL e linguagens declaradas. Não inferir que todo código dos produtos testados foi escrito pelo candidato. Menção a Composer API não demonstra implementação; sem Git.
+
+- **12491898 — Inadequado**. Construction Laborer; home health aide; introductory craft skills. Sem os quatro requisitos técnicos evidenciados. Partes heterogêneas no documento não serão tratadas como programação.
+
+- **24508725 — Inadequado**. Field HR Associate; recruitment; sample correspondence appended. Sem os quatro requisitos técnicos evidenciados. Há material de correspondência anexado, registrado como ruído documental.
+
+- **19063156 — Inadequado**. Managing and Troubleshooting with FTP, cPanel, Plesk and MySQL. MySQL evidenciado, mas não linguagem, Git ou serviços/APIs.
+
+- **10480456 — Inadequado**. New Product Research; oral healthcare R&D; chemistry and microscopy. Sem os quatro requisitos técnicos evidenciados.
+
+- **34317538 — Inadequado**. SQL; establishing version control; 3D modeling and programming. SQL evidenciado. Versionamento sem Git e programação 3D sem linguagem não satisfazem os demais requisitos.
+
+- **35651876 — Inadequado**. Director of Engineering; hotel kitchen/refrigeration maintenance; HVAC. Engenharia aqui é manutenção predial; sem os quatro requisitos técnicos evidenciados.
+
+## Diferenças em relação aos rótulos históricos
+
+- 18067556: Inadequado → Parcialmente Adequado.
+- 90867631: Inadequado → Parcialmente Adequado.
+- 20001721: Inadequado → Parcialmente Adequado.
+- 18187364: Inadequado → Parcialmente Adequado.
+- 32959732: Parcialmente Adequado → Inadequado.
+- 22450718: Parcialmente Adequado → Inadequado.
+- 13836471: Inadequado → Parcialmente Adequado.
+- 17111768: Parcialmente Adequado → Inadequado.
+- 44115326: Inadequado → Parcialmente Adequado.
+- 51508889: Inadequado → Parcialmente Adequado.
+- 21297521: Inadequado → Adequado.
+- 13264796: Inadequado → Parcialmente Adequado.
+- 12472574: Inadequado → Parcialmente Adequado.
+
+Essas alterações não foram usadas para recalcular ou melhorar retrospectivamente rankings antigos. A retirada de uma versão e o texto integral alteram o protocolo da próxima execução.
+
+## Próxima etapa científica
+
+Preparar a seleção ampliada e o teste humano reservado, revisar grupos documentais, fixar janela textual e limites de tokens e implementar partições/validação compatíveis com os poucos exemplos adequados. Ainda há apenas três adequados retidos; a revisão não resolve sozinha a classe rara. A condição de cinco folds com todas as classes em todo teste continua inviável neste piloto. Não chamar os 40 casos sob autorização antecipada de referência humana independente. O processamento comparativo da base completa e a atualização de resultados do artigo permanecem pendentes.
