@@ -6,7 +6,8 @@
   "protocolo_aprovado": {
     "vaga": "Junior Software Developer (Backend and Web Applications)",
     "criterio": "Aderência técnica; categoria da pasta e excesso de experiência não causam reprovação.",
-    "referencia": "piloto_tfidf/data/vaga_referencia.txt"
+    "referencia": "piloto_tfidf/data/vaga_referencia.txt",
+    "formacao_para_aderencia_parcial": "Formação e conhecimento explícito em programação podem sustentar aderência parcial; não equivalem a experiência profissional comprovada."
   },
   "integracao": "Registro separado; corpus, partições e resultados históricos ainda não substituídos.",
   "decisoes_aprovadas": [
@@ -66,6 +67,63 @@
       },
       "justificativa": "Evidência insuficiente de programação e serviços; sem Git identificado. Cargo de suporte não é critério de exclusão.",
       "aprovacao": "Usuário: Aprovo os quatro"
+    },
+    {
+      "id": "83816738",
+      "evidencias": {
+        "sql": "SQL databases like MySQL, PostgreSQL, Oracle",
+        "servicos": "Developed REST web services for external application integration",
+        "git": "Git for source control and versioning",
+        "programacao": "Coded and debugged multi-tiered Java-based applications"
+      },
+      "status": "aprovado",
+      "rotulo": "Adequado",
+      "aprovacao": "Usuário: Aprovo tudo ... registrar o lote 2"
+    },
+    {
+      "id": "18067556",
+      "evidencias": {
+        "sql": "Designed ad-hoc SQL views, stored procedures and reports",
+        "programacao": "Utilized advanced VBA programming ... two billing systems; Programming/Databases ... Python"
+      },
+      "justificativa": "SQL e programação evidenciados; interfaces/ETL/EDI sem evidência explícita de serviço/API; Git não identificado no PDF completo.",
+      "nota_fonte": "PDF original tem quatro páginas, aproximadamente 20 mil caracteres; corpus salvo contém 12 mil. Há competências adicionais além do trecho salvo. Registrar e resolver janela textual no protocolo antes de reexecutar.",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo tudo ... registrar o lote 2"
+    },
+    {
+      "id": "90867631",
+      "evidencias": {
+        "sql": "Performed database queries and file transfers using SQL",
+        "programacao": "Skills C++/VB08/10; COM-207 Programming in C/C+; COM-208 Programming Visual Basic"
+      },
+      "justificativa": "Conhecimento declarado e formação em programação, sem comprovação forte de desenvolvimento de aplicações. Não equiparar cursos a experiência profissional; sem Git/serviços identificado.",
+      "ponto_decisao": "Aceitar formação e conhecimento explícito como evidência para compatibilidade parcial, sem exigir experiência profissional para vaga júnior.",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo tudo ... registrar o lote 2"
+    },
+    {
+      "id": "16899268",
+      "evidencias": {
+        "programacao_ambigua": "Learned two computer languages on my own"
+      },
+      "justificativa": "Linguagens não identificadas; gerenciamento de websites sem evidência dos quatro requisitos. Motivo não é cargo gerencial.",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo tudo ... registrar o lote 2"
+    },
+    {
+      "id": "10089434",
+      "evidencias": {
+        "sql": "T-SQL; SQL",
+        "programacao": "Developing ... application scripts ... Visual Basic Script, and PowerShell; C++, Java, VB.Net"
+      },
+      "justificativa": "SQL e programação declarados; sem serviços/Git identificados. TFS para registrar erros não comprova Git nem uso de controle de versão.",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo tudo ... registrar o lote 2"
     }
   ],
   "verificacao_pdfs": {
@@ -85,60 +143,71 @@
     "origem": "Cópias locais em Documents/TCC; hashes Git idênticos aos blobs do repositório.",
     "conclusao": "Mesmos cargo, período, formação, notas e projetos; diferenças editoriais e conteúdo adicional. Tratar como versões do mesmo histórico para controle de independência, sem afirmar identidade civil.",
     "grupo_aprovado": true,
-    "exclusao_aprovada": false,
-    "proposta": "Uma versão por grupo na avaliação principal. Conservar 16186411, que contém seção Skills preenchida e projeto adicional; arquivar 26746496 como versão relacionada. Não selecionar pela posição no ranking ou desempenho de modelo."
+    "exclusao_aprovada": true,
+    "proposta": "Uma versão por grupo na avaliação principal. Conservar 16186411, que contém seção Skills preenchida e projeto adicional; arquivar 26746496 como versão relacionada. Não selecionar pela posição no ranking ou desempenho de modelo.",
+    "representante_avaliacao_principal": "16186411",
+    "excluido_avaliacao_principal": "26746496",
+    "aprovacao_exclusao": "Usuário: pode manter só o 16186411 na avaliação principal",
+    "politica_preservacao": "Ambos os arquivos originais preservados. A nova seleção será usada na reexecução, sem alterar métricas históricas."
   },
-  "lote_2_proposto": [
+  "progresso": {
+    "documentos_com_rotulo_aprovado": 10,
+    "documentos_aprovados_retidos_na_avaliacao_principal": 9,
+    "total_previsto_avaliacao_principal": 99,
+    "exclusoes_aprovadas": [
+      "26746496"
+    ]
+  },
+  "lote_3_proposto": [
     {
-      "id": "83816738",
-      "rotulo_proposto": "Adequado",
-      "evidencias": {
-        "sql": "SQL databases like MySQL, PostgreSQL, Oracle",
-        "servicos": "Developed REST web services for external application integration",
-        "git": "Git for source control and versioning",
-        "programacao": "Coded and debugged multi-tiered Java-based applications"
-      },
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "18067556",
+      "id": "10265057",
       "rotulo_proposto": "Parcialmente Adequado",
       "evidencias": {
-        "sql": "Designed ad-hoc SQL views, stored procedures and reports",
-        "programacao": "Utilized advanced VBA programming ... two billing systems; Programming/Databases ... Python"
+        "sql": "Data manipulation language SQL commands; extract big data ... SQL database",
+        "programacao": "Programming language: C/C++, Python, Java, Matlab, and LabView"
       },
-      "justificativa": "SQL e programação evidenciados; interfaces/ETL/EDI sem evidência explícita de serviço/API; Git não identificado no PDF completo.",
-      "nota_fonte": "PDF original tem quatro páginas, aproximadamente 20 mil caracteres; corpus salvo contém 12 mil. Há competências adicionais além do trecho salvo. Registrar e resolver janela textual no protocolo antes de reexecutar.",
+      "justificativa": "Dois requisitos técnicos; não identificados Git e APIs/web services. Atuação em RF não causa exclusão.",
+      "fonte": "PDF completo, uma página",
       "status": "aguarda_usuario"
     },
     {
-      "id": "90867631",
-      "rotulo_proposto": "Parcialmente Adequado",
-      "evidencias": {
-        "sql": "Performed database queries and file transfers using SQL",
-        "programacao": "Skills C++/VB08/10; COM-207 Programming in C/C+; COM-208 Programming Visual Basic"
-      },
-      "justificativa": "Conhecimento declarado e formação em programação, sem comprovação forte de desenvolvimento de aplicações. Não equiparar cursos a experiência profissional; sem Git/serviços identificado.",
-      "ponto_decisao": "Aceitar formação e conhecimento explícito como evidência para compatibilidade parcial, sem exigir experiência profissional para vaga júnior.",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "16899268",
+      "id": "10554236",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "programacao_ambigua": "Learned two computer languages on my own"
+        "trechos_ambiguos": "developed an automated tool; supported the testing of scripts, patches, and system change requests"
       },
-      "justificativa": "Linguagens não identificadas; gerenciamento de websites sem evidência dos quatro requisitos. Motivo não é cargo gerencial.",
+      "justificativa": "Automação e uso de ERP não identificam linguagem, SQL, Git ou serviços/APIs; não é rejeição por profissão contábil.",
+      "fonte": "PDF completo, cinco páginas, aproximadamente 24 mil caracteres",
       "status": "aguarda_usuario"
     },
     {
-      "id": "10089434",
-      "rotulo_proposto": "Parcialmente Adequado",
+      "id": "10001727",
+      "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "sql": "T-SQL; SQL",
-        "programacao": "Developing ... application scripts ... Visual Basic Script, and PowerShell; C++, Java, VB.Net"
+        "trecho_ambiguo": "worked on hotel computer programming systems"
       },
-      "justificativa": "SQL e programação declarados; sem serviços/Git identificados. TFS para registrar erros não comprova Git nem uso de controle de versão.",
+      "justificativa": "Contexto de operação de sistemas hoteleiros; nenhuma linguagem, SQL, Git ou implementação de serviços evidenciada. Não confundir usar software com desenvolvê-lo.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "10504237",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "trechos_ambiguos": "Google applications training; records in company database"
+      },
+      "justificativa": "Uso de aplicações e consulta de registros sem evidência de SQL, Git, linguagem ou APIs/web services.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "10186968",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "trechos_ambiguos": "customer database protocols; advanced Excel functions and calculations"
+      },
+      "justificativa": "Organização de registros e uso avançado de Excel não comprovam SQL nem programação; sem Git/serviços identificados.",
+      "fonte": "PDF completo, duas páginas",
       "status": "aguarda_usuario"
     }
   ]
