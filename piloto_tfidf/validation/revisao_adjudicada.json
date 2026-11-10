@@ -402,6 +402,123 @@
       "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados.",
       "grupo_documental": "grupo_19147603",
       "excluir_avaliacao_principal": true
+    },
+    {
+      "id": "20674668",
+      "evidencias": {
+        "sql": "SQL, PL/SQL, Oracle Database",
+        "programacao": "C++, Java, JavaScript, PHP, Python; Lead Drupal Developer"
+      },
+      "justificativa": "SQL e programação evidenciados. Versioning management systems sem Git explicitado; sem API/web services demonstrado. Serviços de implantação Drupal não comprovam integração por serviços.",
+      "status": "aprovado",
+      "fonte": "TXT readable completo versionado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "24889109",
+      "evidencias": {
+        "contexto": "LAN/WAN; Technical Support; routers/firewalls; Windows 7"
+      },
+      "justificativa": "Atuação em infraestrutura sem os quatro requisitos técnicos evidenciados. FTP/TCP/IP e telecomunicações não são serviços de aplicações.",
+      "status": "aprovado",
+      "fonte": "TXT readable completo versionado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "20001721",
+      "evidencias": {
+        "sql": "Structured query language (SQL) expert; SQL Server",
+        "programacao": "Used object-oriented design/programming ... stand-alone application; VBA"
+      },
+      "justificativa": "SQL e programação sustentados por formação, declaração de competência e projeto; sem Git/serviços. Ser estudante não causa reprovação.",
+      "status": "aprovado",
+      "fonte": "TXT readable completo versionado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "18187364",
+      "evidencias": {
+        "sql": "Wrote extensive SQL and PL/SQL programs",
+        "programacao": "Wrote PL/SQL ... custom routines; custom ... UNIX shell scripts"
+      },
+      "justificativa": "SQL e programação de rotinas/scripts explicitamente desenvolvidos. Não inferir linguagem C apenas da letra isolada no bloco de skills. Sem Git e APIs/web services identificado.",
+      "status": "aprovado",
+      "fonte": "TXT readable completo versionado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "10553553",
+      "evidencias": {
+        "sql": "SQL Administration; Administered SQL 2005 database",
+        "ambiguidade": "Migrated ... Exchange ... with PowerShell"
+      },
+      "justificativa": "SQL evidenciado. Usar PowerShell em migração sem descrever criação de scripts não comprova programação. Sem Git/serviços.",
+      "status": "aprovado",
+      "fonte": "TXT readable completo versionado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "12635195",
+      "evidencias": {
+        "programacao": "Taught courses concerning ... Python, Visual Basic, and C#; Developed mobile applications with student body"
+      },
+      "justificativa": "Programação evidenciada, sem SQL, Git ou APIs/web services identificados. Docência não causa reprovação; apenas um dos quatro requisitos.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "31111279",
+      "evidencias": {
+        "sql": "Programmed in SQL ... developed various hospital reports; MS SQL 7.0",
+        "programacao": "making changes ... in VB/VBA code",
+        "ambiguidade": "API Software tools (HR/Payroll, Security, Scheduling and timekeeping systems)"
+      },
+      "justificativa": "SQL e programação explícitos. API é usado no nome de software de gestão de pessoal; não comprova desenvolvimento de interface de programação. Sem Git e web services/REST identificado.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "27295996",
+      "evidencias": {
+        "sql": "Performance monitoring ... Microsoft SQL Databases; Introduction to SQL"
+      },
+      "justificativa": "SQL evidenciado; atividades de suporte, migração e implantação sem linguagem, Git ou APIs/web services comprovados.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "27536013",
+      "evidencias": {
+        "sql": "Upgrade of databases from MS SQL to Oracle; SQL databases"
+      },
+      "justificativa": "SQL evidenciado; gestão de BI/SharePoint e reporting sem linguagem, Git ou serviços/APIs explicitados. BI Program refere-se ao programa organizacional.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "32959732",
+      "evidencias": {
+        "sql": "Microsoft SQL server; IDERA SQL Management",
+        "contexto": "Oversaw an off-shore development team ... SharePoint; Amazon Web Services"
+      },
+      "justificativa": "SQL declarado, sem linguagem ou Git. Coordenar integrações e listar Amazon Web Services não comprova implementação de APIs/web services.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os dez, pode registrar o lote 7 e seguir para o próximo lote usando os textos processados."
     }
   ],
   "verificacao_pdfs": {
@@ -429,15 +546,15 @@
     "politica_preservacao": "Ambos os arquivos originais preservados. A nova seleção será usada na reexecução, sem alterar métricas históricas."
   },
   "progresso": {
-    "documentos_com_rotulo_aprovado": 34,
-    "documentos_aprovados_retidos_na_avaliacao_principal": 31,
+    "documentos_com_rotulo_aprovado": 44,
+    "documentos_aprovados_retidos_na_avaliacao_principal": 41,
     "piloto": {
       "total_documentos": 100,
-      "rotulos_aprovados": 30,
-      "representantes_aprovados_retidos": 29,
-      "pendentes_aprovacao": 70,
+      "rotulos_aprovados": 40,
+      "representantes_aprovados_retidos": 39,
+      "pendentes_aprovacao": 60,
       "tamanho_proximos_lotes": 10,
-      "lotes_restantes_incluindo_lote_7": 7
+      "lotes_restantes_incluindo_lote_8": 6
     },
     "complementares_dos_pares": {
       "documentos_com_rotulo_aprovado": 4,
@@ -506,112 +623,113 @@
       "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados."
     }
   ],
-  "lote_7_proposto": [
+  "lote_8_proposto": [
     {
-      "id": "20674668",
+      "id": "41344156",
       "rotulo_proposto": "Parcialmente Adequado",
       "evidencias": {
-        "sql": "SQL, PL/SQL, Oracle Database",
-        "programacao": "C++, Java, JavaScript, PHP, Python; Lead Drupal Developer"
+        "sql": "SQL Server; SQL databases",
+        "programacao": "ASP.Net; VB.NET; Application Developer ... build ... ETL commission database system"
       },
-      "justificativa": "SQL e programação evidenciados. Versioning management systems sem Git explicitado; sem API/web services demonstrado. Serviços de implantação Drupal não comprovam integração por serviços.",
-      "status": "aguarda_usuario",
-      "fonte": "TXT readable completo versionado"
-    },
-    {
-      "id": "24889109",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "contexto": "LAN/WAN; Technical Support; routers/firewalls; Windows 7"
-      },
-      "justificativa": "Atuação em infraestrutura sem os quatro requisitos técnicos evidenciados. FTP/TCP/IP e telecomunicações não são serviços de aplicações.",
-      "status": "aguarda_usuario",
-      "fonte": "TXT readable completo versionado"
-    },
-    {
-      "id": "20001721",
-      "rotulo_proposto": "Parcialmente Adequado",
-      "evidencias": {
-        "sql": "Structured query language (SQL) expert; SQL Server",
-        "programacao": "Used object-oriented design/programming ... stand-alone application; VBA"
-      },
-      "justificativa": "SQL e programação sustentados por formação, declaração de competência e projeto; sem Git/serviços. Ser estudante não causa reprovação.",
-      "status": "aguarda_usuario",
-      "fonte": "TXT readable completo versionado"
-    },
-    {
-      "id": "18187364",
-      "rotulo_proposto": "Parcialmente Adequado",
-      "evidencias": {
-        "sql": "Wrote extensive SQL and PL/SQL programs",
-        "programacao": "Wrote PL/SQL ... custom routines; custom ... UNIX shell scripts"
-      },
-      "justificativa": "SQL e programação de rotinas/scripts explicitamente desenvolvidos. Não inferir linguagem C apenas da letra isolada no bloco de skills. Sem Git e APIs/web services identificado.",
-      "status": "aguarda_usuario",
-      "fonte": "TXT readable completo versionado"
-    },
-    {
-      "id": "10553553",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "sql": "SQL Administration; Administered SQL 2005 database",
-        "ambiguidade": "Migrated ... Exchange ... with PowerShell"
-      },
-      "justificativa": "SQL evidenciado. Usar PowerShell em migração sem descrever criação de scripts não comprova programação. Sem Git/serviços.",
-      "status": "aguarda_usuario",
-      "fonte": "TXT readable completo versionado"
-    },
-    {
-      "id": "12635195",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "programacao": "Taught courses concerning ... Python, Visual Basic, and C#; Developed mobile applications with student body"
-      },
-      "justificativa": "Programação evidenciada, sem SQL, Git ou APIs/web services identificados. Docência não causa reprovação; apenas um dos quatro requisitos.",
-      "fonte": "TXT readable completo versionado",
+      "justificativa": "SQL e programação evidenciados. ETL e integração de CRM não comprovam APIs/web services; Git não identificado.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
       "status": "aguarda_usuario"
     },
     {
-      "id": "31111279",
+      "id": "46260230",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "contexto": "Hardware repair; Network Administration; Application software testing; Database management"
+      },
+      "justificativa": "Atividades de suporte e teste sem linguagem de programação, SQL, Git ou APIs/web services evidenciados. Gerenciamento genérico de banco não comprova SQL.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "39413067",
       "rotulo_proposto": "Parcialmente Adequado",
       "evidencias": {
-        "sql": "Programmed in SQL ... developed various hospital reports; MS SQL 7.0",
-        "programacao": "making changes ... in VB/VBA code",
-        "ambiguidade": "API Software tools (HR/Payroll, Security, Scheduling and timekeeping systems)"
+        "sql": "MS SQL; SQL",
+        "programacao": "C++, Java, C#, PHP, Visual Basic; Writing batch scripts"
       },
-      "justificativa": "SQL e programação explícitos. API é usado no nome de software de gestão de pessoal; não comprova desenvolvimento de interface de programação. Sem Git e web services/REST identificado.",
-      "fonte": "TXT readable completo versionado",
+      "justificativa": "SQL e programação explicitados; sem Git e APIs/web services identificados.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
       "status": "aguarda_usuario"
     },
     {
-      "id": "27295996",
-      "rotulo_proposto": "Inadequado",
+      "id": "30223363",
+      "rotulo_proposto": "Parcialmente Adequado",
       "evidencias": {
-        "sql": "Performance monitoring ... Microsoft SQL Databases; Introduction to SQL"
+        "sql": "SQL; MS SQL Server 2005/2008; Oracle",
+        "programacao": "C, C++, Core Java, Perl; PHP"
       },
-      "justificativa": "SQL evidenciado; atividades de suporte, migração e implantação sem linguagem, Git ou APIs/web services comprovados.",
-      "fonte": "TXT readable completo versionado",
+      "justificativa": "SQL e linguagens declarados, com formação em banco web/PHP. Integração de dados e campanhas não comprovam APIs; sem Git identificado.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
       "status": "aguarda_usuario"
     },
     {
-      "id": "27536013",
+      "id": "25959103",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "sql": "Upgrade of databases from MS SQL to Oracle; SQL databases"
+        "sql": "installation, configuration and support ... MS SQL database"
       },
-      "justificativa": "SQL evidenciado; gestão de BI/SharePoint e reporting sem linguagem, Git ou serviços/APIs explicitados. BI Program refere-se ao programa organizacional.",
-      "fonte": "TXT readable completo versionado",
+      "justificativa": "SQL evidenciado. Suporte, instalação e integração genérica de software não comprovam linguagem, Git ou serviços/APIs.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
       "status": "aguarda_usuario"
     },
     {
-      "id": "32959732",
+      "id": "26801767",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "sql": "Microsoft SQL server; IDERA SQL Management",
-        "contexto": "Oversaw an off-shore development team ... SharePoint; Amazon Web Services"
+        "programacao": "Cobol; Fortran; Pascal; UNIX and C",
+        "ambiguidade": "relational database; DBase IV; EDI"
       },
-      "justificativa": "SQL declarado, sem linguagem ou Git. Coordenar integrações e listar Amazon Web Services não comprova implementação de APIs/web services.",
-      "fonte": "TXT readable completo versionado",
+      "justificativa": "Linguagens declaradas, mas sem SQL ou tecnologia SQL identificada. Referência genérica a banco relacional não demonstra SQL. Sem Git ou implementação de APIs/web services.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "24020470",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "contexto": "Database servers; CMS: Joomla, WordPress; hardware repair"
+      },
+      "justificativa": "Infraestrutura, suporte e uso de CMS sem linguagem, SQL, Git ou APIs/web services explicitados.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "28897981",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "MySQL",
+        "programacao": "Designed and proto-typed ... tracking system ... PHP",
+        "ambiguidade": "transform web services to a Content Management System, using Drupal"
+      },
+      "justificativa": "MySQL e PHP implementados em projeto. Migração de conteúdo para CMS não comprova desenvolvimento de API/web service; sem Git identificado.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "10247517",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "sql": "Microsoft SQL",
+        "programacao_ambigua": "developing an automated script for retrieving data from an outside server"
+      },
+      "justificativa": "SQL declarado. O script não identifica linguagem, mantendo a exigência aplicada aos casos anteriores. Sem Git ou APIs/web services explicitados. Não confundir configurar imagens de computadores com programação.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "79541391",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "Create and run queries in SQL",
+        "programacao": "Develop, Create and Maintain ... online library ... vb script & ASP.net"
+      },
+      "justificativa": "SQL e desenvolvimento explícito. Testes de integração SAP não comprovam APIs/web services implementados; sem Git identificado.",
+      "fonte": "TXT cleaned_text_en_readable completo da main, commit 5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
       "status": "aguarda_usuario"
     }
   ]
