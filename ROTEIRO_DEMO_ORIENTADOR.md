@@ -1,3 +1,5 @@
+> **Roteiro histórico, anterior à validação de 10/11/2026.** Não usar os comandos de recálculo abaixo para retomar uma execução interrompida. Consulte `VALIDACAO_PRATICA_CHECKLIST.md`; o corpus e os números ainda aguardam adjudicação.
+
 # Roteiro demo — Orientador (~5–7 min)
 
 **Antes da demo:**

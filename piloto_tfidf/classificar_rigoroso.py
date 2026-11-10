@@ -38,6 +38,8 @@ from sklearn.svm import SVC
 from xgboost import XGBClassifier
 
 from extrair_llm import encode_llm
+from protocolo_experimento import fingerprint_textos, MAX_CHARS
+from cache_embeddings import carregar_vetores, salvar_vetores
 
 BASE = Path(__file__).resolve().parent
 DATA = BASE / "data"
@@ -45,7 +47,6 @@ OUT = BASE / "output"
 UI = BASE.parent / "aplicacao_mockup" / "src" / "data" / "metricasReais.json"
 MATRIZ_DIR = OUT / "matrizes_confusao"
 
-MAX_CHARS = 8000
 MODEL_ST = "BAAI/bge-large-en-v1.5"
 MODEL_ST_FB = "BAAI/bge-base-en-v1.5"
 
@@ -82,33 +83,27 @@ def trunc(t: str) -> str:
     return t[:MAX_CHARS] if len(t) > MAX_CHARS else t
 
 
+def carregar_st_em_cache(textos: list[str], name=MODEL_ST):
+    fingerprint = fingerprint_textos(textos, name, encoder="SentenceTransformer", normalize_embeddings=True)
+    result = carregar_vetores(OUT / "cache_st.npy", OUT / "cache_st.json", fingerprint, len(textos))
+    if result is None:
+        raise ValueError("Cache ST ausente, legado ou inválido. Gere explicitamente os embeddings para os textos e modelo validados.")
+    return result
+
+
 def emb_encode(name: str, fb: str, textos: list[str]) -> tuple[np.ndarray, str, float]:
-    cache = OUT / "cache_st.npy"
-    meta_path = OUT / "cache_st.json"
-    if cache.exists() and meta_path.exists():
-        meta = json.loads(meta_path.read_text(encoding="utf-8"))
-        if meta.get("modelo") == name and meta.get("n") == len(textos):
-            print(f"  Cache ST: {name}")
-            return np.load(cache), name, float(meta["tempo_seg"])
-
+    fingerprint = fingerprint_textos(textos, name, encoder="SentenceTransformer", normalize_embeddings=True)
+    result = carregar_vetores(OUT / "cache_st.npy", OUT / "cache_st.json", fingerprint, len(textos))
+    if result is not None:
+        return result[0], name, result[1]
     from sentence_transformers import SentenceTransformer
-
     t0 = time.perf_counter()
-    try:
-        model = SentenceTransformer(name)
-        used = name
-    except Exception:
-        model = SentenceTransformer(fb)
-        used = fb
+    # Falha explicitamente: substituir large por base mudaria o braço experimental.
+    model = SentenceTransformer(name)
     X = model.encode(textos, normalize_embeddings=True, show_progress_bar=False)
     tempo = time.perf_counter() - t0
-    OUT.mkdir(parents=True, exist_ok=True)
-    np.save(cache, X)
-    meta_path.write_text(
-        json.dumps({"modelo": used, "tempo_seg": round(tempo, 3), "n": len(textos)}, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    return X, used, tempo
+    salvar_vetores(OUT / "cache_st.npy", OUT / "cache_st.json", X, fingerprint, tempo, name)
+    return X, name, tempo
 
 
 def avaliar_tfidf_pipeline(textos: list[str], y: np.ndarray, clf_factory) -> dict:
@@ -129,6 +124,9 @@ def avaliar_features_cv(X: np.ndarray, y: np.ndarray, clf_factory) -> dict:
 
 
 def _cv_metricas(estimator, X, y: np.ndarray) -> dict:
+    _, counts = np.unique(y, return_counts=True)
+    if len(counts) < 2 or counts.min() < 5:
+        raise ValueError("Neste protocolo, exigimos ao menos 5 exemplos de cada classe para ter presença em todo teste de 5-fold. Revise rótulos, grupos e protocolo antes de recalcular.")
     cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     t0 = time.perf_counter()
     pred = cross_val_predict(estimator, X, y, cv=cv)
@@ -241,6 +239,8 @@ def _registrar(linhas, combinacoes_ui, relatorio, rep_nome, rep_key, emb_nome, c
 
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     import shutil
     anterior = OUT / "comparativo_classificacao_rigoroso.csv"
     arquivo = OUT / "comparativo_classificacao_rigoroso_bge_base.csv"

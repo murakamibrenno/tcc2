@@ -13,6 +13,7 @@ import re
 from pathlib import Path
 
 import numpy as np
+from protocolo_experimento import MAX_CHARS
 import pandas as pd
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -24,7 +25,6 @@ BASE = Path(__file__).resolve().parent
 DATA = BASE / "data"
 OUT = BASE / "output"
 UI = BASE.parent / "aplicacao_mockup" / "src" / "data" / "metricasReais.json"
-MAX_CHARS = 8000
 MIN_DOCS_LISTA = 2
 ANO = re.compile(r"^(19|20)\d{2}$")
 
@@ -114,6 +114,8 @@ def coeficientes_classe(est, classes: np.ndarray, feature_names: np.ndarray, doc
 
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     cur = json.loads((DATA / "curriculos_piloto.json").read_text(encoding="utf-8"))
     vaga = json.loads((DATA / "vaga_referencia.json").read_text(encoding="utf-8"))
     textos = [trunc(c["texto"]) for c in cur]

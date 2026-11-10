@@ -55,8 +55,8 @@ LANG_PATTERNS = [
     r"\bjava\b",
     r"\bpython\b",
     r"\bphp\b",
-    r"\bc#\b",
-    r"\b\.net\b",
+    r"(?<!\w)c#(?!\w)",
+    r"(?<!\w)(?:asp)?\.net\b",
     r"\bjavascript\b",
     r"\btypescript\b",
     r"\bspring\b",
@@ -69,7 +69,7 @@ LANG_PATTERNS = [
     r"\breact\b",
     r"\bangular\b",
     r"\bvue\b",
-    r"\bc\+\+\b",
+    r"(?<!\w)c\+\+(?!\w)",
 ]
 
 # Titulos IT nao-dev -> forcar Inadequado mesmo com SQL

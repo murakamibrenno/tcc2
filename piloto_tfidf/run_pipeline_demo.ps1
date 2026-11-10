@@ -1,14 +1,16 @@
-﻿# Pipeline completo — corpus auto + experimentos
-Set-Location $PSScriptRoot
-$py = ".venv\Scripts\python.exe"
-& $py expandir_corpus_auto.py --total 80 --incluir-piloto
-& $py tfidf_piloto.py
-& $py embeddings_piloto.py
-& $py exportar_piloto_ui.py
-& $py avaliar_ranking.py
-& $py classificar_piloto.py
-& $py classificar_rigoroso.py
-& $py correlacao_rankings.py
-& $py interpretabilidade_tfidf.py
-& $py particionar_dataset.py
-Write-Host "`nUI: cd ..\aplicacao_mockup; npm run dev"
+# Preflight seguro: não seleciona corpus, não treina e não sobrescreve resultados.
+param([string]$Python = (Join-Path $PSScriptRoot '.venv\Scripts\python.exe'))
+$ErrorActionPreference = 'Stop'
+if (-not (Test-Path -LiteralPath $Python)) {
+    throw 'Informe -Python com o caminho do intérprete configurado para o projeto.'
+}
+Push-Location $PSScriptRoot
+try {
+    & $Python validar_experimento.py --saida validation/relatorio_validacao.json
+    $validationExitCode = $LASTEXITCODE
+    Write-Host 'A interface exibe os resultados anteriores. Inicie-a separadamente com npm run dev.'
+    Write-Host 'Consulte ../VALIDACAO_PRATICA_CHECKLIST.md antes de recalcular o experimento.'
+} finally {
+    Pop-Location
+}
+exit $validationExitCode

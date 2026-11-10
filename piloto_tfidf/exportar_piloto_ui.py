@@ -1,6 +1,7 @@
 ﻿"""Exporta rankings TF-IDF, ST e LLM para a UI. Uso: python exportar_piloto_ui.py"""
 from __future__ import annotations
 import csv, json
+from protocolo_experimento import gravar_json_atomico
 from datetime import date
 from pathlib import Path
 
@@ -60,13 +61,15 @@ def exportar(csv_name, score_csv, score_json, ui_name, metodo):
         "candidatos": candidatos}
     dest = UI / ui_name
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    gravar_json_atomico(dest, payload)
     print(f"  OK {ui_name} ({len(candidatos)} candidatos, top3: {', '.join(x['id'] for x in candidatos[:3])})")
 
 def main():
     print("Exportando para UI...")
     for csv_name, score_csv, score_json, ui_name, metodo in EXPORTS:
         exportar(csv_name, score_csv, score_json, ui_name, metodo or _metodo_llm())
-    print("Concluido.")
+    from validar_experimento import atualizar_status_ui
+    atualizar_status_ui(BASE)
+    print("Concluido. Consulte o status de validação antes de interpretar os resultados.")
 
 if __name__ == "__main__": main()

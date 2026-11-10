@@ -55,7 +55,7 @@ export default function RankingTable({ candidatos, representacaoAtiva = 'llmEmbe
               </TableCell>
               <TableCell sx={{ display: { xs: 'none', sm: 'table-cell' } }}><RotuloMetrica id="aderencia">Faixa</RotuloMetrica></TableCell>
               <TableCell align="center" sx={{ width: 52 }}>
-                <Tooltip title="Ver scores das 9 combinações">
+                <Tooltip title="Ver detalhe do ranking ativo">
                   <TableChartOutlinedIcon sx={{ fontSize: 15, color: 'text.secondary' }} />
                 </Tooltip>
               </TableCell>
@@ -136,8 +136,8 @@ export default function RankingTable({ candidatos, representacaoAtiva = 'llmEmbe
                   <TableCell sx={{ display: { xs: 'none', md: 'table-cell' } }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75 }}>
                       <StatusChip label={c.classificacaoManual} type="classificacao" />
-                      {piloto && c.falsoPositivo && (
-                        <Tooltip title="Falso positivo lexical: o TF-IDF posicionou este currículo Inadequado acima de candidatos relevantes.">
+                      {piloto && c.inversaoRanking && (
+                        <Tooltip title="Inversão no ranking: o TF-IDF posicionou este currículo Inadequado acima de candidatos relevantes.">
                           <WarningAmberRoundedIcon sx={{ fontSize: 16, color: '#DC2626', cursor: 'help' }} />
                         </Tooltip>
                       )}

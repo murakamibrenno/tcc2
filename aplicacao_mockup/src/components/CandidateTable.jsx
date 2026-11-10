@@ -126,8 +126,8 @@ export default function CandidateTable({ curriculos, onVerCurriculo, onCompararM
                           <Typography sx={{ fontSize: '0.85rem', fontWeight: 600, color: 'text.primary', lineHeight: 1.2 }}>
                             {nomeCurto}
                           </Typography>
-                          {c.falsoPositivo && (
-                            <Tooltip title="Falso positivo lexical: Inadequado posicionado acima de candidatos relevantes pelo TF-IDF">
+                          {c.inversaoRanking && (
+                            <Tooltip title="Inversão no ranking: perfil rotulado como Inadequado aparece antes de referências relevantes">
                               <WarningAmberRoundedIcon sx={{ fontSize: 15, color: '#DC2626', flexShrink: 0 }} />
                             </Tooltip>
                           )}

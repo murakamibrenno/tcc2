@@ -13,12 +13,13 @@ Uso:
 
 from __future__ import annotations
 
-import hashlib
 import json
 import time
 from pathlib import Path
 
 import numpy as np
+from protocolo_experimento import fingerprint_textos
+from cache_embeddings import carregar_vetores, salvar_vetores
 
 MODEL_LLM = "Qwen/Qwen2.5-0.5B"
 MAX_TOKENS = 512
@@ -29,32 +30,24 @@ CACHE_DIR = BASE / "output" / "cache_llm"
 
 
 def _chave(textos: list[str], model_id: str, max_tokens: int) -> str:
-    h = hashlib.sha256()
-    h.update(model_id.encode())
-    h.update(str(max_tokens).encode())
-    h.update(str(len(textos)).encode())
-    for t in textos:
-        h.update(str(len(t)).encode())
-        h.update((t[:80] if t else "").encode("utf-8", errors="ignore"))
-    return h.hexdigest()[:16]
+    return fingerprint_textos(textos, model_id, max_tokens=max_tokens,
+                              pooling="last_hidden_state_masked_mean", normalizacao="L2")
 
 
-def _carregar_cache(chave: str) -> tuple[np.ndarray, float] | None:
-    npz = CACHE_DIR / f"{chave}.npy"
-    meta = CACHE_DIR / f"{chave}.json"
-    if not npz.exists() or not meta.exists():
-        return None
-    info = json.loads(meta.read_text(encoding="utf-8"))
-    return np.load(npz), float(info["tempo_seg"])
+def _carregar_cache(chave: str, n: int):
+    return carregar_vetores(CACHE_DIR / f"{chave}.npy", CACHE_DIR / f"{chave}.json", chave, n)
+
+
+def carregar_llm_em_cache(textos: list[str], model_id=MODEL_LLM, max_tokens=MAX_TOKENS):
+    chave = _chave(textos, model_id, max_tokens)
+    result = _carregar_cache(chave, len(textos))
+    if result is None:
+        raise ValueError("Cache LLM ausente, legado ou inválido. Gere explicitamente embeddings com a configuração validada; não reutilize nomes fixos antigos.")
+    return result[0]
 
 
 def _salvar_cache(chave: str, vetores: np.ndarray, tempo: float, model_id: str) -> None:
-    CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    np.save(CACHE_DIR / f"{chave}.npy", vetores)
-    (CACHE_DIR / f"{chave}.json").write_text(
-        json.dumps({"modelo": model_id, "tempo_seg": round(tempo, 3), "n": int(vetores.shape[0]), "max_tokens": MAX_TOKENS}, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    salvar_vetores(CACHE_DIR / f"{chave}.npy", CACHE_DIR / f"{chave}.json", vetores, chave, tempo, model_id)
 
 
 def encode_llm(
@@ -64,7 +57,7 @@ def encode_llm(
     batch_size: int = BATCH_SIZE,
 ) -> tuple[np.ndarray, str, float]:
     chave = _chave(textos, model_id, max_tokens)
-    cache = _carregar_cache(chave)
+    cache = _carregar_cache(chave, len(textos))
     if cache is not None:
         vetores, tempo = cache
         print(f"  Cache LLM: {model_id} | {vetores.shape} | {tempo:.1f}s (gravado)")

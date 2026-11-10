@@ -18,6 +18,9 @@ from copy import deepcopy
 from pathlib import Path
 
 import numpy as np
+from protocolo_experimento import MAX_CHARS
+from classificar_rigoroso import carregar_st_em_cache
+from extrair_llm import carregar_llm_em_cache
 import pandas as pd
 import psutil
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -33,7 +36,6 @@ BASE = Path(__file__).resolve().parent
 DATA = BASE / "data"
 OUT = BASE / "output"
 UI = BASE.parent / "aplicacao_mockup" / "src" / "data" / "metricasReais.json"
-MAX_CHARS = 8000
 MIB = 1024**2
 
 CLASSIFICADORES = [
@@ -161,6 +163,8 @@ def _tempos_vetorizacao_protocolo(meta: dict) -> dict[str, float]:
 
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     cur = json.loads((DATA / "curriculos_piloto.json").read_text(encoding="utf-8"))
     textos = [trunc(c["texto"]) for c in cur]
     labels = [
@@ -197,8 +201,8 @@ def main():
             }
         )
 
-    X_st = np.load(OUT / "cache_st.npy")
-    X_llm = np.load(OUT / "cache_llm" / "19435bd16f833b0f.npy")
+    X_st, _ = carregar_st_em_cache(textos)
+    X_llm = carregar_llm_em_cache(textos)
 
     for rep_nome, rep_key, X in [
         ("Sentence-Transformers", "st", X_st),

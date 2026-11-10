@@ -18,6 +18,7 @@ import { metodosComparativos } from '../data/metricasMock'
 import metricasReais from '../data/metricasReais.json'
 import {
   combinacoes,
+  rankingReais,
   temDadosReais,
 } from '../data/metricasReais'
 
@@ -98,7 +99,7 @@ const CombinacaoTooltip = ({ active, payload, label }) => {
 // Dados para gráfico de F1 por combinação
 const dadosF1 = combinacoes.map((c) => ({ nome: c.labelCurto, F1: c.f1Score, cor: c.cor, rep: c.representacao }))
 const dadosROCAUC = combinacoes.map((c) => ({ nome: c.labelCurto, 'ROC-AUC': c.rocAuc, cor: c.cor }))
-const dadosMAPNDCG = combinacoes.map((c) => ({ nome: c.labelCurto, MAP: c.map, NDCG: c.ndcg, cor: c.cor }))
+const dadosMAPNDCG = rankingReais.map((r) => ({ nome: r.metodo, MAP: r.MAP, NDCG: r['NDCG@10'], cor: combinacoes.find((c) => c.representacao === r.metodo)?.cor ?? '#64748B' }))
 const dadosTempo = combinacoes.map((c) => ({
   nome: c.labelCurto,
   Vetorização: c.tempoVetorizacao,
@@ -177,7 +178,7 @@ export default function Comparativo() {
                   NDCG@10: <strong>{m['NDCG@10']}</strong> | P@5: <strong>{m['P@5']}</strong>
                 </Typography>
                 <Typography sx={{ fontSize: '0.78rem', color: 'text.secondary' }}>
-                  MAP: <strong>{m.MAP}</strong> | Tempo vet.: <strong>{m.tempo_vetorizacao_seg}s</strong>
+                  AP: <strong>{m.MAP}</strong> | Tempo vet.: <strong>{m.tempo_vetorizacao_seg}s</strong>
                 </Typography>
                 <Typography sx={{ fontSize: '0.72rem', color: 'text.secondary', mt: 1 }}>
                   Sales Manager: pos. {m.pos_sales_manager ?? '—'}
@@ -271,9 +272,9 @@ export default function Comparativo() {
             </ChartCard>
           </Grid>
 
-          {/* MAP e NDCG por combinação */}
+          {/* Três rankings por representação; não nove classificadores. */}
           <Grid item xs={12} md={6}>
-            <ChartCard titulo="MAP e NDCG por Combinação" subtitulo={`Métricas de ranking (${FONTE_METRICA})`}>
+            <ChartCard titulo="AP e NDCG por Representação" subtitulo={`Uma vaga; três rankings por cosseno, independentes dos classificadores`}>
               <ResponsiveContainer width="100%" height={260}>
                 <BarChart data={dadosMAPNDCG} margin={{ top: 8, right: 8, left: -20, bottom: 40 }} barCategoryGap="15%">
                   <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" vertical={false} />
@@ -285,7 +286,7 @@ export default function Comparativo() {
                   <YAxis domain={EIXO_METRICA} tick={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 10, fill: '#9CA3AF' }} axisLine={false} tickLine={false} />
                   <Tooltip content={<CombinacaoTooltip />} cursor={{ fill: 'rgba(0,0,0,0.04)' }} />
                   <Legend wrapperStyle={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, paddingTop: 8 }} />
-                  <Bar dataKey="MAP" radius={[3, 3, 0, 0]} maxBarSize={22}>
+                  <Bar dataKey="MAP" name="AP da vaga" radius={[3, 3, 0, 0]} maxBarSize={22}>
                     {dadosMAPNDCG.map((e, i) => <Cell key={i} fill={e.cor} />)}
                   </Bar>
                   <Bar dataKey="NDCG" radius={[3, 3, 0, 0]} maxBarSize={22}>

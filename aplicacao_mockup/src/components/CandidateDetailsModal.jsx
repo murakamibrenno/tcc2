@@ -11,7 +11,7 @@ import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded'
 import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded'
 import StatusChip from './StatusChip'
 import { formatScore, formatCosseno, formatExperiencia, getInitials, getAvatarColor } from '../utils/formatters'
-import { getAderenciaPiloto } from '../utils/rankingUtils'
+import { getAderenciaPiloto, getOrigemRotulo, getScoreAtivo, getMensagemInversao } from '../utils/rankingUtils'
 
 // Mostra o melhor score de cada representação (XGBoost) como referência rápida
 const REPRESENTACOES_INFO = [
@@ -77,15 +77,15 @@ export default function CandidateDetailsModal({ curriculo, open, onClose, piloto
                   Similaridade cosseno
                 </Typography>
                 <Typography sx={{ fontFamily: "'Fraunces', serif", fontWeight: 800, fontSize: '1.6rem', color: aderencia.hex }}>
-                  {formatCosseno(curriculo.scoreFinal ?? curriculo.scoreTfidf)}
+                  {formatCosseno(getScoreAtivo(curriculo, curriculo.representacaoAtiva))}
                 </Typography>
                 <Typography sx={{ fontSize: '0.68rem', color: 'text.secondary' }}>
-                  Posição {curriculo.posicao} de 20
+                  Posição {curriculo.posicao} de {curriculo.totalCurriculos ?? '—'}
                 </Typography>
               </Paper>
               <Paper elevation={0} sx={{ flex: 1, p: 2, borderRadius: '10px', border: '1px solid #E5E7EB', display: 'flex', flexDirection: 'column', gap: 1, justifyContent: 'center' }}>
                 <Typography sx={{ fontSize: '0.68rem', fontWeight: 700, color: 'text.secondary', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                  Anotação manual
+                  {getOrigemRotulo(curriculo)}
                 </Typography>
                 <StatusChip label={curriculo.classificacaoManual} type="classificacao" />
                 <Chip
@@ -96,12 +96,11 @@ export default function CandidateDetailsModal({ curriculo, open, onClose, piloto
               </Paper>
             </Box>
 
-            {curriculo.falsoPositivo && (
+            {curriculo.inversaoRanking && (
               <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1, p: 1.5, borderRadius: '8px', bgcolor: '#FEF2F2', border: '1px solid #FECACA' }}>
                 <WarningAmberRoundedIcon sx={{ fontSize: 18, color: '#DC2626', mt: 0.2 }} />
                 <Typography sx={{ fontSize: '0.76rem', color: '#991B1B', lineHeight: 1.6 }}>
-                  Falso positivo lexical: o TF-IDF posicionou este currículo (anotado como Inadequado) acima de candidatos relevantes,
-                  por compartilhar termos genéricos com a vaga. É uma limitação esperada da representação puramente léxica.
+                  {getMensagemInversao(curriculo, curriculo.representacaoAtiva)}
                 </Typography>
               </Box>
             )}

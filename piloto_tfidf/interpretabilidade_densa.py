@@ -12,6 +12,8 @@ import json
 from pathlib import Path
 
 import numpy as np
+from classificar_rigoroso import carregar_st_em_cache, trunc, MODEL_ST
+from extrair_llm import carregar_llm_em_cache, MODEL_LLM
 from sklearn.preprocessing import LabelEncoder
 from xgboost import XGBClassifier
 
@@ -20,10 +22,6 @@ DATA = BASE / "data"
 OUT = BASE / "output"
 UI = BASE.parent / "aplicacao_mockup" / "src" / "data" / "metricasReais.json"
 
-CACHE_ST = OUT / "cache_st.npy"
-CACHE_ST_META = OUT / "cache_st.json"
-CACHE_LLM = OUT / "cache_llm" / "19435bd16f833b0f.npy"
-CACHE_LLM_META = OUT / "cache_llm" / "19435bd16f833b0f.json"
 
 
 def ajuste_xgb_indices(X: np.ndarray, y: np.ndarray, n_top: int = 15) -> list[dict]:
@@ -49,6 +47,8 @@ def ajuste_xgb_indices(X: np.ndarray, y: np.ndarray, n_top: int = 15) -> list[di
 
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     cur = json.loads((DATA / "curriculos_piloto.json").read_text(encoding="utf-8"))
     if len(cur) != 100:
         raise SystemExit(f"Esperados 100 currículos, encontrados {len(cur)}")
@@ -60,10 +60,9 @@ def main():
     le = LabelEncoder()
     y = le.fit_transform(labels)
 
-    X_st = np.load(CACHE_ST)
-    meta_st = json.loads(CACHE_ST_META.read_text(encoding="utf-8")) if CACHE_ST_META.exists() else {}
-    X_llm = np.load(CACHE_LLM)
-    meta_llm = json.loads(CACHE_LLM_META.read_text(encoding="utf-8")) if CACHE_LLM_META.exists() else {}
+    textos = [trunc(c["texto"]) for c in cur]
+    X_st, _ = carregar_st_em_cache(textos)
+    X_llm = carregar_llm_em_cache(textos)
 
     if X_st.shape[0] != 100:
         raise SystemExit(f"cache_st esperado (100, d), obtido {X_st.shape}")
@@ -77,12 +76,12 @@ def main():
             "(quais índices do vetor o modelo usa), não explicação por termos."
         ),
         "sentence_transformers": {
-            "modelo": meta_st.get("modelo", "BAAI/bge-large-en-v1.5"),
+            "modelo": MODEL_ST,
             "shape": list(X_st.shape),
             "xgboost_top_dimensoes": ajuste_xgb_indices(X_st, y),
         },
         "llm_embeddings": {
-            "modelo": meta_llm.get("modelo", "Qwen/Qwen2.5-0.5B"),
+            "modelo": MODEL_LLM,
             "protocolo": "ultimo hidden state, media dos tokens, 512 tokens, L2",
             "shape": list(X_llm.shape),
             "xgboost_top_dimensoes": ajuste_xgb_indices(X_llm, y),

@@ -33,7 +33,7 @@ export const COLUNAS = {
   },
   similaridade: {
     titulo: 'Similaridade de cosseno',
-    texto: 'Proximidade entre o vetor da vaga e o vetor do currículo, de 0 a 1. Quanto maior, mais a representação aproximou os dois textos. No TF-IDF os valores ficam baixos porque os vetores são esparsos. No Qwen ficam altos e comprimidos, então a ordem importa mais do que o valor absoluto.',
+    texto: 'Proximidade entre o vetor da vaga e o vetor do currículo, entre -1 e 1; no TF-IDF não negativo, entre 0 e 1. Quanto maior, mais a representação aproximou os dois textos. No TF-IDF os valores ficam baixos porque os vetores são esparsos. No Qwen ficam altos e comprimidos, então a ordem importa mais do que o valor absoluto.',
   },
   aderencia: {
     titulo: 'Faixa de aderência',
@@ -52,8 +52,8 @@ export const COLUNAS = {
     texto: 'A mesma conta do Precision@5, agora nos 10 primeiros. Mede a precisão de uma leitura inicial um pouco mais longa.',
   },
   map: {
-    titulo: 'MAP',
-    texto: 'Mean Average Precision, calculada só com os currículos Adequados. Vale 1,00 quando os três Adequados ocupam as três primeiras posições, sem nenhum Inadequado ou Parcial na frente deles.',
+    titulo: 'AP da vaga',
+    texto: 'Average Precision desta única vaga, calculada só com os currículos Adequados. O arquivo histórico usa o nome MAP. Vale 1,00 quando os três Adequados ocupam as três primeiras posições, sem nenhum Inadequado ou Parcial na frente deles.',
   },
   ndcg: {
     titulo: 'NDCG@10',
@@ -129,7 +129,7 @@ export const COLUNAS = {
   },
   tfidf: {
     titulo: 'Posição no TF-IDF',
-    texto: 'Lugar desse currículo na fila feita por contagem de palavras (unigramas e bigramas) e similaridade de cosseno. Uma posição alta com rótulo Inadequado indica falso positivo lexical: o texto compartilha vocabulário com a vaga sem ser o perfil.',
+    texto: 'Lugar desse currículo na fila feita por contagem de palavras (unigramas e bigramas) e similaridade de cosseno. Uma posição alta com rótulo Inadequado indica uma possível inversão no ranking, a investigar pela leitura do documento e pela validade do rótulo.',
   },
   st: {
     titulo: 'Posição no Sentence-Transformers',

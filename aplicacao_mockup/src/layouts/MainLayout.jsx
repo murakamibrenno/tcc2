@@ -1,8 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { Box } from '@mui/material'
+import { Box, Alert } from '@mui/material'
 import Sidebar from '../components/Sidebar'
 import Topbar, { TOPBAR_HEIGHT } from '../components/Topbar'
+
+import validacao from '../data/validacaoExperimento.json'
 
 const DRAWER_WIDTH = 260
 
@@ -30,6 +32,11 @@ export default function MainLayout() {
           },
         }}
       >
+        {!validacao.aptoParaConclusoes && (
+          <Alert severity="warning" sx={{ mb: 3 }}>
+            {validacao.mensagem}
+          </Alert>
+        )}
         <Outlet />
       </Box>
     </Box>

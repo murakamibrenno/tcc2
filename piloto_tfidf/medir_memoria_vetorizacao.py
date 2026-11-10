@@ -72,6 +72,8 @@ def atualizar_ranking(ui: dict, medicoes: dict[str, dict]) -> None:
 
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     if not PY.exists():
         raise SystemExit(f"Intérprete não encontrado: {PY}")
     medicoes = {}

@@ -1,13 +1,12 @@
 import metricasReaisJson from './metricasReais.json'
 import corpusMeta from './corpusMeta.json'
-import { combinacoes as combinacoesMock } from './metricasMock'
 
-/** Combinações 9x9 reais quando existirem; senão mock (legacy). */
+/** Nove combinações publicadas. Dados ausentes não são substituídos por simulações. */
 export const combinacoesReais = metricasReaisJson.combinacoes9?.length
   ? metricasReaisJson.combinacoes9
   : null
 
-export const combinacoes = combinacoesReais ?? combinacoesMock
+export const combinacoes = combinacoesReais ?? []
 
 export const rankingReais = metricasReaisJson.ranking ?? []
 

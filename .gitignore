@@ -10,3 +10,7 @@ piloto_tfidf/output/cache_st.json
 curriculos_processados/
 .huggingface/
 *.log
+
+# Escritas intermediárias e formulários de revisão em andamento
+piloto_tfidf/output/**/*.tmp
+piloto_tfidf/validation/revisao*.csv

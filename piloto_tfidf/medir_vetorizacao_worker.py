@@ -16,6 +16,9 @@ from pathlib import Path
 
 import numpy as np
 import psutil
+from protocolo_experimento import MAX_CHARS, BGE_QUERY_PREFIX, fingerprint_textos
+from cache_embeddings import carregar_vetores
+from extrair_llm import _chave
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -23,8 +26,7 @@ BASE = Path(__file__).resolve().parent
 DATA = BASE / "data"
 OUT = BASE / "output"
 CACHE_ST = OUT / "cache_st.npy"
-CACHE_LLM = OUT / "cache_llm" / "19435bd16f833b0f.npy"
-MAX_CHARS = 8000
+
 MIB = 1024**2
 MODEL_ST = "BAAI/bge-large-en-v1.5"
 MODEL_ST_FB = "BAAI/bge-base-en-v1.5"
@@ -48,8 +50,7 @@ def pico_atual(proc: psutil.Process, pico: int) -> int:
     return max(pico, proc.memory_info().rss)
 
 
-def conferir_cache(novo: np.ndarray, referencia: Path) -> float:
-    ref = np.load(referencia)
+def conferir_cache(novo: np.ndarray, ref: np.ndarray) -> float:
     if novo.shape != ref.shape:
         raise SystemExit(f"Forma divergente: {novo.shape} vs {ref.shape}")
     diff = float(np.abs(novo.astype(np.float64) - ref.astype(np.float64)).max())
@@ -95,6 +96,10 @@ def medir_tfidf(vaga: str, textos: list[str]) -> dict:
 
 
 def medir_st(vaga: str, textos: list[str]) -> dict:
+    fingerprint = fingerprint_textos(textos, MODEL_ST, encoder="SentenceTransformer", normalize_embeddings=True)
+    cached = carregar_vetores(CACHE_ST, OUT / "cache_st.json", fingerprint, len(textos))
+    if cached is None:
+        raise ValueError("Cache ST inválido; interrompido antes de carregar o modelo.")
     from sentence_transformers import SentenceTransformer
 
     print("Sentence-Transformers: carregando modelo...", flush=True)
@@ -106,10 +111,9 @@ def medir_st(vaga: str, textos: list[str]) -> dict:
         model = SentenceTransformer(MODEL_ST)
         usado = MODEL_ST
     except Exception:
-        model = SentenceTransformer(MODEL_ST_FB)
-        usado = MODEL_ST_FB
+        raise RuntimeError("Modelo ST selecionado indisponível; fallback não é permitido no protocolo.")
     pico = pico_atual(proc, pico)
-    lote = [vaga] + textos
+    lote = [BGE_QUERY_PREFIX + vaga] + textos
     print("Sentence-Transformers: encode vaga + 100 currículos...", flush=True)
     emb = model.encode(lote, normalize_embeddings=True, show_progress_bar=True)
     pico = pico_atual(proc, pico)
@@ -118,7 +122,7 @@ def medir_st(vaga: str, textos: list[str]) -> dict:
     pico = pico_atual(proc, pico)
     tempo = time.perf_counter() - t0
     vet_cur = emb[1:]
-    diff = conferir_cache(vet_cur, CACHE_ST)
+    diff = conferir_cache(vet_cur, cached[0])
     return {
         "representacao": "Sentence-Transformers",
         "metodo_ranking": "Sentence-Transformers",
@@ -134,6 +138,11 @@ def medir_st(vaga: str, textos: list[str]) -> dict:
 
 
 def medir_llm(vaga: str, textos: list[str]) -> dict:
+    fingerprint = _chave(textos, MODEL_LLM, MAX_TOKENS)
+    cache = OUT / "cache_llm" / f"{fingerprint}.npy"
+    cached = carregar_vetores(cache, cache.with_suffix(".json"), fingerprint, len(textos))
+    if cached is None:
+        raise ValueError("Cache LLM inválido; interrompido antes de carregar o modelo.")
     import torch
     from transformers import AutoModel, AutoTokenizer
 
@@ -183,7 +192,7 @@ def medir_llm(vaga: str, textos: list[str]) -> dict:
     pico = pico_atual(proc, pico)
     tempo = time.perf_counter() - t0
     vet_cur = emb[1:]
-    diff = conferir_cache(vet_cur, CACHE_LLM)
+    diff = conferir_cache(vet_cur, cached[0])
     return {
         "representacao": "LLM Embeddings",
         "metodo_ranking": "LLM Embeddings",
@@ -201,6 +210,8 @@ def medir_llm(vaga: str, textos: list[str]) -> dict:
 
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     ap = argparse.ArgumentParser()
     ap.add_argument("--repr", required=True, choices=["tfidf", "st", "llm"])
     ap.add_argument("--saida", required=True)
@@ -213,6 +224,7 @@ def main():
     else:
         bloco = medir_llm(vaga, textos)
     bloco["protocolo_medicao"] = PROTOCOLO
+    bloco["nota_memoria"] = "Máximo observado em leituras pontuais; não é monitoramento contínuo do pico real."
     saida = Path(args.saida)
     saida.parent.mkdir(parents=True, exist_ok=True)
     saida.write_text(json.dumps(bloco, ensure_ascii=False, indent=2), encoding="utf-8")

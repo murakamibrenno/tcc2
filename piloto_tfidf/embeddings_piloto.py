@@ -6,13 +6,13 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from extrair_llm import encode_llm
+from protocolo_experimento import MAX_CHARS, BGE_QUERY_PREFIX
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 OUTPUT_DIR = BASE_DIR / "output"
 MODEL_ST = "BAAI/bge-large-en-v1.5"
 MODEL_ST_FALLBACK = "BAAI/bge-base-en-v1.5"
-MAX_CHARS = 8000
 
 def carregar_json(p):
     with p.open(encoding="utf-8") as f: return json.load(f)
@@ -29,7 +29,7 @@ def carregar_modelo(nome, fallback=None):
     except Exception as e:
         if fallback and fallback != nome:
             print(f"  Fallback {fallback}: {e}")
-            return SentenceTransformer(fallback), fallback
+            raise RuntimeError("Fallback desativado: escolha e registre explicitamente o modelo do experimento.") from e
         raise
 
 def encode(model, textos):
@@ -40,8 +40,8 @@ def ranking(curriculos, sims, score_col):
     for c, score in zip(curriculos, sims):
         classif = c.get("classificacaoManualConfirmada") or c.get("classificacaoManualReferencia", "")
         linhas.append({"id": c["id"], "nome": c["nome"], "categoria_origem": c.get("categoria_origem", ""),
-            score_col: round(float(score), 4), "classificacao_manual": classif})
-    df = pd.DataFrame(linhas).sort_values(score_col, ascending=False).reset_index(drop=True)
+            score_col: float(score), "classificacao_manual": classif})
+    df = pd.DataFrame(linhas).sort_values([score_col, "id"], ascending=[False, True], kind="mergesort").reset_index(drop=True)
     df.insert(0, "posicao", df.index + 1)
     return df
 
@@ -89,12 +89,14 @@ def processar_llm(vaga_texto, curriculos):
     }
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     ap = argparse.ArgumentParser()
     ap.add_argument("--so-llm", action="store_true", help="Recalcula só o braço LLM e preserva o meta do ST")
     args = ap.parse_args()
     vaga = carregar_json(DATA_DIR / "vaga_referencia.json")
     curriculos = carregar_json(DATA_DIR / "curriculos_piloto.json")
-    prefix = "Represent this job posting for retrieval: "
+    prefix = BGE_QUERY_PREFIX
     res = []
     if not args.so_llm:
         res.append(processar("Sentence-Transformers", MODEL_ST, MODEL_ST_FALLBACK, vaga["texto"], curriculos, "score_st", "ranking_st_piloto.csv", prefix))

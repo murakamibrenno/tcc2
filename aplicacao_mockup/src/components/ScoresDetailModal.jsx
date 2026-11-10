@@ -8,7 +8,7 @@ import {
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
 import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded'
 import { formatScore, formatCosseno, getInitials, getAvatarColor } from '../utils/formatters'
-import { getAderencia, getAderenciaPiloto } from '../utils/rankingUtils'
+import { getAderencia, getAderenciaPiloto, getOrigemRotulo, getScoreAtivo, getMensagemInversao } from '../utils/rankingUtils'
 import StatusChip from './StatusChip'
 
 const COMBINACOES_CONFIG = [
@@ -85,15 +85,15 @@ export default function ScoresDetailModal({ open, onClose, candidato, representa
                   Similaridade cosseno
                 </Typography>
                 <Typography sx={{ fontFamily: "'Fraunces', serif", fontWeight: 800, fontSize: '1.6rem', color: aderencia.hex }}>
-                  {formatCosseno(candidato.scoreTfidf)}
+                  {formatCosseno(getScoreAtivo(candidato, representacaoAtiva))}
                 </Typography>
                 <Typography sx={{ fontSize: '0.68rem', color: 'text.secondary' }}>
-                  Posição {candidato.posicao} de 20
+                  Posição {candidato.posicao} de {candidato.totalCurriculos ?? '—'}
                 </Typography>
               </Paper>
               <Paper elevation={0} sx={{ flex: 1, p: 2, borderRadius: '10px', border: '1px solid #E5E7EB', display: 'flex', flexDirection: 'column', gap: 1, justifyContent: 'center' }}>
                 <Typography sx={{ fontSize: '0.68rem', fontWeight: 700, color: 'text.secondary', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                  Anotação manual
+                  {getOrigemRotulo(candidato)}
                 </Typography>
                 <StatusChip label={candidato.classificacaoManual} type="classificacao" />
                 <Chip
@@ -104,12 +104,11 @@ export default function ScoresDetailModal({ open, onClose, candidato, representa
               </Paper>
             </Box>
 
-            {candidato.falsoPositivo && (
+            {candidato.inversaoRanking && (
               <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1, p: 1.5, borderRadius: '8px', bgcolor: '#FEF2F2', border: '1px solid #FECACA' }}>
                 <WarningAmberRoundedIcon sx={{ fontSize: 18, color: '#DC2626', mt: 0.2 }} />
                 <Typography sx={{ fontSize: '0.76rem', color: '#991B1B', lineHeight: 1.6 }}>
-                  Falso positivo lexical: o TF-IDF posicionou este currículo (anotado como Inadequado) acima de candidatos relevantes,
-                  por compartilhar termos genéricos com a vaga. É uma limitação esperada da representação puramente léxica.
+                  {getMensagemInversao(candidato, representacaoAtiva)}
                 </Typography>
               </Box>
             )}

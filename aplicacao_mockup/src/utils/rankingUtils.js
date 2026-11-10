@@ -1,6 +1,7 @@
 ﻿import pilotoTfidf from '../data/pilotoTfidf.json'
 import pilotoSt from '../data/pilotoSt.json'
 import pilotoLlm from '../data/pilotoLlm.json'
+import origemRotulos from '../data/origemRotulos.json'
 
 export const PILOTO_VAGA_ID = 4
 
@@ -52,9 +53,9 @@ export const getAderenciaPiloto = (candidato) => {
 
 const PILOTO_RELEVANTES = new Set(['Adequado', 'Parcialmente Adequado'])
 
-const marcarFalsosPositivos = (candidatos) => {
+const marcarInversoes = (candidatos) => {
   const ultima = candidatos.filter((c) => PILOTO_RELEVANTES.has(c.classificacaoManual)).reduce((m, c) => Math.max(m, c.posicao), 0)
-  return candidatos.map((c) => ({ ...c, falsoPositivo: !PILOTO_RELEVANTES.has(c.classificacaoManual) && c.posicao < ultima }))
+  return candidatos.map((c) => ({ ...c, inversaoRanking: !PILOTO_RELEVANTES.has(c.classificacaoManual) && c.posicao < ultima }))
 }
 
 export const getRankingPiloto = (representacao = 'tfidf') => {
@@ -62,8 +63,8 @@ export const getRankingPiloto = (representacao = 'tfidf') => {
   const scoreKey = fonte.scoreKey
   const candidatos = [...fonte.dados.candidatos]
     .sort((a, b) => (b[scoreKey] ?? 0) - (a[scoreKey] ?? 0))
-    .map((c, idx) => ({ ...c, posicao: idx + 1, scoreFinal: c[scoreKey] ?? 0 }))
-  return marcarFalsosPositivos(candidatos)
+    .map((c, idx) => ({ ...c, ...origemRotulos[String(c.id)], posicao: idx + 1, scoreFinal: c[scoreKey] ?? null, representacaoAtiva: representacao, totalCurriculos: fonte.dados.candidatos.length }))
+  return marcarInversoes(candidatos)
 }
 
 export const getPilotoMeta = (representacao = 'tfidf') => {
@@ -95,3 +96,20 @@ export const pilotoRepresentacaoDisponivel = (representacao) => {
   const fonte = PILOTO_FONTES[representacao]
   return fonte && fonte.dados?.candidatos?.length > 0
 }
+
+
+export const getOrigemRotulo = (candidato) => {
+  const origem = origemRotulos[String(candidato.id)] ?? candidato
+  const label = origem.anotacaoAutomatica === true ? 'Rótulo automático'
+    : origem.anotacaoAutomatica === false ? 'Anotação humana (piloto)' : 'Rótulo de referência'
+  return origem.revisaoPendente ? `${label} · revisão pendente` : label
+}
+
+export const getScoreAtivo = (candidato, representacao = candidato.representacaoAtiva ?? 'tfidf') => {
+  const key = PILOTO_FONTES[representacao]?.scoreKey
+  return key && Number.isFinite(candidato[key]) ? candidato[key]
+    : candidato.representacaoAtiva === representacao ? candidato.scoreFinal : undefined
+}
+
+export const getMensagemInversao = (candidato, representacao = candidato.representacaoAtiva ?? 'tfidf') =>
+  `Este perfil, rotulado como Inadequado, aparece antes de referências relevantes no ranking de ${REPRESENTACOES[representacao]?.label ?? representacao}. É uma inversão na ordenação, não uma predição de classe pelo classificador.`

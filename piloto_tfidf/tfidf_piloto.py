@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from protocolo_experimento import MAX_CHARS
 
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -28,11 +29,13 @@ def carregar_json(caminho: Path):
 
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     vaga = carregar_json(DATA_DIR / "vaga_referencia.json")
     curriculos = carregar_json(DATA_DIR / "curriculos_piloto.json")
 
-    texto_vaga = vaga["texto"]
-    textos_curriculos = [c["texto"] for c in curriculos]
+    texto_vaga = vaga["texto"].strip()[:MAX_CHARS]
+    textos_curriculos = [c["texto"].strip()[:MAX_CHARS] for c in curriculos]
 
     # TF-IDF: unigramas + bigramas, mínimo 1 documento (piloto pequeno)
     vectorizer = TfidfVectorizer(
@@ -58,7 +61,7 @@ def main():
                 "id": candidato["id"],
                 "nome": candidato["nome"],
                 "categoria_origem": candidato.get("categoria_origem", ""),
-                "score_tfidf": round(float(score), 4),
+                "score_tfidf": float(score),
                 "classificacao_manual": classif,
                 "classificacao_referencia": candidato.get("classificacaoManualReferencia", ""),
                 "arquivo_txt": candidato.get("arquivo_txt", ""),
@@ -66,7 +69,7 @@ def main():
         )
 
     df = pd.DataFrame(linhas)
-    df = df.sort_values("score_tfidf", ascending=False).reset_index(drop=True)
+    df = df.sort_values(["score_tfidf", "id"], ascending=[False, True], kind="mergesort").reset_index(drop=True)
     df.insert(0, "posicao", df.index + 1)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,244 @@
+{
+  "validacao_concluida": true,
+  "apto_para_conclusoes": false,
+  "nota": "Verificação automática não substitui adjudicação e revisão científica.",
+  "corpus": {
+    "n": 100,
+    "distribuicao": {
+      "Parcialmente Adequado": 21,
+      "Adequado": 3,
+      "Inadequado": 76
+    },
+    "n_automaticos": 80
+  },
+  "manifesto": {
+    "schema": 1,
+    "ids_ordenados": [
+      "20674668",
+      "83816738",
+      "18067556",
+      "26746496",
+      "16186411",
+      "90867631",
+      "16899268",
+      "24889109",
+      "10089434",
+      "10265057",
+      "10554236",
+      "10001727",
+      "10504237",
+      "10186968",
+      "10182582",
+      "10953078",
+      "10062724",
+      "10399912",
+      "10138632",
+      "10235429",
+      "12763627",
+      "10641230",
+      "13405733",
+      "22776912",
+      "70089206",
+      "28126340",
+      "33381211",
+      "37242217",
+      "15651486",
+      "18301617",
+      "20001721",
+      "18187364",
+      "10553553",
+      "12635195",
+      "31111279",
+      "27295996",
+      "27536013",
+      "32959732",
+      "41344156",
+      "46260230",
+      "39413067",
+      "30223363",
+      "25959103",
+      "26801767",
+      "24020470",
+      "28897981",
+      "10247517",
+      "79541391",
+      "51639418",
+      "31243710",
+      "22450718",
+      "20879311",
+      "19796840",
+      "19850482",
+      "11957080",
+      "13836471",
+      "15802627",
+      "14789139",
+      "19201175",
+      "20024870",
+      "18159866",
+      "17111768",
+      "17688766",
+      "13385306",
+      "10840430",
+      "11580408",
+      "91635250",
+      "57002858",
+      "17306905",
+      "44115326",
+      "37292350",
+      "17714174",
+      "16244633",
+      "51508889",
+      "29221006",
+      "21297521",
+      "27710853",
+      "12230301",
+      "65373280",
+      "39908485",
+      "26167298",
+      "11155153",
+      "23085604",
+      "13264796",
+      "15011085",
+      "34792238",
+      "28670024",
+      "20806155",
+      "11842274",
+      "17704246",
+      "37660306",
+      "17342969",
+      "19072267",
+      "12472574",
+      "12491898",
+      "24508725",
+      "19063156",
+      "10480456",
+      "34317538",
+      "35651876"
+    ],
+    "sha256_textos": "b038601697a5972859ad01b183bd3833755317069ddf656268d278f244593c82",
+    "sha256_rotulos": "cc595f255e70de2c9fe18d5e84fa4aa2d1ce5f446c2e90df80006a37d4d9b04d"
+  },
+  "baseline_majoritario": {
+    "acuracia": 0.76,
+    "f1_macro": 0.2878787878787879
+  },
+  "achados": [
+    {
+      "codigo": "folds_classe_rara",
+      "nivel": "bloqueador",
+      "mensagem": "Número de folds incompatível com a presença de cada classe em todo teste.",
+      "evidencia": {
+        "folds": 5,
+        "distribuicao": {
+          "Parcialmente Adequado": 21,
+          "Adequado": 3,
+          "Inadequado": 76
+        }
+      }
+    },
+    {
+      "codigo": "rotulos_automaticos",
+      "nivel": "bloqueador",
+      "mensagem": "Rótulos por regra exigem revisão ou delimitação explícita como supervisão fraca antes das conclusões finais.",
+      "evidencia": {
+        "automaticos": 80,
+        "total": 100
+      }
+    },
+    {
+      "codigo": "revisao_nao_adjudicada",
+      "nivel": "bloqueador",
+      "mensagem": "Revisão diverge do rótulo avaliado; adjudicar sem favorecer modelos.",
+      "evidencia": {
+        "id": "21297521",
+        "publicado": "Inadequado",
+        "revisado": "Adequado"
+      }
+    },
+    {
+      "codigo": "documentos_proximos",
+      "nivel": "bloqueador",
+      "mensagem": "Verificar documentos muito semelhantes e definir grupos antes da avaliação.",
+      "evidencia": [
+        {
+          "ids": [
+            "26746496",
+            "16186411"
+          ],
+          "jaccard_palavras": 0.964567
+        }
+      ]
+    },
+    {
+      "codigo": "proximos_entre_particoes",
+      "nivel": "bloqueador",
+      "mensagem": "Documentos próximos atravessam as partições salvas.",
+      "evidencia": [
+        {
+          "ids": [
+            "26746496",
+            "16186411"
+          ],
+          "jaccard_palavras": 0.964567
+        }
+      ]
+    },
+    {
+      "codigo": "classificacao_colapsada",
+      "nivel": "aviso",
+      "mensagem": "Combinações preveem uma única classe; comparar com DummyClassifier.",
+      "evidencia": [
+        "tfidf_lr",
+        "tfidf_svm",
+        "st_lr",
+        "st_svm",
+        "llm_lr",
+        "llm_svm"
+      ]
+    }
+  ],
+  "rankings": {
+    "tfidf": {
+      "publicado_recalculado": {
+        "AP": 0.6095238095238095,
+        "P@5": 0.6,
+        "P@10": 0.6,
+        "NDCG@10": 0.7019915702370594
+      },
+      "sensibilidade_revisao_nao_oficial": {
+        "AP": 0.4988095238095238,
+        "P@5": 0.6,
+        "P@10": 0.6,
+        "NDCG@10": 0.6394409453802515
+      }
+    },
+    "st": {
+      "publicado_recalculado": {
+        "AP": 1.0,
+        "P@5": 1.0,
+        "P@10": 0.8,
+        "NDCG@10": 0.9313457186160984
+      },
+      "sensibilidade_revisao_nao_oficial": {
+        "AP": 0.8,
+        "P@5": 1.0,
+        "P@10": 0.8,
+        "NDCG@10": 0.848358601495195
+      }
+    },
+    "llm": {
+      "publicado_recalculado": {
+        "AP": 0.5873015873015873,
+        "P@5": 0.8,
+        "P@10": 0.9,
+        "NDCG@10": 0.8508355993712982
+      },
+      "sensibilidade_revisao_nao_oficial": {
+        "AP": 0.6428571428571428,
+        "P@5": 1.0,
+        "P@10": 1.0,
+        "NDCG@10": 0.9086790844154392
+      }
+    }
+  }
+}

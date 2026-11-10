@@ -83,6 +83,8 @@ def avaliar_vetor(X_tr, y_tr, X_te, y_te, clf):
 
 
 def main():
+    from validar_experimento import exigir_preflight
+    exigir_preflight()
     cur = json.loads((DATA / "curriculos_piloto.json").read_text(encoding="utf-8"))
     splits = json.loads((DATA / "splits.json").read_text(encoding="utf-8"))
     por_id = {c["id"]: c for c in cur}
