@@ -12,7 +12,7 @@ O artigo já prevê um subconjunto anotado e separação de treinamento, valida�
 
 **Coleção completa:** todos os 2.484 arquivos serão contabilizados, inclusive falhas de extração. Cada representação deverá gerar vetores e escores nos documentos utilizáveis sob configuração registrada. Medir preparação, vetorização, consulta nova, inferência, memória e armazenamento com repetição e hardware identificados. Relatar o denominador tentado e o efetivamente concluído por método. Uma falha não desaparece do total.
 
-**Conjunto de desenvolvimento:** os 100 documentos do piloto ampliado, ainda em revisão, são material de calibração e desenvolvimento. Os 25 rótulos já aprovados não constituem um teste final independente. O documento 26746496 foi excluído da avaliação principal como versão relacionada a 16186411; ambos os originais permanecem preservados.
+**Conjunto de desenvolvimento:** os 100 documentos do piloto ampliado, agora com revisão concluída, são material de calibração e desenvolvimento. As 60 decisões ratificadas caso a caso e as 40 classificações da IA sob autorização antecipada não constituem um teste final independente. O documento 26746496 foi excluído da avaliação principal como versão relacionada a 16186411; ambos os originais permanecem preservados.
 
 **Subconjunto revisado ampliado:** preparar uma seleção reproduzível além dos 100, com meta operacional inicial de cerca de 400 documentos revisados no total. Esse número é uma meta de trabalho, não um tamanho final congelado nem garantia de precisão estatística. Aumentar ou rever a seleção se o suporte das classes ou dos grupos independentes for insuficiente. A coleção tem apenas 120 arquivos na categoria Information Technology; escolher mais documentos aleatoriamente não garante positivos. A seleção pode considerar categorias e sinais textuais para aumentar a cobertura técnica, mas esses sinais nunca serão rótulos finais. Declarar o enriquecimento e não extrapolar prevalências ou métricas para a população inteira.
 
@@ -58,3 +58,11 @@ python -m unittest discover -s tests -v
 O diretório de saída contém inventario.json e textos_completos.jsonl. Os textos integrais e temporários são artefatos locais; não são adicionados ao Git automaticamente. O resumo versionado está em piloto_tfidf/validation/inventario_base_resumo.json. Código 2 indica que ao menos um documento precisa de tratamento; não significa que os demais arquivos foram perdidos.
 
 Prazo informado: aproximadamente 15/11. O cronograma precisa priorizar dados e avaliação comparativa prevista no artigo. Uma eventual limitação de execução será relatada; não será convertida em uma promessa de estudo diferente.
+
+## Textos processados disponíveis
+
+A pasta curriculos_processados foi publicada na main em 10/11/2026 (5fbdaee). As três versões completas foram conferidas por hash de árvore Git. Usar readable para leitura e extraído para conferência; cinco textos limpos exigem atenção adicional. O relatório e as propostas de dois novos pares e dos lotes 6/7 estão em piloto_tfidf/validation/REVISAO_PENDENTE_LOTES_6_E_7.md. Essas propostas aguardam decisão do autor. O arquivo sem texto permanece sem rótulo artificial.
+
+## Revisão do piloto encerrada em 10/11/2026
+
+Os lotes foram concluídos. A referência de desenvolvimento contém 99 representantes, com 3 adequados, 27 parcialmente adequados e 69 inadequados. Sessenta dos 100 casos foram ratificados individualmente e quarenta foram classificados pela IA sob autorização antecipada do autor. A distinção está registrada no artigo, no manifesto e na auditoria. Não equivale a 100 anotações humanas nem libera um teste final independente. A execução ampliada, o suporte da classe rara e a seleção do teste ainda precisam ser consolidados. O histórico de lotes pendentes acima é substituído pelo estado final em piloto_tfidf/validation/REVISAO_LOTE_ATUAL.md.

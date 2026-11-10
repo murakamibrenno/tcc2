@@ -1,0 +1,227 @@
+{
+  "metodo": "Cobertura de multiconjunto de tokens alfanuméricos, + e #; remove marcadores PAGE.",
+  "limitacao": "Não valida significado, ordem ou negações. Alta cobertura não garante fidelidade semântica; conferir original em casos ambíguos.",
+  "n_referencia": 2484,
+  "versoes": {
+    "extracted_text_en": {
+      "n": 2484,
+      "ids_ausentes": [],
+      "ids_extras": [],
+      "vazios_apos_marcadores": [
+        "12632728"
+      ],
+      "n_cobertura_ao_menos_99": 2483,
+      "menor_cobertura": 1.0,
+      "n_maiores_12000_caracteres": 64,
+      "requer_conferencia": []
+    },
+    "cleaned_text_en": {
+      "n": 2484,
+      "ids_ausentes": [],
+      "ids_extras": [],
+      "vazios_apos_marcadores": [
+        "12632728"
+      ],
+      "n_cobertura_ao_menos_99": 2478,
+      "menor_cobertura": 0.9664233576642336,
+      "n_maiores_12000_caracteres": 64,
+      "requer_conferencia": [
+        {
+          "id": "34304175",
+          "caracteres": 4811,
+          "sha256_txt": "4d665b89e9c01a532a5d509c72811cb6f7722782b44c1c2d78584dc59562bb80",
+          "tokens_pdf": 621,
+          "tokens_txt": 617,
+          "cobertura_tokens_pdf": 0.9871175523349437,
+          "perdas_tokens": {
+            "customer": 1,
+            "service": 1,
+            "results": 1,
+            "safety": 2,
+            "oriented": 2,
+            "conscious": 1
+          }
+        },
+        {
+          "id": "83338413",
+          "caracteres": 5111,
+          "sha256_txt": "a60bc9dbfdce9138e30b249fbb9880bc2474fe4f284d3695cecb415d438ec3b4",
+          "tokens_pdf": 685,
+          "tokens_txt": 673,
+          "cobertura_tokens_pdf": 0.9664233576642336,
+          "perdas_tokens": {
+            "telecommunications": 1,
+            "security": 1,
+            "technologies": 5,
+            "proficiency": 1,
+            "video": 1,
+            "wireless": 1,
+            "tcp": 1,
+            "10": 1,
+            "active": 1,
+            "directory": 1,
+            "networking": 1,
+            "tablet": 1,
+            "smartphone": 1,
+            "microsoft": 1,
+            "messaging": 1,
+            "smtp": 1,
+            "vpn": 1,
+            "pc": 1,
+            "web": 1
+          }
+        },
+        {
+          "id": "25953797",
+          "caracteres": 1179,
+          "sha256_txt": "392dfaac970c80173d30e127c8de7d4d41bb5ea49821e3cc6d276896ca8d6e4c",
+          "tokens_pdf": 178,
+          "tokens_txt": 175,
+          "cobertura_tokens_pdf": 0.9831460674157303,
+          "perdas_tokens": {
+            "rsquo": 2,
+            "ndash": 1
+          }
+        },
+        {
+          "id": "95085510",
+          "caracteres": 4943,
+          "sha256_txt": "16b0e2db7192848d919d17d0603508121ada19bfb087b7d29ac11d86ad132ca6",
+          "tokens_pdf": 692,
+          "tokens_txt": 685,
+          "cobertura_tokens_pdf": 0.9898843930635838,
+          "perdas_tokens": {
+            "apos": 7
+          }
+        },
+        {
+          "id": "10840430",
+          "caracteres": 7406,
+          "sha256_txt": "f27e8577bb107d9a579cafc1d2faafc1a9a05ec313816fc5e5436d2106ce3b9f",
+          "tokens_pdf": 943,
+          "tokens_txt": 938,
+          "cobertura_tokens_pdf": 0.9893955461293743,
+          "perdas_tokens": {
+            "skills": 1,
+            "of": 1,
+            "state": 1,
+            "20": 1,
+            "aug": 1,
+            "26": 1,
+            "sep": 2,
+            "24": 2
+          }
+        }
+      ]
+    },
+    "cleaned_text_en_readable": {
+      "n": 2484,
+      "ids_ausentes": [],
+      "ids_extras": [],
+      "vazios_apos_marcadores": [
+        "12632728"
+      ],
+      "n_cobertura_ao_menos_99": 2478,
+      "menor_cobertura": 0.9664233576642336,
+      "n_maiores_12000_caracteres": 65,
+      "requer_conferencia": [
+        {
+          "id": "34304175",
+          "caracteres": 4843,
+          "sha256_txt": "0d2e802abac77fa35c15b7aed11d5a52205828befad9a1e54bbe939adc6ca046",
+          "tokens_pdf": 621,
+          "tokens_txt": 617,
+          "cobertura_tokens_pdf": 0.9871175523349437,
+          "perdas_tokens": {
+            "customer": 1,
+            "service": 1,
+            "results": 1,
+            "safety": 2,
+            "oriented": 2,
+            "conscious": 1
+          }
+        },
+        {
+          "id": "83338413",
+          "caracteres": 5120,
+          "sha256_txt": "935f8676a46556b793f146c243f17534803b8b7e321d6dbb78793f22cf8efde7",
+          "tokens_pdf": 685,
+          "tokens_txt": 673,
+          "cobertura_tokens_pdf": 0.9664233576642336,
+          "perdas_tokens": {
+            "telecommunications": 1,
+            "security": 1,
+            "technologies": 5,
+            "proficiency": 1,
+            "video": 1,
+            "wireless": 1,
+            "tcp": 1,
+            "10": 1,
+            "active": 1,
+            "directory": 1,
+            "networking": 1,
+            "tablet": 1,
+            "smartphone": 1,
+            "microsoft": 1,
+            "messaging": 1,
+            "smtp": 1,
+            "vpn": 1,
+            "pc": 1,
+            "web": 1
+          }
+        },
+        {
+          "id": "25953797",
+          "caracteres": 1190,
+          "sha256_txt": "a6fe62c05b43fc003090fea0b8fd07abbf4482ecb027b882bfdabcb742597fbb",
+          "tokens_pdf": 178,
+          "tokens_txt": 175,
+          "cobertura_tokens_pdf": 0.9831460674157303,
+          "perdas_tokens": {
+            "rsquo": 2,
+            "ndash": 1
+          }
+        },
+        {
+          "id": "95085510",
+          "caracteres": 4963,
+          "sha256_txt": "ad90748791e05a6bcf3f0aa21bd288b362b9187ce1bef489d9a3076dfac0e23e",
+          "tokens_pdf": 692,
+          "tokens_txt": 685,
+          "cobertura_tokens_pdf": 0.9898843930635838,
+          "perdas_tokens": {
+            "apos": 7
+          }
+        },
+        {
+          "id": "10840430",
+          "caracteres": 7421,
+          "sha256_txt": "602ada64c17b0d05eaf21bff29697e3b5af4a153bb6ba59f6994c31c265869c5",
+          "tokens_pdf": 943,
+          "tokens_txt": 938,
+          "cobertura_tokens_pdf": 0.9893955461293743,
+          "perdas_tokens": {
+            "skills": 1,
+            "of": 1,
+            "state": 1,
+            "20": 1,
+            "aug": 1,
+            "26": 1,
+            "sep": 2,
+            "24": 2
+          }
+        }
+      ]
+    }
+  },
+  "proveniencia": {
+    "commit_main": "5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
+    "arvores_git_verificadas": {
+      "extracted_text_en": "cd494e44e66d818de0dafc3517dff94cd37dc499",
+      "cleaned_text_en": "ec3626f6d1595d5d86354cb966d375c399f260aa",
+      "cleaned_text_en_readable": "2f6630daf1a2486a46532c1b3bc0938da2559015"
+    },
+    "normalizacao_git": "CRLF para LF",
+    "modo": "Cópia de trabalho local idêntica às árvores remotas; não houve git pull pelo shell."
+  }
+}

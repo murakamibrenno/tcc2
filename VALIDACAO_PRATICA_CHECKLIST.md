@@ -103,3 +103,11 @@ O build tem um aviso de bundle maior que 500 kB; ele não impede a compilação.
 4. Sincronizar interface, conferir resultados e redigir o capítulo de resultados do TCC2.
 
 O prazo informado é aproximadamente 15/11. Essa rodada entrega a proteção técnica e evidencia o que falta; não transforma automaticamente o estudo atual em uma validação científica concluída.
+
+## Atualização da revisão do piloto
+
+- [x] Concluir lotes dos 100 documentos, com 60 ratificações por caso e 40 decisões da IA autorizadas antecipadamente.
+- [x] Preservar essa proveniência em manifesto de desenvolvimento, CSV e relatório, sem declarar validação humana independente.
+- [x] Consolidar 99 representantes com hashes dos textos integrais, sem sobrescrever resultados históricos.
+- [ ] Ampliar a referência e revisar um teste humano independente.
+- [ ] Resolver suporte por classe, grupos e protocolo antes da reexecução comparativa.
