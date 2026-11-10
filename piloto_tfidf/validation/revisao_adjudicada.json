@@ -124,6 +124,62 @@
       "status": "aprovado",
       "rotulo": "Parcialmente Adequado",
       "aprovacao": "Usuário: Aprovo tudo ... registrar o lote 2"
+    },
+    {
+      "id": "10265057",
+      "evidencias": {
+        "sql": "Data manipulation language SQL commands; extract big data ... SQL database",
+        "programacao": "Programming language: C/C++, Python, Java, Matlab, and LabView"
+      },
+      "justificativa": "Dois requisitos técnicos; não identificados Git e APIs/web services. Atuação em RF não causa exclusão.",
+      "fonte": "PDF completo, uma página",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo os cinco, pode registrar o lote 3"
+    },
+    {
+      "id": "10554236",
+      "evidencias": {
+        "trechos_ambiguos": "developed an automated tool; supported the testing of scripts, patches, and system change requests"
+      },
+      "justificativa": "Automação e uso de ERP não identificam linguagem, SQL, Git ou serviços/APIs; não é rejeição por profissão contábil.",
+      "fonte": "PDF completo, cinco páginas, aproximadamente 24 mil caracteres",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco, pode registrar o lote 3"
+    },
+    {
+      "id": "10001727",
+      "evidencias": {
+        "trecho_ambiguo": "worked on hotel computer programming systems"
+      },
+      "justificativa": "Contexto de operação de sistemas hoteleiros; nenhuma linguagem, SQL, Git ou implementação de serviços evidenciada. Não confundir usar software com desenvolvê-lo.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco, pode registrar o lote 3"
+    },
+    {
+      "id": "10504237",
+      "evidencias": {
+        "trechos_ambiguos": "Google applications training; records in company database"
+      },
+      "justificativa": "Uso de aplicações e consulta de registros sem evidência de SQL, Git, linguagem ou APIs/web services.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco, pode registrar o lote 3"
+    },
+    {
+      "id": "10186968",
+      "evidencias": {
+        "trechos_ambiguos": "customer database protocols; advanced Excel functions and calculations"
+      },
+      "justificativa": "Organização de registros e uso avançado de Excel não comprovam SQL nem programação; sem Git/serviços identificados.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco, pode registrar o lote 3"
     }
   ],
   "verificacao_pdfs": {
@@ -151,63 +207,62 @@
     "politica_preservacao": "Ambos os arquivos originais preservados. A nova seleção será usada na reexecução, sem alterar métricas históricas."
   },
   "progresso": {
-    "documentos_com_rotulo_aprovado": 10,
-    "documentos_aprovados_retidos_na_avaliacao_principal": 9,
+    "documentos_com_rotulo_aprovado": 15,
+    "documentos_aprovados_retidos_na_avaliacao_principal": 14,
     "total_previsto_avaliacao_principal": 99,
     "exclusoes_aprovadas": [
       "26746496"
     ]
   },
-  "lote_3_proposto": [
+  "lote_4_proposto": [
     {
-      "id": "10265057",
-      "rotulo_proposto": "Parcialmente Adequado",
+      "id": "10182582",
+      "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "sql": "Data manipulation language SQL commands; extract big data ... SQL database",
-        "programacao": "Programming language: C/C++, Python, Java, Matlab, and LabView"
+        "trecho": "Microsoft Outlook, Word and Excel; MS Office expert"
       },
-      "justificativa": "Dois requisitos técnicos; não identificados Git e APIs/web services. Atuação em RF não causa exclusão.",
+      "justificativa": "Uso de ferramentas de escritório e atividades de vendas/atendimento; nenhum dos quatro requisitos técnicos evidenciado.",
       "fonte": "PDF completo, uma página",
       "status": "aguarda_usuario"
     },
     {
-      "id": "10554236",
+      "id": "10953078",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "trechos_ambiguos": "developed an automated tool; supported the testing of scripts, patches, and system change requests"
+        "trecho": "navigate electronic medical records and effectively utilize basic computer programs"
       },
-      "justificativa": "Automação e uso de ERP não identificam linguagem, SQL, Git ou serviços/APIs; não é rejeição por profissão contábil.",
-      "fonte": "PDF completo, cinco páginas, aproximadamente 24 mil caracteres",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "10001727",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "trecho_ambiguo": "worked on hotel computer programming systems"
-      },
-      "justificativa": "Contexto de operação de sistemas hoteleiros; nenhuma linguagem, SQL, Git ou implementação de serviços evidenciada. Não confundir usar software com desenvolvê-lo.",
+      "justificativa": "Uso de prontuários e programas básicos; não há SQL, programação, Git ou serviços/APIs evidenciados. Protocols refere-se a práticas clínicas.",
       "fonte": "PDF completo, duas páginas",
       "status": "aguarda_usuario"
     },
     {
-      "id": "10504237",
+      "id": "10062724",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "trechos_ambiguos": "Google applications training; records in company database"
+        "trecho": "influenced the creation and development of departmental electronic database for charting case notes"
       },
-      "justificativa": "Uso de aplicações e consulta de registros sem evidência de SQL, Git, linguagem ou APIs/web services.",
+      "justificativa": "Participação na definição de campos e fluxos de prontuários, sem evidência de implementação em linguagem, SQL, Git ou serviços/APIs. Program development refere-se a programas de atendimento e treinamento.",
+      "fonte": "PDF completo, três páginas",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "10399912",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "trecho": "Entered updated personnel and subcontractor data into a central database; Utilized and Navigated PeopleSoft"
+      },
+      "justificativa": "Entrada e pesquisa de dados como usuário de sistemas; não comprova SQL, programação, Git ou serviços/APIs.",
       "fonte": "PDF completo, duas páginas",
       "status": "aguarda_usuario"
     },
     {
-      "id": "10186968",
+      "id": "10138632",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "trechos_ambiguos": "customer database protocols; advanced Excel functions and calculations"
+        "trecho": "Computers and Electronics; Administration and Management"
       },
-      "justificativa": "Organização de registros e uso avançado de Excel não comprovam SQL nem programação; sem Git/serviços identificados.",
-      "fonte": "PDF completo, duas páginas",
+      "justificativa": "Conhecimento genérico em informática e atividades comerciais; nenhum dos quatro requisitos técnicos evidenciado.",
+      "fonte": "PDF completo, uma página",
       "status": "aguarda_usuario"
     }
   ]
