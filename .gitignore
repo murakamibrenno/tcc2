@@ -7,7 +7,6 @@ aplicacao_mockup/dist/
 piloto_tfidf/output/cache_llm/
 piloto_tfidf/output/cache_st.npy
 piloto_tfidf/output/cache_st.json
-curriculos_processados/
 .huggingface/
 *.log
 

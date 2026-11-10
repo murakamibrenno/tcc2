@@ -113,6 +113,7 @@ O Python do experimento é `piloto_tfidf\.venv\Scripts\python.exe`. Dependência
 | `piloto_tfidf/data/curriculos_completo.json` | Rótulos dos 2.484. Não entra no ranking. |
 | `piloto_tfidf/data/corpus_completo_meta.json` | Contagem da base inteira. |
 | `piloto_tfidf/data/vaga_referencia.json` | Texto da vaga. |
+| `curriculos_processados/` | Textos extraídos dos 2.484 currículos (`cleaned_text_en_readable` é a cópia usada pelos scripts). O `.venv` dentro de `scripts/` não entra no Git. |
 
 Caches de embedding não vão para o Git: `piloto_tfidf/output/cache_st.npy` e `piloto_tfidf/output/cache_llm/`. Quem clonar o repositório vê os números. Quem for reextrair o Qwen precisa do cache local ou de cerca de 30 minutos de CPU.
 
