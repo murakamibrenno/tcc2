@@ -1,6 +1,6 @@
-# Revisão pendente dos lotes 6 e 7
+# Revisão do lote 7
 
-Conferência de 10/11/2026. Os 25 documentos já aprovados permanecem registrados. Os itens abaixo são propostas da IA, aguardando decisão do autor. Não foram aplicados ao corpus nem aos resultados.
+Atualização de 10/11/2026. Lote 6 e escolhas dos dois pares aprovados pelo autor. Há 30 dos 100 documentos do piloto com rótulos aprovados, além de quatro documentos dos pares complementares. Restam 70 do piloto: sete lotes de dez, incluindo o lote abaixo. A ampliação para além do piloto terá contagem própria após a seleção.
 
 ## Textos publicados na main
 
@@ -10,35 +10,11 @@ Cada versão contém 2.484 TXT e os mesmos IDs do inventário. O arquivo 1263272
 
 Usar cleaned_text_en_readable para revisão, extracted_text_en como referência e PDF em ambiguidades. Conferir no bruto os IDs 34304175, 83338413, 25953797, 95085510 e 10840430. Os textos integrais evitam repetir extração de PDF e não sofrem o corte de 12 mil caracteres do corpus histórico. A janela dos modelos permanece uma decisão experimental separada.
 
-## Novos pares verificados
+## Pares complementares aprovados
 
-### 16850314 e 37473139
+- 16850314 / 37473139: ambos Inadequados. Manter 16850314; excluir 37473139 da avaliação principal. Preservar os originais. Atividades de estoque, compras e uso de PeopleSoft/Excel, sem evidências de SQL, linguagem de programação, Git ou APIs/web services.
 
-STOREKEEPER II. Leitura dos textos completos e inspeção visual das duas páginas. Conteúdo textual e apresentação iguais; PDFs têm bytes diferentes. Os TXT readable são idênticos entre si.
-
-Proposta: manter 16850314 e excluir 37473139 da avaliação principal, preservando o original. Conteúdo equivalente: menor ID numérico como desempate determinístico, sem usar ranking. Rótulo sugerido para ambos: **Inadequado**. Atividades de estoque, compras e uso de PeopleSoft/Excel, sem evidências de SQL, linguagem de programação, Git ou APIs/web services.
-
-Status: aguarda aprovação. Esses casos examinados entram no desenvolvimento, não no teste independente.
-
-### 19147603 e 28398216
-
-FINANCE OFFICER. Leitura dos textos completos e inspeção visual das quatro páginas. Conteúdo textual e apresentação iguais; PDFs têm bytes diferentes. Os TXT readable são idênticos entre si.
-
-Proposta: manter 19147603 e excluir 28398216 da avaliação principal, preservando o original. Conteúdo equivalente: menor ID numérico como desempate determinístico, sem usar ranking. Rótulo sugerido para ambos: **Inadequado**. Contabilidade, orçamento e uso de aplicativos de escritório, sem os quatro requisitos. Assembly refere-se à United Nations General Assembly (UNGA), não à linguagem de programação.
-
-Status: aguarda aprovação. Esses casos examinados entram no desenvolvimento, não no teste independente.
-
-## Lote 6 aguardando aprovação
-
-1. **28126340 — Parcialmente Adequado**. Transact SQL, PL/SQL; MS SQL Server, MySQL, Oracle; Client/Server developer ... JavaScript; Classic ASP/ASP.net ... PHP. SQL e programação evidenciados; não identificados Git ou APIs/web services. Aplicações web não comprovam automaticamente integração por serviços.
-
-2. **33381211 — Parcialmente Adequado**. SQL server; distributed architecture using .NET C#; design & implementation of new services layer with restful APIs; WCF services. Três requisitos evidenciados; sem Git identificado. Experiência declarada é principalmente de liderança técnica e arquitetura, sem inferir execução pessoal de todo o código. Cargo executivo não causa exclusão.
-
-3. **37242217 — Parcialmente Adequado**. MySQL, MS SQL, Oracle 11i; PHP, JavaScript, Java, C++, Microsoft Visual Basic; Web designer, developer ... over 30 client domains. SQL e programação evidenciados; sem Git ou APIs/web services identificado. Administração de servidores web não comprova desenvolvimento de serviços.
-
-4. **15651486 — Inadequado**. SQL Database; Cisco ... network infrastructure ... VoIP. SQL declarado, mas sem linguagem, Git ou serviços/APIs evidenciados. Integração de telefonia e redes não comprova o requisito de serviços de aplicações.
-
-5. **18301617 — Inadequado**. Microsoft SQL; Microsoft SQL Server. Apenas SQL declarado entre os quatro requisitos. Instalação/migração de servidores e infraestrutura não comprova programação, Git ou APIs/web services.
+- 19147603 / 28398216: ambos Inadequados. Manter 19147603; excluir 28398216 da avaliação principal. Preservar os originais. Contabilidade, orçamento e uso de aplicativos de escritório, sem os quatro requisitos. Assembly refere-se à United Nations General Assembly (UNGA), não à linguagem de programação.
 
 ## Lote 7 aguardando aprovação
 
@@ -52,6 +28,16 @@ Status: aguarda aprovação. Esses casos examinados entram no desenvolvimento, n
 
 5. **10553553 — Inadequado**. SQL Administration; Administered SQL 2005 database; Migrated ... Exchange ... with PowerShell. SQL evidenciado. Usar PowerShell em migração sem descrever criação de scripts não comprova programação. Sem Git/serviços.
 
-## Efeito no artigo
+6. **12635195 — Inadequado**. Taught courses concerning ... Python, Visual Basic, and C#; Developed mobile applications with student body. Programação evidenciada, sem SQL, Git ou APIs/web services identificados. Docência não causa reprovação; apenas um dos quatro requisitos.
 
-Depois da aprovação, registrar a versão adjudicada, fechar grupos/partições e recalcular as métricas. Atualizar método, resultados e discussão com os mesmos artefatos. Estas propostas não são números finais nem aprovação humana concluída. Preservar o desenho comparativo do artigo.
+7. **31111279 — Parcialmente Adequado**. Programmed in SQL ... developed various hospital reports; MS SQL 7.0; making changes ... in VB/VBA code; API Software tools (HR/Payroll, Security, Scheduling and timekeeping systems). SQL e programação explícitos. API é usado no nome de software de gestão de pessoal; não comprova desenvolvimento de interface de programação. Sem Git e web services/REST identificado.
+
+8. **27295996 — Inadequado**. Performance monitoring ... Microsoft SQL Databases; Introduction to SQL. SQL evidenciado; atividades de suporte, migração e implantação sem linguagem, Git ou APIs/web services comprovados.
+
+9. **27536013 — Inadequado**. Upgrade of databases from MS SQL to Oracle; SQL databases. SQL evidenciado; gestão de BI/SharePoint e reporting sem linguagem, Git ou serviços/APIs explicitados. BI Program refere-se ao programa organizacional.
+
+10. **32959732 — Inadequado**. Microsoft SQL server; IDERA SQL Management; Oversaw an off-shore development team ... SharePoint; Amazon Web Services. SQL declarado, sem linguagem ou Git. Coordenar integrações e listar Amazon Web Services não comprova implementação de APIs/web services.
+
+## Integração aos resultados e ao artigo
+
+As decisões aprovadas estão no registro adjudicado separado. Corpus, partições e métricas históricas permanecem preservados até a consolidação e reexecução. Os novos itens do lote 7 são propostas, não decisões humanas. Método, resultados e discussão do artigo receberão os artefatos da mesma versão depois da avaliação.

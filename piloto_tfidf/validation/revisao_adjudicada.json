@@ -294,6 +294,114 @@
       "status": "aprovado",
       "rotulo": "Parcialmente Adequado",
       "aprovacao": "Usuário: Aprovo os cinco conforme sua recomendação, pode registrar o lote 5"
+    },
+    {
+      "id": "28126340",
+      "evidencias": {
+        "sql": "Transact SQL, PL/SQL; MS SQL Server, MySQL, Oracle",
+        "programacao": "Client/Server developer ... JavaScript; Classic ASP/ASP.net ... PHP"
+      },
+      "justificativa": "SQL e programação evidenciados; não identificados Git ou APIs/web services. Aplicações web não comprovam automaticamente integração por serviços.",
+      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "33381211",
+      "evidencias": {
+        "sql": "SQL server",
+        "programacao": "distributed architecture using .NET C#",
+        "servicos": "design & implementation of new services layer with restful APIs; WCF services"
+      },
+      "justificativa": "Três requisitos evidenciados; sem Git identificado. Experiência declarada é principalmente de liderança técnica e arquitetura, sem inferir execução pessoal de todo o código. Cargo executivo não causa exclusão.",
+      "fonte": "PDF completo, três páginas; TXT readable completo da main conferido.",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "37242217",
+      "evidencias": {
+        "sql": "MySQL, MS SQL, Oracle 11i",
+        "programacao": "PHP, JavaScript, Java, C++, Microsoft Visual Basic; Web designer, developer ... over 30 client domains"
+      },
+      "justificativa": "SQL e programação evidenciados; sem Git ou APIs/web services identificado. Administração de servidores web não comprova desenvolvimento de serviços.",
+      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "15651486",
+      "evidencias": {
+        "sql": "SQL Database",
+        "contexto": "Cisco ... network infrastructure ... VoIP"
+      },
+      "justificativa": "SQL declarado, mas sem linguagem, Git ou serviços/APIs evidenciados. Integração de telefonia e redes não comprova o requisito de serviços de aplicações.",
+      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "18301617",
+      "evidencias": {
+        "sql": "Microsoft SQL; Microsoft SQL Server"
+      },
+      "justificativa": "Apenas SQL declarado entre os quatro requisitos. Instalação/migração de servidores e infraestrutura não comprova programação, Git ou APIs/web services.",
+      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados."
+    },
+    {
+      "id": "16850314",
+      "rotulo": "Inadequado",
+      "evidencias": {
+        "contexto": "STOREKEEPER II"
+      },
+      "justificativa": "Atividades de estoque, compras e uso de PeopleSoft/Excel, sem evidências de SQL, linguagem de programação, Git ou APIs/web services.",
+      "status": "aprovado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados.",
+      "grupo_documental": "grupo_16850314",
+      "excluir_avaliacao_principal": false
+    },
+    {
+      "id": "37473139",
+      "rotulo": "Inadequado",
+      "evidencias": {
+        "contexto": "STOREKEEPER II"
+      },
+      "justificativa": "Atividades de estoque, compras e uso de PeopleSoft/Excel, sem evidências de SQL, linguagem de programação, Git ou APIs/web services.",
+      "status": "aprovado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados.",
+      "grupo_documental": "grupo_16850314",
+      "excluir_avaliacao_principal": true
+    },
+    {
+      "id": "19147603",
+      "rotulo": "Inadequado",
+      "evidencias": {
+        "contexto": "FINANCE OFFICER"
+      },
+      "justificativa": "Contabilidade, orçamento e uso de aplicativos de escritório, sem os quatro requisitos. Assembly refere-se à United Nations General Assembly (UNGA), não à linguagem de programação.",
+      "status": "aprovado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados.",
+      "grupo_documental": "grupo_19147603",
+      "excluir_avaliacao_principal": false
+    },
+    {
+      "id": "28398216",
+      "rotulo": "Inadequado",
+      "evidencias": {
+        "contexto": "FINANCE OFFICER"
+      },
+      "justificativa": "Contabilidade, orçamento e uso de aplicativos de escritório, sem os quatro requisitos. Assembly refere-se à United Nations General Assembly (UNGA), não à linguagem de programação.",
+      "status": "aprovado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados.",
+      "grupo_documental": "grupo_19147603",
+      "excluir_avaliacao_principal": true
     }
   ],
   "verificacao_pdfs": {
@@ -321,72 +429,40 @@
     "politica_preservacao": "Ambos os arquivos originais preservados. A nova seleção será usada na reexecução, sem alterar métricas históricas."
   },
   "progresso": {
-    "documentos_com_rotulo_aprovado": 25,
-    "documentos_aprovados_retidos_na_avaliacao_principal": 24,
-    "total_previsto_avaliacao_principal": 99,
+    "documentos_com_rotulo_aprovado": 34,
+    "documentos_aprovados_retidos_na_avaliacao_principal": 31,
+    "piloto": {
+      "total_documentos": 100,
+      "rotulos_aprovados": 30,
+      "representantes_aprovados_retidos": 29,
+      "pendentes_aprovacao": 70,
+      "tamanho_proximos_lotes": 10,
+      "lotes_restantes_incluindo_lote_7": 7
+    },
+    "complementares_dos_pares": {
+      "documentos_com_rotulo_aprovado": 4,
+      "representantes_retidos": 2
+    },
     "exclusoes_aprovadas": [
-      "26746496"
+      "26746496",
+      "37473139",
+      "28398216"
     ],
-    "universo_contagem": "Piloto ampliado de 100 documentos; não é o tamanho final do subconjunto revisado ampliado."
+    "nota": "Contagem dos lotes refere-se à revisão do piloto de 100. O subconjunto revisado ampliado ainda depende de seleção e suporte por classe; não há número final de lotes aprovado para a ampliação."
   },
-  "lote_6_proposto": [
-    {
-      "id": "28126340",
-      "rotulo_proposto": "Parcialmente Adequado",
-      "evidencias": {
-        "sql": "Transact SQL, PL/SQL; MS SQL Server, MySQL, Oracle",
-        "programacao": "Client/Server developer ... JavaScript; Classic ASP/ASP.net ... PHP"
-      },
-      "justificativa": "SQL e programação evidenciados; não identificados Git ou APIs/web services. Aplicações web não comprovam automaticamente integração por serviços.",
-      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
-      "status": "aguarda_usuario"
+  "fontes_textuais": {
+    "commit_main": "5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
+    "pasta": "curriculos_processados",
+    "verificacao": "As três árvores Git de TXT locais, após CRLF para LF, são idênticas às árvores publicadas na main. Sincronização de conteúdo conferida pelo conector; git fetch por shell não concluiu por falha DNS no ambiente.",
+    "arvores_git": {
+      "cleaned_text_en": "ec3626f6d1595d5d86354cb966d375c399f260aa",
+      "cleaned_text_en_readable": "2f6630daf1a2486a46532c1b3bc0938da2559015",
+      "extracted_text_en": "cd494e44e66d818de0dafc3517dff94cd37dc499"
     },
-    {
-      "id": "33381211",
-      "rotulo_proposto": "Parcialmente Adequado",
-      "evidencias": {
-        "sql": "SQL server",
-        "programacao": "distributed architecture using .NET C#",
-        "servicos": "design & implementation of new services layer with restful APIs; WCF services"
-      },
-      "justificativa": "Três requisitos evidenciados; sem Git identificado. Experiência declarada é principalmente de liderança técnica e arquitetura, sem inferir execução pessoal de todo o código. Cargo executivo não causa exclusão.",
-      "fonte": "PDF completo, três páginas; TXT readable completo da main conferido.",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "37242217",
-      "rotulo_proposto": "Parcialmente Adequado",
-      "evidencias": {
-        "sql": "MySQL, MS SQL, Oracle 11i",
-        "programacao": "PHP, JavaScript, Java, C++, Microsoft Visual Basic; Web designer, developer ... over 30 client domains"
-      },
-      "justificativa": "SQL e programação evidenciados; sem Git ou APIs/web services identificado. Administração de servidores web não comprova desenvolvimento de serviços.",
-      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "15651486",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "sql": "SQL Database",
-        "contexto": "Cisco ... network infrastructure ... VoIP"
-      },
-      "justificativa": "SQL declarado, mas sem linguagem, Git ou serviços/APIs evidenciados. Integração de telefonia e redes não comprova o requisito de serviços de aplicações.",
-      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "18301617",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "sql": "Microsoft SQL; Microsoft SQL Server"
-      },
-      "justificativa": "Apenas SQL declarado entre os quatro requisitos. Instalação/migração de servidores e infraestrutura não comprova programação, Git ou APIs/web services.",
-      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
-      "status": "aguarda_usuario"
-    }
-  ],
-  "novos_pares_propostos": [
+    "uso": "cleaned_text_en_readable para leitura, extracted_text_en para conferência; verificar PDF em ambiguidades ou suspeita de perda.",
+    "nota": "Cobertura de tokens não garante fidelidade semântica; cinco documentos limpos ficaram abaixo de 99% e precisam de conferência no bruto. Nenhum rótulo novo aprovado nesta etapa."
+  },
+  "novos_pares_aprovados": [
     {
       "ids": [
         "16850314",
@@ -401,8 +477,12 @@
       "criterio_representante": "Conteúdo equivalente: menor ID numérico como desempate determinístico, sem usar ranking.",
       "rotulo_proposto_ambos": "Inadequado",
       "justificativa": "Atividades de estoque, compras e uso de PeopleSoft/Excel, sem evidências de SQL, linguagem de programação, Git ou APIs/web services.",
-      "status": "aguarda_usuario",
-      "uso_experimental": "Casos examinados na calibração; não reservar como teste final independente."
+      "status": "aprovado",
+      "uso_experimental": "Casos examinados na calibração; não reservar como teste final independente.",
+      "representante_avaliacao_principal": "16850314",
+      "excluido_avaliacao_principal": "37473139",
+      "rotulo_ambos": "Inadequado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados."
     },
     {
       "ids": [
@@ -418,23 +498,15 @@
       "criterio_representante": "Conteúdo equivalente: menor ID numérico como desempate determinístico, sem usar ranking.",
       "rotulo_proposto_ambos": "Inadequado",
       "justificativa": "Contabilidade, orçamento e uso de aplicativos de escritório, sem os quatro requisitos. Assembly refere-se à United Nations General Assembly (UNGA), não à linguagem de programação.",
-      "status": "aguarda_usuario",
-      "uso_experimental": "Casos examinados na calibração; não reservar como teste final independente."
+      "status": "aprovado",
+      "uso_experimental": "Casos examinados na calibração; não reservar como teste final independente.",
+      "representante_avaliacao_principal": "19147603",
+      "excluido_avaliacao_principal": "28398216",
+      "rotulo_ambos": "Inadequado",
+      "aprovacao": "Usuário: Aprovo o lote 6 e as escolhas dos dois pares, pode registrar e seguir para o próximo lote usando os textos processados."
     }
   ],
-  "fontes_textuais": {
-    "commit_main": "5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
-    "pasta": "curriculos_processados",
-    "verificacao": "As três árvores Git de TXT locais, após CRLF para LF, são idênticas às árvores publicadas na main. Sincronização de conteúdo conferida pelo conector; git fetch por shell não concluiu por falha DNS no ambiente.",
-    "arvores_git": {
-      "cleaned_text_en": "ec3626f6d1595d5d86354cb966d375c399f260aa",
-      "cleaned_text_en_readable": "2f6630daf1a2486a46532c1b3bc0938da2559015",
-      "extracted_text_en": "cd494e44e66d818de0dafc3517dff94cd37dc499"
-    },
-    "uso": "cleaned_text_en_readable para leitura, extracted_text_en para conferência; verificar PDF em ambiguidades ou suspeita de perda.",
-    "nota": "Cobertura de tokens não garante fidelidade semântica; cinco documentos limpos ficaram abaixo de 99% e precisam de conferência no bruto. Nenhum rótulo novo aprovado nesta etapa."
-  },
-  "lote_7_preparado": [
+  "lote_7_proposto": [
     {
       "id": "20674668",
       "rotulo_proposto": "Parcialmente Adequado",
@@ -488,6 +560,59 @@
       "justificativa": "SQL evidenciado. Usar PowerShell em migração sem descrever criação de scripts não comprova programação. Sem Git/serviços.",
       "status": "aguarda_usuario",
       "fonte": "TXT readable completo versionado"
+    },
+    {
+      "id": "12635195",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "programacao": "Taught courses concerning ... Python, Visual Basic, and C#; Developed mobile applications with student body"
+      },
+      "justificativa": "Programação evidenciada, sem SQL, Git ou APIs/web services identificados. Docência não causa reprovação; apenas um dos quatro requisitos.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "31111279",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "Programmed in SQL ... developed various hospital reports; MS SQL 7.0",
+        "programacao": "making changes ... in VB/VBA code",
+        "ambiguidade": "API Software tools (HR/Payroll, Security, Scheduling and timekeeping systems)"
+      },
+      "justificativa": "SQL e programação explícitos. API é usado no nome de software de gestão de pessoal; não comprova desenvolvimento de interface de programação. Sem Git e web services/REST identificado.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "27295996",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "sql": "Performance monitoring ... Microsoft SQL Databases; Introduction to SQL"
+      },
+      "justificativa": "SQL evidenciado; atividades de suporte, migração e implantação sem linguagem, Git ou APIs/web services comprovados.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "27536013",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "sql": "Upgrade of databases from MS SQL to Oracle; SQL databases"
+      },
+      "justificativa": "SQL evidenciado; gestão de BI/SharePoint e reporting sem linguagem, Git ou serviços/APIs explicitados. BI Program refere-se ao programa organizacional.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "32959732",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "sql": "Microsoft SQL server; IDERA SQL Management",
+        "contexto": "Oversaw an off-shore development team ... SharePoint; Amazon Web Services"
+      },
+      "justificativa": "SQL declarado, sem linguagem ou Git. Coordenar integrações e listar Amazon Web Services não comprova implementação de APIs/web services.",
+      "fonte": "TXT readable completo versionado",
+      "status": "aguarda_usuario"
     }
   ]
 }
