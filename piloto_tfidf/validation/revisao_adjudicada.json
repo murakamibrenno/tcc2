@@ -180,6 +180,61 @@
       "status": "aprovado",
       "rotulo": "Inadequado",
       "aprovacao": "Usuário: Aprovo os cinco, pode registrar o lote 3"
+    },
+    {
+      "id": "10182582",
+      "evidencias": {
+        "trecho": "Microsoft Outlook, Word and Excel; MS Office expert"
+      },
+      "justificativa": "Uso de ferramentas de escritório e atividades de vendas/atendimento; nenhum dos quatro requisitos técnicos evidenciado.",
+      "fonte": "PDF completo, uma página",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco como Inadequado, pode registrar o lote 4"
+    },
+    {
+      "id": "10953078",
+      "evidencias": {
+        "trecho": "navigate electronic medical records and effectively utilize basic computer programs"
+      },
+      "justificativa": "Uso de prontuários e programas básicos; não há SQL, programação, Git ou serviços/APIs evidenciados. Protocols refere-se a práticas clínicas.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco como Inadequado, pode registrar o lote 4"
+    },
+    {
+      "id": "10062724",
+      "evidencias": {
+        "trecho": "influenced the creation and development of departmental electronic database for charting case notes"
+      },
+      "justificativa": "Participação na definição de campos e fluxos de prontuários, sem evidência de implementação em linguagem, SQL, Git ou serviços/APIs. Program development refere-se a programas de atendimento e treinamento.",
+      "fonte": "PDF completo, três páginas",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco como Inadequado, pode registrar o lote 4"
+    },
+    {
+      "id": "10399912",
+      "evidencias": {
+        "trecho": "Entered updated personnel and subcontractor data into a central database; Utilized and Navigated PeopleSoft"
+      },
+      "justificativa": "Entrada e pesquisa de dados como usuário de sistemas; não comprova SQL, programação, Git ou serviços/APIs.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco como Inadequado, pode registrar o lote 4"
+    },
+    {
+      "id": "10138632",
+      "evidencias": {
+        "trecho": "Computers and Electronics; Administration and Management"
+      },
+      "justificativa": "Conhecimento genérico em informática e atividades comerciais; nenhum dos quatro requisitos técnicos evidenciado.",
+      "fonte": "PDF completo, uma página",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco como Inadequado, pode registrar o lote 4"
     }
   ],
   "verificacao_pdfs": {
@@ -207,62 +262,66 @@
     "politica_preservacao": "Ambos os arquivos originais preservados. A nova seleção será usada na reexecução, sem alterar métricas históricas."
   },
   "progresso": {
-    "documentos_com_rotulo_aprovado": 15,
-    "documentos_aprovados_retidos_na_avaliacao_principal": 14,
+    "documentos_com_rotulo_aprovado": 20,
+    "documentos_aprovados_retidos_na_avaliacao_principal": 19,
     "total_previsto_avaliacao_principal": 99,
     "exclusoes_aprovadas": [
       "26746496"
     ]
   },
-  "lote_4_proposto": [
+  "lote_5_proposto": [
     {
-      "id": "10182582",
+      "id": "10235429",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "trecho": "Microsoft Outlook, Word and Excel; MS Office expert"
+        "trecho": "website development; Developed Excel program to track monthly performance"
       },
-      "justificativa": "Uso de ferramentas de escritório e atividades de vendas/atendimento; nenhum dos quatro requisitos técnicos evidenciado.",
-      "fonte": "PDF completo, uma página",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "10953078",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "trecho": "navigate electronic medical records and effectively utilize basic computer programs"
-      },
-      "justificativa": "Uso de prontuários e programas básicos; não há SQL, programação, Git ou serviços/APIs evidenciados. Protocols refere-se a práticas clínicas.",
+      "justificativa": "Website e planilha mencionados sem linguagem ou implementação técnica especificada. Sem SQL, Git ou APIs/web services evidenciados.",
       "fonte": "PDF completo, duas páginas",
       "status": "aguarda_usuario"
     },
     {
-      "id": "10062724",
+      "id": "10641230",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "trecho": "influenced the creation and development of departmental electronic database for charting case notes"
+        "programacao": "JavaScript, Java, PHP; Programmed a cloud storage website ... security login, uploading and downloading"
       },
-      "justificativa": "Participação na definição de campos e fluxos de prontuários, sem evidência de implementação em linguagem, SQL, Git ou serviços/APIs. Program development refere-se a programas de atendimento e treinamento.",
-      "fonte": "PDF completo, três páginas",
+      "justificativa": "Programação de aplicação comprovada, mas apenas um dos quatro requisitos. Database servers não comprova SQL; site com upload/login não comprova API/web services; Git não identificado.",
+      "fonte": "PDF completo, uma página",
       "status": "aguarda_usuario"
     },
     {
-      "id": "10399912",
-      "rotulo_proposto": "Inadequado",
+      "id": "13405733",
+      "rotulo_proposto": "Parcialmente Adequado",
       "evidencias": {
-        "trecho": "Entered updated personnel and subcontractor data into a central database; Utilized and Navigated PeopleSoft"
+        "sql": "SQL (Microsoft and Oracle)",
+        "programacao": "Python; Perl"
       },
-      "justificativa": "Entrada e pesquisa de dados como usuário de sistemas; não comprova SQL, programação, Git ou serviços/APIs.",
+      "justificativa": "Dois requisitos declarados. Migração e integração de dados não comprovam automaticamente serviços/APIs; sem Git identificado. Cargo de diretor não é exclusão.",
       "fonte": "PDF completo, duas páginas",
       "status": "aguarda_usuario"
     },
     {
-      "id": "10138632",
+      "id": "22776912",
       "rotulo_proposto": "Inadequado",
       "evidencias": {
-        "trecho": "Computers and Electronics; Administration and Management"
+        "sql": "SQL Repositories; websites with SQL data repositories",
+        "programacao_ambigua": "Development of multiple applications using data mapping; Enterprise Application Development and Deployment"
       },
-      "justificativa": "Conhecimento genérico em informática e atividades comerciais; nenhum dos quatro requisitos técnicos evidenciado.",
-      "fonte": "PDF completo, uma página",
+      "justificativa": "SQL evidenciado; há relato de aplicações e integrações, mas nenhuma linguagem identificada nem evidência específica de serviços/APIs ou Git. Pela exigência atual de linguagem explícita, apenas um requisito. Caso limítrofe para decisão do usuário.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "70089206",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "Worked extensively in PL/SQL, SQL",
+        "programacao": "Pro C; JavaScript; Visual Basic; developed programs and command procedures",
+        "outro_versionamento": "Serena Version Manager as a software repository"
+      },
+      "justificativa": "SQL e programação evidenciados. Serena é ferramenta de versionamento, mas não prova Git exigido pela vaga; não identificados serviços/APIs.",
+      "fonte": "PDF completo, duas páginas",
       "status": "aguarda_usuario"
     }
   ]
