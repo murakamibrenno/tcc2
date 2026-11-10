@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "data": "2026-11-10",
+  "status": "revisao_parcial",
+  "metodo": "Revisão assistida por IA com decisão explícita do usuário; não equivale a dois avaliadores humanos independentes.",
+  "protocolo_aprovado": {
+    "vaga": "Junior Software Developer (Backend and Web Applications)",
+    "criterio": "Aderência técnica; categoria da pasta e excesso de experiência não causam reprovação.",
+    "referencia": "piloto_tfidf/data/vaga_referencia.txt"
+  },
+  "integracao": "Registro separado; corpus, partições e resultados históricos ainda não substituídos.",
+  "decisoes_aprovadas": [
+    {
+      "id": "21297521",
+      "rotulo": "Adequado",
+      "evidencias": {
+        "sql": "SQL Server, Oracle, MySQL, Postgres",
+        "servicos": "REST based API reference architectures",
+        "git": "Git based development workflows",
+        "programacao": "Even wrote Java code; built a C++ engine"
+      },
+      "justificativa": "Quatro requisitos técnicos evidenciados, apesar do cargo gerencial.",
+      "aprovacao": "Usuário: Aprovo os quatro"
+    },
+    {
+      "id": "26746496",
+      "rotulo": "Adequado",
+      "grupo_documental": "grupo_26746496_16186411",
+      "evidencias": {
+        "sql": "LINQ to SQL; SQL Database",
+        "servicos": "Modified and written web services using C#",
+        "git": "Version Controls: Tortoise SVN, GitHub",
+        "programacao": "Microsoft.Net based solutions using C#"
+      },
+      "aprovacao": "Usuário: Aprovo os quatro"
+    },
+    {
+      "id": "16186411",
+      "rotulo": "Adequado",
+      "grupo_documental": "grupo_26746496_16186411",
+      "evidencias": {
+        "sql": "LINQ to SQL; SQL Database",
+        "servicos": "Modified and written web services using C#",
+        "git": "Version Controls: Tortoise SVN, GitHub",
+        "programacao": "Developed web based applications using C#"
+      },
+      "aprovacao": "Usuário: Aprovo os quatro"
+    },
+    {
+      "id": "12763627",
+      "rotulo": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "SQL Server, MySQL, Oracle",
+        "git": "Source Controls: Team Foundation Sever, GitHub, Visual Source Safe",
+        "programacao": "Programming Languages: C#"
+      },
+      "justificativa": "Três requisitos; ausência de evidência explícita de APIs/web services no texto revisado.",
+      "aprovacao": "Usuário: Aprovo os quatro"
+    },
+    {
+      "id": "22450718",
+      "rotulo": "Inadequado",
+      "evidencias": {
+        "banco": "Working knowledge ... Oracle",
+        "ambiguidades": "J2EE e Service Oriented Architecture citados sem implementação clara; Spring 2008 é período da graduação"
+      },
+      "justificativa": "Evidência insuficiente de programação e serviços; sem Git identificado. Cargo de suporte não é critério de exclusão.",
+      "aprovacao": "Usuário: Aprovo os quatro"
+    }
+  ],
+  "verificacao_pdfs": {
+    "status": "concluida_leitura_textual_e_visual_das_quatro_paginas",
+    "arquivos": [
+      {
+        "id": "26746496",
+        "paginas": 2,
+        "git_blob_sha": "76f3447ed30900b760c1072205e395711ba6c507"
+      },
+      {
+        "id": "16186411",
+        "paginas": 2,
+        "git_blob_sha": "bddb6a1a08aed9953d8fe5691b5757b9b78cb182"
+      }
+    ],
+    "origem": "Cópias locais em Documents/TCC; hashes Git idênticos aos blobs do repositório.",
+    "conclusao": "Mesmos cargo, período, formação, notas e projetos; diferenças editoriais e conteúdo adicional. Tratar como versões do mesmo histórico para controle de independência, sem afirmar identidade civil.",
+    "grupo_aprovado": true,
+    "exclusao_aprovada": false,
+    "proposta": "Uma versão por grupo na avaliação principal. Conservar 16186411, que contém seção Skills preenchida e projeto adicional; arquivar 26746496 como versão relacionada. Não selecionar pela posição no ranking ou desempenho de modelo."
+  },
+  "lote_2_proposto": [
+    {
+      "id": "83816738",
+      "rotulo_proposto": "Adequado",
+      "evidencias": {
+        "sql": "SQL databases like MySQL, PostgreSQL, Oracle",
+        "servicos": "Developed REST web services for external application integration",
+        "git": "Git for source control and versioning",
+        "programacao": "Coded and debugged multi-tiered Java-based applications"
+      },
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "18067556",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "Designed ad-hoc SQL views, stored procedures and reports",
+        "programacao": "Utilized advanced VBA programming ... two billing systems; Programming/Databases ... Python"
+      },
+      "justificativa": "SQL e programação evidenciados; interfaces/ETL/EDI sem evidência explícita de serviço/API; Git não identificado no PDF completo.",
+      "nota_fonte": "PDF original tem quatro páginas, aproximadamente 20 mil caracteres; corpus salvo contém 12 mil. Há competências adicionais além do trecho salvo. Registrar e resolver janela textual no protocolo antes de reexecutar.",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "90867631",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "Performed database queries and file transfers using SQL",
+        "programacao": "Skills C++/VB08/10; COM-207 Programming in C/C+; COM-208 Programming Visual Basic"
+      },
+      "justificativa": "Conhecimento declarado e formação em programação, sem comprovação forte de desenvolvimento de aplicações. Não equiparar cursos a experiência profissional; sem Git/serviços identificado.",
+      "ponto_decisao": "Aceitar formação e conhecimento explícito como evidência para compatibilidade parcial, sem exigir experiência profissional para vaga júnior.",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "16899268",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "programacao_ambigua": "Learned two computer languages on my own"
+      },
+      "justificativa": "Linguagens não identificadas; gerenciamento de websites sem evidência dos quatro requisitos. Motivo não é cargo gerencial.",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "10089434",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "T-SQL; SQL",
+        "programacao": "Developing ... application scripts ... Visual Basic Script, and PowerShell; C++, Java, VB.Net"
+      },
+      "justificativa": "SQL e programação declarados; sem serviços/Git identificados. TFS para registrar erros não comprova Git nem uso de controle de versão.",
+      "status": "aguarda_usuario"
+    }
+  ]
+}
