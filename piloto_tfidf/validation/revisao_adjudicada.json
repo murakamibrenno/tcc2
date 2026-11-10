@@ -235,6 +235,65 @@
       "status": "aprovado",
       "rotulo": "Inadequado",
       "aprovacao": "Usuário: Aprovo os cinco como Inadequado, pode registrar o lote 4"
+    },
+    {
+      "id": "10235429",
+      "evidencias": {
+        "trecho": "website development; Developed Excel program to track monthly performance"
+      },
+      "justificativa": "Website e planilha mencionados sem linguagem ou implementação técnica especificada. Sem SQL, Git ou APIs/web services evidenciados.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco conforme sua recomendação, pode registrar o lote 5"
+    },
+    {
+      "id": "10641230",
+      "evidencias": {
+        "programacao": "JavaScript, Java, PHP; Programmed a cloud storage website ... security login, uploading and downloading"
+      },
+      "justificativa": "Programação de aplicação comprovada, mas apenas um dos quatro requisitos. Database servers não comprova SQL; site com upload/login não comprova API/web services; Git não identificado.",
+      "fonte": "PDF completo, uma página",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco conforme sua recomendação, pode registrar o lote 5"
+    },
+    {
+      "id": "13405733",
+      "evidencias": {
+        "sql": "SQL (Microsoft and Oracle)",
+        "programacao": "Python; Perl"
+      },
+      "justificativa": "Dois requisitos declarados. Migração e integração de dados não comprovam automaticamente serviços/APIs; sem Git identificado. Cargo de diretor não é exclusão.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo os cinco conforme sua recomendação, pode registrar o lote 5"
+    },
+    {
+      "id": "22776912",
+      "evidencias": {
+        "sql": "SQL Repositories; websites with SQL data repositories",
+        "programacao_ambigua": "Development of multiple applications using data mapping; Enterprise Application Development and Deployment"
+      },
+      "justificativa": "SQL evidenciado; há relato de aplicações e integrações, mas nenhuma linguagem identificada nem evidência específica de serviços/APIs ou Git. Pela exigência atual de linguagem explícita, apenas um requisito. Caso limítrofe para decisão do usuário.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Inadequado",
+      "aprovacao": "Usuário: Aprovo os cinco conforme sua recomendação, pode registrar o lote 5"
+    },
+    {
+      "id": "70089206",
+      "evidencias": {
+        "sql": "Worked extensively in PL/SQL, SQL",
+        "programacao": "Pro C; JavaScript; Visual Basic; developed programs and command procedures",
+        "outro_versionamento": "Serena Version Manager as a software repository"
+      },
+      "justificativa": "SQL e programação evidenciados. Serena é ferramenta de versionamento, mas não prova Git exigido pela vaga; não identificados serviços/APIs.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aprovado",
+      "rotulo": "Parcialmente Adequado",
+      "aprovacao": "Usuário: Aprovo os cinco conforme sua recomendação, pode registrar o lote 5"
     }
   ],
   "verificacao_pdfs": {
@@ -262,65 +321,66 @@
     "politica_preservacao": "Ambos os arquivos originais preservados. A nova seleção será usada na reexecução, sem alterar métricas históricas."
   },
   "progresso": {
-    "documentos_com_rotulo_aprovado": 20,
-    "documentos_aprovados_retidos_na_avaliacao_principal": 19,
+    "documentos_com_rotulo_aprovado": 25,
+    "documentos_aprovados_retidos_na_avaliacao_principal": 24,
     "total_previsto_avaliacao_principal": 99,
     "exclusoes_aprovadas": [
       "26746496"
     ]
   },
-  "lote_5_proposto": [
+  "lote_6_proposto": [
     {
-      "id": "10235429",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "trecho": "website development; Developed Excel program to track monthly performance"
-      },
-      "justificativa": "Website e planilha mencionados sem linguagem ou implementação técnica especificada. Sem SQL, Git ou APIs/web services evidenciados.",
-      "fonte": "PDF completo, duas páginas",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "10641230",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "programacao": "JavaScript, Java, PHP; Programmed a cloud storage website ... security login, uploading and downloading"
-      },
-      "justificativa": "Programação de aplicação comprovada, mas apenas um dos quatro requisitos. Database servers não comprova SQL; site com upload/login não comprova API/web services; Git não identificado.",
-      "fonte": "PDF completo, uma página",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "13405733",
+      "id": "28126340",
       "rotulo_proposto": "Parcialmente Adequado",
       "evidencias": {
-        "sql": "SQL (Microsoft and Oracle)",
-        "programacao": "Python; Perl"
+        "sql": "Transact SQL, PL/SQL; MS SQL Server, MySQL, Oracle",
+        "programacao": "Client/Server developer ... JavaScript; Classic ASP/ASP.net ... PHP"
       },
-      "justificativa": "Dois requisitos declarados. Migração e integração de dados não comprovam automaticamente serviços/APIs; sem Git identificado. Cargo de diretor não é exclusão.",
+      "justificativa": "SQL e programação evidenciados; não identificados Git ou APIs/web services. Aplicações web não comprovam automaticamente integração por serviços.",
       "fonte": "PDF completo, duas páginas",
       "status": "aguarda_usuario"
     },
     {
-      "id": "22776912",
-      "rotulo_proposto": "Inadequado",
-      "evidencias": {
-        "sql": "SQL Repositories; websites with SQL data repositories",
-        "programacao_ambigua": "Development of multiple applications using data mapping; Enterprise Application Development and Deployment"
-      },
-      "justificativa": "SQL evidenciado; há relato de aplicações e integrações, mas nenhuma linguagem identificada nem evidência específica de serviços/APIs ou Git. Pela exigência atual de linguagem explícita, apenas um requisito. Caso limítrofe para decisão do usuário.",
-      "fonte": "PDF completo, duas páginas",
-      "status": "aguarda_usuario"
-    },
-    {
-      "id": "70089206",
+      "id": "33381211",
       "rotulo_proposto": "Parcialmente Adequado",
       "evidencias": {
-        "sql": "Worked extensively in PL/SQL, SQL",
-        "programacao": "Pro C; JavaScript; Visual Basic; developed programs and command procedures",
-        "outro_versionamento": "Serena Version Manager as a software repository"
+        "sql": "SQL server",
+        "programacao": "distributed architecture using .NET C#",
+        "servicos": "design & implementation of new services layer with restful APIs; WCF services"
       },
-      "justificativa": "SQL e programação evidenciados. Serena é ferramenta de versionamento, mas não prova Git exigido pela vaga; não identificados serviços/APIs.",
+      "justificativa": "Três requisitos evidenciados; sem Git identificado. Experiência declarada é principalmente de liderança técnica e arquitetura, sem inferir execução pessoal de todo o código. Cargo executivo não causa exclusão.",
+      "fonte": "PDF completo, três páginas",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "37242217",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "MySQL, MS SQL, Oracle 11i",
+        "programacao": "PHP, JavaScript, Java, C++, Microsoft Visual Basic; Web designer, developer ... over 30 client domains"
+      },
+      "justificativa": "SQL e programação evidenciados; sem Git ou APIs/web services identificado. Administração de servidores web não comprova desenvolvimento de serviços.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "15651486",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "sql": "SQL Database",
+        "contexto": "Cisco ... network infrastructure ... VoIP"
+      },
+      "justificativa": "SQL declarado, mas sem linguagem, Git ou serviços/APIs evidenciados. Integração de telefonia e redes não comprova o requisito de serviços de aplicações.",
+      "fonte": "PDF completo, duas páginas",
+      "status": "aguarda_usuario"
+    },
+    {
+      "id": "18301617",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "sql": "Microsoft SQL; Microsoft SQL Server"
+      },
+      "justificativa": "Apenas SQL declarado entre os quatro requisitos. Instalação/migração de servidores e infraestrutura não comprova programação, Git ou APIs/web services.",
       "fonte": "PDF completo, duas páginas",
       "status": "aguarda_usuario"
     }
