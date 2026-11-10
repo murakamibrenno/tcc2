@@ -326,7 +326,8 @@
     "total_previsto_avaliacao_principal": 99,
     "exclusoes_aprovadas": [
       "26746496"
-    ]
+    ],
+    "universo_contagem": "Piloto ampliado de 100 documentos; não é o tamanho final do subconjunto revisado ampliado."
   },
   "lote_6_proposto": [
     {
@@ -337,7 +338,7 @@
         "programacao": "Client/Server developer ... JavaScript; Classic ASP/ASP.net ... PHP"
       },
       "justificativa": "SQL e programação evidenciados; não identificados Git ou APIs/web services. Aplicações web não comprovam automaticamente integração por serviços.",
-      "fonte": "PDF completo, duas páginas",
+      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
       "status": "aguarda_usuario"
     },
     {
@@ -349,7 +350,7 @@
         "servicos": "design & implementation of new services layer with restful APIs; WCF services"
       },
       "justificativa": "Três requisitos evidenciados; sem Git identificado. Experiência declarada é principalmente de liderança técnica e arquitetura, sem inferir execução pessoal de todo o código. Cargo executivo não causa exclusão.",
-      "fonte": "PDF completo, três páginas",
+      "fonte": "PDF completo, três páginas; TXT readable completo da main conferido.",
       "status": "aguarda_usuario"
     },
     {
@@ -360,7 +361,7 @@
         "programacao": "PHP, JavaScript, Java, C++, Microsoft Visual Basic; Web designer, developer ... over 30 client domains"
       },
       "justificativa": "SQL e programação evidenciados; sem Git ou APIs/web services identificado. Administração de servidores web não comprova desenvolvimento de serviços.",
-      "fonte": "PDF completo, duas páginas",
+      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
       "status": "aguarda_usuario"
     },
     {
@@ -371,7 +372,7 @@
         "contexto": "Cisco ... network infrastructure ... VoIP"
       },
       "justificativa": "SQL declarado, mas sem linguagem, Git ou serviços/APIs evidenciados. Integração de telefonia e redes não comprova o requisito de serviços de aplicações.",
-      "fonte": "PDF completo, duas páginas",
+      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
       "status": "aguarda_usuario"
     },
     {
@@ -381,8 +382,113 @@
         "sql": "Microsoft SQL; Microsoft SQL Server"
       },
       "justificativa": "Apenas SQL declarado entre os quatro requisitos. Instalação/migração de servidores e infraestrutura não comprova programação, Git ou APIs/web services.",
-      "fonte": "PDF completo, duas páginas",
+      "fonte": "PDF completo, duas páginas; TXT readable completo da main conferido.",
       "status": "aguarda_usuario"
+    }
+  ],
+  "novos_pares_propostos": [
+    {
+      "ids": [
+        "16850314",
+        "37473139"
+      ],
+      "titulo": "STOREKEEPER II",
+      "categoria_origem": "aviation",
+      "conferencia": "Leitura dos textos completos e inspeção visual das duas páginas. Conteúdo textual e apresentação iguais; PDFs têm bytes diferentes.",
+      "igualdade_txt_readable": true,
+      "representante_proposto": "16850314",
+      "exclusao_proposta": "37473139",
+      "criterio_representante": "Conteúdo equivalente: menor ID numérico como desempate determinístico, sem usar ranking.",
+      "rotulo_proposto_ambos": "Inadequado",
+      "justificativa": "Atividades de estoque, compras e uso de PeopleSoft/Excel, sem evidências de SQL, linguagem de programação, Git ou APIs/web services.",
+      "status": "aguarda_usuario",
+      "uso_experimental": "Casos examinados na calibração; não reservar como teste final independente."
+    },
+    {
+      "ids": [
+        "19147603",
+        "28398216"
+      ],
+      "titulo": "FINANCE OFFICER",
+      "categoria_origem": "finance",
+      "conferencia": "Leitura dos textos completos e inspeção visual das quatro páginas. Conteúdo textual e apresentação iguais; PDFs têm bytes diferentes.",
+      "igualdade_txt_readable": true,
+      "representante_proposto": "19147603",
+      "exclusao_proposta": "28398216",
+      "criterio_representante": "Conteúdo equivalente: menor ID numérico como desempate determinístico, sem usar ranking.",
+      "rotulo_proposto_ambos": "Inadequado",
+      "justificativa": "Contabilidade, orçamento e uso de aplicativos de escritório, sem os quatro requisitos. Assembly refere-se à United Nations General Assembly (UNGA), não à linguagem de programação.",
+      "status": "aguarda_usuario",
+      "uso_experimental": "Casos examinados na calibração; não reservar como teste final independente."
+    }
+  ],
+  "fontes_textuais": {
+    "commit_main": "5fbdaee93e7b53abc6013edbee3e47d7d29daf24",
+    "pasta": "curriculos_processados",
+    "verificacao": "As três árvores Git de TXT locais, após CRLF para LF, são idênticas às árvores publicadas na main. Sincronização de conteúdo conferida pelo conector; git fetch por shell não concluiu por falha DNS no ambiente.",
+    "arvores_git": {
+      "cleaned_text_en": "ec3626f6d1595d5d86354cb966d375c399f260aa",
+      "cleaned_text_en_readable": "2f6630daf1a2486a46532c1b3bc0938da2559015",
+      "extracted_text_en": "cd494e44e66d818de0dafc3517dff94cd37dc499"
+    },
+    "uso": "cleaned_text_en_readable para leitura, extracted_text_en para conferência; verificar PDF em ambiguidades ou suspeita de perda.",
+    "nota": "Cobertura de tokens não garante fidelidade semântica; cinco documentos limpos ficaram abaixo de 99% e precisam de conferência no bruto. Nenhum rótulo novo aprovado nesta etapa."
+  },
+  "lote_7_preparado": [
+    {
+      "id": "20674668",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "SQL, PL/SQL, Oracle Database",
+        "programacao": "C++, Java, JavaScript, PHP, Python; Lead Drupal Developer"
+      },
+      "justificativa": "SQL e programação evidenciados. Versioning management systems sem Git explicitado; sem API/web services demonstrado. Serviços de implantação Drupal não comprovam integração por serviços.",
+      "status": "aguarda_usuario",
+      "fonte": "TXT readable completo versionado"
+    },
+    {
+      "id": "24889109",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "contexto": "LAN/WAN; Technical Support; routers/firewalls; Windows 7"
+      },
+      "justificativa": "Atuação em infraestrutura sem os quatro requisitos técnicos evidenciados. FTP/TCP/IP e telecomunicações não são serviços de aplicações.",
+      "status": "aguarda_usuario",
+      "fonte": "TXT readable completo versionado"
+    },
+    {
+      "id": "20001721",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "Structured query language (SQL) expert; SQL Server",
+        "programacao": "Used object-oriented design/programming ... stand-alone application; VBA"
+      },
+      "justificativa": "SQL e programação sustentados por formação, declaração de competência e projeto; sem Git/serviços. Ser estudante não causa reprovação.",
+      "status": "aguarda_usuario",
+      "fonte": "TXT readable completo versionado"
+    },
+    {
+      "id": "18187364",
+      "rotulo_proposto": "Parcialmente Adequado",
+      "evidencias": {
+        "sql": "Wrote extensive SQL and PL/SQL programs",
+        "programacao": "Wrote PL/SQL ... custom routines; custom ... UNIX shell scripts"
+      },
+      "justificativa": "SQL e programação de rotinas/scripts explicitamente desenvolvidos. Não inferir linguagem C apenas da letra isolada no bloco de skills. Sem Git e APIs/web services identificado.",
+      "status": "aguarda_usuario",
+      "fonte": "TXT readable completo versionado"
+    },
+    {
+      "id": "10553553",
+      "rotulo_proposto": "Inadequado",
+      "evidencias": {
+        "sql": "SQL Administration; Administered SQL 2005 database",
+        "ambiguidade": "Migrated ... Exchange ... with PowerShell"
+      },
+      "justificativa": "SQL evidenciado. Usar PowerShell em migração sem descrever criação de scripts não comprova programação. Sem Git/serviços.",
+      "status": "aguarda_usuario",
+      "fonte": "TXT readable completo versionado"
     }
   ]
 }
+

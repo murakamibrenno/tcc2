@@ -58,3 +58,7 @@ python -m unittest discover -s tests -v
 O diretório de saída contém inventario.json e textos_completos.jsonl. Os textos integrais e temporários são artefatos locais; não são adicionados ao Git automaticamente. O resumo versionado está em piloto_tfidf/validation/inventario_base_resumo.json. Código 2 indica que ao menos um documento precisa de tratamento; não significa que os demais arquivos foram perdidos.
 
 Prazo informado: aproximadamente 15/11. O cronograma precisa priorizar dados e avaliação comparativa prevista no artigo. Uma eventual limitação de execução será relatada; não será convertida em uma promessa de estudo diferente.
+
+## Textos processados disponíveis
+
+A pasta curriculos_processados foi publicada na main em 10/11/2026 (5fbdaee). As três versões completas foram conferidas por hash de árvore Git. Usar readable para leitura e extraído para conferência; cinco textos limpos exigem atenção adicional. O relatório e as propostas de dois novos pares e dos lotes 6/7 estão em piloto_tfidf/validation/REVISAO_PENDENTE_LOTES_6_E_7.md. Essas propostas aguardam decisão do autor. O arquivo sem texto permanece sem rótulo artificial.
