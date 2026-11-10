@@ -1,5 +1,7 @@
 # Validação da parte prática do TCC2
 
+Atualização aprovada em 10/11/2026: execução na coleção de 2.484 documentos e qualidade em subconjunto revisado independente, preservando o desenho comparativo do artigo. O detalhamento vigente está em PLANEJAMENTO_TCC2_ESCALA_E_QUALIDADE.md. O diagnóstico abaixo permanece como histórico; não representa resultados novos.
+
 Rodada técnica de 10/11/2026. Snapshot científico preservado: `7431ceaa8ed3ea2058562b816c12daf20d552790`.
 
 ## Resultado desta rodada

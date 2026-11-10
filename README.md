@@ -1,5 +1,7 @@
 # CurrículoRank — parte prática do TCC2
 
+Atualização de escopo aprovada em 10/11/2026: [processamento da base completa e qualidade no subconjunto revisado](PLANEJAMENTO_TCC2_ESCALA_E_QUALIDADE.md), preservando a comparação e os objetivos do artigo.
+
 > **Validação técnica em andamento (10/11/2026):** consulte [o checklist executado e as pendências científicas](VALIDACAO_PRATICA_CHECKLIST.md). Os números abaixo são o snapshot anterior à adjudicação. A nova verificação preserva esses números e bloqueia reexecuções enquanto houver pendências nos dados. `run_pipeline_demo.ps1` agora executa somente o preflight, sem reconstruir o corpus.
 
 Repositório da parte prática de Brenno Murakami (IFSP Presidente Epitácio, orientador Prof. Vilson Francisco Maziero).

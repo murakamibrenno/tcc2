@@ -14,3 +14,6 @@ curriculos_processados/
 # Escritas intermediárias e formulários de revisão em andamento
 piloto_tfidf/output/**/*.tmp
 piloto_tfidf/validation/revisao*.csv
+
+# Artefatos integrais do inventário local
+piloto_tfidf/validation/base_completa/

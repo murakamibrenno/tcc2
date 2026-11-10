@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "etapa": "inventario_e_extracao_sem_modelos",
+  "n_documentos": 2484,
+  "status": {
+    "ok": 2483,
+    "texto_vazio": 1
+  },
+  "categorias": {
+    "accountant": 118,
+    "advocate": 118,
+    "agriculture": 63,
+    "apparel": 97,
+    "arts": 103,
+    "automobile": 36,
+    "aviation": 117,
+    "banking": 115,
+    "bpo": 22,
+    "business-development": 120,
+    "chef": 118,
+    "construction": 112,
+    "consultant": 115,
+    "designer": 107,
+    "digital-media": 96,
+    "engineering": 118,
+    "finance": 118,
+    "fitness": 117,
+    "healthcare": 115,
+    "hr": 110,
+    "information-technology": 120,
+    "public-relations": 111,
+    "sales": 116,
+    "teacher": 102
+  },
+  "grupos_multiplos": [
+    [
+      "16850314",
+      "37473139"
+    ],
+    [
+      "19147603",
+      "28398216"
+    ],
+    [
+      "16186411",
+      "26746496"
+    ]
+  ],
+  "segundos_totais": 36.046,
+  "nota": "Não mede desempenho de TF-IDF/BGE/Qwen nem qualidade. Quase duplicação adicional ainda exige triagem. Categoria não é rótulo de aderência.",
+  "pendencias": [
+    {
+      "id": "12632728",
+      "categoria_origem": "business-development",
+      "pdf_relativo": "BUSINESS-DEVELOPMENT/12632728.pdf",
+      "paginas": 1,
+      "status": "texto_vazio",
+      "caracteres": 0,
+      "sha256_pdf": "29d5808a74f455434f9432b126447ea3965504d87a4eb1b51c14771fcc3127e2",
+      "sha256_texto_normalizado": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "segundos_extracao": 0.009242,
+      "grupo_documental": "grupo_12632728",
+      "conferencia_visual": "Página em branco; não é rótulo de aderência. Sem texto para entrada nos modelos."
+    }
+  ],
+  "ambiente": {
+    "python": "3.12.14",
+    "pymupdf": "2.1",
+    "nota": "Extração local; este tempo não representa custo comparativo dos modelos."
+  }
+}
