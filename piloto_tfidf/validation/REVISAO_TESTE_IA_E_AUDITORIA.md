@@ -1,5 +1,7 @@
 # Coorte anotada por IA e auditoria humana limitada
 
+Atualização posterior: o autor aprovou os cinco casos apresentados, sem correções. A ratificação assistida está registrada em `auditoria_humana_5_casos_v1.json`; a referência original da IA continua preservada. A avaliação dos 97 foi executada; ver [resultados](../output/coorte97_v1/README.md). O texto abaixo descreve o estado anterior à aprovação.
+
 ## Alteração autorizada pelo autor
 
 O autor substituiu a revisão humana integral planejada dos 100 casos por anotação da IA, seguida de conferência de uma amostra pequena. Esta decisão altera a proveniência da referência de avaliação. O desenho comparativo de representações e classificadores permanece, mas a evidência obtida será exploratória e não uma validação humana independente.

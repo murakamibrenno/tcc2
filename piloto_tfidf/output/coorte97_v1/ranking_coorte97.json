@@ -1,0 +1,39 @@
+{
+  "n": 97,
+  "n_consultas": 1,
+  "universo": "Subconjunto de 97 integralmente julgado pela referência assistida, não a coleção inteira.",
+  "definicao": "Avaliar somente os 97 julgados usando scores de recuperação já calculados. AP/P@k: apenas Adequado relevante. NDCG: Adequado2, Parcial1, Inadequado0, ganho2^rel-1. Empates por ID crescente. Uma vaga, reportar AP, não MAP.",
+  "limitacao": "Mesma IA participou do desenvolvimento e da avaliação. Cinco ratificações de amostra intencional com sugestões visíveis não são julgamento humano independente, não validam os outros rótulos e não estimam acurácia da população.",
+  "representacoes": [
+    {
+      "representacao": "tfidf",
+      "n_julgados": 97,
+      "n_adequados_relevancia_binaria": 4,
+      "AP_adequado": 0.6348484848484848,
+      "NDCG_graduado": 0.9337554522584183,
+      "P@5": 0.4,
+      "P@10": 0.2,
+      "sha256_ranking_fonte": "f95386b8ce5ccefc3ff30debecf8cb3e30624e09a30d75dea15ade401bcc3f82"
+    },
+    {
+      "representacao": "bge",
+      "n_julgados": 97,
+      "n_adequados_relevancia_binaria": 4,
+      "AP_adequado": 0.47870370370370374,
+      "NDCG_graduado": 0.864922732378267,
+      "P@5": 0.6,
+      "P@10": 0.3,
+      "sha256_ranking_fonte": "19410fb9ac574fbec751c8539fc0db5abc395291d7cedbbada0bbf6e63f137c2"
+    },
+    {
+      "representacao": "qwen",
+      "n_julgados": 97,
+      "n_adequados_relevancia_binaria": 4,
+      "AP_adequado": 0.2541467304625199,
+      "NDCG_graduado": 0.7755172604305138,
+      "P@5": 0.2,
+      "P@10": 0.2,
+      "sha256_ranking_fonte": "78dd42e60816364e37186fb380cbc3da28a7c09cf7328444d4561dc2753b9e51"
+    }
+  ]
+}

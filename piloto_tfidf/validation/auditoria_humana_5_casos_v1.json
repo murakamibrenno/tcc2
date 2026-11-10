@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "data": "2026-11-10",
+  "avaliador": "autor",
+  "tipo": "ratificacao_humana_assistida",
+  "independente": false,
+  "selecao_intencional": true,
+  "sugestoes_ia_visiveis": true,
+  "sha256_revisao_ia": "37d46deff944c51ff93aee82ccee7952fbc9cde3415e69c9cb6081d54c250483",
+  "fonte": "Mensagem explícita do autor nesta conversa; não é inferência de concordância.",
+  "mensagem_do_autor": "Aprovo os cinco conforme sua recomendação. Pode registrar minha conferência e seguir com a avaliação dos 97 casos, mantendo a limitação da auditoria humana bem explicada no artigo e atualizando o GitHub.",
+  "limite": "A aprovação abrange somente os cinco casos apresentados e não transforma os demais rótulos da IA em humanos.",
+  "decisoes": [
+    {
+      "id": "23464505",
+      "decisao": "aprovado_sem_correcao",
+      "rotulo_ratificado": "Adequado"
+    },
+    {
+      "id": "10624813",
+      "decisao": "aprovado_sem_correcao",
+      "rotulo_ratificado": "Adequado"
+    },
+    {
+      "id": "62994611",
+      "decisao": "aprovado_sem_correcao",
+      "rotulo_ratificado": "Parcialmente Adequado"
+    },
+    {
+      "id": "47603843",
+      "decisao": "aprovado_sem_correcao",
+      "rotulo_ratificado": "Parcialmente Adequado"
+    },
+    {
+      "id": "18297650",
+      "decisao": "aprovado_sem_correcao",
+      "rotulo_ratificado": "Inadequado"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Continuidade do experimento do TCC2
 
+Atualização vigente: os cinco casos foram aprovados pelo autor como ratificação humana assistida, e a avaliação exploratória dos 97 foi executada sem recalibrar os modelos. Há cinco casos ratificados e 92 rótulos da IA sem conferência; não é teste humano independente. [Resultados e limitações](piloto_tfidf/output/coorte97_v1/README.md). Os estados anteriores abaixo são históricos.
+
 Atualização vigente: o autor autorizou a IA a anotar os 100 casos reservados, com auditoria humana limitada de cinco casos ainda pendente. Foram anotados 4 Adequados, 38 Parciais e 58 Inadequados; três versões relacionadas ao desenvolvimento ficaram fora da avaliação principal, com 97 elegíveis. Isso não constitui teste humano independente. [Método, evidências e limitações](piloto_tfidf/validation/REVISAO_TESTE_IA_E_AUDITORIA.md). Os estados anteriores abaixo são históricos.
 
 Estado atualizado em 10/11/2026: três representações executadas em 2.483 textos utilizáveis; 201 novos casos de desenvolvimento conferidos por IA, com 195 rótulos e seis dúvidas excluídas. O desenvolvimento atual tem 294 casos (6 Adequados, 75 Parciais, 213 Inadequados), com proveniência mista. Nove combinações originais e nove com pesos foram executadas exploratoriamente. Os 100 casos de teste seguem reservados para revisão humana pelo autor. Resultados e pendências vigentes: [desenvolvimento ampliado](piloto_tfidf/output/desenvolvimento_v2/README.md). Os números e tarefas abaixo preservam a evolução do planejamento e devem ser lidos à luz dessa atualização.

@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "etapa": "avaliacao_exploratoria_coorte97_v1",
+  "sha256_desenvolvimento": "265a08614bbf5e25521eecd7f95f99c0fabd58ab9dde73c05af51318379f3963",
+  "sha256_coorte": "d535c0dbff308e11f04ec45de77e422c13808521f630a4d62e7660ad221caedc",
+  "sha256_auditoria": "db95e6378753a7684d676c3c9e52c2dd9c87038d4ecc7cec05d8962630d26cc7",
+  "n_treino": 294,
+  "n_avaliacao": 97,
+  "condicoes": [
+    "original",
+    "pesos_balanceados"
+  ],
+  "parametros_fixados_no_desenvolvimento": "LR max_iter2000; SVC linear probabilityTrue; XGB 50 árvores profundidade3 lr0.1. Sem busca de hiperparâmetros.",
+  "semente": 42,
+  "treino": "Ajustar cada classificador em todos os 294 casos do desenvolvimento; sem busca de hiperparâmetros ou seleção pelo resultado dos 97.",
+  "pesos": "n_treino/(3*n_classe_treino), somente na condição separada pesos_balanceados; sem usar frequências da coorte.",
+  "tfidf_classificacao": "Ajustado somente nos 294 textos de treino, depois transformados os 97.",
+  "metrica_primaria": "F1 macro nas três classes; precisão, recall, F1 e suporte por classe, matriz de confusão e referência majoritária.",
+  "ranking": "Avaliar somente os 97 julgados usando scores de recuperação já calculados. AP/P@k: apenas Adequado relevante. NDCG: Adequado2, Parcial1, Inadequado0, ganho2^rel-1. Empates por ID crescente. Uma vaga, reportar AP, não MAP.",
+  "limite_ranking": "Escores TF-IDF de recuperação ajustados na coleção utilizável inteira sem rótulos; experimento distinto da classificação com TF-IDF ajustado no treino. Métricas restritas ao conjunto julgado, não à coleção de 2483.",
+  "proveniencia": {
+    "IA_com_ratificacao_assistida": 5,
+    "IA_sem_conferencia": 92,
+    "humana_independente": 0
+  },
+  "n_excluidos_relacao_documental": 3,
+  "n_adequados": 4,
+  "limite": "Mesma IA participou do desenvolvimento e da avaliação. Cinco ratificações de amostra intencional com sugestões visíveis não são julgamento humano independente, não validam os outros rótulos e não estimam acurácia da população.",
+  "versoes": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "plataforma": "Windows-11-10.0.26200-SP0"
+}
