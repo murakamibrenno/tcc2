@@ -1,0 +1,13 @@
+{
+  "sha256_rotulos": "265a08614bbf5e25521eecd7f95f99c0fabd58ab9dde73c05af51318379f3963",
+  "n": 294,
+  "semente": 42,
+  "n_folds": 3,
+  "condicoes": [
+    "original",
+    "pesos_balanceados"
+  ],
+  "definicao_pesos": "Peso n_treino/(n_classes*n_classe_treino), calculado somente no treino; mesma fórmula para LR, SVM e XGBoost.",
+  "hiperparametros": "LR max_iter2000; SVC linear probabilityTrue; XGB 50 árvores profundidade3 lr0.1. Sem busca de hiperparâmetros.",
+  "metrica_primaria": "F1 macro em três classes; recall/F1 e suporte por classe obrigatórios. Comparação exploratória, teste humano não consumido."
+}

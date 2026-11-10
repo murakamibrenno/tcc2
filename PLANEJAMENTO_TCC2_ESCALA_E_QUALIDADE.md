@@ -1,5 +1,7 @@
 # Continuidade do experimento do TCC2
 
+Estado atualizado em 10/11/2026: três representações executadas em 2.483 textos utilizáveis; 201 novos casos de desenvolvimento conferidos por IA, com 195 rótulos e seis dúvidas excluídas. O desenvolvimento atual tem 294 casos (6 Adequados, 75 Parciais, 213 Inadequados), com proveniência mista. Nove combinações originais e nove com pesos foram executadas exploratoriamente. Os 100 casos de teste seguem reservados para revisão humana pelo autor. Resultados e pendências vigentes: [desenvolvimento ampliado](piloto_tfidf/output/desenvolvimento_v2/README.md). Os números e tarefas abaixo preservam a evolução do planejamento e devem ser lidos à luz dessa atualização.
+
 Decisão do autor em 10/11/2026: processar a coleção de 2.484 documentos e avaliar qualidade em um subconjunto revisado, preservando a modalidade e os objetivos do artigo pós-TCC1.
 
 ## Compromissos mantidos
