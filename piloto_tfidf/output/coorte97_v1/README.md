@@ -82,5 +82,8 @@ O segundo comando utiliza o manifesto versionado em `data/coorte_97_v1/manifesto
 - [x] Documentar limites da IA, da auditoria e da classe rara.
 - [ ] Adjudicar seis dúvidas de desenvolvimento para uma eventual versão posterior; não reinseri-las e reotimizar com os mesmos 97 como se fossem teste novo.
 - [x] Concluir interpretabilidade e integração dos dados ao CurrículoRank; ver relatório de interpretabilidade.
-- [ ] Conferir visualmente a interface e concluir a revisão integral do artigo.
+- [x] Integrar a redação de resultados, discussão e conclusão ao artigo para revisão.
+- [ ] Conferir visualmente a interface e realizar a revisão institucional final.
 - [ ] Em trabalho posterior, obter referência humana independente mais ampla para validação externa.
+
+ROC-AUC foi operacionalizada posteriormente como complemento descritivo, sem substituir este protocolo ou mudar previsões. Ver [complemento](../complemento_auc97_v1/README.md).

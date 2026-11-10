@@ -11,6 +11,8 @@ test('universos, referências e predições publicados permanecem separados',asy
  assert.equal(judged.filter(r=>r.rotulo==='Adequado').length,4);
  assert.ok(data.curriculos.some(r=>r.rotulo===null));
  assert.equal(data.classificacao.resultados.length,18);
+ const auc=JSON.parse(fs.readFileSync(path.join(__dirname,'../../piloto_tfidf/output/complemento_auc97_v1/roc_auc_coorte97.json'),'utf8'));
+ assert.deepEqual(data.auc_complementar,auc);
  const cohort=JSON.parse(fs.readFileSync(path.join(__dirname,'../../piloto_tfidf/data/coorte_97_v1/manifesto.json'),'utf8'));
  assert.deepEqual(judged.map(r=>r.id).sort(),cohort.registros.map(r=>r.id).sort());
  const published=JSON.parse(fs.readFileSync(path.join(__dirname,'../../piloto_tfidf/output/coorte97_v1/classificacao_coorte97.json'),'utf8'));
@@ -41,8 +43,13 @@ test('todas as páginas atuais renderizam em servidor sem navegador',async()=>{
   const pages=await server.ssrLoadModule('/src/pages/ExperimentoAtual.jsx');
   const React=require('react');const {renderToString}=require('react-dom/server');const {MemoryRouter}=require('react-router-dom');
   for(const name of ['DashboardAtual','VagaAtual','DocumentosAtuais','ComparativoAtual','ResultadosAtuais','InterpretabilidadeAtual','MetodologiaAtual']){
-   const html=renderToString(React.createElement(MemoryRouter,{initialEntries:['/dashboard']},React.createElement(pages[name])));
+   const html=renderToString(React.createElement(MemoryRouter,{initialEntries:['/dashboard']},React.createElement(pages[name]))).replace(/<!--.*?-->/g,'');
    assert.ok(html.includes('<h1'),name);assert.ok(html.length>1000,name);
+   if(name==='DocumentosAtuais'){
+    assert.ok(html.includes('2.483 currículos no universo selecionado'));
+    assert.ok(html.includes('Ranking operacional dos 2.483 textos'));
+    assert.ok(!html.includes('Métricas fixas dos 97 julgados'));
+   }
   }
  }finally{await server.close();}
 });

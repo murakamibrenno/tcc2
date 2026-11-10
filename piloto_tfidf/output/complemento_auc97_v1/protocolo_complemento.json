@@ -1,0 +1,20 @@
+{
+  "etapa": "complemento_descritivo_ROC_AUC",
+  "n_treino": 294,
+  "n_avaliacao": 97,
+  "classes": [
+    "Inadequado",
+    "Parcialmente Adequado",
+    "Adequado"
+  ],
+  "sha256_desenvolvimento": "265a08614bbf5e25521eecd7f95f99c0fabd58ab9dde73c05af51318379f3963",
+  "sha256_coorte": "d535c0dbff308e11f04ec45de77e422c13808521f630a4d62e7660ad221caedc",
+  "declaracao": "ROC-AUC prevista no texto original e operacionalizada depois de conhecidos os resultados primários. Complemento exploratório; não foi métrica de seleção. Sem mudar modelos, pesos, parâmetros, rótulos ou limiares.",
+  "definicao": "ROC-AUC one-vs-rest binária por classe usando predict_proba; macro = média simples das três AUCs; ponderada = média pelos suportes 58/35/4. Ordem I/P/A.",
+  "limite": "Referência assistida da IA, cinco ratificações e 92 sem conferência. Apenas quatro Adequados. Não mede calibração nem substitui recall na decisão registrada.",
+  "versoes": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  }
+}

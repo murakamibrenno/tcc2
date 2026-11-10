@@ -14,7 +14,9 @@ Estado vigente em 10/11/2026. Históricos e decisões anteriores permanecem no G
 - [x] Documentar o estágio atual e as limitações no artigo.
 - [ ] Conferir visualmente navegação, seletores, filtros, modal, gráficos e uso em tela pequena; permissão do navegador recusada nesta sessão.
 - [ ] Capturar figuras da interface atual depois da conferência visual e contextualizá-las no texto final.
-- [ ] Harmonizar integralmente a redação final do artigo: método executado, resultados e discussão, conclusão, resumos e referências.
+- [x] Consolidar a redação final para revisão: método executado, resultados e discussão, conclusão, resumos, referências e índices.
+- [x] Operacionalizar ROC-AUC complementar sem mudar decisões, com protocolo posterior explícito e probabilidades rastreáveis.
+- [x] Abrir o ranking nos 2.483 com total destacado, mantendo a opção dos 97.
 - [ ] Fazer revisão final com orientador, normas institucionais, paginação e apresentação.
 
 ## Decisões que não bloqueiam a entrega exploratória

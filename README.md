@@ -16,6 +16,7 @@ O ranking por cosseno foi medido somente entre os 97 julgados: AP de 0,635 / 0,4
 
 - [Resultados, matrizes, protocolo e limitações](piloto_tfidf/output/coorte97_v1/README.md).
 - [Interpretabilidade: contribuições lexicais e oclusão densa](piloto_tfidf/output/interpretabilidade_atual_v1/README.md).
+- [ROC-AUC complementar, sem alteração das previsões](piloto_tfidf/output/complemento_auc97_v1/README.md).
 - [Checklist e etapas restantes](VALIDACAO_PRATICA_CHECKLIST.md).
 - [Manifesto da coorte e proveniência](piloto_tfidf/data/coorte_97_v1/manifesto.json).
 
@@ -29,7 +30,7 @@ npm run build
 npm run dev -- --host 127.0.0.1
 ```
 
-Usar Node 22.12 ou superior compatível com Vite 8. A aplicação mostra uma execução pré-calculada, com uma vaga, rankings dos 2.483 ou dos 97, filtros, comparação das 18 configurações, matrizes, custos, proveniência e interpretabilidade dos cinco casos. Não executa novas inferências nem cadastro de novas vagas. O texto integral na inspeção é disponibilizado para os cinco casos; os demais textos estão em `curriculos_processados/extracted_text_en`.
+Usar Node 22.12 ou superior compatível com Vite 8. A aplicação mostra uma execução pré-calculada, com uma vaga, rankings dos 2.483 ou dos 97, filtros, comparação das 18 configurações, matrizes, custos, proveniência e interpretabilidade dos cinco casos. O ranking abre na coleção completa, com total visível e contagem após filtros; os 97 permanecem como opção para avaliar qualidade. Não executa novas inferências nem cadastro de novas vagas. O texto integral na inspeção é disponibilizado para os cinco casos; os demais textos estão em `curriculos_processados/extracted_text_en`.
 
 A fonte ativa é `aplicacao_mockup/src/data/experimentoAtual.json`, exportada dos relatórios atuais com hashes conferidos. Páginas e JSONs do piloto anterior foram preservados, mas não são usados pelas rotas ativas. Não usar `metricasReais.json` para descrever a execução atual.
 
@@ -42,8 +43,8 @@ python -m unittest discover -s piloto_tfidf/tests -v
 python -m compileall -q piloto_tfidf
 ```
 
-Foram executados 54 testes Python e 9 testes de interface, incluindo integridade dos universos, ordenação e renderização das páginas em servidor; build de produção aprovado. Dependências atualizadas e auditoria npm sem vulnerabilidades reportadas na execução. A conferência visual e interativa no navegador ficou pendente: a permissão de abertura da página local foi recusada. SSR/build não substituem essa conferência. O pacote de produção ainda gera aviso de tamanho de chunk.
+Foram executados 55 testes Python e 9 testes de interface, incluindo integridade dos universos, ordenação e renderização das páginas em servidor; build de produção aprovado. Dependências atualizadas e auditoria npm sem vulnerabilidades reportadas na execução. A conferência visual e interativa no navegador ficou pendente: a permissão de abertura da página local foi recusada. SSR/build não substituem essa conferência. O pacote de produção ainda gera aviso de tamanho de chunk.
 
-A redação completa do artigo deve ser harmonizada como entrega final do TCC2: resultados/discussão, figuras da versão atual, conclusão, resumos, referências e normas. Os experimentos, a implementação e os limites já estão documentados. Validação humana independente mais ampla é trabalho posterior, salvo nova exigência do orientador. Seis dúvidas podem permanecer excluídas com justificativa; eventual inclusão exige nova versão do protocolo e não transforma os 97 em teste novo.
+A redação final foi integrada no artigo editável para revisão do autor e orientador: resumo e abstract, método executado, resultados e discussão, conclusão, referências e índices. Ver [alterações específicas](docs/ALTERACOES_ARTIGO_TCC2.md) e [resultados e discussão](docs/ARTIGO_RESULTADOS_DISCUSSAO_CONCLUSAO.md). Permanecem a conferência visual da interface, eventuais figuras atuais e a revisão institucional. Validação humana independente mais ampla é trabalho posterior, salvo nova exigência do orientador. Seis dúvidas podem permanecer excluídas com justificativa; eventual inclusão exige nova versão do protocolo e não transforma os 97 em teste novo.
 
 Os snapshots históricos permanecem no Git e nos diretórios anteriores. Seus números e critérios não descrevem o protocolo atual. O artigo editável é mantido no Drive do autor, fora deste repositório público.

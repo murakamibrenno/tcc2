@@ -9,6 +9,8 @@ def exportar(escala,interpretacao):
     load=lambda p:json.loads(p.read_text(encoding='utf-8'))
     selection=load(BASE/'data/validacao_ampliada_v1/manifesto.json');dev=load(BASE/'data/desenvolvimento_revisado_v2/manifesto.json');cohort=load(BASE/'data/coorte_97_v1/manifesto.json')
     quality=load(BASE/'output/coorte97_v1/classificacao_coorte97.json');rank=load(BASE/'output/coorte97_v1/ranking_coorte97.json');interp=load(interpretacao)
+    auc=load(BASE/'output/complemento_auc97_v1/roc_auc_coorte97.json')
+    if auc['protocolo']['sha256_coorte']!=cohort['sha256_registros'] or auc['protocolo']['sha256_desenvolvimento']!=dev['sha256_registros']:raise ValueError('Complemento AUC de outro experimento')
     if (quality['protocolo']['sha256_coorte']!=cohort['sha256_registros']
         or quality['protocolo']['sha256_desenvolvimento']!=dev['sha256_registros']
         or interp['protocolo']['sha256_coorte']!=cohort['sha256_registros']
@@ -57,7 +59,7 @@ def exportar(escala,interpretacao):
         'proveniencia_avaliacao':{'IA_com_ratificacao_assistida':5,'IA_sem_conferencia':92,'humana_independente':0},
         'limitacoes':['Avaliação exploratória: a mesma IA participou das anotações de desenvolvimento e avaliação.','Cinco ratificações assistidas de amostra intencional não validam os demais 92 rótulos nem constituem julgamento humano independente.','Há quatro Adequados na coorte; um caso altera o recall em 25 pontos percentuais.','A amostra foi enriquecida por sinais técnicos. As métricas dos 97 não estimam qualidade ou prevalência na coleção inteira.','Textos integrais preservados; entrada de até 8.000 caracteres, com limite adicional de 512 tokens em BGE e Qwen. Evidências podem ficar fora da janela.','Interpretabilidade descreve modelos e sensibilidade a máscaras artificiais; não comprova competência nem causalidade.'],
         'vaga':load(BASE/'data/vaga_referencia.json'),'metodos':methods,'curriculos':curriculos,
-        'classificacao':quality,'predicoes':predictions,'ranking':rank,'interpretabilidade':interp,'textos_casos_inspecao':rawsample,
+        'classificacao':quality,'predicoes':predictions,'ranking':rank,'interpretabilidade':interp,'textos_casos_inspecao':rawsample,'auc_complementar':auc,
         'rastreabilidade':{'sha256_desenvolvimento':dev['sha256_registros'],'sha256_coorte':cohort['sha256_registros'],'sha256_auditoria':cohort['sha256_auditoria'],'fontes':'piloto_tfidf/output/coorte97_v1 e piloto_tfidf/output/interpretabilidade_atual_v1; históricos anteriores preservados.'}}
 
 def main():
