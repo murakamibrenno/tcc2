@@ -27,6 +27,7 @@ const navItems = [
   { label: 'Comparativo de Métodos', path: '/comparativo', icon: <BarChartRoundedIcon fontSize="small" /> },
   { label: 'Metodologia', path: '/metodologia', icon: <SchoolRoundedIcon fontSize="small" /> },
   { label: 'Resultados', path: '/resultados', icon: <MenuBookRoundedIcon fontSize="small" /> },
+  { label: 'Interpretabilidade', path: '/interpretabilidade', icon: <MenuBookRoundedIcon fontSize="small" /> },
   /* Rota /sobre mantida em AppRoutes para uso futuro — não listada no menu */
 ]
 
@@ -42,7 +43,7 @@ export default function Sidebar({ drawerWidth = 260 }) {
         width: drawerWidth,
         minHeight: '100vh',
         bgcolor: NAVY,
-        display: 'flex',
+        display: { xs: 'none', md: 'flex' },
         flexDirection: 'column',
         position: 'fixed',
         top: 0,

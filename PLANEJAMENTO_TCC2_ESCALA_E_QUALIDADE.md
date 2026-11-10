@@ -1,3 +1,7 @@
+# Estado atual do planejamento
+
+A execução de escala, avaliação exploratória, interpretabilidade e integração ao CurrículoRank foi concluída. A conferência visual da interface permanece pendente por recusa de acesso do navegador. Consulte o [checklist vigente](VALIDACAO_PRATICA_CHECKLIST.md). O texto a seguir preserva o planejamento histórico, não uma lista atual de pendências.
+
 # Continuidade do experimento do TCC2
 
 Atualização vigente: os cinco casos foram aprovados pelo autor como ratificação humana assistida, e a avaliação exploratória dos 97 foi executada sem recalibrar os modelos. Há cinco casos ratificados e 92 rótulos da IA sem conferência; não é teste humano independente. [Resultados e limitações](piloto_tfidf/output/coorte97_v1/README.md). Os estados anteriores abaixo são históricos.

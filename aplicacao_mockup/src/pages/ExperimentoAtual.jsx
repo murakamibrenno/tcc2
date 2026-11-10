@@ -1,0 +1,103 @@
+import React, { useMemo, useState } from 'react'
+import { Link as RouterLink } from 'react-router-dom'
+import { Alert, Box, Button, Chip, Dialog, DialogContent, DialogTitle, Divider, Grid, MenuItem, Paper, Select, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, TextField, Typography } from '@mui/material'
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
+import data from '../data/experimentoAtual.json'
+import { classesAtuais, chaveConfiguracao, rankingAtual, filtrarDocumentos } from '../utils/experimentoAtual'
+
+const fmt = (v, n = 3) => typeof v === 'number' ? v.toLocaleString('pt-BR', { maximumFractionDigits: n, minimumFractionDigits: n }) : '—'
+const methodName = id => data.metodos.find(x => x.id === id)?.nome || id
+const clfName = id => ({ lr: 'Regressão Logística', svm: 'SVM', xgb: 'XGBoost' }[id] || id)
+const conditionName = id => id === 'original' ? 'Original' : 'Pesos balanceados'
+const titleDoc = id => data.curriculos.find(r => r.id === id)?.titulo || id
+const labelColor = s => s === 'Adequado' ? 'success' : s === 'Parcialmente Adequado' ? 'warning' : 'default'
+function Title({ children, sub }) { return <Box mb={3}><Typography variant="h4" component="h1" gutterBottom>{children}</Typography>{sub && <Typography color="text.secondary">{sub}</Typography>}</Box> }
+function Panel({ children, title }) { return <Paper variant="outlined" sx={{ p: 3, mb: 3, overflow: 'hidden' }}>{title && <Typography variant="h6" gutterBottom>{title}</Typography>}{children}</Paper> }
+function Note({ children, severity = 'info' }) { return <Alert severity={severity} sx={{ my: 2 }}>{children}</Alert> }
+function Metric({ value, label }) { return <Paper variant="outlined" sx={{ p: 2, height: '100%' }}><Typography variant="h4">{value}</Typography><Typography color="text.secondary">{label}</Typography></Paper> }
+function DataTable({ headers, rows, label }) { return <TableContainer><Table size="small" aria-label={label}><TableHead><TableRow>{headers.map(h => <TableCell key={h}>{h}</TableCell>)}</TableRow></TableHead><TableBody>{rows.map((r, i) => <TableRow key={i}>{r.map((c, j) => <TableCell key={j}>{c}</TableCell>)}</TableRow>)}</TableBody></Table></TableContainer> }
+function Limits() { return <Panel title="Como interpretar estes resultados"><Stack spacing={1}>{data.limitacoes.map(s => <Typography key={s} variant="body2">• {s}</Typography>)}</Stack></Panel> }
+
+export function DashboardAtual() {
+  return <><Title sub="Execução registrada em 10/11/2026. Resultados pré-calculados para uma única vaga.">Visão geral do experimento</Title>
+    <Grid container spacing={2} mb={3}>{[[2484, 'PDFs inventariados'], [2483, 'Textos nas três representações'], [294, 'Casos de desenvolvimento'], [97, 'Casos da avaliação exploratória']].map(([v, s]) => <Grid item xs={6} lg={3} key={s}><Metric value={v.toLocaleString('pt-BR')} label={s} /></Grid>)}</Grid>
+    <Panel title="Cobertura, avaliação e origem dos rótulos"><Typography>Um PDF em branco ficou no inventário, sem rótulo artificial. A qualidade foi medida nos mesmos 97 casos, com 4 Adequados, 35 Parciais e 58 Inadequados. As 18 configurações usam os mesmos dados de avaliação.</Typography>
+      <Note severity="warning">Cinco casos tiveram ratificação humana assistida. Os outros 92 permanecem anotados somente pela IA. Não há referência humana independente nesta avaliação.</Note>
+      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap><Button component={RouterLink} to="/comparativo" variant="contained">Comparar configurações</Button><Button component={RouterLink} to="/ranking" variant="outlined">Explorar rankings</Button><Button component={RouterLink} to="/interpretabilidade">Inspecionar explicações</Button></Stack>
+    </Panel><Limits /></>
+}
+
+export function VagaAtual() { return <><Title>Vaga de referência</Title><Panel title={data.vaga.titulo}><Typography sx={{ whiteSpace: 'pre-wrap' }}>{data.vaga.texto}</Typography><Divider sx={{ my: 2 }} /><Typography>Idioma: inglês, compatível com a base utilizada. Categoria profissional e experiência acima da faixa júnior não causam reprovação automática.</Typography><Typography mt={2}>Rubrica: quatro requisitos e desenvolvimento de aplicações para Adequado; dois ou três para Parcial; zero ou um para Inadequado. Rótulos seguem a evidência textual disponível.</Typography></Panel><Note>Esta execução contém uma única vaga. Não há processamento de novas vagas ou currículos em tempo real.</Note></> }
+
+export function DocumentosAtuais({ ranking = false }) {
+  const [method, setMethod] = useState('tfidf'), [scope, setScope] = useState('coorte97'), [search, setSearch] = useState(''), [label, setLabel] = useState(''), [page, setPage] = useState(0), [detail, setDetail] = useState(null)
+  const ordered = useMemo(() => rankingAtual(data, method, scope), [method, scope])
+  const filtered = useMemo(() => filtrarDocumentos(ordered, search, label), [ordered, search, label])
+  const change = setter => e => { setter(e.target.value); setPage(0) }
+  const quality = data.ranking.representacoes.find(r => r.representacao === method)
+  return <><Title sub="Escores de cosseno não são probabilidades de contratação. A categoria é apenas metadado.">{ranking ? 'Ranking por representação' : 'Currículos e referências'}</Title>
+    <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} mb={2}>
+      <Select value={scope} onChange={change(setScope)} inputProps={{ 'aria-label': 'Universo dos documentos' }}><MenuItem value="coorte97">97 casos julgados</MenuItem><MenuItem value="colecao2483">Coleção utilizável — 2.483</MenuItem></Select>
+      <Select value={method} onChange={change(setMethod)} inputProps={{ 'aria-label': 'Representação do ranking' }}>{data.metodos.map(m => <MenuItem key={m.id} value={m.id}>{m.nome}</MenuItem>)}</Select>
+      <TextField label="Buscar por ID, título ou categoria" value={search} onChange={change(setSearch)} sx={{ flex: 1 }} />
+      <Select value={label} onChange={change(setLabel)} displayEmpty inputProps={{ 'aria-label': 'Filtrar referência' }}><MenuItem value="">Todas as referências</MenuItem>{classesAtuais.map(c => <MenuItem key={c} value={c}>{c}</MenuItem>)}</Select>
+    </Stack>
+    {scope === 'coorte97' ? <Note>Métricas fixas dos 97 julgados para {methodName(method)}: AP {fmt(quality.AP_adequado)}, NDCG graduado {fmt(quality.NDCG_graduado)}, P@5 {fmt(quality['P@5'])}. Filtros da tabela não recalculam essas métricas. Apenas Adequado conta como relevante em AP/P@k.</Note> : <Note severity="warning">Ranking operacional dos 2.483 textos. Não há métrica de qualidade global: documentos sem referência não foram tratados como Inadequados. Os escores são da representação, não do classificador.</Note>}
+    <Panel><DataTable label="Documentos da execução atual" headers={['Posição', 'Documento', 'Cosseno', 'Referência', 'Origem / papel']} rows={filtered.slice(page * 15, page * 15 + 15).map(r => [r.posicao_exibicao, <Button onClick={() => setDetail(r)} sx={{ textAlign: 'left', justifyContent: 'flex-start' }}>{r.id} — {r.titulo}</Button>, fmt(r.scores[method], 4), r.rotulo ? <Chip size="small" label={r.rotulo} color={labelColor(r.rotulo)} /> : 'Sem referência confirmada', <><Typography variant="body2">{r.origem_rotulo}</Typography><Typography variant="caption" color="text.secondary">{r.papel}</Typography></>])} />
+      <TablePagination component="div" count={filtered.length} page={page} rowsPerPage={15} rowsPerPageOptions={[15]} onPageChange={(_, p) => setPage(p)} labelDisplayedRows={({ from, to, count }) => `${from}–${to} de ${count}`} />
+    </Panel>
+    <Dialog open={Boolean(detail)} onClose={() => setDetail(null)} maxWidth="md" fullWidth><DialogTitle>{detail?.id} — {detail?.titulo}</DialogTitle><DialogContent>{detail && <><Typography>{detail.papel} • {detail.origem_rotulo}</Typography><Typography color="text.secondary">Categoria de origem: {detail.categoria}. Texto integral: {detail.caracteres.toLocaleString('pt-BR')} caracteres.</Typography><DataTable label="Escores por representação" headers={['Representação', 'Cosseno', 'Posição na coleção']} rows={data.metodos.map(m => [m.nome, fmt(detail.scores[m.id], 5), detail.posicoes_colecao[m.id]])} />{data.textos_casos_inspecao[detail.id] ? <Typography component="pre" sx={{ whiteSpace: 'pre-wrap', fontSize: 13, mt: 2 }}>{data.textos_casos_inspecao[detail.id]}</Typography> : <Note>O texto integral fica nos arquivos de origem do repositório. Nesta tela, a leitura integral está disponível nos cinco casos da inspeção.</Note>}</>}</DialogContent></Dialog>
+  </>
+}
+
+export function ComparativoAtual() {
+  const [condition, setCondition] = useState('original'), [selected, setSelected] = useState('original_tfidf_lr')
+  const rows = data.classificacao.resultados.filter(r => r.condicao === condition), model = data.classificacao.resultados.find(r => chaveConfiguracao(r) === selected)
+  const preds = data.predicoes[selected] || []
+  return <><Title sub="18 condições predefinidas. Treino nos 294 casos; avaliação nos mesmos 97, sem recalibração por seus resultados.">Comparação de classificadores</Title>
+    <Select value={condition} onChange={e => { setCondition(e.target.value); setSelected(`${e.target.value}_tfidf_lr`) }} inputProps={{ 'aria-label': 'Condição experimental' }} sx={{ mb: 2 }}><MenuItem value="original">Original</MenuItem><MenuItem value="pesos_balanceados">Pesos balanceados</MenuItem></Select>
+    <Panel><DataTable label="Métricas das nove combinações na condição escolhida" headers={['Representação / classificador', 'Acurácia / concordância', 'F1 macro', 'Precisão Adequado', 'Recall Adequado', 'Inspeção']} rows={rows.map(r => [<>{methodName(r.representacao)}<Typography variant="body2">{clfName(r.classificador)}</Typography></>, fmt(r.accuracy_concordancia), fmt(r.f1_macro), fmt(r.por_classe.Adequado.precision), fmt(r.por_classe.Adequado.recall), <Button onClick={() => setSelected(chaveConfiguracao(r))}>Ver matriz</Button>])} /></Panel>
+    <Note>Referência majoritária: acurácia/concordância {fmt(data.classificacao.baseline_majoritaria.accuracy_concordancia)}; F1 macro {fmt(data.classificacao.baseline_majoritaria.f1_macro)}. Os quatro Adequados permitem saltos de 25 pontos percentuais no recall por um único caso.</Note>
+    {model && <Panel title={`${methodName(model.representacao)} + ${clfName(model.classificador)} — ${conditionName(model.condicao)}`}>
+      <Typography mb={1}>Matriz de confusão: linhas = referência assistida; colunas = predição.</Typography>
+      <DataTable label="Matriz de confusão atual" headers={['Referência / Predito', ...classesAtuais]} rows={model.matriz_confusao.map((r, i) => [classesAtuais[i], ...r])} />
+      <DataTable label="Precisão e recall por classe" headers={['Classe', 'Precisão', 'Recall', 'F1', 'Suporte']} rows={classesAtuais.map(c => [c, fmt(model.por_classe[c].precision), fmt(model.por_classe[c].recall), fmt(model.por_classe[c]['f1-score']), model.por_classe[c].support])} />
+      <Typography variant="body2" mt={2}>Medição única: ajuste {fmt(model.fit_s_uma_passagem, 3)} s; inferência dos 97 {fmt(model.inferencia_s_uma_passagem, 4)} s. Não é comparação estatística de custo.</Typography>
+      <Typography variant="h6" mt={2}>Predições dos 97 casos</Typography><Box sx={{ maxHeight: 310, overflow: 'auto' }}><DataTable label="Predições rastreáveis por currículo" headers={['ID', 'Referência assistida', 'Predito', 'Conferência']} rows={preds.map(r => [r.id, r.rotulo_referencia_assistida, r.predito, r.conferencia_autor === 'ratificacao_assistida' ? 'Ratificação assistida' : 'IA sem conferência'])} /></Box>
+    </Panel>}
+  </>
+}
+
+export function ResultadosAtuais() {
+  const chart = data.classificacao.resultados.map(r => ({ nome: `${methodName(r.representacao)} / ${r.classificador} / ${r.condicao === 'original' ? 'original' : 'pesos'}`, F1: r.f1_macro }))
+  return <><Title sub="Comparação exploratória contra referência de IA com auditoria humana limitada.">Resultados registrados</Title>
+    <Panel title="F1 macro nos 97 casos por configuração"><Box sx={{ width: '100%', height: 560 }}><ResponsiveContainer><BarChart data={chart} layout="vertical" margin={{ left: 15, right: 30 }}><CartesianGrid strokeDasharray="3 3" /><XAxis type="number" domain={[0, 1]} label={{ value: 'F1 macro (0 a 1)', position: 'insideBottom', offset: -2 }} /><YAxis type="category" dataKey="nome" width={210} tick={{ fontSize: 11 }} /><Tooltip formatter={v => fmt(v)} /><Bar dataKey="F1" fill="#0E7490" /></BarChart></ResponsiveContainer></Box><Typography variant="caption">Fonte: execução de 10/11/2026, coorte fixa de 97 casos. LR = Regressão Logística. As barras não indicam significância estatística.</Typography></Panel>
+    <Panel title="Ranking dentro do conjunto julgado"><DataTable label="Qualidade de recuperação nos 97 julgados" headers={['Representação', 'AP — Adequado', 'NDCG graduado', 'P@5', 'P@10']} rows={data.ranking.representacoes.map(r => [methodName(r.representacao), fmt(r.AP_adequado), fmt(r.NDCG_graduado), fmt(r['P@5']), fmt(r['P@10'])])} /><Typography variant="body2" mt={2}>Uma vaga: AP, não MAP. Para AP/P@k, apenas Adequado é relevante. NDCG usa graus 2/1/0. Essas métricas avaliam os 97 julgados, sem considerar não julgados como irrelevantes.</Typography></Panel>
+    <Panel title="Custo de representação na coleção utilizável"><DataTable label="Medições de vetorização e consulta" headers={['Representação', 'Documentos', 'Vetorização (s)', 'Consulta + escores (ms)', 'Dispositivo']} rows={data.metodos.map(m => [m.nome, 2483, fmt(m.vetorizacao_segundos, 2), fmt(m.consulta_escores_mediana_segundos * 1000, 2), m.device])} /><Typography variant="body2" mt={2}>{data.metodos[0].nota_custo}</Typography></Panel><Limits />
+  </>
+}
+
+export function InterpretabilidadeAtual() {
+  const [method, setMethod] = useState('tfidf'), [cid, setCid] = useState(data.interpretabilidade.protocolo.casos[0])
+  const lexical = data.interpretabilidade.tfidf, item = method === 'tfidf' ? lexical.casos.find(x => x.id === cid) : data.interpretabilidade.densos[method].casos.find(x => x.id === cid)
+  return <><Title sub="Inspeção de configurações fixas e cinco casos auditados. Explicações do modelo não equivalem a avaliação profissional.">Interpretabilidade</Title>
+    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} mb={2}><Select value={method} onChange={e => setMethod(e.target.value)} inputProps={{ 'aria-label': 'Representação da explicação' }}>{data.metodos.map(m => <MenuItem key={m.id} value={m.id}>{m.nome}</MenuItem>)}</Select><Select value={cid} onChange={e => setCid(e.target.value)} inputProps={{ 'aria-label': 'Caso de inspeção' }} sx={{ maxWidth: '100%' }}>{data.interpretabilidade.protocolo.casos.map(id => <MenuItem key={id} value={id}>{id} — {titleDoc(id).slice(0, 42)}</MenuItem>)}</Select></Stack>
+    {method === 'tfidf' ? <>
+      <Panel title="Contribuições lexicais — Regressão Logística com pesos"><Typography>Predição registrada: {item.predito_lr}. O contraste abaixo compara logit de Adequado menos logit de Inadequado; a decisão completa continua sendo entre três classes.</Typography>
+        <Note>Soma de todas as contribuições ({fmt(item.soma_contribuicoes, 5)}) + intercepto ({fmt(item.intercepto, 5)}) = margem {fmt(item.margem, 5)}. Valor positivo favorece esse contraste; não comprova atendimento aos quatro requisitos.</Note>
+        <DataTable label="Contribuições dos termos para contraste Adequado menos Inadequado" headers={['Termo', 'Contribuição ao contraste', 'Documentos no treino']} rows={item.contribuicoes_mais_fortes.map(x => [x.termo, fmt(x.valor, 5), x.n_docs_treino])} /><Typography variant="body2" mt={1}>Contribuições restantes somadas: {fmt(item.soma_demais_contribuicoes, 5)}. Listas sem filtro de palavras comuns ou anos.</Typography>
+      </Panel><Panel title="Termos usados no treinamento"><Grid container spacing={3}><Grid item xs={12} md={6}><Typography fontWeight={700}>LR: contraste global Adequado − Inadequado</Typography><DataTable label="Coeficientes globais lexicais" headers={['Termo', 'Coeficiente']} rows={lexical.global_lr_contraste_adequado_inadequado.map(x => [x.termo, fmt(x.valor, 4)])} /></Grid><Grid item xs={12} md={6}><Typography fontWeight={700}>XGBoost: importância global, sem direção</Typography><DataTable label="Importâncias globais XGBoost" headers={['Termo', 'Importância']} rows={lexical.global_xgb_importancias.map(x => [x.termo, fmt(x.valor, 4)])} /></Grid></Grid><Typography variant="body2" mt={2}>{lexical.nota_xgb}</Typography></Panel>
+    </> : <Panel title={`Sensibilidade por oclusão — ${data.interpretabilidade.densos[method].classificador}`}>
+      <Typography>Predição original: {item.predito_original}. Cosseno com a vaga: {fmt(item.cosseno_vaga_original, 5)}. Margem de Adequado: {fmt(item.margem_adequado_original, 5)} ({data.interpretabilidade.densos[method].tipo_margem}).</Typography>
+      <Note>O encoder recebeu {item.n_tokens_visiveis} tokens e alcançou o caractere {item.fim_char_visivel} da entrada de {item.n_chars_entrada} caracteres; o texto integral tem {item.n_chars_texto_integral}. Os oito blocos pertencem somente à janela acessível. A máscara preserva as posições e não revela o restante do currículo.</Note>
+      <DataTable label="Sensibilidade à máscara de blocos de tokens" headers={['Bloco', 'Trecho acessível', 'Δ margem Adequado', 'Δ cosseno', 'Predito após máscara']} rows={item.blocos.map(b => [b.bloco, <details><summary>{b.n_tokens_mascarados} tokens • caracteres {b.inicio_char}–{b.fim_char}</summary><Typography variant="body2" sx={{ whiteSpace: 'pre-wrap', maxWidth: 420 }}>{b.trecho}</Typography></details>, fmt(b.delta_margem_adequado, 5), fmt(b.delta_cosseno_vaga, 5), b.predito_com_oclusao])} />
+      <Typography variant="body2" mt={2}>Δ = valor original menos valor com máscara. Positivo significa que a máscara reduziu o valor; negativo, que aumentou. SVM usa margem OvR agregada, não probabilidade. As dimensões densas não correspondem diretamente a palavras.</Typography>
+    </Panel>}
+    <Note severity="warning">{data.interpretabilidade.protocolo.limite}</Note><Typography variant="body2">Verificação: as predições dos quatro modelos inspecionados nos 97 casos coincidem com os relatórios; os embeddings sem máscara coincidem numericamente com os caches registrados. Nenhum modelo foi ajustado após a oclusão.</Typography>
+  </>
+}
+
+export function MetodologiaAtual() { return <><Title>Metodologia e rastreabilidade</Title><Panel title="Universos distintos"><Typography>2.484 PDFs contabilizados; 2.483 textos utilizáveis vetorizados; 294 casos no desenvolvimento; 97 na avaliação. Seis dúvidas do desenvolvimento e três históricos relacionados da coorte ficaram fora da modelagem/avaliação correspondente.</Typography><Typography mt={2}>As configurações foram definidas no desenvolvimento: LR, SVM linear e XGBoost com TF-IDF, BGE e Qwen, nas condições original e pesos. Pesos usam apenas frequências do treino. Nenhum hiperparâmetro foi recalibrado pelos 97.</Typography></Panel>
+    <Panel title="Representação textual"><Typography>TF-IDF usa unigramas e bigramas. Na classificação, vocabulário e IDF são ajustados apenas nos 294 casos. Na recuperação sem rótulos, TF-IDF é ajustado na coleção utilizável inteira; esses experimentos não devem ser confundidos.</Typography><Typography mt={2}>BGE: BAAI/bge-large-en-v1.5, pooling CLS e normalização L2. Qwen: Qwen/Qwen2.5-0.5B, último hidden state, média com máscara e normalização L2. Entrada inicial de até 8.000 caracteres, com limite adicional de 512 tokens nos densos. Modelos, revisões e hashes estão registrados.</Typography></Panel>
+    <Panel title="Origem das referências"><Typography>No desenvolvimento: 59 ratificações individuais do autor e 235 anotações da IA. Na avaliação: 5 ratificações assistidas, com sugestões visíveis, e 92 anotações da IA sem conferência. A mesma IA participou das duas referências.</Typography></Panel>
+    <Limits /><Panel title="Arquivos e versão"><Typography variant="body2">{data.rastreabilidade.fontes}</Typography><Typography variant="body2" mt={1} sx={{ overflowWrap: 'anywhere' }}>Desenvolvimento: {data.rastreabilidade.sha256_desenvolvimento}<br />Coorte: {data.rastreabilidade.sha256_coorte}<br />Auditoria: {data.rastreabilidade.sha256_auditoria}</Typography><Typography mt={2}>Os números desta interface vêm do snapshot atual. Resultados históricos foram preservados no repositório e não são misturados a esta execução.</Typography></Panel></> }

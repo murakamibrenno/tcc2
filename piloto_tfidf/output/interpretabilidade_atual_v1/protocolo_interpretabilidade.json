@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "sha256_desenvolvimento": "265a08614bbf5e25521eecd7f95f99c0fabd58ab9dde73c05af51318379f3963",
+  "sha256_coorte": "d535c0dbff308e11f04ec45de77e422c13808521f630a4d62e7660ad221caedc",
+  "n_treino": 294,
+  "casos": [
+    "23464505",
+    "10624813",
+    "62994611",
+    "47603843",
+    "18297650"
+  ],
+  "escolha_casos": "Os cinco casos da auditoria já definida antes das métricas da coorte, sem escolher exemplos pelos erros observados.",
+  "escolha_modelos": "Inspeção pós-avaliação de TF-IDF/LR e TF-IDF/XGBoost com pesos, BGE/LR com pesos e Qwen/SVM com pesos. Nenhum parâmetro ou rótulo é alterado.",
+  "limite": "Contribuições lineares descrevem o modelo ajustado, não competência profissional. Oclusão é sensibilidade a uma intervenção artificial, não explicação causal, importância semântica garantida ou validação humana independente.",
+  "oclusao": "Oito blocos contíguos entre tokens efetivamente acessíveis, até512. Zerar attention_mask do bloco, preservando input_ids, posições e primeiro token. Não excluir texto nem revelar tokens que estavam fora da janela. Mesma máscara no pooling Qwen.",
+  "margens": "LR: logit Adequado. SVM: decision_function OvR agregada de Adequado; não é probabilidade. Delta = valor original menos valor com bloco mascarado."
+}

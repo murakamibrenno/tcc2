@@ -1,0 +1,1562 @@
+{
+  "protocolo": {
+    "schema": 1,
+    "sha256_desenvolvimento": "265a08614bbf5e25521eecd7f95f99c0fabd58ab9dde73c05af51318379f3963",
+    "sha256_coorte": "d535c0dbff308e11f04ec45de77e422c13808521f630a4d62e7660ad221caedc",
+    "n_treino": 294,
+    "casos": [
+      "23464505",
+      "10624813",
+      "62994611",
+      "47603843",
+      "18297650"
+    ],
+    "escolha_casos": "Os cinco casos da auditoria já definida antes das métricas da coorte, sem escolher exemplos pelos erros observados.",
+    "escolha_modelos": "Inspeção pós-avaliação de TF-IDF/LR e TF-IDF/XGBoost com pesos, BGE/LR com pesos e Qwen/SVM com pesos. Nenhum parâmetro ou rótulo é alterado.",
+    "limite": "Contribuições lineares descrevem o modelo ajustado, não competência profissional. Oclusão é sensibilidade a uma intervenção artificial, não explicação causal, importância semântica garantida ou validação humana independente.",
+    "oclusao": "Oito blocos contíguos entre tokens efetivamente acessíveis, até512. Zerar attention_mask do bloco, preservando input_ids, posições e primeiro token. Não excluir texto nem revelar tokens que estavam fora da janela. Mesma máscara no pooling Qwen.",
+    "margens": "LR: logit Adequado. SVM: decision_function OvR agregada de Adequado; não é probabilidade. Delta = valor original menos valor com bloco mascarado."
+  },
+  "tfidf": {
+    "dimensoes_classificacao": 144570,
+    "global_lr_contraste_adequado_inadequado": [
+      {
+        "termo": "application",
+        "valor": 1.2311684321086214,
+        "n_docs_treino": 97
+      },
+      {
+        "termo": "net",
+        "valor": 1.210417226283701,
+        "n_docs_treino": 32
+      },
+      {
+        "termo": "java",
+        "valor": 1.0769549520594293,
+        "n_docs_treino": 39
+      },
+      {
+        "termo": "web",
+        "valor": 1.0431186747236474,
+        "n_docs_treino": 96
+      },
+      {
+        "termo": "framework",
+        "valor": 0.9785407253110321,
+        "n_docs_treino": 26
+      },
+      {
+        "termo": "database",
+        "valor": 0.9576521910497738,
+        "n_docs_treino": 116
+      },
+      {
+        "termo": "service now",
+        "valor": 0.9478823567726796,
+        "n_docs_treino": 3
+      },
+      {
+        "termo": "javascript",
+        "valor": 0.9462483074041512,
+        "n_docs_treino": 34
+      },
+      {
+        "termo": "using",
+        "valor": 0.939522312226718,
+        "n_docs_treino": 139
+      },
+      {
+        "termo": "like",
+        "valor": 0.9170280652408941,
+        "n_docs_treino": 29
+      },
+      {
+        "termo": "software",
+        "valor": 0.9003238791713284,
+        "n_docs_treino": 159
+      },
+      {
+        "termo": "mysql",
+        "valor": 0.8356813288262405,
+        "n_docs_treino": 24
+      },
+      {
+        "termo": "xml",
+        "valor": 0.8124879473127786,
+        "n_docs_treino": 27
+      },
+      {
+        "termo": "data",
+        "valor": 0.8109022939823175,
+        "n_docs_treino": 204
+      },
+      {
+        "termo": "test",
+        "valor": 0.7727918954273482,
+        "n_docs_treino": 65
+      }
+    ],
+    "global_xgb_importancias": [
+      {
+        "termo": "javascript",
+        "valor": 0.09247623383998871,
+        "n_docs_treino": 34
+      },
+      {
+        "termo": "html",
+        "valor": 0.0690397322177887,
+        "n_docs_treino": 49
+      },
+      {
+        "termo": "points",
+        "valor": 0.042237892746925354,
+        "n_docs_treino": 17
+      },
+      {
+        "termo": "mysql",
+        "valor": 0.032961152493953705,
+        "n_docs_treino": 24
+      },
+      {
+        "termo": "sql",
+        "valor": 0.023469842970371246,
+        "n_docs_treino": 102
+      },
+      {
+        "termo": "on",
+        "valor": 0.021628206595778465,
+        "n_docs_treino": 280
+      },
+      {
+        "termo": "git",
+        "valor": 0.021318934857845306,
+        "n_docs_treino": 6
+      },
+      {
+        "termo": "scrum",
+        "valor": 0.018731005489826202,
+        "n_docs_treino": 16
+      },
+      {
+        "termo": "application",
+        "valor": 0.018269367516040802,
+        "n_docs_treino": 97
+      },
+      {
+        "termo": "business",
+        "valor": 0.0180964358150959,
+        "n_docs_treino": 215
+      },
+      {
+        "termo": "web services",
+        "valor": 0.012486939318478107,
+        "n_docs_treino": 14
+      },
+      {
+        "termo": "social media",
+        "valor": 0.012013303115963936,
+        "n_docs_treino": 34
+      },
+      {
+        "termo": "unix",
+        "valor": 0.011979368515312672,
+        "n_docs_treino": 32
+      },
+      {
+        "termo": "developer",
+        "valor": 0.0116419130936265,
+        "n_docs_treino": 31
+      },
+      {
+        "termo": "expertise",
+        "valor": 0.011362435296177864,
+        "n_docs_treino": 74
+      }
+    ],
+    "nota_xgb": "Importância global não direcional das features no treino; não é contribuição local nem explica por si uma previsão.",
+    "nota_termos": "Listas sem filtro editorial de stop words ou anos. Termos frequentes podem receber peso; não equivalem à rubrica de quatro requisitos.",
+    "casos": [
+      {
+        "id": "23464505",
+        "predito_lr": "Parcialmente Adequado",
+        "contraste": "logit Adequado menos logit Inadequado",
+        "margem": -0.15981926667565627,
+        "intercepto": -1.769055633296848,
+        "soma_contribuicoes": 1.6092363666211913,
+        "contribuicoes_mais_fortes": [
+          {
+            "termo": "java",
+            "valor": 0.14156018824670122,
+            "n_docs_treino": 39
+          },
+          {
+            "termo": "and",
+            "valor": -0.13589948446665448,
+            "n_docs_treino": 294
+          },
+          {
+            "termo": "programming",
+            "valor": 0.07770835285981394,
+            "n_docs_treino": 52
+          },
+          {
+            "termo": "angularjs",
+            "valor": 0.06175857808542885,
+            "n_docs_treino": 3
+          },
+          {
+            "termo": "mvc",
+            "valor": 0.05280271848058661,
+            "n_docs_treino": 9
+          },
+          {
+            "termo": "test",
+            "valor": 0.05076754756517284,
+            "n_docs_treino": 65
+          },
+          {
+            "termo": "database",
+            "valor": 0.048488981377442314,
+            "n_docs_treino": 116
+          },
+          {
+            "termo": "spring",
+            "valor": 0.04777844410963241,
+            "n_docs_treino": 40
+          },
+          {
+            "termo": "application",
+            "valor": 0.04538474243590601,
+            "n_docs_treino": 97
+          },
+          {
+            "termo": "web services",
+            "valor": 0.043961121172349175,
+            "n_docs_treino": 14
+          },
+          {
+            "termo": "web",
+            "valor": 0.03864026177331518,
+            "n_docs_treino": 96
+          },
+          {
+            "termo": "ï¼",
+            "valor": -0.03514934027253341,
+            "n_docs_treino": 129
+          },
+          {
+            "termo": "server",
+            "valor": 0.030625545542141037,
+            "n_docs_treino": 85
+          },
+          {
+            "termo": "unix",
+            "valor": 0.028887044769640876,
+            "n_docs_treino": 32
+          },
+          {
+            "termo": "using",
+            "valor": 0.028756991333603432,
+            "n_docs_treino": 139
+          }
+        ],
+        "soma_demais_contribuicoes": 1.0831646736086453
+      },
+      {
+        "id": "10624813",
+        "predito_lr": "Parcialmente Adequado",
+        "contraste": "logit Adequado menos logit Inadequado",
+        "margem": -0.9459309356027066,
+        "intercepto": -1.769055633296848,
+        "soma_contribuicoes": 0.8231246976941414,
+        "contribuicoes_mais_fortes": [
+          {
+            "termo": "software",
+            "valor": 0.1742393366515559,
+            "n_docs_treino": 159
+          },
+          {
+            "termo": "and",
+            "valor": -0.16549604164112872,
+            "n_docs_treino": 294
+          },
+          {
+            "termo": "agile",
+            "valor": 0.062225002031511094,
+            "n_docs_treino": 22
+          },
+          {
+            "termo": "the",
+            "valor": 0.053864423062298314,
+            "n_docs_treino": 286
+          },
+          {
+            "termo": "engineering",
+            "valor": 0.05008524071990758,
+            "n_docs_treino": 78
+          },
+          {
+            "termo": "development",
+            "valor": 0.04323457587874951,
+            "n_docs_treino": 200
+          },
+          {
+            "termo": "java",
+            "valor": 0.03524408553160637,
+            "n_docs_treino": 39
+          },
+          {
+            "termo": "javascript",
+            "valor": 0.03234583549418416,
+            "n_docs_treino": 34
+          },
+          {
+            "termo": "sql",
+            "valor": 0.03139664340912383,
+            "n_docs_treino": 102
+          },
+          {
+            "termo": "ï¼",
+            "valor": -0.03008188176255588,
+            "n_docs_treino": 129
+          },
+          {
+            "termo": "software development",
+            "valor": 0.02840621915650345,
+            "n_docs_treino": 35
+          },
+          {
+            "termo": "ï¼ city",
+            "valor": -0.028333635800300197,
+            "n_docs_treino": 127
+          },
+          {
+            "termo": "january",
+            "valor": 0.0255918571859242,
+            "n_docs_treino": 77
+          },
+          {
+            "termo": "php",
+            "valor": 0.02547510892762032,
+            "n_docs_treino": 32
+          },
+          {
+            "termo": "css",
+            "valor": 0.022442467056212997,
+            "n_docs_treino": 26
+          }
+        ],
+        "soma_demais_contribuicoes": 0.4624854617929285
+      },
+      {
+        "id": "62994611",
+        "predito_lr": "Parcialmente Adequado",
+        "contraste": "logit Adequado menos logit Inadequado",
+        "margem": -0.5737505353265401,
+        "intercepto": -1.769055633296848,
+        "soma_contribuicoes": 1.1953050979703073,
+        "contribuicoes_mais_fortes": [
+          {
+            "termo": "and",
+            "valor": -0.14271558126961384,
+            "n_docs_treino": 294
+          },
+          {
+            "termo": "net",
+            "valor": 0.08763188840933124,
+            "n_docs_treino": 32
+          },
+          {
+            "termo": "the",
+            "valor": 0.06843081525823962,
+            "n_docs_treino": 286
+          },
+          {
+            "termo": "html",
+            "valor": 0.06088351157943841,
+            "n_docs_treino": 49
+          },
+          {
+            "termo": "javascript",
+            "valor": 0.05603593836078289,
+            "n_docs_treino": 34
+          },
+          {
+            "termo": "data",
+            "valor": 0.050196632231371364,
+            "n_docs_treino": 204
+          },
+          {
+            "termo": "web",
+            "valor": 0.049998238644531,
+            "n_docs_treino": 96
+          },
+          {
+            "termo": "using",
+            "valor": 0.049613153031282095,
+            "n_docs_treino": 139
+          },
+          {
+            "termo": "sql",
+            "valor": 0.048952401851327286,
+            "n_docs_treino": 102
+          },
+          {
+            "termo": "project",
+            "valor": 0.04148417547589006,
+            "n_docs_treino": 187
+          },
+          {
+            "termo": "my responsibilities",
+            "valor": 0.040369931925800934,
+            "n_docs_treino": 2
+          },
+          {
+            "termo": "application",
+            "valor": 0.03915013475569625,
+            "n_docs_treino": 97
+          },
+          {
+            "termo": "api",
+            "valor": 0.036457308262478824,
+            "n_docs_treino": 18
+          },
+          {
+            "termo": "development",
+            "valor": 0.03370481845319195,
+            "n_docs_treino": 200
+          },
+          {
+            "termo": "css",
+            "valor": 0.0311034711309768,
+            "n_docs_treino": 26
+          }
+        ],
+        "soma_demais_contribuicoes": 0.6440082598695824
+      },
+      {
+        "id": "47603843",
+        "predito_lr": "Inadequado",
+        "contraste": "logit Adequado menos logit Inadequado",
+        "margem": -1.8517958843139337,
+        "intercepto": -1.769055633296848,
+        "soma_contribuicoes": -0.08274025101708601,
+        "contribuicoes_mais_fortes": [
+          {
+            "termo": "and",
+            "valor": -0.13862738492629437,
+            "n_docs_treino": 294
+          },
+          {
+            "termo": "net",
+            "valor": 0.0418141224089214,
+            "n_docs_treino": 32
+          },
+          {
+            "termo": "java",
+            "valor": 0.03496041535609889,
+            "n_docs_treino": 39
+          },
+          {
+            "termo": "javascript",
+            "valor": 0.03208549255456262,
+            "n_docs_treino": 34
+          },
+          {
+            "termo": "android",
+            "valor": 0.031096157303659118,
+            "n_docs_treino": 15
+          },
+          {
+            "termo": "xml",
+            "valor": 0.029512996940978913,
+            "n_docs_treino": 27
+          },
+          {
+            "termo": "bootstrap",
+            "valor": 0.02827299275540921,
+            "n_docs_treino": 5
+          },
+          {
+            "termo": "ï¼",
+            "valor": -0.027127055252972446,
+            "n_docs_treino": 129
+          },
+          {
+            "termo": "of",
+            "valor": -0.02243976915086175,
+            "n_docs_treino": 293
+          },
+          {
+            "termo": "css",
+            "valor": 0.022261833668436554,
+            "n_docs_treino": 26
+          },
+          {
+            "termo": "in",
+            "valor": 0.021652957741521792,
+            "n_docs_treino": 293
+          },
+          {
+            "termo": "customer",
+            "valor": -0.021633265808661473,
+            "n_docs_treino": 178
+          },
+          {
+            "termo": "ï¼ city",
+            "valor": -0.020440426165867286,
+            "n_docs_treino": 127
+          },
+          {
+            "termo": "developer",
+            "valor": 0.01968716515222685,
+            "n_docs_treino": 31
+          },
+          {
+            "termo": "html",
+            "valor": 0.019367307586907592,
+            "n_docs_treino": 49
+          }
+        ],
+        "soma_demais_contribuicoes": -0.13318379118115165
+      },
+      {
+        "id": "18297650",
+        "predito_lr": "Inadequado",
+        "contraste": "logit Adequado menos logit Inadequado",
+        "margem": -1.791509573054265,
+        "intercepto": -1.769055633296848,
+        "soma_contribuicoes": -0.022453939757416955,
+        "contribuicoes_mais_fortes": [
+          {
+            "termo": "and",
+            "valor": -0.21342864508220266,
+            "n_docs_treino": 294
+          },
+          {
+            "termo": "the",
+            "valor": 0.05171579826240318,
+            "n_docs_treino": 286
+          },
+          {
+            "termo": "database",
+            "valor": 0.051514190294356096,
+            "n_docs_treino": 116
+          },
+          {
+            "termo": "technical",
+            "valor": 0.0315951900639824,
+            "n_docs_treino": 136
+          },
+          {
+            "termo": "java",
+            "valor": 0.030078414799771126,
+            "n_docs_treino": 39
+          },
+          {
+            "termo": "software",
+            "valor": 0.027036608802928484,
+            "n_docs_treino": 159
+          },
+          {
+            "termo": "in",
+            "valor": 0.02276909475897571,
+            "n_docs_treino": 293
+          },
+          {
+            "termo": "developers",
+            "valor": 0.022222772307416483,
+            "n_docs_treino": 20
+          },
+          {
+            "termo": "recruiting",
+            "valor": -0.02118890816538146,
+            "n_docs_treino": 23
+          },
+          {
+            "termo": "web",
+            "valor": 0.02052550642918133,
+            "n_docs_treino": 96
+          },
+          {
+            "termo": "of",
+            "valor": -0.02051283487365068,
+            "n_docs_treino": 293
+          },
+          {
+            "termo": "job",
+            "valor": -0.01847704662285996,
+            "n_docs_treino": 59
+          },
+          {
+            "termo": "net",
+            "valor": 0.017987522537894204,
+            "n_docs_treino": 32
+          },
+          {
+            "termo": "test",
+            "valor": 0.01797830511701046,
+            "n_docs_treino": 65
+          },
+          {
+            "termo": "ï¼",
+            "valor": -0.014003360289932147,
+            "n_docs_treino": 129
+          }
+        ],
+        "soma_demais_contribuicoes": -0.028266548097309517
+      }
+    ]
+  },
+  "densos": {
+    "bge": {
+      "modelo": "BAAI/bge-large-en-v1.5",
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "device": "cuda",
+      "classificador": "LR com pesos",
+      "tipo_margem": "logit",
+      "casos": [
+        {
+          "id": "23464505",
+          "n_chars_texto_integral": 3187,
+          "n_chars_entrada": 3187,
+          "n_tokens_visiveis": 512,
+          "fim_char_visivel": 2240,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Adequado",
+          "margem_adequado_original": 0.7838276028633118,
+          "cosseno_vaga_original": 0.6892104744911194,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 0,
+              "fim_char": 327,
+              "trecho": "--- PAGE 1 ---\n\nJAVA INTERN\nCareer Overview\nDeveloper well-versed in structuring, developing and implementing interactive websites. with experience in back-end programming, relational\ndatabases and performance testing SAN.\nEducation\nMay 2015 Wichita State University ï¼​ City , State Master of Science Computer Science GPA: GPA",
+              "delta_margem_adequado": 0.10437703132629395,
+              "delta_cosseno_vaga": 0.01764005422592163,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 327,
+              "fim_char": 571,
+              "trecho": ": 3.93/4\nGPA: 3.92/4\nMay 2013 BMSCE ï¼​ City , State Bachelor of Engineering Computer Science GPA: GPA: 8.81/10\nGPA: 8.81/10\nQualifications\nProgramming and design skills\nStrong analytical skills\nOptimizing and performance tuning\nExperience with",
+              "delta_margem_adequado": -0.12268257141113281,
+              "delta_cosseno_vaga": -0.0011035799980163574,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 572,
+              "fim_char": 931,
+              "trecho": "writing and executing test plans\nExperience working in Agile Software development\nmethodology\nCapable of working simultaneously on diverse projects individually and as\na team\nExperience in project presentations and enthusiasm in understanding new\nconcepts\nTechnical Skills\nServer-side technologies : servlets, JSP, J2EE technologies, Hibernate3.x, JPA, Spring",
+              "delta_margem_adequado": 0.15283513069152832,
+              "delta_cosseno_vaga": 0.017615020275115967,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 932,
+              "fim_char": 1133,
+              "trecho": "3.0, Struts 2.0, EJB, JMS, Design patterns, SQL,\nPl/SQL\nClient-side scripting : HTML5, CSS, Java Script, AngularJS, Jquery and bootstrap\nConsuming and producing SOAP and Restful web services (XML and J",
+              "delta_margem_adequado": 0.07071816921234131,
+              "delta_cosseno_vaga": -0.0001900196075439453,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1133,
+              "fim_char": 1382,
+              "trecho": "SON)\nC, C++,Unix system programming, CUDA, Perl\nData Structures, Operating system concepts, multicore and multi-threaded programming, SAN, UNIX\nTools : Eclipse, IOmeter , Code Warrior, vi editor, Visual Studio, Arduino, Oracle 11g, Code Blocks, iSCS",
+              "delta_margem_adequado": -0.03363621234893799,
+              "delta_cosseno_vaga": -0.004044890403747559,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1382,
+              "fim_char": 1645,
+              "trecho": "I initiator, NetApp internal\ntools, Navicat, JConsole, JMeter, tomcat, JBOSS, Git\nTechnical projects\nUnix system programming : Built a binary search tree using system calls in C (on Linux platform) to sort a file of records Implementation\nof Unix commands : tail,",
+              "delta_margem_adequado": 0.029122591018676758,
+              "delta_cosseno_vaga": 0.0012261271476745605,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 1646,
+              "fim_char": 1944,
+              "trecho": "tee, cp and mv, in C\nParallel Apriori algorithm proposal on Nvidia GPU Performance of Apriori algorithm with multiple threads on a single-core machine was\ncompared against multi-threading on GPU. The newly proposed algorithm reduces the processing overhead on GPU.\nLeave management system: Designed",
+              "delta_margem_adequado": -0.11815404891967773,
+              "delta_cosseno_vaga": -0.017461776733398438,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 1945,
+              "fim_char": 2240,
+              "trecho": "and implemented a module to help the organization to log the attendance of employees with its\nbiometric system. This project had html, jquery, AngularJS for front-end and Spring MVC, Hibernate running on tomcat server in the back\nend and Oracle 11g server as database\nWork Experience\nJava intern",
+              "delta_margem_adequado": 0.05271196365356445,
+              "delta_cosseno_vaga": 0.012130022048950195,
+              "predito_com_oclusao": "Adequado"
+            }
+          ]
+        },
+        {
+          "id": "10624813",
+          "n_chars_texto_integral": 6651,
+          "n_chars_entrada": 6651,
+          "n_tokens_visiveis": 512,
+          "fim_char_visivel": 2779,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Inadequado",
+          "margem_adequado_original": -0.28058260679244995,
+          "cosseno_vaga_original": 0.5973246693611145,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 0,
+              "fim_char": 401,
+              "trecho": "--- PAGE 1 ---\n\nENGINEERING OPERATIONS DIRECTOR\nExecutive Profile\nSenior Software Executive Senior Software Executive who is a key contributor to strategic planning and product development. Highly skilled at\ncreating and implementing key software improvements and process changes by uncovering major process limitations, maximizing profitability,\nscalability, and competition in the global marketplace",
+              "delta_margem_adequado": -0.7896798849105835,
+              "delta_cosseno_vaga": -0.003515779972076416,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 401,
+              "fim_char": 782,
+              "trecho": ". Accomplishments (over last 15 years +) Reported directly to C-level executives and Board\nmembers, successfully bridging the gap between the business and Engineering, implementing strategic plans and ensuring that the engineering teams\nare aligned to business goals. Agile expert and evangelist, running software development teams for over 17 years and specifically agile software",
+              "delta_margem_adequado": -0.038904786109924316,
+              "delta_cosseno_vaga": 0.01226109266281128,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 783,
+              "fim_char": 1183,
+              "trecho": "development for more that 13 years. Reorganized and transitioned many teams and companies to become smooth running agile groups, drastically\nreducing delivery issues, making the work very transparent, empowering team members to become self-directed and accountable to their\ncommitments. Skilled at managing entire software development process and employees including QA, Project Management, Technical",
+              "delta_margem_adequado": 0.052935630083084106,
+              "delta_cosseno_vaga": 0.014442741870880127,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1184,
+              "fim_char": 1564,
+              "trecho": "Support, on\nand offshore teams, contractors, subsidiaries, and merger/acquisitions. Successfully on-boarded the engineers and technology from an acquired\ncompany and quickly merged their intellectual property (IP) into the main product line. Advocate for strong Engineering Best Practices, including\ndesign & code reviews, paired programming, unit tests and continuous integration",
+              "delta_margem_adequado": -0.031017541885375977,
+              "delta_cosseno_vaga": -0.003568589687347412,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1565,
+              "fim_char": 1902,
+              "trecho": "testing through automation. Including, establishing leading and\ntrailing engineering metrics, which provide strong indicators of product quality and delivery schedule. Managed globally distributed teams ranging\nfrom 15-60 people, with P&L responsibilities between $2M - $6M. Teams have been located in US, Germany, Hungary, Russia, China",
+              "delta_margem_adequado": 0.029208362102508545,
+              "delta_cosseno_vaga": -0.004234135150909424,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1902,
+              "fim_char": 2191,
+              "trecho": ", and\nArgentina. Consistently an early adopter of critical trends in methodologies and practices, which transform and refine processes to increase the\ndelivery of business value.\nSkill Highlights\nTechnology · Java · Amazon AWS · Hibernate · PHP · EC2 · Elastic Search · C++ · JSMVC · JUnit",
+              "delta_margem_adequado": 0.07078436017036438,
+              "delta_cosseno_vaga": 0.009491562843322754,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 2192,
+              "fim_char": 2389,
+              "trecho": "· C · HTML ·\nSelenium · CanJS · CSS · Aurora · PL/SQL · Bootstrap · Jenkins · Oracle · Python · Phabricator · My/SQL · AJAX ·\nGitHub · JavaScript · Camel · Jira · REST and SOAP services · MongoDB ·",
+              "delta_margem_adequado": -0.04712069034576416,
+              "delta_cosseno_vaga": 0.005835354328155518,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 2390,
+              "fim_char": 2779,
+              "trecho": "Perl\nProfessional Experience\nEngineering Operations Director \nJanuary 2014 to Current Company Name ï¼​ City , State\nA high growth company, whose suite of services help researchers successfully communicate their work.\nIdentified misalignment between technical teams and business, reorganized the technical teams and aligned technical metrics to support\nbusiness KPIs, increasing revenue and",
+              "delta_margem_adequado": -0.008033990859985352,
+              "delta_cosseno_vaga": -0.007417500019073486,
+              "predito_com_oclusao": "Inadequado"
+            }
+          ]
+        },
+        {
+          "id": "62994611",
+          "n_chars_texto_integral": 7987,
+          "n_chars_entrada": 7987,
+          "n_tokens_visiveis": 512,
+          "fim_char_visivel": 2664,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Adequado",
+          "margem_adequado_original": 0.6651355624198914,
+          "cosseno_vaga_original": 0.7229505777359009,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 0,
+              "fim_char": 394,
+              "trecho": "--- PAGE 1 ---\n\nSOFTWARE DEVELOPER\nProfessional Summary\nEnthusiastic computer engineer eager to contribute to team success through hard work, attention to detail and excellent organizational skills.\nTechnical professional with complete understanding of entire software development life cycle. Respectful self-motivator gifted at finding reliable\nsolutions for software issues. Experienced in c#",
+              "delta_margem_adequado": 0.1569889783859253,
+              "delta_cosseno_vaga": 0.050093770027160645,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 394,
+              "fim_char": 670,
+              "trecho": ", python, HTML, SQL, node.js/javascript and working knowledge of Restful API design &\nimplementations. Fluent in English and Turkish and accustomed to working with cross-cultural, global teams.\nSkills\nC#, HTML, CSS, JavaScript, 5 years of experience\nSQL, 5 years of experience",
+              "delta_margem_adequado": 0.1327214241027832,
+              "delta_cosseno_vaga": 0.023526370525360107,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 671,
+              "fim_char": 936,
+              "trecho": "Python, MatLab, MongoDB, Tableau, Node JS\nFrameworks: .Net, Devexpress, TensorFlow, Keras, Scikit-learn, Pandas, NLTK.\nSearch Engine Optimization\nNet\nAPI\nCSS\nClients\nDatabase development\nDesigning\nEnglish\nHTML\nImage processing\nJavaScript\nLeadership\nMarketing\nMatLab",
+              "delta_margem_adequado": -0.004225969314575195,
+              "delta_cosseno_vaga": 0.01350313425064087,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 937,
+              "fim_char": 1273,
+              "trecho": "C#\nOffice\nWindows\nProject management\nSpeaker\nPython\nSales\nSearch Engine Optimization\nSpanish\nSQL\nSystem architecture\nTurkish\nUser Interface\nWeb site\nWritten\nWork History\nSoftware Developer , 12/2015 to Current \nCompany Name â€“ City , State \nProject was tasked to design an Internal Marketing System using c#,SQL, HTML,.net, devexpress.",
+              "delta_margem_adequado": 0.02829885482788086,
+              "delta_cosseno_vaga": 0.006076931953430176,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1274,
+              "fim_char": 1615,
+              "trecho": "Amazon,Walmart,eBay and Shopify.\nAPI's were integrated.\nThe system records the end to end process.\nA scalable system architecture to support high-availability Internet site with various internal applicationswas key.\nMy responsibilities were:.\nIntegration of marketplace APIs.\nCoordinated with project management staff on database development",
+              "delta_margem_adequado": -0.014797806739807129,
+              "delta_cosseno_vaga": 0.007392525672912598,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1616,
+              "fim_char": 1951,
+              "trecho": "timelines and project scope.\nRevised, modularized and updated old code bases to modern development standards.\nAuthored code fixes and enhancements for inclusion in future code releases and patches.\nThe successful launch of these applications enabled company growth of 30%.\nComputer Engineer Intern , 06/2013 to 09/2013 \nCompany Name â€",
+              "delta_margem_adequado": -0.013479113578796387,
+              "delta_cosseno_vaga": -0.0036693811416625977,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 1951,
+              "fim_char": 2303,
+              "trecho": "“ City \nTested the User Interface for Web site and provided feedback to increase user satisfaction, reduce reaction time and improve site\nmappings.\nExecuted Performance testing on internal applications, documented results and maintained logs.\nComputer Engineer Intern , 06/2012 to 09/2012 \nCompany Name â€“ City \nOur team has created an application for",
+              "delta_margem_adequado": 0.041210293769836426,
+              "delta_cosseno_vaga": -0.004235029220581055,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 2304,
+              "fim_char": 2664,
+              "trecho": "Turkish Patent and Trademark Office using MatLab, C#, SQL and HTML.\nMy responsibilities within that team was:.\nDeveloped the FAQ and Support part of the web site.\nResearched various studies and recommended alternate algorithms for Image processing to increase accuracy and speed.\nTested and documented prototypes and standard products.\nMaintained positive work",
+              "delta_margem_adequado": -0.09463584423065186,
+              "delta_cosseno_vaga": 0.0003084540367126465,
+              "predito_com_oclusao": "Adequado"
+            }
+          ]
+        },
+        {
+          "id": "47603843",
+          "n_chars_texto_integral": 2204,
+          "n_chars_entrada": 2204,
+          "n_tokens_visiveis": 436,
+          "fim_char_visivel": 2204,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Inadequado",
+          "margem_adequado_original": -0.31435704231262207,
+          "cosseno_vaga_original": 0.6552387475967407,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 55,
+              "inicio_char": 0,
+              "fim_char": 275,
+              "trecho": "--- PAGE 1 ---\n\nHEAD CHEF\nSummary\nI am currently a student focused on earning a B.A. in Computer Science and becoming an Android app developer. My goal is to develop\ntechnical skills to develop and manage investment activities in the international markets.\nAreas of Expertise",
+              "delta_margem_adequado": -0.09711921215057373,
+              "delta_cosseno_vaga": 0.009909868240356445,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 55,
+              "inicio_char": 276,
+              "fim_char": 515,
+              "trecho": "I have experience with Android Studio, Java, XML, Android SDK, Google APIs, databases, Jsoup,\nFirebase, and Material Design. I am currently developing my own app for Google Playstore and\nAmazon app market. \nI have experience using HTML, CS",
+              "delta_margem_adequado": 0.6227431297302246,
+              "delta_cosseno_vaga": 0.030964434146881104,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 54,
+              "inicio_char": 515,
+              "fim_char": 733,
+              "trecho": "S,\nJavascript, and Bootstrap, Photoshop,\nand Paint.net.\nExperience\n02/2013 to 02/2014\nCompany Name ï¼​ City , State\nResponsible for customer service at the sushi bar, preparing quality authentic entrÃ©es and appetizers",
+              "delta_margem_adequado": 0.02711540460586548,
+              "delta_cosseno_vaga": 0.002323746681213379,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 54,
+              "inicio_char": 733,
+              "fim_char": 1012,
+              "trecho": ", manage and utilize luxury imported\nproducts conservatively to minimize shrinkage and maintain overhead.\nResponsible for training new employees and maintaining safety and efficiency behind sushi bar.\n02/2008 to 03/2015\nHead Chef Company Name ï¼​ City , State\nPrepare entrÃ©es in",
+              "delta_margem_adequado": -0.0937451720237732,
+              "delta_cosseno_vaga": -0.005421042442321777,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 54,
+              "inicio_char": 1013,
+              "fim_char": 1307,
+              "trecho": "timely fashion, maintain efficiency and safety in work environment.\nSupport and train new employees in kitchen.\nMaintain cleanliness in the kitchen and sushi bar.\n01/2005 to 01/2006\nRamp Agent Company Name\nResponsible for guiding aircraft traffic, baggage handling, maintaining security on ramp",
+              "delta_margem_adequado": -0.06192302703857422,
+              "delta_cosseno_vaga": 0.0002155303955078125,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 54,
+              "inicio_char": 1307,
+              "fim_char": 1604,
+              "trecho": ", removal of hazardous debris, customer support,\ncabin maintenance, operating Ground Support Equipment such as tugs, forklifts, and belt loaders.\nResponsible for delivery of high priority air-freight to cargo in timely fashion.\nEducation\nAssociate of Science : Finance Midlands Technical College ï",
+              "delta_margem_adequado": -0.009380996227264404,
+              "delta_cosseno_vaga": -0.0010411739349365234,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 54,
+              "inicio_char": 1604,
+              "fim_char": 1903,
+              "trecho": "¼​ State , Columbia Finance\nAssociate of Science : Mathematical Economics Miami Dade College ï¼​ City , State\n2017\nAssociate of Science : Computer Science University of North Georgia ï¼​ City , State\nSkills\nAccounting, customer service, airfreight delivery, retail, operating airport vehicles to tug",
+              "delta_margem_adequado": 0.019064009189605713,
+              "delta_cosseno_vaga": 0.010235011577606201,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 54,
+              "inicio_char": 1904,
+              "fim_char": 2204,
+              "trecho": "aircraft and luggage, maintaining safety in highly secure\nareas of airport terminal, inventory, managing, preparing quality entrees and beverages.\nActivities and Honors\nI am involved in an import-export business my family and I have prepared trading agricultural goods from Iran to the United States.",
+              "delta_margem_adequado": -0.041054368019104004,
+              "delta_cosseno_vaga": 0.0004984140396118164,
+              "predito_com_oclusao": "Inadequado"
+            }
+          ]
+        },
+        {
+          "id": "18297650",
+          "n_chars_texto_integral": 10177,
+          "n_chars_entrada": 8000,
+          "n_tokens_visiveis": 512,
+          "fim_char_visivel": 3079,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Inadequado",
+          "margem_adequado_original": -0.649268627166748,
+          "cosseno_vaga_original": 0.610133707523346,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 0,
+              "fim_char": 353,
+              "trecho": "--- PAGE 1 ---\n\nVOLUNTEER HR -IVOLUNTEER\nSummary\nSponsorship not required to work in the US A successful Human Resources Professional, with a Masters qualification in Human Resources and\nexperience in a challenging environment Key skill sets include Recruitment - Recruitment efforts, scheduling, posting positions, follow up and offer\nletters. Seasoned",
+              "delta_margem_adequado": -0.31719234585762024,
+              "delta_cosseno_vaga": 0.001353919506072998,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 354,
+              "fim_char": 691,
+              "trecho": "executive with 10 + years Staffing, Technology Recruiting and Staffing experience with a highly successful track record at big\nfirms such as Nokia and also Small-Midsized & Start-up IT services firms. Extensive hands-on experience in recruiting IT talent in the US and\nIndia marketplace and driving talent acquisition with sourcing teams",
+              "delta_margem_adequado": 0.14683139324188232,
+              "delta_cosseno_vaga": -0.0014926791191101074,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 691,
+              "fim_char": 1084,
+              "trecho": ". Besides corporate sector, have also been engaged with Non-profit sector in\nthe same role for a while. Key Strength/ Experience include: Extensive experience with high-volume recruiting responsibilities within start-ups and\ncorporate environments. Partnering with hiring managers to understand the skills and background requirements for each opportunity and provide\nexpert advice and coaching",
+              "delta_margem_adequado": -0.010190844535827637,
+              "delta_cosseno_vaga": -0.0017322897911071777,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1085,
+              "fim_char": 1523,
+              "trecho": "to hiring managers throughout the recruitment process. Conduct employment advertising campaigns and programs by\ndeveloping and managing a network of recruitment and referral resources including but not limited to networking with schools, colleges, minority\norganizations, state employment services, other employers and professional associations. Participate in recruitment, interview and selection of\ncandidates for all levels of position",
+              "delta_margem_adequado": -0.03313314914703369,
+              "delta_cosseno_vaga": -0.0005672574043273926,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1524,
+              "fim_char": 1960,
+              "trecho": "openings and promote a work environment that openly embraces individuals with diverse backgrounds and\nexperiences. Source, screen, evaluate and select candidates through a structured recruitment process designed to obtain the best candidates.\nInform applicants of job duties and responsibilities, compensation and benefits, work schedules and working conditions, company policies,\npromotional opportunities and other related information",
+              "delta_margem_adequado": -0.003995239734649658,
+              "delta_cosseno_vaga": 0.0016834139823913574,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1960,
+              "fim_char": 2332,
+              "trecho": ". Utilize knowledge of multiple recruiting sources such as Dice, Monster, Hot jobs, 3rd\nparty vendors, Independent consultants and execute various recruiting strategies. Generate qualified candidates through cost-effective efforts (i.e.,\nalternative sourcing). Utilize a resume database for sourcing and tracking of all candidates. Proficiency with employment interviewing",
+              "delta_margem_adequado": -0.012541592121124268,
+              "delta_cosseno_vaga": 0.0013405680656433105,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 2333,
+              "fim_char": 2708,
+              "trecho": "techniques\nand applicant appraisal. Demonstrated oral presentation and written communication skills. Excellent relationship management skills to develop\nsuccessful networks within senior management, staffing teams and HR Partners. Ability to handle volume recruiting in a fast paced, (un) structured\nenvironment, adhering to strict deadlines. Extensively worked on Taleo tool",
+              "delta_margem_adequado": -0.015286684036254883,
+              "delta_cosseno_vaga": 0.00017589330673217773,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 2708,
+              "fim_char": 3079,
+              "trecho": ". Dynamic and result-oriented individual with years of technical\nrecruiting experience, focused in the placement of Software Engineers/Architects (Distributed and Mainframe), Database\nArchitects/Developers/Administrators, Network/System/Security Engineers, Web Developers, Quality Assurance/Test Engineers, Technical\nProgram/Product/Project Managers, Development Managers",
+              "delta_margem_adequado": 0.07389819622039795,
+              "delta_cosseno_vaga": 0.009360969066619873,
+              "predito_com_oclusao": "Inadequado"
+            }
+          ]
+        }
+      ]
+    },
+    "qwen": {
+      "modelo": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "device": "cuda",
+      "classificador": "SVM com pesos",
+      "tipo_margem": "OvR agregado, não probabilidade",
+      "casos": [
+        {
+          "id": "23464505",
+          "n_chars_texto_integral": 3187,
+          "n_chars_entrada": 3187,
+          "n_tokens_visiveis": 512,
+          "fim_char_visivel": 2155,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Parcialmente Adequado",
+          "margem_adequado_original": 1.122963414288479,
+          "cosseno_vaga_original": 0.9301460385322571,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 3,
+              "fim_char": 318,
+              "trecho": " PAGE 1 ---\n\nJAVA INTERN\nCareer Overview\nDeveloper well-versed in structuring, developing and implementing interactive websites. with experience in back-end programming, relational\ndatabases and performance testing SAN.\nEducation\nMay 2015 Wichita State University ï¼​ City , State Master of Science Computer Science",
+              "delta_margem_adequado": -1.0405303286022765,
+              "delta_cosseno_vaga": -0.00014603137969970703,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 318,
+              "fim_char": 447,
+              "trecho": " GPA: GPA: 3.93/4\nGPA: 3.92/4\nMay 2013 BMSCE ï¼​ City , State Bachelor of Engineering Computer Science GPA: GPA: 8.81/10\nGPA: 8.8",
+              "delta_margem_adequado": -1.0518649044186192,
+              "delta_cosseno_vaga": -0.008844196796417236,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 447,
+              "fim_char": 800,
+              "trecho": "1/10\nQualifications\nProgramming and design skills\nStrong analytical skills\nOptimizing and performance tuning\nExperience with writing and executing test plans\nExperience working in Agile Software development\nmethodology\nCapable of working simultaneously on diverse projects individually and as\na team\nExperience in project presentations and enthusiasm in",
+              "delta_margem_adequado": -0.012711386622239473,
+              "delta_cosseno_vaga": 0.00733262300491333,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 800,
+              "fim_char": 1016,
+              "trecho": " understanding new\nconcepts\nTechnical Skills\nServer-side technologies : servlets, JSP, J2EE technologies, Hibernate3.x, JPA, Spring 3.0, Struts 2.0, EJB, JMS, Design patterns, SQL,\nPl/SQL\nClient-side scripting : HTML",
+              "delta_margem_adequado": 0.08380172606701253,
+              "delta_cosseno_vaga": 0.0027979016304016113,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1016,
+              "fim_char": 1292,
+              "trecho": "5, CSS, Java Script, AngularJS, Jquery and bootstrap\nConsuming and producing SOAP and Restful web services (XML and JSON)\nC, C++,Unix system programming, CUDA, Perl\nData Structures, Operating system concepts, multicore and multi-threaded programming, SAN, UNIX\nTools : Eclipse",
+              "delta_margem_adequado": 0.061628953225969285,
+              "delta_cosseno_vaga": 0.005534827709197998,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1292,
+              "fim_char": 1523,
+              "trecho": ", IOmeter , Code Warrior, vi editor, Visual Studio, Arduino, Oracle 11g, Code Blocks, iSCSI initiator, NetApp internal\ntools, Navicat, JConsole, JMeter, tomcat, JBOSS, Git\nTechnical projects\nUnix system programming : Built a binary",
+              "delta_margem_adequado": 0.0485839036285769,
+              "delta_cosseno_vaga": 0.0008930563926696777,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1523,
+              "fim_char": 1823,
+              "trecho": " search tree using system calls in C (on Linux platform) to sort a file of records Implementation\nof Unix commands : tail, tee, cp and mv, in C\nParallel Apriori algorithm proposal on Nvidia GPU Performance of Apriori algorithm with multiple threads on a single-core machine was\ncompared against multi",
+              "delta_margem_adequado": 0.006768750898098697,
+              "delta_cosseno_vaga": 0.0011342167854309082,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 1823,
+              "fim_char": 2155,
+              "trecho": "-threading on GPU. The newly proposed algorithm reduces the processing overhead on GPU.\nLeave management system: Designed and implemented a module to help the organization to log the attendance of employees with its\nbiometric system. This project had html, jquery, AngularJS for front-end and Spring MVC, Hibernate running on tomcat",
+              "delta_margem_adequado": 0.002431812167208669,
+              "delta_cosseno_vaga": 0.008542239665985107,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            }
+          ]
+        },
+        {
+          "id": "10624813",
+          "n_chars_texto_integral": 6651,
+          "n_chars_entrada": 6651,
+          "n_tokens_visiveis": 512,
+          "fim_char_visivel": 2648,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Parcialmente Adequado",
+          "margem_adequado_original": 0.8769495272052773,
+          "cosseno_vaga_original": 0.937427282333374,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 3,
+              "fim_char": 389,
+              "trecho": " PAGE 1 ---\n\nENGINEERING OPERATIONS DIRECTOR\nExecutive Profile\nSenior Software Executive Senior Software Executive who is a key contributor to strategic planning and product development. Highly skilled at\ncreating and implementing key software improvements and process changes by uncovering major process limitations, maximizing profitability,\nscalability, and competition in the global",
+              "delta_margem_adequado": -0.08538838406345761,
+              "delta_cosseno_vaga": -0.0065441131591796875,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 389,
+              "fim_char": 741,
+              "trecho": " marketplace. Accomplishments (over last 15 years +) Reported directly to C-level executives and Board\nmembers, successfully bridging the gap between the business and Engineering, implementing strategic plans and ensuring that the engineering teams\nare aligned to business goals. Agile expert and evangelist, running software development teams for over",
+              "delta_margem_adequado": -0.023125486826298336,
+              "delta_cosseno_vaga": -0.0025803446769714355,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 741,
+              "fim_char": 1072,
+              "trecho": " 17 years and specifically agile software\ndevelopment for more that 13 years. Reorganized and transitioned many teams and companies to become smooth running agile groups, drastically\nreducing delivery issues, making the work very transparent, empowering team members to become self-directed and accountable to their\ncommitments. Sk",
+              "delta_margem_adequado": -0.00833370685437107,
+              "delta_cosseno_vaga": -0.0010706186294555664,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1072,
+              "fim_char": 1445,
+              "trecho": "illed at managing entire software development process and employees including QA, Project Management, Technical Support, on\nand offshore teams, contractors, subsidiaries, and merger/acquisitions. Successfully on-boarded the engineers and technology from an acquired\ncompany and quickly merged their intellectual property (IP) into the main product line. Advocate for strong",
+              "delta_margem_adequado": -0.011404341853421762,
+              "delta_cosseno_vaga": -0.0008644461631774902,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1445,
+              "fim_char": 1803,
+              "trecho": " Engineering Best Practices, including\ndesign & code reviews, paired programming, unit tests and continuous integration testing through automation. Including, establishing leading and\ntrailing engineering metrics, which provide strong indicators of product quality and delivery schedule. Managed globally distributed teams ranging\nfrom 15-60 people, with P&L",
+              "delta_margem_adequado": 1.0081223278305191,
+              "delta_cosseno_vaga": 0.0011684894561767578,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1803,
+              "fim_char": 2115,
+              "trecho": " responsibilities between $2M - $6M. Teams have been located in US, Germany, Hungary, Russia, China, and\nArgentina. Consistently an early adopter of critical trends in methodologies and practices, which transform and refine processes to increase the\ndelivery of business value.\nSkill Highlights\nTechnology · Java",
+              "delta_margem_adequado": -1.552263569182255e-05,
+              "delta_cosseno_vaga": 0.0005023479461669922,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 2115,
+              "fim_char": 2326,
+              "trecho": " · Amazon AWS · Hibernate · PHP · EC2 · Elastic Search · C++ · JSMVC · JUnit · C · HTML ·\nSelenium · CanJS · CSS · Aurora · PL/SQL · Bootstrap · Jenkins · Oracle · Python · Phabricator · My/SQL · AJAX ·\nGitHub ·",
+              "delta_margem_adequado": 1.0575759130025582,
+              "delta_cosseno_vaga": 0.014043927192687988,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 2326,
+              "fim_char": 2648,
+              "trecho": " JavaScript · Camel · Jira · REST and SOAP services · MongoDB · Perl\nProfessional Experience\nEngineering Operations Director \nJanuary 2014 to Current Company Name ï¼​ City , State\nA high growth company, whose suite of services help researchers successfully communicate their work.\nIdentified misalignment between technical",
+              "delta_margem_adequado": 0.003724855268499083,
+              "delta_cosseno_vaga": 0.0021065473556518555,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            }
+          ]
+        },
+        {
+          "id": "62994611",
+          "n_chars_texto_integral": 7987,
+          "n_chars_entrada": 7987,
+          "n_tokens_visiveis": 512,
+          "fim_char_visivel": 2361,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Parcialmente Adequado",
+          "margem_adequado_original": 1.0649893707280003,
+          "cosseno_vaga_original": 0.9276427030563354,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 3,
+              "fim_char": 368,
+              "trecho": " PAGE 1 ---\n\nSOFTWARE DEVELOPER\nProfessional Summary\nEnthusiastic computer engineer eager to contribute to team success through hard work, attention to detail and excellent organizational skills.\nTechnical professional with complete understanding of entire software development life cycle. Respectful self-motivator gifted at finding reliable\nsolutions for software",
+              "delta_margem_adequado": -1.066109739965061,
+              "delta_cosseno_vaga": 0.005342960357666016,
+              "predito_com_oclusao": "Adequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 368,
+              "fim_char": 656,
+              "trecho": " issues. Experienced in c#, python, HTML, SQL, node.js/javascript and working knowledge of Restful API design &\nimplementations. Fluent in English and Turkish and accustomed to working with cross-cultural, global teams.\nSkills\nC#, HTML, CSS, JavaScript, 5 years of experience\nSQL, 5 years",
+              "delta_margem_adequado": 0.04264884339551145,
+              "delta_cosseno_vaga": 0.013734817504882812,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 656,
+              "fim_char": 897,
+              "trecho": " of experience\nPython, MatLab, MongoDB, Tableau, Node JS\nFrameworks: .Net, Devexpress, TensorFlow, Keras, Scikit-learn, Pandas, NLTK.\nSearch Engine Optimization\nNet\nAPI\nCSS\nClients\nDatabase development\nDesigning\nEnglish\nHTML\nImage processing",
+              "delta_margem_adequado": 0.11811113099475756,
+              "delta_cosseno_vaga": 0.0015357732772827148,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 897,
+              "fim_char": 1146,
+              "trecho": "\nJavaScript\nLeadership\nMarketing\nMatLab\nC#\nOffice\nWindows\nProject management\nSpeaker\nPython\nSales\nSearch Engine Optimization\nSpanish\nSQL\nSystem architecture\nTurkish\nUser Interface\nWeb site\nWritten\nWork History\nSoftware Developer , 12/2015 to Current",
+              "delta_margem_adequado": 0.003735654915498099,
+              "delta_cosseno_vaga": -0.01072472333908081,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1146,
+              "fim_char": 1451,
+              "trecho": " \nCompany Name â€“ City , State \nProject was tasked to design an Internal Marketing System using c#,SQL, HTML,.net, devexpress.\nAmazon,Walmart,eBay and Shopify.\nAPI's were integrated.\nThe system records the end to end process.\nA scalable system architecture to support high-availability Internet site with",
+              "delta_margem_adequado": 0.02587645846794495,
+              "delta_cosseno_vaga": 0.0018943548202514648,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1451,
+              "fim_char": 1838,
+              "trecho": " various internal applicationswas key.\nMy responsibilities were:.\nIntegration of marketplace APIs.\nCoordinated with project management staff on database development timelines and project scope.\nRevised, modularized and updated old code bases to modern development standards.\nAuthored code fixes and enhancements for inclusion in future code releases and patches.\nThe successful launch of",
+              "delta_margem_adequado": -0.0004907869459216396,
+              "delta_cosseno_vaga": 0.004309594631195068,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1838,
+              "fim_char": 2097,
+              "trecho": " these applications enabled company growth of 30%.\nComputer Engineer Intern , 06/2013 to 09/2013 \nCompany Name â€“ City \nTested the User Interface for Web site and provided feedback to increase user satisfaction, reduce reaction time and improve site\nmappings",
+              "delta_margem_adequado": -0.02702426944273628,
+              "delta_cosseno_vaga": -0.0021544694900512695,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 2097,
+              "fim_char": 2361,
+              "trecho": ".\nExecuted Performance testing on internal applications, documented results and maintained logs.\nComputer Engineer Intern , 06/2012 to 09/2012 \nCompany Name â€“ City \nOur team has created an application for Turkish Patent and Trademark Office using MatLab, C#, SQL",
+              "delta_margem_adequado": -0.014257875408673515,
+              "delta_cosseno_vaga": -0.0018110275268554688,
+              "predito_com_oclusao": "Parcialmente Adequado"
+            }
+          ]
+        },
+        {
+          "id": "47603843",
+          "n_chars_texto_integral": 2204,
+          "n_chars_entrada": 2204,
+          "n_tokens_visiveis": 489,
+          "fim_char_visivel": 2204,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Inadequado",
+          "margem_adequado_original": -0.20596456889361603,
+          "cosseno_vaga_original": 0.896976113319397,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 61,
+              "inicio_char": 3,
+              "fim_char": 298,
+              "trecho": " PAGE 1 ---\n\nHEAD CHEF\nSummary\nI am currently a student focused on earning a B.A. in Computer Science and becoming an Android app developer. My goal is to develop\ntechnical skills to develop and manage investment activities in the international markets.\nAreas of Expertise\nI have experience with",
+              "delta_margem_adequado": -0.012759425672369956,
+              "delta_cosseno_vaga": 0.005810081958770752,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 61,
+              "inicio_char": 298,
+              "fim_char": 571,
+              "trecho": " Android Studio, Java, XML, Android SDK, Google APIs, databases, Jsoup,\nFirebase, and Material Design. I am currently developing my own app for Google Playstore and\nAmazon app market. \nI have experience using HTML, CSS,\nJavascript, and Bootstrap, Photoshop,\nand Paint.net.\n",
+              "delta_margem_adequado": 0.030255409700768482,
+              "delta_cosseno_vaga": 0.023226261138916016,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 61,
+              "inicio_char": 571,
+              "fim_char": 805,
+              "trecho": "Experience\n02/2013 to 02/2014\nCompany Name ï¼​ City , State\nResponsible for customer service at the sushi bar, preparing quality authentic entrÃ©es and appetizers, manage and utilize luxury imported\nproducts conservatively to minimize",
+              "delta_margem_adequado": -0.003283519978416194,
+              "delta_cosseno_vaga": -0.005413949489593506,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 61,
+              "inicio_char": 805,
+              "fim_char": 1048,
+              "trecho": " shrinkage and maintain overhead.\nResponsible for training new employees and maintaining safety and efficiency behind sushi bar.\n02/2008 to 03/2015\nHead Chef Company Name ï¼​ City , State\nPrepare entrÃ©es in timely fashion, maintain efficiency",
+              "delta_margem_adequado": -0.009960343467924987,
+              "delta_cosseno_vaga": -0.007285714149475098,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 61,
+              "inicio_char": 1048,
+              "fim_char": 1307,
+              "trecho": " and safety in work environment.\nSupport and train new employees in kitchen.\nMaintain cleanliness in the kitchen and sushi bar.\n01/2005 to 01/2006\nRamp Agent Company Name\nResponsible for guiding aircraft traffic, baggage handling, maintaining security on ramp",
+              "delta_margem_adequado": -0.00993728576073069,
+              "delta_cosseno_vaga": -0.004502415657043457,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 61,
+              "inicio_char": 1307,
+              "fim_char": 1605,
+              "trecho": ", removal of hazardous debris, customer support,\ncabin maintenance, operating Ground Support Equipment such as tugs, forklifts, and belt loaders.\nResponsible for delivery of high priority air-freight to cargo in timely fashion.\nEducation\nAssociate of Science : Finance Midlands Technical College ï¼",
+              "delta_margem_adequado": -0.004877463958209899,
+              "delta_cosseno_vaga": -0.0006091594696044922,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 61,
+              "inicio_char": 1605,
+              "fim_char": 1868,
+              "trecho": "​ State , Columbia Finance\nAssociate of Science : Mathematical Economics Miami Dade College ï¼​ City , State\n2017\nAssociate of Science : Computer Science University of North Georgia ï¼​ City , State\nSkills\nAccounting, customer service, airfreight delivery, retail",
+              "delta_margem_adequado": -0.004745045902121298,
+              "delta_cosseno_vaga": -0.000845789909362793,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 61,
+              "inicio_char": 1868,
+              "fim_char": 2204,
+              "trecho": ", operating airport vehicles to tug aircraft and luggage, maintaining safety in highly secure\nareas of airport terminal, inventory, managing, preparing quality entrees and beverages.\nActivities and Honors\nI am involved in an import-export business my family and I have prepared trading agricultural goods from Iran to the United States.",
+              "delta_margem_adequado": -0.007173715943326109,
+              "delta_cosseno_vaga": 0.0004305839538574219,
+              "predito_com_oclusao": "Inadequado"
+            }
+          ]
+        },
+        {
+          "id": "18297650",
+          "n_chars_texto_integral": 10177,
+          "n_chars_entrada": 8000,
+          "n_tokens_visiveis": 512,
+          "fim_char_visivel": 2913,
+          "max_erro_abs_vs_cache": 0.0,
+          "predito_original": "Inadequado",
+          "margem_adequado_original": -0.22706210534825189,
+          "cosseno_vaga_original": 0.9104912877082825,
+          "blocos": [
+            {
+              "bloco": 1,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 3,
+              "fim_char": 315,
+              "trecho": " PAGE 1 ---\n\nVOLUNTEER HR -IVOLUNTEER\nSummary\nSponsorship not required to work in the US A successful Human Resources Professional, with a Masters qualification in Human Resources and\nexperience in a challenging environment Key skill sets include Recruitment - Recruitment efforts, scheduling, posting positions,",
+              "delta_margem_adequado": -0.005183059840806775,
+              "delta_cosseno_vaga": 0.001531839370727539,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 2,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 315,
+              "fim_char": 615,
+              "trecho": " follow up and offer\nletters. Seasoned executive with 10 + years Staffing, Technology Recruiting and Staffing experience with a highly successful track record at big\nfirms such as Nokia and also Small-Midsized & Start-up IT services firms. Extensive hands-on experience in recruiting IT talent in the",
+              "delta_margem_adequado": 0.00521455911821711,
+              "delta_cosseno_vaga": 0.005188047885894775,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 3,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 615,
+              "fim_char": 985,
+              "trecho": " US and\nIndia marketplace and driving talent acquisition with sourcing teams. Besides corporate sector, have also been engaged with Non-profit sector in\nthe same role for a while. Key Strength/ Experience include: Extensive experience with high-volume recruiting responsibilities within start-ups and\ncorporate environments. Partnering with hiring managers to understand",
+              "delta_margem_adequado": 0.007506954071641259,
+              "delta_cosseno_vaga": 0.003936827182769775,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 4,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 985,
+              "fim_char": 1403,
+              "trecho": " the skills and background requirements for each opportunity and provide\nexpert advice and coaching to hiring managers throughout the recruitment process. Conduct employment advertising campaigns and programs by\ndeveloping and managing a network of recruitment and referral resources including but not limited to networking with schools, colleges, minority\norganizations, state employment services, other employers and",
+              "delta_margem_adequado": -0.0031736490325503797,
+              "delta_cosseno_vaga": -0.0029128193855285645,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 5,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1403,
+              "fim_char": 1819,
+              "trecho": " professional associations. Participate in recruitment, interview and selection of\ncandidates for all levels of position openings and promote a work environment that openly embraces individuals with diverse backgrounds and\nexperiences. Source, screen, evaluate and select candidates through a structured recruitment process designed to obtain the best candidates.\nInform applicants of job duties and responsibilities",
+              "delta_margem_adequado": -0.00560477679646576,
+              "delta_cosseno_vaga": -0.004494071006774902,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 6,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 1819,
+              "fim_char": 2198,
+              "trecho": ", compensation and benefits, work schedules and working conditions, company policies,\npromotional opportunities and other related information. Utilize knowledge of multiple recruiting sources such as Dice, Monster, Hot jobs, 3rd\nparty vendors, Independent consultants and execute various recruiting strategies. Generate qualified candidates through cost-effective efforts (i.e.,\n",
+              "delta_margem_adequado": -9.753896910910664e-05,
+              "delta_cosseno_vaga": -0.00084686279296875,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 7,
+              "n_tokens_mascarados": 64,
+              "inicio_char": 2198,
+              "fim_char": 2615,
+              "trecho": "alternative sourcing). Utilize a resume database for sourcing and tracking of all candidates. Proficiency with employment interviewing techniques\nand applicant appraisal. Demonstrated oral presentation and written communication skills. Excellent relationship management skills to develop\nsuccessful networks within senior management, staffing teams and HR Partners. Ability to handle volume recruiting in a fast paced",
+              "delta_margem_adequado": -0.0014603154314998812,
+              "delta_cosseno_vaga": -0.0002377033233642578,
+              "predito_com_oclusao": "Inadequado"
+            },
+            {
+              "bloco": 8,
+              "n_tokens_mascarados": 63,
+              "inicio_char": 2615,
+              "fim_char": 2913,
+              "trecho": ", (un) structured\nenvironment, adhering to strict deadlines. Extensively worked on Taleo tool. Dynamic and result-oriented individual with years of technical\nrecruiting experience, focused in the placement of Software Engineers/Architects (Distributed and Mainframe), Database\nArchitects/Developers",
+              "delta_margem_adequado": 0.004526798967040252,
+              "delta_cosseno_vaga": 0.004514575004577637,
+              "predito_com_oclusao": "Inadequado"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "confirmacao": "Predições dos quatro classificadores nos 97 idênticas ao relatório publicado; embeddings originais conferidos contra o cache. Nenhum ajuste de decisão após oclusão."
+}

@@ -4,7 +4,6 @@ import { Box, Alert } from '@mui/material'
 import Sidebar from '../components/Sidebar'
 import Topbar, { TOPBAR_HEIGHT } from '../components/Topbar'
 
-import validacao from '../data/validacaoExperimento.json'
 
 const DRAWER_WIDTH = 260
 
@@ -18,7 +17,8 @@ export default function MainLayout() {
         component="main"
         sx={{
           flexGrow: 1,
-          ml: `${DRAWER_WIDTH}px`,
+          ml: { xs: 0, md: `${DRAWER_WIDTH}px` },
+          minWidth: 0,
           mt: `${TOPBAR_HEIGHT}px`,
           minHeight: `calc(100vh - ${TOPBAR_HEIGHT}px)`,
           bgcolor: 'background.default',
@@ -32,11 +32,9 @@ export default function MainLayout() {
           },
         }}
       >
-        {!validacao.aptoParaConclusoes && (
-          <Alert severity="warning" sx={{ mb: 3 }}>
-            {validacao.mensagem}
-          </Alert>
-        )}
+        <Alert severity="warning" sx={{ mb: 3 }}>
+          Avaliação exploratória em 97 casos: 5 ratificações humanas assistidas e 92 rótulos da IA sem conferência. Não é teste humano independente nem avaliação de qualidade dos 2.483 textos.
+        </Alert>
         <Outlet />
       </Box>
     </Box>
