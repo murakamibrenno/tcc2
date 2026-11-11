@@ -1,0 +1,38 @@
+{
+  "data": "2026-11-10",
+  "paginas_trabalho_completo": 78,
+  "paginas_artigo_SBC": 11,
+  "indices_conferidos": 79,
+  "equacoes_OMML": 12,
+  "figuras_trabalho_completo": 19,
+  "tabelas_artigo_SBC": 5,
+  "celulas_numericas_SBC_conferidas": 45,
+  "matriz_coerente_entre_documentos_e_relatorio": [
+    [
+      49,
+      9,
+      0
+    ],
+    [
+      4,
+      31,
+      0
+    ],
+    [
+      0,
+      2,
+      2
+    ]
+  ],
+  "resultados_primarios_alterados": false,
+  "rotulos_alterados": false,
+  "autoria": {
+    "autor": "Brenno Murakami",
+    "email": "brenno.murakami@gmail.com",
+    "orientador_trabalho_completo": "Vilson Francisco Maziero",
+    "coautoria_artigo": "não presumida"
+  },
+  "inspecao_visual": "Renderização em LibreOffice autorizado; inspeção das páginas alteradas e equivalência de pixels do corpo das preservadas. Artigo SBC inspecionado integralmente.",
+  "limite": "Sem novo teste humano independente; sem testes interativos completos ou de telas menores nesta rodada.",
+  "relatorio_classificacao_sha256": "1043023c897cecc664c2fd5670c0fd206e55706d25ab52fc9ca6e4fed0141f0c"
+}

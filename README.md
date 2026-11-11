@@ -47,4 +47,13 @@ Foram executados 55 testes Python e 9 testes de interface, incluindo integridade
 
 A redação final foi integrada no artigo editável para revisão do autor e orientador: resumo e abstract, método executado, resultados e discussão, conclusão, referências e índices. Ver [alterações específicas](docs/ALTERACOES_ARTIGO_TCC2.md) e [resultados e discussão](docs/ARTIGO_RESULTADOS_DISCUSSAO_CONCLUSAO.md). As Figuras 14–19 agora documentam a interface atual. Permanecem os testes interativos completos, a conferência em telas menores e a revisão institucional. Validação humana independente mais ampla é trabalho posterior, salvo nova exigência do orientador. Seis dúvidas podem permanecer excluídas com justificativa; eventual inclusão exige nova versão do protocolo e não transforma os 97 em teste novo.
 
-Os snapshots históricos permanecem no Git e nos diretórios anteriores. Seus números e critérios não descrevem o protocolo atual. O artigo editável é mantido no Drive do autor, fora deste repositório público.
+Os snapshots históricos permanecem no Git e nos diretórios anteriores. Seus números e critérios não descrevem o protocolo atual. Os documentos editáveis e os PDFs são mantidos no Drive do autor, fora deste repositório público.
+
+## Documentos para revisão
+
+- [Trabalho completo revisado — Word, 78 páginas](https://docs.google.com/document/d/1PmGy9EWf7Jtit6s31piz__LMz75dMi5o/edit?usp=drivesdk&ouid=116276678962502189456&rtpof=true&sd=true) e [PDF](https://drive.google.com/file/d/1iA4j6wWVEMBc0nIlRrO_sL0tG1NkxoQT/view?usp=drivesdk).
+- [Artigo SBC — Word, 11 páginas](https://docs.google.com/document/d/1m0Rzhm0aKedYz9EaDBdpj03psNt5YE6R/edit?usp=drivesdk&ouid=116276678962502189456&rtpof=true&sd=true) e [PDF](https://drive.google.com/file/d/14Y5ynOV11moERIKvCwJdEIp2yoB3zcVZ/view?usp=drivesdk).
+
+O artigo SBC contém as referências nas onze páginas. Os dois textos mantêm os mesmos universos, resultados e limitações. Correções da revisão crítica incluem equações, diagramas teóricos legíveis, trabalhos relacionados, matriz de confusão, análise de erros e apêndices de anotação e reprodução. O e-mail foi indicado pelo autor; eventual coautoria do orientador será combinada entre eles.
+
+Fontes e verificação: [artigo SBC](docs/ARTIGO_SBC_TCC2.md), [resultados do trabalho completo](docs/ARTIGO_RESULTADOS_DISCUSSAO_CONCLUSAO.md), [apêndices](docs/APENDICES_TCC2.md), [alterações](docs/ALTERACOES_ARTIGO_TCC2.md), [conferência](docs/conferencia_documentos_tcc2.json) e [arquivos e hashes](docs/versao_artigo_tcc2.json). Revisão e aceite institucional permanecem com o autor e orientador.

@@ -1,30 +1,27 @@
-# Redação final do artigo para revisão
+# Correções do trabalho completo e artigo SBC
 
-Atualização de 10/11/2026. A proposta central foi mantida: comparar TF-IDF, Sentence-Transformers/BGE e embeddings extraídos de Qwen na triagem de currículos por qualidade, custo e interpretabilidade. O título e a fundamentação foram preservados, com ajustes pontuais de coerência verbal.
+A proposta original permanece: comparar TF-IDF, Sentence-Transformers/BGE e embeddings extraídos de Qwen por qualidade, custo e interpretabilidade. Esta rodada é documental: nenhum rótulo, modelo, previsão ou resultado primário foi alterado.
 
-## Alterações realizadas
+## Trabalho completo revisado
 
-1. Resumo e abstract passaram a relatar o experimento executado, seus resultados e limitações.
-2. Introdução e estrutura passaram a remeter à metodologia efetiva, ao capítulo de resultados e discussão e à conclusão.
-3. Metodologia consolidada: 2.484 PDFs inventariados, 2.483 textos processados, 294 casos no desenvolvimento e 97 na avaliação. Mantidos parâmetros, condições e separação por grupos.
-4. Mudança operacional da anotação manual prevista para referência assistida explicitada, incluindo 59 ratificações no desenvolvimento e cinco assistidas na coorte. Os 92 demais casos da coorte não foram promovidos a referência humana.
-5. Janelas de 8.000 caracteres e 512 tokens, pooling, revisões dos modelos, protocolos de custo e prevenção de vazamento documentados no método executado.
-6. Capítulo de aplicação atualizado para distinguir funcionalidades atuais e imagens históricas. O ranking inicia nos 2.483, com total destacado e opção dos 97 julgados.
-7. Novo capítulo 5: participação da coleção, classificação com e sem pesos, ROC-AUC complementar, ranking no conjunto julgado, custo, interpretabilidade e ameaças à validade. Seis tabelas novas, mantendo o resultado histórico do piloto identificado separadamente.
-8. Considerações parciais substituídas pela conclusão, com resposta ao objetivo original e continuidade condicionada à validação humana e a novos protocolos.
-9. Referências primárias de BGE, Qwen e ROC-AUC incluídas; sumário, lista de figuras e lista de tabelas atualizados conforme a paginação renderizada.
+- Fundamentação: doze equações nativas corrigidas, incluindo atenção, IDF suavizado implementado e DCG com ganho exponencial. Distinção entre AP para uma vaga e MAP para várias consultas.
+- Figuras 4 e 5: esquemas conceituais originais de SVM e boosting, com fontes teóricas identificadas e versões SVG editáveis. Diagramas substituídos estavam em baixa qualidade; cópia anterior preservada no workspace. Demais figuras e seis telas atuais mantidas (19 figuras no total).
+- Seção 2.10: trabalhos relacionados de Qin et al. (2018) e Bian et al. (2019), delimitando a diferença de tarefa e impossibilidade de comparação direta das métricas.
+- Método: preservada a distinção entre 2.484 PDFs, 2.483 textos utilizáveis, 294 casos de desenvolvimento e 97 de avaliação; agrupamento reduz sobreposição conhecida, sem garantia absoluta.
+- Resultados: nova Tabela 5 com matriz de Qwen/SVM ponderada e leitura dos falsos negativos. Os dois acertos de Adequado são referências apenas da IA; os dois falsos negativos foram ratificados com assistência. Precisão 1,000 corresponde a duas marcações, sem validação humana independente.
+- Análise contextual dos IDs 23464505, 10624813 e 62994611, contrastando evidências, previsões e janelas efetivamente lidas, sem atribuição causal automática ao truncamento.
+- Apêndice A: consulta integral, rubrica, procedimento e proveniência da anotação, exemplos e lacunas dos registros de IA; nenhum prompt original foi inventado.
+- Apêndice B: commit da execução, requisitos, arquivos, cache vetorial, comandos de reprodução e limites da conferência da aplicação.
+- Referências normalizadas, página em branco removida, oito tabelas legendadas e 79 entradas do sumário/listas atualizadas pela numeração impressa. Trabalho com 78 páginas físicas.
 
-## Rastreabilidade e limites
+## Artigo separado no modelo SBC
 
-O capítulo de resultados, discussão e conclusão está em [ARTIGO_RESULTADOS_DISCUSSAO_CONCLUSAO.md](ARTIGO_RESULTADOS_DISCUSSAO_CONCLUSAO.md). O artigo editável é mantido no [Drive do autor](https://docs.google.com/document/d/1PmGy9EWf7Jtit6s31piz__LMz75dMi5o/edit), com a cópia anterior preservada no workspace. A nota de versão registra o hash do DOCX entregue.
+Onze páginas físicas, incluindo referências; A4, uma coluna, Times New Roman 12 no corpo, margens 3/3/3,5/2,5 cm, resumo e abstract na primeira página, sem cabeçalho/rodapé/paginação. Regras do modelo oficial publicado pela SBC: https://www.overleaf.com/latex/templates/sbc-conferences-template/blbxwjwzdngr . Não houve redução artificial da fonte para atingir a extensão.
 
-Os resultados primários não foram substituídos. ROC-AUC foi operacionalizada como complemento posterior, previamente prevista no artigo, sem reotimização ou nova seleção pelos 97. As previsões das dezoito configurações foram reproduzidas e preservadas.
+Cinco tabelas nativas sintetizam universos, as dezoito condições, matriz, qualidade de recuperação e custo. Uma captura real atual ilustra o ranking com 2.483. Conteúdo integral legível em [ARTIGO_SBC_TCC2.md](ARTIGO_SBC_TCC2.md). E-mail indicado pelo autor: brenno.murakami@gmail.com. Brenno Murakami consta como autor; Vilson Francisco Maziero permanece como orientador no trabalho completo. Eventual coautoria depende de acordo entre eles.
 
-## Telas atuais incorporadas
-+
-+Foram recebidas e arquivadas doze capturas reais do autor. Seis imagens complementares compõem as Figuras 14–19, com parágrafos de apresentação, legendas e fonte: dashboard, ranking da coleção, matriz original TF-IDF com Regressão Logística, gráfico das dezoito condições, qualidade/custo e explicação lexical local. As Figuras 1–13 foram preservadas, mantendo a identificação histórica das telas do TCC1.
-+
-+Sumário e listas foram atualizados conforme a paginação renderizada. Os valores detalhados seguem nas tabelas editáveis do Capítulo 5. O comparativo recebido está na condição Original; não foi apresentado como resultado com pesos. Não houve mudança em modelos, rótulos, previsões ou métricas.
-+
-+A inspeção visual foi estática, sobre imagens fornecidas pelo autor. Testes interativos completos, telas menores, revisão do autor e orientador e conferência das normas permanecem pendentes. O navegador continuou recusando acesso na sessão; as capturas foram enviadas pelo autor, sem contorno dessa restrição. Os arquivos e hashes constam de [capturas atuais](capturas_curriculorank_20261110/README.md).
-+
+## Coerência e limites
+
+As tabelas e a matriz foram conferidas contra os relatórios preservados. Os dois documentos mantêm as mesmas contagens, resultados e limitações: referência predominantemente da IA, cinco ratificações assistidas, quatro Adequados, amostra intencional, uma vaga, janelas limitadas e custo local em hardware misto. ROC-AUC continua complementar e posterior, sem reotimização. O ranking operacional usa a coleção completa; qualidade foi medida somente nos 97 julgados.
+
+As doze capturas reais foram arquivadas e seis telas atuais integram o trabalho completo. A conferência visual foi estática em desktop. Testes interativos completos e telas menores seguem pendentes. Os documentos estão preparados para revisão do autor e orientador; isso não representa aprovação institucional.

@@ -1,18 +1,41 @@
 {
-  "data": "2026-11-10",
-  "arquivo": "Artigo_TCC2_com_telas_atuais.docx",
-  "sha256_docx": "c45bc5af2c81ea6f4900e407f2f01c6412d9c5be782d4cbb4aaa242ff1aa7cf3",
-  "bytes_docx": 5792022,
-  "paginas_fisicas_renderizadas": 74,
-  "imagens_inline_preservadas": 13,
-  "novas_tabelas_docx": 6,
-  "entradas_indices_conferidas": 76,
-  "drive_file_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
+  "data_local": "2026-11-10",
   "branch": "codex/validacao-pratica-tcc2-20261110",
-  "estado": "Redação e telas atuais integradas para revisão do autor e orientador; inspeção estática desktop concluída sobre capturas do autor. Testes interativos completos, telas menores e revisão institucional pendentes.",
-  "protocolo": "Resultados primários preservados; ROC-AUC complementar posterior sem alteração de previsões.",
-  "verificacao_documento": "Renderização e inspeção das páginas alteradas; páginas preservadas conferidas por equivalência visual e de arquivo. Sumário e listas conferidos com páginas impressas.",
-  "novas_capturas_inline": 6,
-  "total_imagens_inline": 19,
-  "capturas_originais_arquivadas": 12
+  "commit_execucao_experimental": "3b3c41f4fa8bc3152e07f89b38f6ea1e42633058",
+  "documentos": {
+    "TCC2_trabalho_completo_revisado": {
+      "arquivo_docx": "TCC2_trabalho_completo_revisado.docx",
+      "sha256_docx": "fac4aa36a28569dd4aaead77ae65aa0b230ef7cd26532f642d864894ddbdf17a",
+      "bytes_docx": 5937393,
+      "paginas_fisicas": 78,
+      "drive_docx_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
+      "arquivo_pdf": "TCC2_trabalho_completo_revisado.pdf",
+      "sha256_pdf": "a74c39404f6f7104d8095b6dd7954f640f37c88e21282cf4056c40b781b526fe",
+      "bytes_pdf": 3243441,
+      "drive_pdf_id": "1iA4j6wWVEMBc0nIlRrO_sL0tG1NkxoQT"
+    },
+    "TCC2_artigo_SBC": {
+      "arquivo_docx": "TCC2_artigo_SBC.docx",
+      "sha256_docx": "32a15a1c18817039385d7be178e74d5d4a20c6c98f30f79bd9a2fb21c2c1e9eb",
+      "bytes_docx": 448554,
+      "paginas_fisicas": 11,
+      "drive_docx_id": "1m0Rzhm0aKedYz9EaDBdpj03psNt5YE6R",
+      "arquivo_pdf": "TCC2_artigo_SBC.pdf",
+      "sha256_pdf": "a0216af75ed535b4a448e0495b02eab58c39fbe0c00265ca9502678bea6c2951",
+      "bytes_pdf": 413415,
+      "drive_pdf_id": "14Y5ynOV11moERIKvCwJdEIp2yoB3zcVZ"
+    }
+  },
+  "figuras_trabalho_completo": 19,
+  "tabelas_legendadas_trabalho_completo": 8,
+  "tabelas_nativas_trabalho_completo": 7,
+  "equacoes_nativas_OMML": 12,
+  "entradas_indices_conferidas": 79,
+  "capturas_originais_arquivadas": 12,
+  "capturas_no_trabalho_completo": 6,
+  "diagramas_conceituais_redesenhados": 2,
+  "estado": "Dois documentos para revisão do autor e orientador; inspeção visual estática e paginação concluídas. Testes interativos, telas menores, coautoria e conferência institucional pendentes.",
+  "resultados_primarios_preservados": true,
+  "artigo_SBC_inclui_referencias_nas_11_paginas": true,
+  "email_artigo": "brenno.murakami@gmail.com"
 }

@@ -1,6 +1,6 @@
 # Resultados, discussão e conclusão do TCC2
 
-Versão de redação para revisão do autor e orientador. Artigo editável mantido no Drive do autor. Mesmos protocolos, modelos e referências da execução registrada; ROC-AUC complementar explicitamente posterior à análise primária.
+Fonte sincronizada com o trabalho completo revisado. Resultados primários preservados. Tabelas abaixo em linhas separadas por ponto e vírgula; tabelas editáveis e paginação no DOCX/PDF do Drive.
 
 ## RESULTADOS E DISCUSSÃO
 
@@ -12,15 +12,19 @@ Foram inventariados 2.484 PDFs, dos quais 2.483 forneceram texto utilizável. O 
 
 Tabela 2 – Universos e participação no experimento
 
-Fonte: resultados experimentais do autor (2026).
+Universo; Quantidade; Papel
 
-| Universo | Quantidade | Papel |
-| --- | --- | --- |
-| PDFs inventariados | 2.484 | Cobertura da coleção e identificação de arquivo em branco |
-| Textos utilizáveis | 2.483 | Vetorização, escores, rankings completos e custos |
-| Desenvolvimento incluído | 294 | Treino e comparação em três folds por grupos |
-| Coorte avaliada | 97 | Métricas de qualidade e classificação |
-| Auditoria assistida na coorte | 5 dos 97 | Ratificação de propostas, sem independência ou extrapolação |
+PDFs inventariados; 2.484; Cobertura da coleção e identificação de arquivo em branco
+
+Textos utilizáveis; 2.483; Vetorização, escores, rankings completos e custos
+
+Desenvolvimento incluído; 294; Treino e comparação em três folds por grupos
+
+Coorte avaliada; 97; Métricas de qualidade e classificação
+
+Auditoria assistida na coorte; 5 dos 97; Ratificação de propostas, sem independência ou extrapolação
+
+Fonte: resultados experimentais do autor (2026).
 
 Os 97 casos pertencem à coleção de 2.483, mas foram separados do conjunto de treino. A distinção não torna os demais documentos acessórios: seus textos determinaram os vetores, a extensão dos rankings e os custos de processamento da coleção. Entretanto, a existência de escore para todos não equivale a uma referência correta de aderência para todos. Por isso, o trabalho não atribui F1 ou acurácia global aos 2.483.
 
@@ -32,37 +36,53 @@ A referência majoritária obteve acurácia de concordância 0,598 e F1 macro 0,
 
 Tabela 3 – Classificação na condição original sem pesos nos 97 casos
 
-Fonte: resultados experimentais do autor (2026).
+Método; Modelo; Acurácia; F1 macro; Precisão A; Recall A; AUC macro
 
-| Método | Modelo | Acurácia | F1 macro | Precisão A | Recall A | AUC macro |
-| --- | --- | --- | --- | --- | --- | --- |
-| TF-IDF | LR | 0,660 | 0,366 | 0,000 | 0,000 | 0,934 |
-| TF-IDF | SVM | 0,753 | 0,483 | 0,000 | 0,000 | 0,891 |
-| TF-IDF | XGB | 0,835 | 0,557 | 0,000 | 0,000 | 0,942 |
-| BGE | LR | 0,691 | 0,419 | 0,000 | 0,000 | 0,920 |
-| BGE | SVM | 0,722 | 0,452 | 0,000 | 0,000 | 0,925 |
-| BGE | XGB | 0,701 | 0,440 | 0,000 | 0,000 | 0,867 |
-| Qwen | LR | 0,608 | 0,272 | 0,000 | 0,000 | 0,902 |
-| Qwen | SVM | 0,598 | 0,249 | 0,000 | 0,000 | 0,940 |
-| Qwen | XGB | 0,784 | 0,514 | 0,000 | 0,000 | 0,932 |
+TF-IDF; LR; 0,660; 0,366; 0,000; 0,000; 0,934
+
+TF-IDF; SVM; 0,753; 0,483; 0,000; 0,000; 0,891
+
+TF-IDF; XGB; 0,835; 0,557; 0,000; 0,000; 0,942
+
+BGE; LR; 0,691; 0,419; 0,000; 0,000; 0,920
+
+BGE; SVM; 0,722; 0,452; 0,000; 0,000; 0,925
+
+BGE; XGB; 0,701; 0,440; 0,000; 0,000; 0,867
+
+Qwen; LR; 0,608; 0,272; 0,000; 0,000; 0,902
+
+Qwen; SVM; 0,598; 0,249; 0,000; 0,000; 0,940
+
+Qwen; XGB; 0,784; 0,514; 0,000; 0,000; 0,932
+
+Fonte: resultados experimentais do autor (2026).
 
 LR = Regressão Logística; SVM = máquina de vetores de suporte linear; XGB = XGBoost; A = Adequado. AUC macro é complemento descritivo one-vs-rest, operacionalizado após a avaliação primária. Precisão zero pode decorrer da ausência de marcações Adequado.
 
 Tabela 4 – Classificação na condição com pesos balanceados nos 97 casos
 
-Fonte: resultados experimentais do autor (2026).
+Método; Modelo; Acurácia; F1 macro; Precisão A; Recall A; AUC macro
 
-| Método | Modelo | Acurácia | F1 macro | Precisão A | Recall A | AUC macro |
-| --- | --- | --- | --- | --- | --- | --- |
-| TF-IDF | LR | 0,825 | 0,550 | 0,000 | 0,000 | 0,942 |
-| TF-IDF | SVM | 0,814 | 0,544 | 0,000 | 0,000 | 0,911 |
-| TF-IDF | XGB | 0,856 | 0,759 | 0,667 | 0,500 | 0,949 |
-| BGE | LR | 0,814 | 0,743 | 0,500 | 0,750 | 0,928 |
-| BGE | SVM | 0,814 | 0,713 | 0,500 | 0,500 | 0,916 |
-| BGE | XGB | 0,701 | 0,450 | 0,000 | 0,000 | 0,839 |
-| Qwen | LR | 0,804 | 0,704 | 0,375 | 0,750 | 0,911 |
-| Qwen | SVM | 0,845 | 0,785 | 1,000 | 0,500 | 0,912 |
-| Qwen | XGB | 0,825 | 0,682 | 1,000 | 0,250 | 0,942 |
+TF-IDF; LR; 0,825; 0,550; 0,000; 0,000; 0,942
+
+TF-IDF; SVM; 0,814; 0,544; 0,000; 0,000; 0,911
+
+TF-IDF; XGB; 0,856; 0,759; 0,667; 0,500; 0,949
+
+BGE; LR; 0,814; 0,743; 0,500; 0,750; 0,928
+
+BGE; SVM; 0,814; 0,713; 0,500; 0,500; 0,916
+
+BGE; XGB; 0,701; 0,450; 0,000; 0,000; 0,839
+
+Qwen; LR; 0,804; 0,704; 0,375; 0,750; 0,911
+
+Qwen; SVM; 0,845; 0,785; 1,000; 0,500; 0,912
+
+Qwen; XGB; 0,825; 0,682; 1,000; 0,250; 0,942
+
+Fonte: resultados experimentais do autor (2026).
 
 LR = Regressão Logística; SVM = máquina de vetores de suporte linear; XGB = XGBoost; A = Adequado. AUC macro é complemento descritivo one-vs-rest, operacionalizado após a avaliação primária. Precisão zero pode decorrer da ausência de marcações Adequado.
 
@@ -71,6 +91,28 @@ Nas nove condições originais, nenhum dos quatro Adequados foi recuperado e nen
 O desenvolvimento continha apenas seis Adequados entre 294 exemplos. Sem ponderação, a contribuição dessa classe para o ajuste é pequena em relação às classes majoritárias. A baixa disponibilidade de exemplos, a separação aprendida pelas representações e a regra de decisão categórica são explicações compatíveis com o padrão observado. O experimento não isola cada fator nem demonstra que desbalanceamento é sua única causa; parte das evidências técnicas também pode estar fora da janela dos encoders densos.
 
 Na condição ponderada, Qwen com SVM apresentou o maior F1 macro observado, 0,785, com acurácia 0,845. Recuperou dois dos quatro Adequados e realizou duas marcações dessa classe, ambas concordantes com a referência. Os outros dois Adequados foram classificados como Parciais. As duas marcações corretas não constituem demonstração de precisão perfeita em uso real, dado o suporte reduzido e a natureza assistida da referência.
+
+A Tabela 5 detalha os 97 resultados da configuração Qwen com SVM e pesos. O principal contraste entre as classes majoritárias ocorre entre Inadequado e Parcialmente Adequado. Na classe rara, duas referências Adequado foram recuperadas e duas foram previstas como Parciais.
+
+Tabela 5 – Matriz de confusão de Qwen com SVM e pesos
+
+Referência / predito; Inadequado; Parcial; Adequado
+
+Inadequado; 49; 9; 0
+
+Parcialmente Adequado; 4; 31; 0
+
+Adequado; 0; 2; 2
+
+Fonte: predições registradas do experimento (2026). Linhas = referência assistida; colunas = predição. Classes e contagens preservadas.
+
+Os quatro Adequados evidenciam uma restrição da interpretação: 43311839 e 85101052 foram previstos como Adequados, mas não receberam conferência humana. Os casos 23464505 e 10624813, ratificados pelo autor, foram previstos como Parciais. Portanto, os dois acertos observados nessa classe ainda dependem de rótulos somente da IA. Essa leitura não altera as métricas primárias nem permite calcular desempenho humano geral a partir da amostra intencional de cinco casos.
+
+No caso 23464505, a referência registra SQL, serviços SOAP/REST, Git e desenvolvimento de aplicações. Qwen com SVM e pesos produziu Parcialmente Adequado, enquanto BGE com Regressão Logística e pesos produziu Adequado. O documento integral tem 3.187 caracteres; as janelas visíveis alcançaram 2.155 e 2.240 caracteres, respectivamente. A divergência mostra que o resultado depende da combinação entre representação e classificador; não demonstra isoladamente que um dos modelos compreendeu melhor os requisitos.
+
+No caso 10624813, a referência inclui PL/SQL, REST/SOAP, GitHub e desenvolvimento de comércio eletrônico. Qwen com SVM e pesos produziu Parcialmente Adequado e BGE com Regressão Logística e pesos produziu Inadequado. Dos 6.651 caracteres integrais, foram acessíveis 2.648 e 2.779, respectivamente. O truncamento é uma hipótese compatível com a perda de evidências, mas não foi isolado como causa desse erro.
+
+O caso 62994611 ilustra um falso positivo em BGE com Regressão Logística e pesos: a referência Parcialmente Adequado registra SQL, integração de APIs e C#, sem confirmação de Git. O modelo previu Adequado. O escore aprendido não equivale à verificação lógica dos quatro requisitos. Os trechos e as decisões desses exemplos foram preservados antes da inspeção dos erros; a comparação entre modelos apresentada aqui é posterior à avaliação.
 
 BGE com Regressão Logística e pesos recuperou três dos quatro Adequados, mas marcou seis casos como Adequado: três concordantes e três falsos positivos. Qwen com Regressão Logística e pesos também recuperou três, com oito marcações e cinco falsos positivos. Portanto, maior recuperação veio acompanhada de mais documentos encaminhados indevidamente à classe mais aderente. A escolha prática depende do custo de perder candidatos relevantes e do esforço disponível para conferência.
 
@@ -88,17 +130,19 @@ No SVM, as probabilidades são produzidas pelo procedimento interno habilitado p
 
 ### Qualidade do ranqueamento no conjunto julgado
 
-A Tabela 5 utiliza os mesmos 97 documentos para todas as representações. Cada fila foi formada restringindo o ranking completo a esses documentos e reordenando seus escores. As posições indicadas e os valores de Precision@k pertencem a esse ranking julgado, sem representar o topo dos 2.483. Os documentos não julgados não foram considerados negativos.
+A Tabela 6 utiliza os mesmos 97 documentos para todas as representações. Cada fila foi formada restringindo o ranking completo a esses documentos e reordenando seus escores. As posições indicadas e os valores de Precision@k pertencem a esse ranking julgado, sem representar o topo dos 2.483. Os documentos não julgados não foram considerados negativos.
 
-Tabela 5 – Recuperação entre os 97 documentos julgados
+Tabela 6 – Recuperação entre os 97 documentos julgados
+
+Método; AP; NDCG; P@5; P@10; Posições dos Adequados
+
+TF-IDF; 0,635; 0,934; 0,400; 0,200; 1, 2, 11 e 15
+
+BGE; 0,479; 0,865; 0,600; 0,300; 2, 3, 5 e 27
+
+QWEN; 0,254; 0,776; 0,200; 0,200; 3, 10, 11 e 19
 
 Fonte: resultados experimentais do autor (2026).
-
-| Método | AP | NDCG | P@5 | P@10 | Posições dos Adequados |
-| --- | --- | --- | --- | --- | --- |
-| TF-IDF | 0,635 | 0,934 | 0,400 | 0,200 | 1, 2, 11 e 15 |
-| BGE | 0,479 | 0,865 | 0,600 | 0,300 | 2, 3, 5 e 27 |
-| QWEN | 0,254 | 0,776 | 0,200 | 0,200 | 3, 10, 11 e 19 |
 
 TF-IDF apresentou as maiores AP e NDCG observadas, 0,635 e 0,934. BGE teve AP 0,479 e NDCG 0,865, mas colocou três Adequados nos cinco primeiros, contra dois do TF-IDF. Qwen apresentou AP 0,254 e NDCG 0,776, com um Adequado nos cinco primeiros. Os indicadores valorizam aspectos diferentes da ordenação, de modo que uma única medida não resume todas as prioridades de leitura.
 
@@ -108,27 +152,31 @@ O resultado de Qwen na recuperação também não contradiz seu F1 macro com SVM
 
 ### Custo e dimensão na coleção completa
 
-Tabela 6 – Processamento das três representações nos 2.483 textos
+Tabela 7 – Processamento das três representações nos 2.483 textos
+
+Método; Dimensão; Vetorização (s); Consulta e escores (ms); Dispositivo
+
+TF-IDF; 652064; 4,464; 12,494; CPU
+
+BGE; 1024; 121,825; 23,759; GPU RTX 4060
+
+QWEN; 896; 150,410; 35,056; GPU RTX 4060
 
 Fonte: resultados experimentais do autor (2026).
-
-| Método | Dimensão | Vetorização (s) | Consulta e escores (ms) | Dispositivo |
-| --- | --- | --- | --- | --- |
-| TF-IDF | 652064 | 4,464 | 12,494 | CPU |
-| BGE | 1024 | 121,825 | 23,759 | GPU RTX 4060 |
-| QWEN | 896 | 150,410 | 35,056 | GPU RTX 4060 |
 
 O TF-IDF foi medido em CPU pela mediana de três ajustes completos. BGE e Qwen tiveram uma passagem completa em GPU após aquecimento, excluindo download e carga. A consulta e o cálculo dos escores utilizaram a mediana de dez medições após descartar a primeira, sem incluir ordenação ou exportação. O equipamento possuía processador Intel Core i5-10400F, 12 CPUs lógicas e cerca de 40 GiB de RAM; os densos utilizaram uma NVIDIA GeForce RTX 4060. Esses resultados descrevem a execução local e não um benchmark normalizado entre algoritmos.
 
-Tabela 7 – Armazenamento vetorial e memória observada
+Tabela 8 – Armazenamento vetorial e memória observada
+
+Método; Arquivo vetorial (MiB); Pico RSS amostrado (MiB); Pico GPU alocado (MiB)
+
+TF-IDF; 15,249; 377,879; Não aplicável
+
+BGE; 9,699; 1297,371; 1384,745
+
+QWEN; 8,487; 3335,625; 2091,706
 
 Fonte: resultados experimentais do autor (2026).
-
-| Método | Arquivo vetorial (MiB) | Pico RSS amostrado (MiB) | Pico GPU alocado (MiB) |
-| --- | --- | --- | --- |
-| TF-IDF | 15,249 | 377,879 | Não aplicável |
-| BGE | 9,699 | 1297,371 | 1384,745 |
-| QWEN | 8,487 | 3335,625 | 2091,706 |
 
 O TF-IDF foi armazenado em formato esparso NPZ comprimido; os vetores densos, em NPY float32. Os tamanhos de arquivo não equivalem diretamente à memória de trabalho nem isolam o custo de carregar os modelos. RSS é o valor absoluto do processo, amostrado a cada 20 ms; para TF-IDF, a tabela mostra o maior pico entre as três repetições. O pico GPU é a memória alocada registrada pelo framework, sem abranger toda a VRAM reservada ou a atividade do sistema. Logo, os valores não sustentam uma conclusão geral de economia de memória de um método.
 
@@ -175,4 +223,3 @@ Não foi estabelecido um vencedor universal. O compromisso entre omissões e fal
 A coleção completa forneceu evidência de cobertura, ordenação e custo; os 97 casos forneceram evidência exploratória de concordância com referências disponíveis. O CurrículoRank integra esses níveis, abrindo o ranking com os 2.483 documentos e mantendo o subconjunto julgado como opção, com proveniência e limitações visíveis. A interface apoia a inspeção dos resultados e preserva a participação da coleção inteira no experimento.
 
 Como continuidade, propõe-se ampliar a referência humana independente, as vagas e os idiomas, e investigar documentos longos e outras estratégias de pooling. As seis dúvidas podem ser adjudicadas em versão posterior. Novas otimizações exigem outra separação de avaliação, sem reutilizar os 97 casos como teste inédito.
-

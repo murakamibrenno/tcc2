@@ -1,0 +1,2 @@
+Fonte: https://www.overleaf.com/latex/templates/sbc-conferences-template/blbxwjwzdngr
+A4; coluna única; margens superior 3,5 cm, inferior 2,5 cm, laterais 3 cm. Corpo Times New Roman 12 pt, espaço simples e 6 pt antes dos parágrafos. Título 16 pt; seções 13 pt; subseções 12 pt. Abstract e resumo de até dez linhas, na primeira página, recuo lateral de 0,8 cm. Sem cabeçalho, rodapé ou paginação. Legendas Arial (substituto métrico de Helvetica), 10 pt, negrito. Referências 12 pt com recuo suspenso de 0,5 cm. Tabelas nativas, sem fundos coloridos, linhas finas.
