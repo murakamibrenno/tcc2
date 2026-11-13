@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { Alert, Box, Button, Chip, Dialog, DialogContent, DialogTitle, Divider, Grid, MenuItem, Paper, Select, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, TextField, Typography } from '@mui/material'
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
@@ -56,17 +56,22 @@ export function ComparativoAtual() {
   const [condition, setCondition] = useState('original'), [selected, setSelected] = useState('original_tfidf_lr')
   const rows = data.classificacao.resultados.filter(r => r.condicao === condition), model = data.classificacao.resultados.find(r => chaveConfiguracao(r) === selected)
   const preds = data.predicoes[selected] || []
+  const matrixRef = useRef(null)
+  const showMatrix = row => {
+    setSelected(chaveConfiguracao(row))
+    matrixRef.current?.focus()
+  }
   return <><Title sub="18 condições predefinidas. Treino nos 294 casos; avaliação nos mesmos 97, sem recalibração por seus resultados.">Comparação de classificadores</Title>
     <Select value={condition} onChange={e => { setCondition(e.target.value); setSelected(`${e.target.value}_tfidf_lr`) }} inputProps={{ 'aria-label': 'Condição experimental' }} sx={{ mb: 2 }}><MenuItem value="original">Original</MenuItem><MenuItem value="pesos_balanceados">Pesos balanceados</MenuItem></Select>
-    <Panel><DataTable label="Métricas das nove combinações na condição escolhida" headers={['Representação / classificador', 'Acurácia / concordância', 'F1 macro', 'Precisão Adequado', 'Recall Adequado', 'ROC-AUC macro', 'Inspeção']} rows={rows.map(r => [<>{methodName(r.representacao)}<Typography variant="body2">{clfName(r.classificador)}</Typography></>, fmt(r.accuracy_concordancia), fmt(r.f1_macro), fmt(r.por_classe.Adequado.precision), fmt(r.por_classe.Adequado.recall), fmt(aucMacro(r)), <Button onClick={() => setSelected(chaveConfiguracao(r))}>Ver matriz</Button>])} /><Typography variant="body2" mt={2}>ROC-AUC one-vs-rest: complemento descritivo calculado após a avaliação primária, sem mudar previsões ou selecionar modelos. Avalia ordenação dos escores, não calibração; uma AUC alta pode coexistir com recall zero na decisão registrada.</Typography></Panel>
+    <Panel><DataTable label="Métricas das nove combinações na condição escolhida" headers={['Representação / classificador', 'Acurácia / concordância', 'F1 macro', 'Precisão Adequado', 'Recall Adequado', 'ROC-AUC macro', 'Inspeção']} rows={rows.map(r => [<>{methodName(r.representacao)}<Typography variant="body2">{clfName(r.classificador)}</Typography></>, fmt(r.accuracy_concordancia), fmt(r.f1_macro), fmt(r.por_classe.Adequado.precision), fmt(r.por_classe.Adequado.recall), fmt(aucMacro(r)), <Button onClick={() => showMatrix(r)} aria-controls="matriz-classificador">Ver matriz</Button>])} /><Typography variant="body2" mt={2}>ROC-AUC one-vs-rest: complemento descritivo calculado após a avaliação primária, sem mudar previsões ou selecionar modelos. Avalia ordenação dos escores, não calibração; uma AUC alta pode coexistir com recall zero na decisão registrada.</Typography></Panel>
     <Note>Referência majoritária: acurácia/concordância {fmt(data.classificacao.baseline_majoritaria.accuracy_concordancia)}; F1 macro {fmt(data.classificacao.baseline_majoritaria.f1_macro)}. Os quatro Adequados permitem saltos de 25 pontos percentuais no recall por um único caso.</Note>
-    {model && <Panel title={`${methodName(model.representacao)} + ${clfName(model.classificador)} — ${conditionName(model.condicao)}`}>
+    {model && <Box component="section" id="matriz-classificador" ref={matrixRef} tabIndex={-1} aria-label="Detalhes da matriz de confusão"><Panel title={`${methodName(model.representacao)} + ${clfName(model.classificador)} — ${conditionName(model.condicao)}`}>
       <Typography mb={1}>Matriz de confusão: linhas = referência assistida; colunas = predição.</Typography>
       <DataTable label="Matriz de confusão atual" headers={['Referência / Predito', ...classesAtuais]} rows={model.matriz_confusao.map((r, i) => [classesAtuais[i], ...r])} />
       <DataTable label="Precisão e recall por classe" headers={['Classe', 'Precisão', 'Recall', 'F1', 'Suporte']} rows={classesAtuais.map(c => [c, fmt(model.por_classe[c].precision), fmt(model.por_classe[c].recall), fmt(model.por_classe[c]['f1-score']), model.por_classe[c].support])} />
       <Typography variant="body2" mt={2}>Medição única: ajuste {fmt(model.fit_s_uma_passagem, 3)} s; inferência dos 97 {fmt(model.inferencia_s_uma_passagem, 4)} s. Não é comparação estatística de custo.</Typography>
       <Typography variant="h6" mt={2}>Predições dos 97 casos</Typography><Box sx={{ maxHeight: 310, overflow: 'auto' }}><DataTable label="Predições rastreáveis por currículo" headers={['ID', 'Referência assistida', 'Predito', 'Conferência']} rows={preds.map(r => [r.id, r.rotulo_referencia_assistida, r.predito, r.conferencia_autor === 'ratificacao_assistida' ? 'Ratificação assistida' : 'IA sem conferência'])} /></Box>
-    </Panel>}
+    </Panel></Box>}
   </>
 }
 
