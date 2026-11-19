@@ -16,3 +16,6 @@ piloto_tfidf/validation/revisao*.csv
 
 # Artefatos integrais do inventário local
 piloto_tfidf/validation/base_completa/
+
+# Textos verificados e gerados durante dev/build
+aplicacao_mockup/public/curriculos/

@@ -1,8 +1,9 @@
-import React, { useMemo, useRef, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { Alert, Box, Button, Chip, Dialog, DialogContent, DialogTitle, Divider, Grid, MenuItem, Paper, Select, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, TextField, Typography } from '@mui/material'
+import { Alert, Box, Button, Chip, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Grid, MenuItem, Paper, Select, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TablePagination, TextField, Typography } from '@mui/material'
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import data from '../data/experimentoAtual.json'
+import DetalheCurriculo from '../components/DetalheCurriculo'
 import { classesAtuais, chaveConfiguracao, rankingAtual, filtrarDocumentos } from '../utils/experimentoAtual'
 
 const fmt = (v, n = 3) => typeof v === 'number' ? v.toLocaleString('pt-BR', { maximumFractionDigits: n, minimumFractionDigits: n }) : '—'
@@ -45,33 +46,32 @@ export function DocumentosAtuais({ ranking = false }) {
       <Select value={label} onChange={change(setLabel)} displayEmpty inputProps={{ 'aria-label': 'Filtrar referência' }}><MenuItem value="">Todas as referências</MenuItem>{classesAtuais.map(c => <MenuItem key={c} value={c}>{c}</MenuItem>)}</Select>
     </Stack>
     {scope === 'coorte97' ? <Note>Métricas fixas dos 97 julgados para {methodName(method)}: AP {fmt(quality.AP_adequado)}, NDCG graduado {fmt(quality.NDCG_graduado)}, P@5 {fmt(quality['P@5'])}. Filtros da tabela não recalculam essas métricas. Apenas Adequado conta como relevante em AP/P@k.</Note> : <Note severity="warning">Ranking operacional dos 2.483 textos. Não há métrica de qualidade global: documentos sem referência não foram tratados como Inadequados. Os escores são da representação, não do classificador.</Note>}
-    <Panel><DataTable label="Documentos da execução atual" headers={['Posição', 'Documento', 'Cosseno', 'Referência', 'Origem / papel']} rows={filtered.slice(page * 15, page * 15 + 15).map(r => [r.posicao_exibicao, <Button onClick={() => setDetail(r)} sx={{ textAlign: 'left', justifyContent: 'flex-start' }}>{r.id} — {r.titulo}</Button>, fmt(r.scores[method], 4), r.rotulo ? <Chip size="small" label={r.rotulo} color={labelColor(r.rotulo)} /> : 'Sem referência confirmada', <><Typography variant="body2">{r.origem_rotulo}</Typography><Typography variant="caption" color="text.secondary">{r.papel}</Typography></>])} />
+    <Panel><DataTable label="Documentos da execução atual" headers={['Posição', 'Documento', 'Cosseno', 'Referência', 'Origem / papel']} rows={filtered.slice(page * 15, page * 15 + 15).map(r => [r.posicao_exibicao, <Button aria-haspopup="dialog" onClick={() => setDetail(r)} sx={{ textAlign: 'left', justifyContent: 'flex-start' }}>{r.id} — {r.titulo}</Button>, fmt(r.scores[method], 4), r.rotulo ? <Chip size="small" label={r.rotulo} color={labelColor(r.rotulo)} /> : 'Sem referência confirmada', <><Typography variant="body2">{r.origem_rotulo}</Typography><Typography variant="caption" color="text.secondary">{r.papel}</Typography></>])} />
       <TablePagination component="div" count={filtered.length} page={page} rowsPerPage={15} rowsPerPageOptions={[15]} onPageChange={(_, p) => setPage(p)} labelDisplayedRows={({ from, to, count }) => `${from}–${to} de ${count}`} />
     </Panel>
-    <Dialog open={Boolean(detail)} onClose={() => setDetail(null)} maxWidth="md" fullWidth><DialogTitle>{detail?.id} — {detail?.titulo}</DialogTitle><DialogContent>{detail && <><Typography>{detail.papel} • {detail.origem_rotulo}</Typography><Typography color="text.secondary">Categoria de origem: {detail.categoria}. Texto integral: {detail.caracteres.toLocaleString('pt-BR')} caracteres.</Typography><DataTable label="Escores por representação" headers={['Representação', 'Cosseno', 'Posição na coleção']} rows={data.metodos.map(m => [m.nome, fmt(detail.scores[m.id], 5), detail.posicoes_colecao[m.id]])} />{data.textos_casos_inspecao[detail.id] ? <Typography component="pre" sx={{ whiteSpace: 'pre-wrap', fontSize: 13, mt: 2 }}>{data.textos_casos_inspecao[detail.id]}</Typography> : <Note>O texto integral fica nos arquivos de origem do repositório. Nesta tela, a leitura integral está disponível nos cinco casos da inspeção.</Note>}</>}</DialogContent></Dialog>
+    <DetalheCurriculo document={detail} methods={data.metodos} onClose={() => setDetail(null)} />
   </>
 }
 
 export function ComparativoAtual() {
-  const [condition, setCondition] = useState('original'), [selected, setSelected] = useState('original_tfidf_lr')
+  const [condition, setCondition] = useState('original'), [selected, setSelected] = useState(null), [detail, setDetail] = useState(null)
   const rows = data.classificacao.resultados.filter(r => r.condicao === condition), model = data.classificacao.resultados.find(r => chaveConfiguracao(r) === selected)
   const preds = data.predicoes[selected] || []
-  const matrixRef = useRef(null)
   const showMatrix = row => {
     setSelected(chaveConfiguracao(row))
-    matrixRef.current?.focus()
   }
   return <><Title sub="18 condições predefinidas. Treino nos 294 casos; avaliação nos mesmos 97, sem recalibração por seus resultados.">Comparação de classificadores</Title>
-    <Select value={condition} onChange={e => { setCondition(e.target.value); setSelected(`${e.target.value}_tfidf_lr`) }} inputProps={{ 'aria-label': 'Condição experimental' }} sx={{ mb: 2 }}><MenuItem value="original">Original</MenuItem><MenuItem value="pesos_balanceados">Pesos balanceados</MenuItem></Select>
-    <Panel><DataTable label="Métricas das nove combinações na condição escolhida" headers={['Representação / classificador', 'Acurácia / concordância', 'F1 macro', 'Precisão Adequado', 'Recall Adequado', 'ROC-AUC macro', 'Inspeção']} rows={rows.map(r => [<>{methodName(r.representacao)}<Typography variant="body2">{clfName(r.classificador)}</Typography></>, fmt(r.accuracy_concordancia), fmt(r.f1_macro), fmt(r.por_classe.Adequado.precision), fmt(r.por_classe.Adequado.recall), fmt(aucMacro(r)), <Button onClick={() => showMatrix(r)} aria-controls="matriz-classificador">Ver matriz</Button>])} /><Typography variant="body2" mt={2}>ROC-AUC one-vs-rest: complemento descritivo calculado após a avaliação primária, sem mudar previsões ou selecionar modelos. Avalia ordenação dos escores, não calibração; uma AUC alta pode coexistir com recall zero na decisão registrada.</Typography></Panel>
+    <Select value={condition} onChange={e => { setCondition(e.target.value); setSelected(null) }} inputProps={{ 'aria-label': 'Condição experimental' }} sx={{ mb: 2 }}><MenuItem value="original">Original</MenuItem><MenuItem value="pesos_balanceados">Pesos balanceados</MenuItem></Select>
+    <Panel><DataTable label="Métricas das nove combinações na condição escolhida" headers={['Representação / classificador', 'Acurácia / concordância', 'F1 macro', 'Precisão Adequado', 'Recall Adequado', 'ROC-AUC macro', 'Inspeção']} rows={rows.map(r => [<>{methodName(r.representacao)}<Typography variant="body2">{clfName(r.classificador)}</Typography></>, fmt(r.accuracy_concordancia), fmt(r.f1_macro), fmt(r.por_classe.Adequado.precision), fmt(r.por_classe.Adequado.recall), fmt(aucMacro(r)), <Button onClick={() => showMatrix(r)} aria-haspopup="dialog">Ver matriz</Button>])} /><Typography variant="body2" mt={2}>ROC-AUC one-vs-rest: complemento descritivo calculado após a avaliação primária, sem mudar previsões ou selecionar modelos. Avalia ordenação dos escores, não calibração; uma AUC alta pode coexistir com recall zero na decisão registrada.</Typography></Panel>
     <Note>Referência majoritária: acurácia/concordância {fmt(data.classificacao.baseline_majoritaria.accuracy_concordancia)}; F1 macro {fmt(data.classificacao.baseline_majoritaria.f1_macro)}. Os quatro Adequados permitem saltos de 25 pontos percentuais no recall por um único caso.</Note>
-    {model && <Box component="section" id="matriz-classificador" ref={matrixRef} tabIndex={-1} aria-label="Detalhes da matriz de confusão"><Panel title={`${methodName(model.representacao)} + ${clfName(model.classificador)} — ${conditionName(model.condicao)}`}>
+    <Dialog open={Boolean(model)} onClose={() => setSelected(null)} aria-labelledby="titulo-matriz" maxWidth="lg" fullWidth><DialogTitle id="titulo-matriz">{model && `${methodName(model.representacao)} + ${clfName(model.classificador)} — ${conditionName(model.condicao)}`}</DialogTitle><DialogContent dividers>{model && <>
       <Typography mb={1}>Matriz de confusão: linhas = referência assistida; colunas = predição.</Typography>
       <DataTable label="Matriz de confusão atual" headers={['Referência / Predito', ...classesAtuais]} rows={model.matriz_confusao.map((r, i) => [classesAtuais[i], ...r])} />
       <DataTable label="Precisão e recall por classe" headers={['Classe', 'Precisão', 'Recall', 'F1', 'Suporte']} rows={classesAtuais.map(c => [c, fmt(model.por_classe[c].precision), fmt(model.por_classe[c].recall), fmt(model.por_classe[c]['f1-score']), model.por_classe[c].support])} />
       <Typography variant="body2" mt={2}>Medição única: ajuste {fmt(model.fit_s_uma_passagem, 3)} s; inferência dos 97 {fmt(model.inferencia_s_uma_passagem, 4)} s. Não é comparação estatística de custo.</Typography>
-      <Typography variant="h6" mt={2}>Predições dos 97 casos</Typography><Box sx={{ maxHeight: 310, overflow: 'auto' }}><DataTable label="Predições rastreáveis por currículo" headers={['ID', 'Referência assistida', 'Predito', 'Conferência']} rows={preds.map(r => [r.id, r.rotulo_referencia_assistida, r.predito, r.conferencia_autor === 'ratificacao_assistida' ? 'Ratificação assistida' : 'IA sem conferência'])} /></Box>
-    </Panel></Box>}
+      <Typography variant="h6" mt={2}>Predições dos 97 casos</Typography><Box sx={{ maxHeight: 310, overflow: 'auto' }}><DataTable label="Predições rastreáveis por currículo" headers={['ID', 'Referência assistida', 'Predito', 'Conferência']} rows={preds.map(r => [<Button aria-haspopup="dialog" onClick={() => setDetail(data.curriculos.find(document => document.id === r.id))}>Ver currículo {r.id}</Button>, r.rotulo_referencia_assistida, r.predito, r.conferencia_autor === 'ratificacao_assistida' ? 'Ratificação assistida' : 'IA sem conferência'])} /></Box>
+    </>}</DialogContent><DialogActions><Button onClick={() => setSelected(null)}>Fechar matriz</Button></DialogActions></Dialog>
+    <DetalheCurriculo document={detail} methods={data.metodos} onClose={() => setDetail(null)} />
   </>
 }
 
@@ -85,10 +85,12 @@ export function ResultadosAtuais() {
 }
 
 export function InterpretabilidadeAtual() {
-  const [method, setMethod] = useState('tfidf'), [cid, setCid] = useState(data.interpretabilidade.protocolo.casos[0])
+  const [method, setMethod] = useState('tfidf'), [cid, setCid] = useState(data.interpretabilidade.protocolo.casos[0]), [detail, setDetail] = useState(null)
   const lexical = data.interpretabilidade.tfidf, item = method === 'tfidf' ? lexical.casos.find(x => x.id === cid) : data.interpretabilidade.densos[method].casos.find(x => x.id === cid)
   return <><Title sub="Inspeção de configurações fixas e cinco casos auditados. Explicações do modelo não equivalem a avaliação profissional.">Interpretabilidade</Title>
     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} mb={2}><Select value={method} onChange={e => setMethod(e.target.value)} inputProps={{ 'aria-label': 'Representação da explicação' }}>{data.metodos.map(m => <MenuItem key={m.id} value={m.id}>{m.nome}</MenuItem>)}</Select><Select value={cid} onChange={e => setCid(e.target.value)} inputProps={{ 'aria-label': 'Caso de inspeção' }} sx={{ maxWidth: '100%' }}>{data.interpretabilidade.protocolo.casos.map(id => <MenuItem key={id} value={id}>{id} — {titleDoc(id).slice(0, 42)}</MenuItem>)}</Select></Stack>
+    <Button variant="outlined" sx={{ mb: 2 }} onClick={() => setDetail(data.curriculos.find(document => document.id === cid))} aria-haspopup="dialog">Ver currículo completo</Button>
+    <DetalheCurriculo document={detail} methods={data.metodos} onClose={() => setDetail(null)} />
     {method === 'tfidf' ? <>
       <Panel title="Contribuições lexicais — Regressão Logística com pesos"><Typography>Predição registrada: {item.predito_lr}. O contraste abaixo compara logit de Adequado menos logit de Inadequado; a decisão completa continua sendo entre três classes.</Typography>
         <Note>Soma de todas as contribuições ({fmt(item.soma_contribuicoes, 5)}) + intercepto ({fmt(item.intercepto, 5)}) = margem {fmt(item.margem, 5)}. Valor positivo favorece esse contraste; não comprova atendimento aos quatro requisitos.</Note>

@@ -1,0 +1,28 @@
+# Atualização do CurrículoRank na VPS
+
+Execute a partir da raiz do clone que já está publicado. Use Node 22.12 ou superior compatível com Vite 8. Confira `git status` antes de atualizar. Se houver alterações locais, examine-as antes de continuar.
+
+```bash
+git status --short
+git switch codex/validacao-pratica-tcc2-20261110
+git pull --ff-only origin codex/validacao-pratica-tcc2-20261110
+cd aplicacao_mockup
+npm ci --ignore-scripts
+npm test
+npm run build
+```
+
+O build valida os textos contra o manifesto e inclui os 2.483 arquivos em `dist/curriculos`. O clone deve conter `curriculos_processados/extracted_text_en`. Um checkout parcial precisa incluir essa pasta e `piloto_tfidf/data/validacao_ampliada_v1/manifesto.json` antes do build.
+
+Publique **todo o conteúdo de `dist/`**, inclusive `curriculos/`, no diretório que o servidor web já serve. Se a configuração atual aponta diretamente para `aplicacao_mockup/dist`, o build atualiza esse diretório. Caso a publicação copie o build para outra pasta, repita o procedimento de cópia que já está configurado na VPS.
+
+Mantenha o fallback das rotas React para `index.html`. As respostas de `/curriculos/*.txt` precisam ser texto simples (`Content-Type: text/plain`). O controle de acesso existente do site deve abranger esses arquivos. A interface verifica o tipo da resposta para detectar uma configuração que devolva HTML no lugar do currículo.
+
+## Conferência após a publicação
+
+- Recarregue a página e abra um currículo que esteja fora dos cinco casos de interpretabilidade. Confira o texto até o fim e feche pelo botão **Fechar currículo**. Repita em outra página do ranking e no subconjunto dos 97.
+- Em **Comparativo**, clique em **Ver matriz** de configurações diferentes. Confira o título, feche a janela e teste também a condição com pesos. Na lista de predições, abra um currículo e depois retorne à matriz.
+- Em **Interpretabilidade**, use **Ver currículo completo** e confira o documento selecionado.
+- Confira navegação por teclado, Escape e uma tela menor. Se o carregamento de texto falhar, a janela mostra uma mensagem e o botão **Tentar novamente**.
+
+Os testes automatizados verificam os 2.483 textos integrais, os hashes, o carregamento e os erros HTTP. A conferência de interação no navegador local ficou bloqueada pela permissão de navegação da sessão de desenvolvimento e deve ser completada no endereço publicado.

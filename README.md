@@ -30,7 +30,11 @@ npm run build
 npm run dev -- --host 127.0.0.1
 ```
 
-Usar Node 22.12 ou superior compatível com Vite 8. A aplicação mostra uma execução pré-calculada, com uma vaga, rankings dos 2.483 ou dos 97, filtros, comparação das 18 configurações, matrizes, custos, proveniência e interpretabilidade dos cinco casos. O ranking abre na coleção completa, com total visível e contagem após filtros; os 97 permanecem como opção para avaliar qualidade. Não executa novas inferências nem cadastro de novas vagas. O texto integral na inspeção é disponibilizado para os cinco casos; os demais textos estão em `curriculos_processados/extracted_text_en`.
+Usar Node 22.12 ou superior compatível com Vite 8. A aplicação mostra uma execução pré-calculada, com uma vaga, rankings dos 2.483 ou dos 97, filtros, comparação das 18 configurações, matrizes, custos, proveniência e interpretabilidade dos cinco casos. O ranking abre na coleção completa, com total visível e contagem após filtros; os 97 permanecem como opção para avaliar qualidade. Não executa novas inferências nem cadastro de novas vagas.
+
+Os detalhes permitem ler o texto integral dos 2.483 currículos, carregado sob demanda. É possível abri-los pelo Ranking, Currículos, predições do Comparativo e pelos cinco casos da Interpretabilidade. O botão **Ver matriz** abre uma janela com a configuração selecionada, a matriz e as predições. As janelas possuem botões de fechar.
+
+Antes de `npm run dev` e `npm run build`, o script `scripts/publicar-textos.mjs` confere os hashes das fontes e gera os textos estáticos em `public/curriculos`. O build inclui esses arquivos em `dist/curriculos`. Os arquivos gerados ficam fora do Git, e o clone usado no build precisa conter `curriculos_processados/extracted_text_en` e os manifestos. [Atualização na VPS](aplicacao_mockup/PUBLICAR_VPS.md).
 
 A fonte ativa é `aplicacao_mockup/src/data/experimentoAtual.json`, exportada dos relatórios atuais com hashes conferidos. Páginas e JSONs do piloto anterior foram preservados, mas não são usados pelas rotas ativas. Não usar `metricasReais.json` para descrever a execução atual.
 
