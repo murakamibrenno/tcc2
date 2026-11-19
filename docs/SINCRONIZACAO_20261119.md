@@ -22,7 +22,7 @@ Os 2.483 textos integrais continuam disponíveis sob demanda. O botão Ver matri
 
 ## Word combinado e SBC incorporado
 
-O fundo azul repetido veio de uma forma de página no cabeçalho do arquivo recebido. Foi removida a forma e seu fallback, preservando o cabeçalho institucional. A capa usa fundo branco e texto legível; sua distribuição foi ajustada para caber em uma página. As linhas flutuantes que cruzavam os títulos preliminares foram retiradas.
+O fundo azul repetido veio de uma forma de página no cabeçalho do arquivo recebido. Foi removida a forma e seu fallback, preservando o cabeçalho institucional. Após correção solicitada pelo autor, a capa azul, o texto branco e os elementos do cabeçalho foram recuperados diretamente do DOCX de referência fornecido. O fundo azul fica no corpo da capa, sem repetição nas páginas internas. A distribuição da capa mantém cidade e ano na primeira página. As linhas que enquadram o título da capa e da folha de rosto foram restauradas. O texto atualizado, as tabelas e a paginação interna permanecem preservados.
 
 Foram mantidas a identificação do professor Vilson Francisco Maziero, a inclusão de Brenno Murakami na folha de aprovação e as 13 tabelas centralizadas. A descrição da aplicação agora corresponde aos textos integrais e ao P@5 complementar. Trabalho e SBC distinguem a referência original da revisão posterior; a análise dos acertos de Qwen foi corrigida para reconhecer a conferência de 43311839. As capturas de 10/11 continuam identificadas como registros daquela versão, sem apresentá-las como capturas da interface atualizada em 19/11.
 

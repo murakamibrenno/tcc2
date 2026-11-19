@@ -1,8 +1,8 @@
 {
   "data_local": "2026-11-19",
   "drive_word_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
-  "sha256_docx": "df963b94d83625a9a2c2e67dbef49123b18e23c0ccfb5b2d73082f30a2ee82cc",
-  "bytes_docx": 4772793,
+  "sha256_docx": "0632d3803471318c33aeec79dea68efddabb509ff4773b5239470ddb88c1d912",
+  "bytes_docx": 4773854,
   "paginas_fisicas_renderizadas": 93,
   "sbc_inicio_fisico": 83,
   "sbc_paginas": 11,
@@ -25,5 +25,13 @@
   },
   "pdf_drive_atualizado": false,
   "sbc_separado_drive_atualizado": false,
-  "limites": "Renderização local com LibreOffice autorizado pelo autor; testes em servidor e integridade não substituem cliques e conferência responsiva na VPS. Não há revisão humana independente dos 97."
+  "limites": "Renderização local com LibreOffice autorizado pelo autor; testes em servidor e integridade não substituem cliques e conferência responsiva na VPS. Não há revisão humana independente dos 97.",
+  "visual_restaurado": {
+    "referencia_sha256": "9a167a22e0f953f8205609a90d31edf729597a4971658fcbbf8a06ce66bac92c",
+    "capa": "azul, com texto branco e elementos gráficos da referência",
+    "cabecalho": "logotipo e linha colorida recuperados da referência",
+    "paginas_internas": "fundo branco",
+    "texto_e_tabelas_atuais_preservados": true,
+    "paginacao_interna_preservada": true
+  }
 }
