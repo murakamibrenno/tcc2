@@ -1,8 +1,8 @@
 {
   "data_local": "2026-11-19",
   "drive_word_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
-  "sha256_docx": "763487771b087eea689109b827cb6d0242016e98b3d1428b54e6be806dff4765",
-  "bytes_docx": 4778541,
+  "sha256_docx": "a202cdb102f6146d50894fe01a4997adbf4b466131d0255eb41ad1d52e1aa8b1",
+  "bytes_docx": 4778546,
   "paginas_fisicas_renderizadas": 95,
   "sbc_inicio_fisico": 84,
   "sbc_paginas": 12,
@@ -54,5 +54,16 @@
     "snapshot_aplicacao": "resultados primários preservados",
     "indices_atualizados": true,
     "sha256_entrada_drive": "cea62389aa54cf9720c3b2197e289d955ba8adae20849590d53bfd6815a65b8b"
+  },
+  "versao_entrega": {
+    "escopo": "avaliação exploratória realizada",
+    "revisao_humana_independente": "não realizada; trabalho futuro",
+    "recomendacao_antes_defesa_reclassificada": true,
+    "rotulos_e_metricas_alterados": false,
+    "pagina_fisica_alterada": 74,
+    "paginas_identicas_a_versao_anterior": 94,
+    "testes_interface_aprovados": 13,
+    "build_aprovado": true,
+    "sem_validacao_institucional_implicita": true
   }
 }
