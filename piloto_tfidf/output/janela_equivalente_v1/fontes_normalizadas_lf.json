@@ -1,0 +1,125 @@
+{
+  "nota": "Protocolo preserva hashes dos bytes da execução. Esta verificação adicional normaliza somente finais de linha para conferir checkouts Windows/Linux; não muda texto, fontes, vetores ou referências.",
+  "fontes": {
+    "piloto_tfidf/output/coorte97_v1/classificacao_coorte97.json": {
+      "sha256_bytes_na_execucao": "1043023c897cecc664c2fd5670c0fd206e55706d25ab52fc9ca6e4fed0141f0c",
+      "sha256_utf8_lf": "1043023c897cecc664c2fd5670c0fd206e55706d25ab52fc9ca6e4fed0141f0c"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_bge_lr.json": {
+      "sha256_bytes_na_execucao": "5299b8ac9511b6d7931e27766dc877fb646501333548e1143b1c32d2b989f337",
+      "sha256_utf8_lf": "5299b8ac9511b6d7931e27766dc877fb646501333548e1143b1c32d2b989f337"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_bge_svm.json": {
+      "sha256_bytes_na_execucao": "5d9242c529706d6e539edbadd9e08baae91b14b930a5ecc6a9ed30b3d403ea02",
+      "sha256_utf8_lf": "5d9242c529706d6e539edbadd9e08baae91b14b930a5ecc6a9ed30b3d403ea02"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_bge_xgb.json": {
+      "sha256_bytes_na_execucao": "0d1ae53a03fc0e56c17e6f3001ccea9eeb66c048dac908744e4a3560d82277eb",
+      "sha256_utf8_lf": "0d1ae53a03fc0e56c17e6f3001ccea9eeb66c048dac908744e4a3560d82277eb"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_qwen_lr.json": {
+      "sha256_bytes_na_execucao": "c1434cbbcf4b0aa8e50b26e8de4ae01655ee0a48c79a78afb015a1a318d8fc0c",
+      "sha256_utf8_lf": "c1434cbbcf4b0aa8e50b26e8de4ae01655ee0a48c79a78afb015a1a318d8fc0c"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_qwen_svm.json": {
+      "sha256_bytes_na_execucao": "8266e5f4c8acf5a07dfc739d88c3ee57a8c293e347f1812c27e6f521514b642e",
+      "sha256_utf8_lf": "8266e5f4c8acf5a07dfc739d88c3ee57a8c293e347f1812c27e6f521514b642e"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_qwen_xgb.json": {
+      "sha256_bytes_na_execucao": "abe167f04eb1a100cfd7b71f4fc8c25714324e7a959271f640db801dc88bce53",
+      "sha256_utf8_lf": "abe167f04eb1a100cfd7b71f4fc8c25714324e7a959271f640db801dc88bce53"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_tfidf_lr.json": {
+      "sha256_bytes_na_execucao": "c86ba2285f6d31574ebba495680faa688deb4e36fbe8de3977e3a0553a66699a",
+      "sha256_utf8_lf": "c86ba2285f6d31574ebba495680faa688deb4e36fbe8de3977e3a0553a66699a"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_tfidf_svm.json": {
+      "sha256_bytes_na_execucao": "4eda824359b9d01a8ba261291599689029410392039ea3f4d51d3b9f24eb880e",
+      "sha256_utf8_lf": "4eda824359b9d01a8ba261291599689029410392039ea3f4d51d3b9f24eb880e"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_original_tfidf_xgb.json": {
+      "sha256_bytes_na_execucao": "2335b64dc91e40706454dcb14e7303ce4cbd0637d93a8f2e81a3a162697ed8f6",
+      "sha256_utf8_lf": "2335b64dc91e40706454dcb14e7303ce4cbd0637d93a8f2e81a3a162697ed8f6"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_bge_lr.json": {
+      "sha256_bytes_na_execucao": "bddad252106ec51ad54d3e7ef9d73e55b129905a93e36e06086410574e1082c4",
+      "sha256_utf8_lf": "bddad252106ec51ad54d3e7ef9d73e55b129905a93e36e06086410574e1082c4"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_bge_svm.json": {
+      "sha256_bytes_na_execucao": "48bef8c6d89e8ec3aa1f82a1807f1b267e101df8a2e586a4b948593c18771548",
+      "sha256_utf8_lf": "48bef8c6d89e8ec3aa1f82a1807f1b267e101df8a2e586a4b948593c18771548"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_bge_xgb.json": {
+      "sha256_bytes_na_execucao": "b6b74bbd14c45cf6af5ab9c3f8842efde302376ffa47b1d34314ebd8d05c97db",
+      "sha256_utf8_lf": "b6b74bbd14c45cf6af5ab9c3f8842efde302376ffa47b1d34314ebd8d05c97db"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_qwen_lr.json": {
+      "sha256_bytes_na_execucao": "afad615e2aba60eef46fe48316313b9d183d0a52f87e713487428c13329c16c1",
+      "sha256_utf8_lf": "afad615e2aba60eef46fe48316313b9d183d0a52f87e713487428c13329c16c1"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_qwen_svm.json": {
+      "sha256_bytes_na_execucao": "15a2a62a78b70902730b607021aae0f3016ef6efc28b42f8c9c11f09cefac643",
+      "sha256_utf8_lf": "15a2a62a78b70902730b607021aae0f3016ef6efc28b42f8c9c11f09cefac643"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_qwen_xgb.json": {
+      "sha256_bytes_na_execucao": "c457cfb40868ad8e6fca774919c9d8650165ffb9a63704b1560526e5569542fe",
+      "sha256_utf8_lf": "c457cfb40868ad8e6fca774919c9d8650165ffb9a63704b1560526e5569542fe"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_tfidf_lr.json": {
+      "sha256_bytes_na_execucao": "2cec1112cf72047435924f314d1069e03dafcd16d35561debb13a9938109747e",
+      "sha256_utf8_lf": "2cec1112cf72047435924f314d1069e03dafcd16d35561debb13a9938109747e"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_tfidf_svm.json": {
+      "sha256_bytes_na_execucao": "e14fc8baa94c653b1cf06db7ea6553def26514c435692b8a4ff4d18bd791bd24",
+      "sha256_utf8_lf": "e14fc8baa94c653b1cf06db7ea6553def26514c435692b8a4ff4d18bd791bd24"
+    },
+    "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_tfidf_xgb.json": {
+      "sha256_bytes_na_execucao": "cfe43f66b4941f7a272dc81cb5faa92e9d7d22a3a1f750a053932dd89bca1ac0",
+      "sha256_utf8_lf": "cfe43f66b4941f7a272dc81cb5faa92e9d7d22a3a1f750a053932dd89bca1ac0"
+    },
+    "piloto_tfidf/output/coorte97_v1/protocolo_pre_execucao.json": {
+      "sha256_bytes_na_execucao": "2e09459c3ae631b5bbb50c4d7f40ce30a50641e9c0150beae397d2d1848aec54",
+      "sha256_utf8_lf": "2e09459c3ae631b5bbb50c4d7f40ce30a50641e9c0150beae397d2d1848aec54"
+    },
+    "piloto_tfidf/output/coorte97_v1/ranking_coorte97.json": {
+      "sha256_bytes_na_execucao": "34e8c47d6c096089f0dbc6fee717e6658fe51facc3f47b60744ad6a68233acf1",
+      "sha256_utf8_lf": "34e8c47d6c096089f0dbc6fee717e6658fe51facc3f47b60744ad6a68233acf1"
+    },
+    "piloto_tfidf/output/coorte97_v1/ranking_julgado97_bge.csv": {
+      "sha256_bytes_na_execucao": "59f3ff949745e0dfb069f02dab20a61c353ed78891a2689aae316ec0287ca143",
+      "sha256_utf8_lf": "fc85ea13fd020fa0295e7a67e904bc4daf8fe2c7130db0ac7d5b0e929892ca50"
+    },
+    "piloto_tfidf/output/coorte97_v1/ranking_julgado97_qwen.csv": {
+      "sha256_bytes_na_execucao": "e12c8478bb178728e349aa90e2217289009f2fbf3ff2696319583cca6b055aed",
+      "sha256_utf8_lf": "defea4245096a5398c346f24ce596d899af07bda2d5fdc29cc46fa148343fb8f"
+    },
+    "piloto_tfidf/output/coorte97_v1/ranking_julgado97_tfidf.csv": {
+      "sha256_bytes_na_execucao": "92e25e7d767285d1e47ba891f2ba1f592f873739862d4a23ec6a93538ccd96c9",
+      "sha256_utf8_lf": "74a6b6114b7b12df901c2f9b0b664b88ba9ae105519b1297d1ecd409c6a047c7"
+    },
+    "piloto_tfidf/output/coorte97_v1/README.md": {
+      "sha256_bytes_na_execucao": "8cd28212db214a563b11fc3272fe78f9dfcfcb556046678628730f0bf49b66b7",
+      "sha256_utf8_lf": "7c1fab34dd4e593ab32ecb7ad6e58227ee9ddd779fa71a750c215ffb715fcbf9"
+    },
+    "piloto_tfidf/data/desenvolvimento_revisado_v2/manifesto.json": {
+      "sha256_bytes_na_execucao": "b79fd6467dca254b6907d4d31a847061352fa7ac9f58802df326574f68b5d40c",
+      "sha256_utf8_lf": "b79fd6467dca254b6907d4d31a847061352fa7ac9f58802df326574f68b5d40c"
+    },
+    "piloto_tfidf/data/coorte_97_v1/manifesto.json": {
+      "sha256_bytes_na_execucao": "3fb60346f210afe082d798ff336fe40e18896b736b183d7b4a9ca0bc506df646",
+      "sha256_utf8_lf": "3fb60346f210afe082d798ff336fe40e18896b736b183d7b4a9ca0bc506df646"
+    },
+    "piloto_tfidf/data/validacao_ampliada_v1/manifesto.json": {
+      "sha256_bytes_na_execucao": "cd6a29e3939984011f2f4ffb586d995f68eff538032fe7ef79dc02231a1f5776",
+      "sha256_utf8_lf": "1764ec39f380248e2bfcdeff2c7a6306c4a3b419dcdee7aac7b960c9bdbab756"
+    },
+    "piloto_tfidf/data/vaga_referencia.txt": {
+      "sha256_bytes_na_execucao": "8830c89e201e8e267db10a99abf1fbbed94d82a1a5625cedf8a1c4507e8e56bb",
+      "sha256_utf8_lf": "d679220545dade1c1eca6e11d6f5ada930e2a82c2757db529813adcc7eda2217"
+    },
+    "aplicacao_mockup/src/data/experimentoAtual.json": {
+      "sha256_bytes_na_execucao": "b7befb4270ca766e40dca1ecc1e0d5e1da60cc6449c25c392c861fa3b1b5d700",
+      "sha256_utf8_lf": "10c6651b7b090443e33b69367c7b96d24e69ff7fc2167af0062e998a4e96b735"
+    }
+  }
+}

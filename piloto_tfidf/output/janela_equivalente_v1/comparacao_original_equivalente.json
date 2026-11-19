@@ -1,0 +1,377 @@
+{
+  "protocolo": {
+    "schema": 1,
+    "data": "2026-11-19",
+    "natureza": "Análise complementar exploratória pós-avaliação; os mesmos 97 já foram examinados, não é teste independente novo.",
+    "hipotese": "Investigar quanto o acesso desigual ao conteúdo acompanha as diferenças entre as três implementações.",
+    "regra_corte": "Primeiros até 8.000 caracteres; menor fim de offset entre duas tokenizações truncadas a 512; recuar por caracteres se a retokenização exceder 512; remover apenas espaços finais. Um único texto compartilhado pelos três métodos.",
+    "limite_tokens": 512,
+    "mesmos_ids": 2483,
+    "n_treino": 294,
+    "n_avaliacao": 97,
+    "modelos": {
+      "bge": {
+        "modelo": "BAAI/bge-large-en-v1.5",
+        "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09"
+      },
+      "qwen": {
+        "modelo": "Qwen/Qwen2.5-0.5B",
+        "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+      }
+    },
+    "consulta": "Mesmo texto de vaga. Prefixo de instrução BGE original preservado; a consulta inteira deve caber, sem truncamento.",
+    "parametros": "Mesmos 18 ajustes: LR max_iter=2000; SVC linear probability=True; XGB 50 árvores profundidade3 taxa0.1 n_jobs6; seed42; original e sample_weight n/(3*n_classe), somente treino. Sem busca de hiperparâmetros.",
+    "avaliacao": "F1 macro primário; precisão/recall por classe; matrizes e predições por ID. AP, NDCG, P@5 e P@10 restritos aos mesmos 97; empates por ID. Não transformar não julgados em negativos.",
+    "top5_completo": "Não transferir P@5 humano do ranking antigo para o novo. Só calcular se todos os cinco IDs estiverem entre os 12 julgados; caso contrário, informar cobertura e P@5 nulo.",
+    "custos": "TF-IDF mediana de 3 ajustes CPU; densos 1 passagem GPU após aquecimento; consulta+escores mediana de 10 após descartar primeira. Sem carga/download, ordenação ou exportação. Descrição local, não benchmark normalizado nem teste causal.",
+    "limites": "A referência assistida original, quatro Adequados, uma vaga e a ausência de referência humana independente permanecem. Conteúdo equivalente não iguala pré-treinamento, tokenizer, pooling ou dispositivo. A condição encurta o TF-IDF e pode encurtar também os densos; não é leitura integral nem demonstra causa isolada.",
+    "hashes_originais": {
+      "piloto_tfidf/output/coorte97_v1/classificacao_coorte97.json": "1043023c897cecc664c2fd5670c0fd206e55706d25ab52fc9ca6e4fed0141f0c",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_bge_lr.json": "5299b8ac9511b6d7931e27766dc877fb646501333548e1143b1c32d2b989f337",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_bge_svm.json": "5d9242c529706d6e539edbadd9e08baae91b14b930a5ecc6a9ed30b3d403ea02",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_bge_xgb.json": "0d1ae53a03fc0e56c17e6f3001ccea9eeb66c048dac908744e4a3560d82277eb",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_qwen_lr.json": "c1434cbbcf4b0aa8e50b26e8de4ae01655ee0a48c79a78afb015a1a318d8fc0c",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_qwen_svm.json": "8266e5f4c8acf5a07dfc739d88c3ee57a8c293e347f1812c27e6f521514b642e",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_qwen_xgb.json": "abe167f04eb1a100cfd7b71f4fc8c25714324e7a959271f640db801dc88bce53",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_tfidf_lr.json": "c86ba2285f6d31574ebba495680faa688deb4e36fbe8de3977e3a0553a66699a",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_tfidf_svm.json": "4eda824359b9d01a8ba261291599689029410392039ea3f4d51d3b9f24eb880e",
+      "piloto_tfidf/output/coorte97_v1/predicoes_original_tfidf_xgb.json": "2335b64dc91e40706454dcb14e7303ce4cbd0637d93a8f2e81a3a162697ed8f6",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_bge_lr.json": "bddad252106ec51ad54d3e7ef9d73e55b129905a93e36e06086410574e1082c4",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_bge_svm.json": "48bef8c6d89e8ec3aa1f82a1807f1b267e101df8a2e586a4b948593c18771548",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_bge_xgb.json": "b6b74bbd14c45cf6af5ab9c3f8842efde302376ffa47b1d34314ebd8d05c97db",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_qwen_lr.json": "afad615e2aba60eef46fe48316313b9d183d0a52f87e713487428c13329c16c1",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_qwen_svm.json": "15a2a62a78b70902730b607021aae0f3016ef6efc28b42f8c9c11f09cefac643",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_qwen_xgb.json": "c457cfb40868ad8e6fca774919c9d8650165ffb9a63704b1560526e5569542fe",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_tfidf_lr.json": "2cec1112cf72047435924f314d1069e03dafcd16d35561debb13a9938109747e",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_tfidf_svm.json": "e14fc8baa94c653b1cf06db7ea6553def26514c435692b8a4ff4d18bd791bd24",
+      "piloto_tfidf/output/coorte97_v1/predicoes_pesos_balanceados_tfidf_xgb.json": "cfe43f66b4941f7a272dc81cb5faa92e9d7d22a3a1f750a053932dd89bca1ac0",
+      "piloto_tfidf/output/coorte97_v1/protocolo_pre_execucao.json": "2e09459c3ae631b5bbb50c4d7f40ce30a50641e9c0150beae397d2d1848aec54",
+      "piloto_tfidf/output/coorte97_v1/ranking_coorte97.json": "34e8c47d6c096089f0dbc6fee717e6658fe51facc3f47b60744ad6a68233acf1",
+      "piloto_tfidf/output/coorte97_v1/ranking_julgado97_bge.csv": "59f3ff949745e0dfb069f02dab20a61c353ed78891a2689aae316ec0287ca143",
+      "piloto_tfidf/output/coorte97_v1/ranking_julgado97_qwen.csv": "e12c8478bb178728e349aa90e2217289009f2fbf3ff2696319583cca6b055aed",
+      "piloto_tfidf/output/coorte97_v1/ranking_julgado97_tfidf.csv": "92e25e7d767285d1e47ba891f2ba1f592f873739862d4a23ec6a93538ccd96c9",
+      "piloto_tfidf/output/coorte97_v1/README.md": "8cd28212db214a563b11fc3272fe78f9dfcfcb556046678628730f0bf49b66b7",
+      "piloto_tfidf/data/desenvolvimento_revisado_v2/manifesto.json": "b79fd6467dca254b6907d4d31a847061352fa7ac9f58802df326574f68b5d40c",
+      "piloto_tfidf/data/coorte_97_v1/manifesto.json": "3fb60346f210afe082d798ff336fe40e18896b736b183d7b4a9ca0bc506df646",
+      "piloto_tfidf/data/validacao_ampliada_v1/manifesto.json": "cd6a29e3939984011f2f4ffb586d995f68eff538032fe7ef79dc02231a1f5776",
+      "piloto_tfidf/data/vaga_referencia.txt": "8830c89e201e8e267db10a99abf1fbbed94d82a1a5625cedf8a1c4507e8e56bb",
+      "aplicacao_mockup/src/data/experimentoAtual.json": "b7befb4270ca766e40dca1ecc1e0d5e1da60cc6449c25c392c861fa3b1b5d700"
+    },
+    "sha256_script": "fd0b74e422a59d928ebbda4c4cac3656c673100f3a29922ffd3e967dcb98ea83",
+    "versoes": {
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "xgboost": "3.4.1",
+      "torch": "2.14.1+cu130",
+      "transformers": "5.22.2",
+      "sentence-transformers": "6.2.0"
+    },
+    "plataforma": "Windows-11-10.0.26200-SP0"
+  },
+  "prefixos": {
+    "caracteres_prefixo": {
+      "min": 707.0,
+      "mediana": 2589.0,
+      "max": 3125.0
+    },
+    "n_reduzidos": 2322
+  },
+  "classificacao_comparada": [
+    {
+      "condicao": "original",
+      "representacao": "tfidf",
+      "classificador": "lr",
+      "f1_original": 0.3657726692209451,
+      "f1_equivalente": 0.30735269145865174,
+      "delta_f1": -0.05841997776229335,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "original",
+      "representacao": "tfidf",
+      "classificador": "svm",
+      "f1_original": 0.48328804933799113,
+      "f1_equivalente": 0.4473493100944081,
+      "delta_f1": -0.03593873924358304,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "original",
+      "representacao": "tfidf",
+      "classificador": "xgb",
+      "f1_original": 0.5571428571428572,
+      "f1_equivalente": 0.542063492063492,
+      "delta_f1": -0.015079365079365137,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "tfidf",
+      "classificador": "lr",
+      "f1_original": 0.5504398942675662,
+      "f1_equivalente": 0.5136410256410257,
+      "delta_f1": -0.03679886862654058,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "tfidf",
+      "classificador": "svm",
+      "f1_original": 0.5437853107344632,
+      "f1_equivalente": 0.5249116039858567,
+      "delta_f1": -0.018873706748606556,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "tfidf",
+      "classificador": "xgb",
+      "f1_original": 0.7591371591371591,
+      "f1_equivalente": 0.6851396391219401,
+      "delta_f1": -0.07399752001521898,
+      "recall_A_original": 0.5,
+      "recall_A_equivalente": 0.5
+    },
+    {
+      "condicao": "original",
+      "representacao": "bge",
+      "classificador": "lr",
+      "f1_original": 0.41858329890281415,
+      "f1_equivalente": 0.4067261241174285,
+      "delta_f1": -0.011857174785385671,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "original",
+      "representacao": "bge",
+      "classificador": "svm",
+      "f1_original": 0.4522032693674485,
+      "f1_equivalente": 0.41858329890281415,
+      "delta_f1": -0.03361997046463433,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "original",
+      "representacao": "bge",
+      "classificador": "xgb",
+      "f1_original": 0.44009056078021597,
+      "f1_equivalente": 0.4690831556503198,
+      "delta_f1": 0.02899259487010386,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "bge",
+      "classificador": "lr",
+      "f1_original": 0.7426066724832773,
+      "f1_equivalente": 0.7341687552213868,
+      "delta_f1": -0.00843791726189047,
+      "recall_A_original": 0.75,
+      "recall_A_equivalente": 0.75
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "bge",
+      "classificador": "svm",
+      "f1_original": 0.7132003798670464,
+      "f1_equivalente": 0.638526108990244,
+      "delta_f1": -0.07467427087680245,
+      "recall_A_original": 0.5,
+      "recall_A_equivalente": 0.25
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "bge",
+      "classificador": "xgb",
+      "f1_original": 0.44973544973544977,
+      "f1_equivalente": 0.47524999999999995,
+      "delta_f1": 0.025514550264550184,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "original",
+      "representacao": "qwen",
+      "classificador": "lr",
+      "f1_original": 0.2719298245614035,
+      "f1_equivalente": 0.2719298245614035,
+      "delta_f1": 0.0,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "original",
+      "representacao": "qwen",
+      "classificador": "svm",
+      "f1_original": 0.24946236559139787,
+      "f1_equivalente": 0.24946236559139787,
+      "delta_f1": 0.0,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "original",
+      "representacao": "qwen",
+      "classificador": "xgb",
+      "f1_original": 0.5136410256410257,
+      "f1_equivalente": 0.5044642857142857,
+      "delta_f1": -0.009176739926739952,
+      "recall_A_original": 0.0,
+      "recall_A_equivalente": 0.0
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "qwen",
+      "classificador": "lr",
+      "f1_original": 0.7041623667010665,
+      "f1_equivalente": 0.7041623667010665,
+      "delta_f1": 0.0,
+      "recall_A_original": 0.75,
+      "recall_A_equivalente": 0.75
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "qwen",
+      "classificador": "svm",
+      "f1_original": 0.7849147849147848,
+      "f1_equivalente": 0.7849147849147848,
+      "delta_f1": 0.0,
+      "recall_A_original": 0.5,
+      "recall_A_equivalente": 0.5
+    },
+    {
+      "condicao": "pesos_balanceados",
+      "representacao": "qwen",
+      "classificador": "xgb",
+      "f1_original": 0.682144544166273,
+      "f1_equivalente": 0.5437853107344632,
+      "delta_f1": -0.13835923343180978,
+      "recall_A_original": 0.25,
+      "recall_A_equivalente": 0.0
+    }
+  ],
+  "ranking_comparado": [
+    {
+      "representacao": "tfidf",
+      "original": {
+        "AP_adequado": 0.6348484848484848,
+        "NDCG_graduado": 0.9337554522584183,
+        "P@5": 0.4,
+        "P@10": 0.2
+      },
+      "equivalente": {
+        "AP_adequado": 0.740909090909091,
+        "NDCG_graduado": 0.9441935552347227,
+        "P@5": 0.6,
+        "P@10": 0.3
+      },
+      "top5_completo": {
+        "ids": [
+          "83816738",
+          "43311839",
+          "12415691",
+          "22351830",
+          "16186411"
+        ],
+        "n_com_revisao_posterior_disponivel": 5,
+        "P@5": 0.8,
+        "nota": "P@5 nulo quando falta julgamento de algum documento; não julgados não são negativos. Referências dos 12 incluem revisão do autor e adjudicação assistida."
+      }
+    },
+    {
+      "representacao": "bge",
+      "original": {
+        "AP_adequado": 0.47870370370370374,
+        "NDCG_graduado": 0.864922732378267,
+        "P@5": 0.6,
+        "P@10": 0.3
+      },
+      "equivalente": {
+        "AP_adequado": 0.4816666666666667,
+        "NDCG_graduado": 0.8643324107323596,
+        "P@5": 0.6,
+        "P@10": 0.3
+      },
+      "top5_completo": {
+        "ids": [
+          "16186411",
+          "26746496",
+          "62994611",
+          "12144825",
+          "83816738"
+        ],
+        "n_com_revisao_posterior_disponivel": 5,
+        "P@5": 0.8,
+        "nota": "P@5 nulo quando falta julgamento de algum documento; não julgados não são negativos. Referências dos 12 incluem revisão do autor e adjudicação assistida."
+      }
+    },
+    {
+      "representacao": "qwen",
+      "original": {
+        "AP_adequado": 0.2541467304625199,
+        "NDCG_graduado": 0.7755172604305138,
+        "P@5": 0.2,
+        "P@10": 0.2
+      },
+      "equivalente": {
+        "AP_adequado": 0.25151515151515147,
+        "NDCG_graduado": 0.7750266638998767,
+        "P@5": 0.2,
+        "P@10": 0.2
+      },
+      "top5_completo": {
+        "ids": [
+          "12144825",
+          "20674668",
+          "83816738",
+          "41152404",
+          "98300955"
+        ],
+        "n_com_revisao_posterior_disponivel": 5,
+        "P@5": 0.6,
+        "nota": "P@5 nulo quando falta julgamento de algum documento; não julgados não são negativos. Referências dos 12 incluem revisão do autor e adjudicação assistida."
+      }
+    }
+  ],
+  "custos": [
+    {
+      "metodo": "tfidf",
+      "device": "cpu",
+      "dimensoes": [
+        2483,
+        351304
+      ],
+      "vetorizacao_segundos": 2.352813999983482,
+      "consulta_escores_mediana_s": 0.007329799991566688
+    },
+    {
+      "metodo": "bge",
+      "device": "cuda",
+      "dimensoes": [
+        2483,
+        1024
+      ],
+      "vetorizacao_segundos": 333.5247754000593,
+      "consulta_escores_mediana_s": 0.06676794996019453
+    },
+    {
+      "metodo": "qwen",
+      "device": "cuda",
+      "dimensoes": [
+        2483,
+        896
+      ],
+      "vetorizacao_segundos": 404.1492130000843,
+      "consulta_escores_mediana_s": 0.1327016000286676
+    }
+  ],
+  "fontes_originais_preservadas": true
+}

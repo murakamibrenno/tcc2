@@ -37,3 +37,7 @@ Os 13 testes da interface passaram, incluindo hashes dos 2.483 textos, integrida
 A inspeção do documento verifica o fundo branco, a identificação do orientador, as tabelas, os índices e a extensão do SBC. O manifesto `sincronizacao_documental_20261119.json` registra o hash do Word e a paginação verificada.
 
 Permanecem para uma etapa posterior a revisão humana independente dos 97 e os experimentos complementares sobre janelas de leitura, regras e agrupamento de versões semelhantes. Não foram apresentados como concluídos nesta atualização.
+
+## Retificação das linhas do título
+
+As quatro linhas em volta dos títulos da capa e da folha de rosto foram tornadas horizontais a pedido do autor. A correção partiu da versão mais recente do Word do Drive e preservou seus textos, imagens, cores, cabeçalho e as demais partes do arquivo. A conferência manteve 93 páginas físicas e 11 páginas no SBC incorporado.

@@ -19,3 +19,6 @@ piloto_tfidf/validation/base_completa/
 
 # Textos verificados e gerados durante dev/build
 aplicacao_mockup/public/curriculos/
+
+# Caches regeneráveis da análise complementar; protocolos e relatórios são versionados.
+piloto_tfidf/output/janela_equivalente_v1/cache/

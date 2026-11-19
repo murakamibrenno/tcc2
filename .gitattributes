@@ -2,3 +2,6 @@
 piloto_tfidf/validation/top5_formulario_devolvido_v1.json -text
 piloto_tfidf/validation/top5_mapa_formulario_v1.json -text
 piloto_tfidf/validation/top5_adjudicacao_assistida_v1.json -text
+# The experiment protocol records this script's exact byte hash.
+piloto_tfidf/experimento_janela_equivalente.py -text
+piloto_tfidf/output/janela_equivalente_v1/*.json text eol=lf
