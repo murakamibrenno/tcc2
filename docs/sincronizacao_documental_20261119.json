@@ -1,12 +1,12 @@
 {
   "data_local": "2026-11-19",
   "drive_word_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
-  "sha256_docx": "cea62389aa54cf9720c3b2197e289d955ba8adae20849590d53bfd6815a65b8b",
-  "bytes_docx": 4773682,
-  "paginas_fisicas_renderizadas": 93,
-  "sbc_inicio_fisico": 83,
-  "sbc_paginas": 11,
-  "tabelas_centralizadas": 13,
+  "sha256_docx": "763487771b087eea689109b827cb6d0242016e98b3d1428b54e6be806dff4765",
+  "bytes_docx": 4778541,
+  "paginas_fisicas_renderizadas": 95,
+  "sbc_inicio_fisico": 84,
+  "sbc_paginas": 12,
+  "tabelas_centralizadas": 16,
   "numeros_tabelas_preservados": true,
   "identificacao_orientador_preservada": true,
   "imagens_e_estilos_preservados": true,
@@ -35,5 +35,24 @@
     "paginacao_interna_preservada": true
   },
   "linhas_titulo_horizontais": 4,
-  "alteracao_visual_atual": "Quatro linhas ao redor dos títulos foram endireitadas, preservando o conteúdo, cores, cabeçalho e demais partes da versão mais recente do Drive."
+  "alteracao_visual_atual": "Quatro linhas ao redor dos títulos foram endireitadas, preservando o conteúdo, cores, cabeçalho e demais partes da versão mais recente do Drive.",
+  "integracao_janela_equivalente": {
+    "preserva_resultados_primarios": true,
+    "secao_metodo_trabalho": "3.4.4",
+    "secao_resultados_trabalho": "5.6.1",
+    "tabelas_trabalho": [
+      9,
+      10
+    ],
+    "secao_metodo_sbc": "3.3",
+    "secao_resultados_sbc": "4.5",
+    "tabela_sbc": 6,
+    "commit_experimento": "141be46b558bb65e8ad6af24f23a30b165e6ec5a",
+    "mesmos_97_pos_avaliacao": true,
+    "referencia_humana_independente": false,
+    "testes_python_aprovados": 63,
+    "snapshot_aplicacao": "resultados primários preservados",
+    "indices_atualizados": true,
+    "sha256_entrada_drive": "cea62389aa54cf9720c3b2197e289d955ba8adae20849590d53bfd6815a65b8b"
+  }
 }

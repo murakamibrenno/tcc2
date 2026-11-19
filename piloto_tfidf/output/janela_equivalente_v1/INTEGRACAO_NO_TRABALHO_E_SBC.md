@@ -1,3 +1,5 @@
+Estado em 19/11/2026: integração concluída no Word combinado do Drive (mesmo ID). Método 3.4.4, resultados 5.6.1 e Tabelas 9/10 no trabalho; método 3.3 e resultados 4.5/Tabela 6 no SBC, com 12 páginas. As conclusões e limitações foram atualizadas. O roteiro abaixo registra o planejamento anterior; a seção SBC 4.5 foi usada para preservar a numeração das tabelas originais.
+
 # Integração proposta da análise de janela equivalente
 
 Os resultados originais permanecem a avaliação principal. A análise adicional deve ser identificada como complementar, planejada após os resultados iniciais e feita nos mesmos 97 documentos, sem alegar novo teste independente. Nesta rodada, o Word recebeu somente a correção visual das quatro linhas do título; os novos resultados estão documentados separadamente para integração coerente.

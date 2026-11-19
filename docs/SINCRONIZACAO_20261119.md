@@ -36,8 +36,14 @@ Os 13 testes da interface passaram, incluindo hashes dos 2.483 textos, integrida
 
 A inspeção do documento verifica o fundo branco, a identificação do orientador, as tabelas, os índices e a extensão do SBC. O manifesto `sincronizacao_documental_20261119.json` registra o hash do Word e a paginação verificada.
 
-Permanecem para uma etapa posterior a revisão humana independente dos 97 e os experimentos complementares sobre janelas de leitura, regras e agrupamento de versões semelhantes. Não foram apresentados como concluídos nesta atualização.
+Na sincronização inicial, permaneciam para etapa posterior a revisão humana independente dos 97 e os experimentos sobre janelas de leitura, regras e agrupamento de versões semelhantes. O controle de janela equivalente foi executado e integrado posteriormente, conforme o registro abaixo; as demais pendências não foram apresentadas como concluídas.
 
 ## Retificação das linhas do título
 
 As quatro linhas em volta dos títulos da capa e da folha de rosto foram tornadas horizontais a pedido do autor. A correção partiu da versão mais recente do Word do Drive e preservou seus textos, imagens, cores, cabeçalho e as demais partes do arquivo. A conferência manteve 93 páginas físicas e 11 páginas no SBC incorporado.
+
+## Integração da análise complementar de janela equivalente
+
+A versão vigente incorpora o controle de conteúdo comum no método (3.4.4), nos resultados (5.6.1, Tabelas 9 e 10), nas limitações e na conclusão. O SBC incorporado apresenta o método em 3.3 e a comparação em 4.5 (Tabela 6), com síntese na conclusão. As métricas e tabelas primárias permanecem preservadas. O controle reutiliza os mesmos 97 casos já examinados, sem nova referência humana independente. O P@5 completo usa os julgamentos anteriores disponíveis, sem confundir os cinco primeiros da coleção com os cinco primeiros entre os 97. A aplicação continua mostrando o snapshot primário.
+
+O Word possui 95 páginas físicas; o SBC ocupa 12, começando na página física 84. Os índices e a lista de tabelas foram atualizados. As 13 tabelas anteriores foram mantidas integralmente e três novas tabelas foram acrescentadas, todas centralizadas. Capa, cabeçalhos, cores, estilos, imagens e demais partes externas ao corpo são idênticos à versão de entrada do Drive. O experimento complementar tem 63 testes Python aprovados; não houve nova alteração de código da aplicação nesta integração documental.

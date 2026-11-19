@@ -1,4 +1,4 @@
-Fonte textual sincronizada com o Word combinado em 19/11/2026. Tabelas em linhas separadas por ponto e vírgula; a formatação final permanece no Word do Drive.
+Fonte textual sincronizada com o Word combinado em 19/11/2026, após integração da janela equivalente. Tabelas em linhas separadas por ponto e vírgula; a formatação final permanece no Word do Drive.
 
 Avaliação Comparativa de Representações Textuais Aplicadas à Triagem Automática de Currículos: TF-IDF, Sentence-Transformers e Embeddings de LLMs
 
@@ -73,6 +73,8 @@ Na recuperação, TfidfVectorizer foi ajustado nos 2.483 textos sem rótulos e g
 BGE utilizou BAAI/bge-large-en-v1.5 na revisão d4aa6901d3a41ba39fb536a557fa166f842b0e09, com pooling CLS, vetores normalizados de 1.024 dimensões e lotes de quatro. A consulta recebeu o prefixo “Represent this job posting for retrieval: ”. Qwen utilizou Qwen/Qwen2.5-0.5B na revisão 060db6499f32faf8b98477b0a26969ef7d8b9987, com média do último estado oculto ponderada pela máscara de atenção, seguida de normalização L2 e vetores de 896 dimensões. Ambos permaneceram congelados, com vetores float32.
 
 O ranking usa cosseno entre cada currículo e a vaga. Os classificadores recebem os vetores dos documentos anotados para essa única vaga e produzem decisões categóricas; não são um modelo geral de correspondência entre múltiplas vagas e candidatos. As probabilidades desses classificadores não foram utilizadas para gerar ou recalibrar os rankings completos.
+
+Após a avaliação primária, executou-se um controle exploratório de conteúdo: cada currículo recebeu um prefixo que coubesse em até 512 tokens nos dois encoders, incluindo tokens especiais, e o mesmo trecho foi fornecido ao TF-IDF. A retokenização foi conferida; a mediana foi de 2.589 caracteres e 2.322 entradas foram encurtadas. Mantiveram-se vaga, modelos, pooling, casos, rótulos e parâmetros. O protocolo antecedeu a nova execução, mas sucedeu a análise primária; os mesmos 97 foram reutilizados, sem novo teste independente.
 
 3.4. Classificadores e protocolo de avaliação
 
@@ -186,6 +188,22 @@ A interpretação lexical examinou LR e XGB com TF-IDF e pesos. Na LR, o produto
 
 Nos densos, BGE com LR e Qwen com SVM, ambos com pesos, foram inspecionados por oclusão. Oito blocos contíguos de tokens foram mascarados separadamente por caso, totalizando oitenta intervenções nos cinco documentos auditados. Preservaram-se IDs, posições, primeiro token e a janela original, sem revelar trechos posteriores; a média Qwen utilizou a máscara modificada. Houve mudança de classe em uma intervenção BGE e em três Qwen, envolvendo um e dois casos, respectivamente. Essas observações medem sensibilidade local a máscaras artificiais, não causalidade profissional ou robustez geral.
 
+4.5. Análise complementar de conteúdo equivalente
+
+A Tabela 6 compara a recuperação sob conteúdo comum, mantendo as métricas primárias das Tabelas 2 a 5. A vantagem lexical persistiu: o acesso a mais texto não é explicação suficiente para o padrão observado nesta consulta. O corte altera também vocabulário, IDF e normalização, sem isolar uma causa da variação.
+
+Tabela 6. Recuperação nos 97: janela original e equivalente
+
+Método; AP orig.; AP equiv.; NDCG orig.; NDCG equiv.
+
+TF-IDF; 0,635; 0,741; 0,934; 0,944
+
+BGE; 0,479; 0,482; 0,865; 0,864
+
+Qwen; 0,254; 0,252; 0,776; 0,775
+
+Na classificação, TF-IDF com XGB e pesos caiu de F1 macro 0,759 para 0,685; Qwen com SVM e pesos manteve 0,785. As nove condições sem pesos continuaram sem recuperar Adequados. Nos novos top 5 completos, todos cobertos pelos julgamentos anteriores do autor, P@5 foi 0,80 em TF-IDF, 0,80 em BGE e 0,60 em Qwen. Esses valores são por documento na coleção e não correspondem ao P@5 entre os 97. A melhora do ranking não implicou melhora geral da classificação. Fonte: relatórios complementares janela_equivalente_v1, com as dezoito configurações preservadas.
+
 5. Análise de erros e ameaças à validade
 
 O caso 23464505, JAVA INTERN, possui referência Adequado com evidências de SQL, serviços SOAP/REST, Git e desenvolvimento de aplicações. Qwen com SVM e pesos produziu Parcialmente Adequado; BGE com LR e pesos produziu Adequado. Dos 3.187 caracteres integrais, os limites visíveis foram 2.155 e 2.240. A divergência entre modelos mostra que a resposta depende da configuração, sem isolar um mecanismo de compreensão semântica.
@@ -196,7 +214,7 @@ A ameaça principal é a construção da referência pela mesma IA no desenvolvi
 
 A seleção enriquecida não estima prevalência na coleção; a vaga única restringe validade externa. O agrupamento e as exclusões reduzem versões relacionadas conhecidas, mas a revisão contextual identificou relações que a etapa lexical inicial não havia capturado. Não se assegura ausência absoluta de outras relações. Também não houve avaliação de equidade demográfica, verificação externa das experiências declaradas ou mensuração de decisões reais de contratação.
 
-As janelas de leitura, os objetivos de pré-treinamento e o pooling diferem entre representações. Sem ablações sistemáticas, esses fatores não podem ser isolados como causas do desempenho. Custos usam hardware misto e repetições distintas; explicações cobrem cinco exemplos e modelos escolhidos após a avaliação. Novas configurações exigem outra separação de avaliação, sem otimizar repetidamente os mesmos 97 casos e reapresentá-los como teste inédito.
+O controle complementar igualou o conteúdo inicial, mas reutilizou os 97 casos já examinados e a referência assistida. Não avaliou leitura integral, outras janelas, objetivos de pré-treinamento ou pooling como causas isoladas. Custos usam hardware e repetições distintos; os tempos da nova rodada não estimam ganhos causais de eficiência. Explicações cobrem cinco casos e modelos selecionados após a avaliação. Novas otimizações exigem outra avaliação reservada.
 
 6. Integração e reprodução no CurrículoRank
 
@@ -206,11 +224,15 @@ Figura 1. Ranking da coleção utilizável no CurrículoRank. Fonte: aplicação
 
 Os scripts, os protocolos e os relatórios estão em https://github.com/murakamibrenno/tcc2. A referência da execução é o commit 3b3c41f4fa8bc3152e07f89b38f6ea1e42633058. Os manifestos identificam a seleção, as exclusões, a ordem dos vetores e os hashes; as previsões por ID permitem recalcular as métricas. Os textos processados estão disponíveis no repositório. A reprodução completa dos encoders requer o cache vetorial ou sua regeneração com as revisões de modelo fixadas.
 
-Foram registrados NumPy 2.5.4, scikit-learn 1.9.1, XGBoost 3.4.1, Sentence-Transformers 6.2.0, Transformers 5.22.2 e PyTorch 2.14.1+cu130. Os comandos dos scripts e os requisitos estão preservados junto do código. A verificação experimental registrou 55 testes Python; na atualização de 19/11/2026, os 13 testes da interface e o build passaram. As capturas fornecidas pelo autor permitiram inspeção estática desktop; testes interativos completos e a conferência em telas menores permanecem pendentes e não são substituídos por essas verificações.
+Foram registrados NumPy 2.5.4, scikit-learn 1.9.1, XGBoost 3.4.1, Sentence-Transformers 6.2.0, Transformers 5.22.2 e PyTorch 2.14.1+cu130. Os comandos dos scripts e os requisitos estão preservados junto do código. A verificação experimental registrou 63 testes Python após a análise complementar; na atualização de 19/11/2026, os 13 testes da interface e o build passaram. As capturas fornecidas pelo autor permitiram inspeção estática desktop; testes interativos completos e a conferência em telas menores permanecem pendentes e não são substituídos por essas verificações.
+
+A análise de janela equivalente está registrada no commit 141be46b558bb65e8ad6af24f23a30b165e6ec5a, em piloto_tfidf/output/janela_equivalente_v1, com protocolo, hashes dos prefixos, rankings completos e predições por ID. O snapshot exibido na aplicação permanece o da avaliação primária.
 
 7. Conclusão
 
 Na avaliação exploratória dos 97 casos, TF-IDF obteve a maior AP (0,635) e Qwen com SVM e pesos obteve o maior F1 macro (0,785). A conferência de todos os 12 documentos que ocuparam as primeiras cinco posições dos três rankings completos indicou P@5 de 0,80 para BGE e 0,60 para TF-IDF e Qwen. Esses resultados descrevem uma vaga e distinguem a ordenação de currículos da classificação em níveis de aderência.
+
+Com conteúdo equivalente, TF-IDF manteve a vantagem de recuperação, com AP 0,741, mas seu F1 com XGB e pesos caiu para 0,685; Qwen com SVM e pesos manteve 0,785. Esse controle complementa os resultados originais, sem demonstrar superioridade geral ou resolver as limitações da referência.
 
 Na prática empresarial, a escolha depende da prioridade entre custo de processamento e qualidade nas primeiras posições. TF-IDF oferece um ponto de partida de baixo custo para priorizar leitura humana. Em alto volume, custos adicionais por currículo se acumulam. Uma avaliação em produção deve medir o custo total e o tempo de revisão, considerando lotes, hardware e a perda de perfis aderentes nos cortes.
 

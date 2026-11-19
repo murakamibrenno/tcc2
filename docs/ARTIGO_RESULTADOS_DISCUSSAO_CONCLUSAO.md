@@ -1,4 +1,4 @@
-Fonte textual sincronizada com o Word combinado em 19/11/2026. Tabelas em linhas separadas por ponto e vírgula; a formatação final permanece no Word do Drive.
+Fonte textual sincronizada com o Word combinado em 19/11/2026, após integração da janela equivalente. Tabelas em linhas separadas por ponto e vírgula; a formatação final permanece no Word do Drive.
 
 RESULTADOS E DISCUSSÃO
 
@@ -196,6 +196,54 @@ Nas oitenta intervenções por máscara, uma oclusão alterou a classe de um cas
 
 As variações de margem e de cosseno registram sensibilidade local a uma intervenção artificial. No SVM, o valor OvR agregado não é probabilidade e pode responder às comparações entre classes. Ausência de mudança categórica não comprova robustez geral; presença de mudança também não demonstra causalidade ou competência profissional. As explicações não corrigem a falta de referência humana independente.
 
+5.6.1 Análise complementar da janela de leitura equivalente
+
+A análise complementar verifica se o padrão observado persiste quando as representações recebem o mesmo conteúdo inicial de cada currículo. As Tabelas 9 e 10 comparam as duas janelas, mantendo os casos e as configurações. As tabelas e previsões da avaliação primária foram preservadas; os novos relatórios foram armazenados separadamente em janela_equivalente_v1.
+
+Tabela 9 – Recuperação nos mesmos 97 julgados com janela original e equivalente
+
+Método; AP orig.; AP equiv.; NDCG orig.; NDCG equiv.; P@5 orig.; P@5 equiv.
+
+TF-IDF; 0,635; 0,741; 0,934; 0,944; 0,400; 0,600
+
+BGE; 0,479; 0,482; 0,865; 0,864; 0,600; 0,600
+
+Qwen; 0,254; 0,252; 0,776; 0,775; 0,200; 0,200
+
+Fonte: análise complementar do autor (2026). Orig. = janela primária; equiv. = conteúdo textual comum. AP e P@5 consideram somente Adequado como relevante; NDCG mantém graus 2/1/0. As métricas desta tabela se restringem aos 97 documentos.
+
+TF-IDF passou de AP 0,635 para 0,741 e de NDCG 0,934 para 0,944, enquanto BGE e Qwen apresentaram pequenas variações. A vantagem lexical na recuperação dessa consulta persistiu sob conteúdo comum. Assim, o acesso a mais texto não é explicação suficiente para o padrão primário observado. O corte também altera vocabulário, frequências, IDF e normalização: os atributos de recuperação TF-IDF passaram de 652.064 para 351.304. Não se atribui a melhora exclusivamente à remoção de ruído nem se demonstra superioridade geral de uma representação.
+
+Tabela 10 – F1 macro das dezoito configurações nas duas janelas
+
+Método; Modelo; Sem pesos orig.; Sem pesos equiv.; Com pesos orig.; Com pesos equiv.
+
+TF-IDF; LR; 0,366; 0,307; 0,550; 0,514
+
+TF-IDF; SVM; 0,483; 0,447; 0,544; 0,525
+
+TF-IDF; XGB; 0,557; 0,542; 0,759; 0,685
+
+BGE; LR; 0,419; 0,407; 0,743; 0,734
+
+BGE; SVM; 0,452; 0,419; 0,713; 0,639
+
+BGE; XGB; 0,440; 0,469; 0,450; 0,475
+
+Qwen; LR; 0,272; 0,272; 0,704; 0,704
+
+Qwen; SVM; 0,249; 0,249; 0,785; 0,785
+
+Qwen; XGB; 0,514; 0,504; 0,682; 0,544
+
+Fonte: análise complementar do autor (2026). Cada linha reúne duas condições de ponderação; as nove linhas abrangem dezoito configurações em cada janela. LR = Regressão Logística; XGB = XGBoost.
+
+A melhora na recuperação não se repetiu uniformemente na classificação. Todas as seis configurações TF-IDF tiveram redução de F1 macro; com XGB e pesos, o valor passou de 0,759 para 0,685, mantendo recall de Adequado em 0,50. Qwen com SVM e pesos manteve o maior F1 observado, 0,785, também com recall 0,50. BGE com LR e pesos passou de 0,743 para 0,734, mantendo recall 0,75. Qwen com XGB e pesos caiu de 0,682 para 0,544 e deixou de recuperar Adequados. Nas nove condições sem pesos, o recall dessa classe continuou zero. O conteúdo disponível afeta de forma distinta a ordenação direta e a fronteira supervisionada.
+
+Separadamente, os top 5 dos novos rankings completos estavam integralmente cobertos pelos 12 documentos da conferência anterior do autor. Reutilizados esses julgamentos, sem inferir novos rótulos, o P@5 da coleção passou de 0,60 para 0,80 em TF-IDF e permaneceu 0,80 em BGE e 0,60 em Qwen. Esses valores se referem às cinco primeiras posições de cada ranking dos 2.483 documentos e não ao P@5 dos 97 da Tabela 9. Permanecem o julgamento pelo autor, a adjudicação assistida e a presença de versões semelhantes no top 5 BGE, sem agrupamento por candidato.
+
+A janela equivalente reduz uma diferença de conteúdo entre as implementações, mas reutiliza os mesmos 97 casos já examinados, com somente quatro Adequados e a mesma referência assistida. Não houve teste de significância ou nova avaliação independente. Os tempos desta rodada foram preservados para auditoria, sem estimar ganho causal de eficiência diante de condições de execução distintas. A análise complementa a avaliação original e não substitui a revisão humana independente.
+
 Limitações e ameaças à validade
 
 Na referência original dos 97 casos, somente cinco tiveram ratificação humana assistida, com sugestões da IA visíveis; 92 ficaram sem conferência humana. A mesma IA participou dos rótulos de desenvolvimento e avaliação. Os indicadores medem concordância com essa referência, cuja correção não foi estabelecida de modo independente. A conferência posterior do top 5 completo incluiu 43311839 (TOP-06), antes não conferido, e 62994611 (TOP-07), já ratificado. Os rótulos coincidiram com a referência original; as métricas dos 97 foram preservadas. Essa revisão do autor não constitui avaliação humana independente nem valida os demais 91 casos sem conferência.
@@ -206,7 +254,7 @@ Apenas quatro Adequados compõem a avaliação. Além da variação de 25 pontos
 
 A revisão de documentos semelhantes e as exclusões reduziram sobreposição conhecida entre partições. Contudo, o agrupamento lexical inicial não identificou todas as versões contextualmente semelhantes; a correção manual do histórico relacionado mostrou essa limitação. Não se afirma ausência absoluta de relações documentais remanescentes. Os registros permitem revisar a decisão em uma nova versão do experimento.
 
-O truncamento de 8.000 caracteres e de 512 tokens nos densos pode excluir evidências relevantes. Os encoders foram congelados, e a representação Qwen usa pooling médio de um modelo generativo. Sem ablação sistemática de janelas, pooling e modelos, essas escolhas não podem ser isoladas como causas do resultado. Novas configurações não devem ser otimizadas repetidamente nos mesmos 97 casos como se constituíssem teste inédito.
+O truncamento de 8.000 caracteres e de 512 tokens nos densos pode excluir evidências relevantes. O controle complementar de conteúdo comum reduziu essa diferença de acesso, mas não avaliou leitura integral, outras janelas, objetivos de pré-treinamento ou estratégias de pooling. Reutilizou os mesmos 97 casos após a análise primária, sem resolver a dependência da referência assistida. Novas configurações não devem ser otimizadas repetidamente nesses casos como se constituíssem teste inédito.
 
 Os custos refletem hardware misto e repetições distintas; a análise de interpretabilidade cobre cinco exemplos e modelos selecionados após a avaliação. Não houve teste de significância ou validação de calibração. Capturas atuais permitiram inspecionar a apresentação estática do protótipo em desktop; testes interativos completos e a conferência em telas menores permanecem pendentes. Essas restrições delimitam o alcance da demonstração e não devem ser ocultadas pela apresentação gráfica.
 
@@ -221,6 +269,8 @@ O trabalho comparou TF-IDF, BGE e embeddings extraídos de Qwen na triagem de cu
 A implementação concretizou a comparação proposta com representações rastreáveis, três classificadores e duas condições de ponderação. A referência ampliada foi construída com assistência de IA e ratificação parcial do autor, em lugar de anotação integralmente manual. Essa alteração operacional limita a validação e foi explicitada, mantendo a pergunta comparativa e a identificação dos rótulos não conferidos.
 
 Na avaliação exploratória dos 97 casos, TF-IDF obteve a maior AP (0,635) e o maior NDCG (0,934), enquanto Qwen com SVM e pesos obteve o maior F1 macro (0,785), recuperando dois dos quatro Adequados da referência. Na conferência humana complementar das primeiras posições do ranking completo, BGE obteve P@5 de 0,80 e TF-IDF e Qwen obtiveram 0,60. As duas avaliações mostram aspectos distintos da recuperação e da classificação para uma única vaga.
+
+Na análise complementar de conteúdo equivalente, TF-IDF manteve a maior AP entre os 97, passando a 0,741, e alcançou P@5 de 0,80 no novo top 5 completo com julgamentos anteriores. Em contrapartida, seu F1 com XGB e pesos caiu para 0,685, enquanto Qwen com SVM e pesos manteve 0,785. O controle fortalece a interpretação de que a vantagem lexical observada na recuperação não depende apenas do acesso a mais texto, sem estabelecer um vencedor universal ou substituir a referência humana independente.
 
 Não foi estabelecido um vencedor universal. O compromisso entre omissões e falsos positivos depende do contexto de uso, e a pequena quantidade de Adequados e a referência assistida impedem tratar a comparação como recomendação validada de contratação. Os custos também descrevem uma execução local, com dispositivos e repetições distintos, enquanto as explicações registram comportamento do modelo, sem comprovar competência profissional.
 
