@@ -1,0 +1,90 @@
+{
+  "batch": "top5-bb5bfc8c6fe00397",
+  "source": "work/tcc2-experimentos/aplicacao_mockup/src/data/experimentoAtual.json",
+  "sha256_source": "b7befb4270ca766e40dca1ecc1e0d5e1da60cc6449c25c392c861fa3b1b5d700",
+  "cases": [
+    {
+      "code": "TOP-01",
+      "id": "20674668",
+      "sha256": "c2b311a194aa813598ce68fc25afd4bfab8731c1a4f3e3ae911c80cd912b1f53"
+    },
+    {
+      "code": "TOP-02",
+      "id": "13385306",
+      "sha256": "6e22a0fa3bbe578dada81794fe0d40674963fc6eaffe1e2bbc5533a71362a29c"
+    },
+    {
+      "code": "TOP-03",
+      "id": "22351830",
+      "sha256": "7c82aa1ff512a2fdac8c1b10c68d93df5c1def25c40bb6f80b5800e968f3568d"
+    },
+    {
+      "code": "TOP-04",
+      "id": "16186411",
+      "sha256": "014f718ebf4479d898e8ad18d5ab37adebcc31942c6f41a780e130b79cfda384"
+    },
+    {
+      "code": "TOP-05",
+      "id": "83816738",
+      "sha256": "b09eefc519fef3820110d14d64ff745703407324c1b243e75e72f91d0fe85a9b"
+    },
+    {
+      "code": "TOP-06",
+      "id": "43311839",
+      "sha256": "bef9bab0a7d09c8c7ab4ce1e278c167eb24840eb38f0cf602c9a8bf0235887d7"
+    },
+    {
+      "code": "TOP-07",
+      "id": "62994611",
+      "sha256": "8132acbdad200fb1dce5a491e231347786e91e883dd26ef167c0246cdbb383d3"
+    },
+    {
+      "code": "TOP-08",
+      "id": "12144825",
+      "sha256": "fc275d3266d1c64438b317944ed85abc6fe33afdaa2bc23cd6327a3ffb4a1708"
+    },
+    {
+      "code": "TOP-09",
+      "id": "26746496",
+      "sha256": "2996f2a079426e4d59dba12f4336e126d76b19be2d0fa8d41869dcab2777a36a"
+    },
+    {
+      "code": "TOP-10",
+      "id": "41152404",
+      "sha256": "f5187d9e47c6ca341c463e1a41397bac631e2d0be57ff369aa05a01eb3b7ed79"
+    },
+    {
+      "code": "TOP-11",
+      "id": "12415691",
+      "sha256": "0bd952ac2d2fd38bfa4f362e3808cd808b7044c6de3d93d5608b1fbfba2a02b7"
+    },
+    {
+      "code": "TOP-12",
+      "id": "98300955",
+      "sha256": "0cd7cb4a374307a0b7ccaf0da35e50847c5ace7a141be18efce2dfa6678eb574"
+    }
+  ],
+  "rankings": {
+    "tfidf": [
+      "TOP-05",
+      "TOP-06",
+      "TOP-03",
+      "TOP-11",
+      "TOP-02"
+    ],
+    "bge": [
+      "TOP-04",
+      "TOP-09",
+      "TOP-07",
+      "TOP-08",
+      "TOP-05"
+    ],
+    "qwen": [
+      "TOP-08",
+      "TOP-05",
+      "TOP-01",
+      "TOP-10",
+      "TOP-12"
+    ]
+  }
+}

@@ -26,3 +26,7 @@ Mantenha o fallback das rotas React para `index.html`. As respostas de `/curricu
 - Confira navegação por teclado, Escape e uma tela menor. Se o carregamento de texto falhar, a janela mostra uma mensagem e o botão **Tentar novamente**.
 
 Os testes automatizados verificam os 2.483 textos integrais, os hashes, o carregamento e os erros HTTP. A conferência de interação no navegador local ficou bloqueada pela permissão de navegação da sessão de desenvolvimento e deve ser completada no endereço publicado.
+
+## Sincronização de 19/11/2026
+
+Após atualizar a mesma branch e reconstruir o site, a página **Resultados** deve mostrar duas avaliações: métricas originais dos 97 e **Conferência posterior do top 5 da coleção completa**, com P@5 de 0,60 / 0,80 / 0,60. Abra as decisões para ver as evidências e a adjudicação assistida de TOP-02. Os links levam ao texto completo dos documentos. O caso 43311839 identifica a conferência posterior e preserva sua referência original. Essas alterações não exigem novos experimentos.

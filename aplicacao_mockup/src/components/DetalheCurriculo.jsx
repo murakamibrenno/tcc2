@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Alert, Box, Button, CircularProgress, Dialog, DialogActions, DialogContent, DialogTitle, Stack, Table, TableBody, TableCell, TableHead, TableRow, TableContainer, Typography } from '@mui/material'
 import { carregarTextoCurriculo } from '../utils/textoCurriculo'
+import { NotaConferenciaPosterior } from './ConferenciaTop5'
 
 function TextoCurriculo({ id }) {
   const [state, setState] = useState({ loading: true, text: '', error: '' })
@@ -28,7 +29,8 @@ export default function DetalheCurriculo({ document, methods, onClose }) {
   return <Dialog open={Boolean(document)} onClose={onClose} aria-labelledby="titulo-curriculo" maxWidth="md" fullWidth>
     <DialogTitle id="titulo-curriculo">{document?.id} — {document?.titulo}</DialogTitle>
     <DialogContent dividers>{document && <>
-      <Typography>{document.papel} • {document.origem_rotulo}</Typography>
+      <Typography>Referência original: {document.rotulo || 'sem anotação'}. {document.papel} • {document.origem_rotulo}</Typography>
+      <NotaConferenciaPosterior id={document.id} />
       <Typography color="text.secondary">Categoria de origem: {document.categoria}. Texto integral: {document.caracteres.toLocaleString('pt-BR')} caracteres.</Typography>
       <TableContainer sx={{ my: 2 }}>
         <Table size="small" aria-label="Escores por representação">

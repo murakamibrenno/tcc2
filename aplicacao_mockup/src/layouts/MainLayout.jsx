@@ -33,7 +33,7 @@ export default function MainLayout() {
         }}
       >
         <Alert severity="warning" sx={{ mb: 3 }}>
-          Avaliação exploratória em 97 casos: 5 ratificações humanas assistidas e 92 rótulos da IA sem conferência. Não é teste humano independente nem avaliação de qualidade dos 2.483 textos.
+          Referência original dos 97: 5 ratificações assistidas e 92 rótulos então sem conferência humana. A conferência posterior do top 5 completo está em Resultados. Não é teste humano independente nem avaliação de qualidade de toda a coleção.
         </Alert>
         <Outlet />
       </Box>

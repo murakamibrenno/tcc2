@@ -1,12 +1,10 @@
-# Resultados, discussão e conclusão do TCC2
+Fonte textual sincronizada com o Word combinado em 19/11/2026. Tabelas em linhas separadas por ponto e vírgula; a formatação final permanece no Word do Drive.
 
-Fonte sincronizada com o trabalho completo revisado. Resultados primários preservados. Tabelas abaixo em linhas separadas por ponto e vírgula; tabelas editáveis e paginação no DOCX/PDF do Drive.
-
-## RESULTADOS E DISCUSSÃO
+RESULTADOS E DISCUSSÃO
 
 Os resultados são apresentados em dois níveis complementares. A coleção completa sustenta a execução das representações, os rankings e as medições de custo. Os documentos anotados sustentam o desenvolvimento supervisionado e a avaliação exploratória de qualidade. Essa organização preserva a comparação originalmente proposta, delimitando o tipo de evidência obtido em cada etapa.
 
-### Participação da coleção completa e dos subconjuntos
+Participação da coleção completa e dos subconjuntos
 
 Foram inventariados 2.484 PDFs, dos quais 2.483 forneceram texto utilizável. O arquivo em branco, ID 12632728, foi mantido no inventário, sem preenchimento artificial. Todos os 2.483 documentos utilizáveis receberam vetores e escores nas três representações, originando três rankings completos. A Tabela 2 distingue os universos e seus papéis.
 
@@ -22,7 +20,7 @@ Desenvolvimento incluído; 294; Treino e comparação em três folds por grupos
 
 Coorte avaliada; 97; Métricas de qualidade e classificação
 
-Auditoria assistida na coorte; 5 dos 97; Ratificação de propostas, sem independência ou extrapolação
+Auditoria original na coorte; 5 dos 97; Ratificação de propostas, sem independência ou extrapolação
 
 Fonte: resultados experimentais do autor (2026).
 
@@ -30,7 +28,7 @@ Os 97 casos pertencem à coleção de 2.483, mas foram separados do conjunto de 
 
 O desenvolvimento reuniu seis Adequados, 75 Parciais e 213 Inadequados. Na coorte, foram quatro, 35 e 58, respectivamente. As seis dúvidas de desenvolvimento e os três documentos relacionados à partição de treino permaneceram excluídos dos universos correspondentes. A seleção enriquecida por sinais técnicos limita inferências sobre a prevalência de aderência na coleção inteira.
 
-### Classificação com e sem pesos
+Classificação com e sem pesos
 
 A referência majoritária obteve acurácia de concordância 0,598 e F1 macro 0,249. As Tabelas 3 e 4 apresentam todas as configurações fixadas no desenvolvimento, preservando a condição original e a ponderada. Acurácia e demais métricas medem concordância com a referência assistida, e não precisão profissional validada em recrutamento.
 
@@ -106,7 +104,7 @@ Adequado; 0; 2; 2
 
 Fonte: predições registradas do experimento (2026). Linhas = referência assistida; colunas = predição. Classes e contagens preservadas.
 
-Os quatro Adequados evidenciam uma restrição da interpretação: 43311839 e 85101052 foram previstos como Adequados, mas não receberam conferência humana. Os casos 23464505 e 10624813, ratificados pelo autor, foram previstos como Parciais. Portanto, os dois acertos observados nessa classe ainda dependem de rótulos somente da IA. Essa leitura não altera as métricas primárias nem permite calcular desempenho humano geral a partir da amostra intencional de cinco casos.
+Na referência original, os acertos de Qwen com SVM e pesos na classe Adequado foram 43311839 e 85101052, ambos sem conferência humana naquele momento. Posteriormente, 43311839 foi conferido como TOP-06 e permaneceu Adequado; 85101052 continua sem conferência. Os casos 23464505 e 10624813, ratificados anteriormente, foram previstos como Parciais. Essa conferência posterior não modifica as métricas primárias nem constitui validação humana independente.
 
 No caso 23464505, a referência registra SQL, serviços SOAP/REST, Git e desenvolvimento de aplicações. Qwen com SVM e pesos produziu Parcialmente Adequado, enquanto BGE com Regressão Logística e pesos produziu Adequado. O documento integral tem 3.187 caracteres; as janelas visíveis alcançaram 2.155 e 2.240 caracteres, respectivamente. A divergência mostra que o resultado depende da combinação entre representação e classificador; não demonstra isoladamente que um dos modelos compreendeu melhor os requisitos.
 
@@ -120,7 +118,7 @@ TF-IDF com XGBoost e pesos obteve a maior acurácia de concordância, 0,856, com
 
 A ponderação foi comparada nas mesmas partições e com as mesmas referências, o que documenta o comportamento das duas condições. Ainda assim, não houve teste de significância ou validação externa. A ampliação do subconjunto, a revisão de rótulos e a ponderação são intervenções distintas; não se atribui toda diferença frente aos pilotos anteriores ao crescimento dos dados ou a uma única alteração.
 
-### Leitura da ROC-AUC complementar
+Leitura da ROC-AUC complementar
 
 A ROC-AUC foi prevista no texto inicial e calculada como análise complementar após os resultados primários, sem alterar a grade de modelos. As probabilidades e as AUCs por classe foram preservadas, juntamente com o protocolo dessa complementação. As previsões de todas as dezoito configurações coincidiram com os registros anteriores, confirmando que a análise não mudou as decisões já avaliadas.
 
@@ -128,7 +126,7 @@ Qwen com SVM original apresentou AUC macro 0,940 mesmo classificando os 97 docum
 
 No SVM, as probabilidades são produzidas pelo procedimento interno habilitado por probability=True, que pode não preservar exatamente a decisão categórica do estimador. Não foi validada a calibração dessas probabilidades. AUCs altas, sobretudo com quatro positivos e rótulos assistidos, não substituem a inspeção de falsos positivos e falsos negativos. F1 macro e métricas por classe permanecem centrais na interpretação.
 
-### Qualidade do ranqueamento no conjunto julgado
+Qualidade do ranqueamento no conjunto julgado
 
 A Tabela 6 utiliza os mesmos 97 documentos para todas as representações. Cada fila foi formada restringindo o ranking completo a esses documentos e reordenando seus escores. As posições indicadas e os valores de Precision@k pertencem a esse ranking julgado, sem representar o topo dos 2.483. Os documentos não julgados não foram considerados negativos.
 
@@ -146,11 +144,15 @@ Fonte: resultados experimentais do autor (2026).
 
 TF-IDF apresentou as maiores AP e NDCG observadas, 0,635 e 0,934. BGE teve AP 0,479 e NDCG 0,865, mas colocou três Adequados nos cinco primeiros, contra dois do TF-IDF. Qwen apresentou AP 0,254 e NDCG 0,776, com um Adequado nos cinco primeiros. Os indicadores valorizam aspectos diferentes da ordenação, de modo que uma única medida não resume todas as prioridades de leitura.
 
+Na conferência complementar posterior, o autor julgou os documentos das cinco primeiras posições dos três rankings completos: 15 posições e 12 identificadores distintos. O formulário ocultou método, posição, escores e rótulos anteriores e apresentou os textos em ordem aleatória. Apenas Adequado contou como relevante. TOP-02 teve adjudicação assistida pela rubrica. A ocultação no formulário não torna essa revisão do autor independente da pesquisa. A conferência posterior do top 5 completo incluiu 43311839 (TOP-06), antes não conferido, e 62994611 (TOP-07), já ratificado. Os rótulos coincidiram com a referência original; as métricas dos 97 foram preservadas. Essa revisão do autor não constitui avaliação humana independente nem valida os demais 91 casos sem conferência.
+
+No ranking completo, o P@5 foi 0,60 (3/5) para TF-IDF, 0,80 (4/5) para BGE e 0,60 (3/5) para Qwen. Na adjudicação do caso TOP-02, o desenvolvimento em ASP e a migração do sistema legado sustentaram programação aplicada, mas não forneceram evidência explícita de API, serviço web ou integração entre serviços. O caso passou a Parcialmente Adequado. Duas versões semelhantes com identificadores distintos ocuparam posições no top 5 de BGE, de modo que o resultado se refere a documentos nas posições do ranking, sem agrupamento por candidato.
+
 A vantagem lexical observada é compatível com uma vaga explicitamente descrita por tecnologias e serviços presentes nos currículos. Isso não demonstra que o TF-IDF compreende o contexto profissional nem que embeddings são dispensáveis. O falso positivo lexical do piloto ilustra um risco, enquanto o desempenho atual mostra que maior complexidade não garantiu melhor recuperação nessa consulta específica.
 
 O resultado de Qwen na recuperação também não contradiz seu F1 macro com SVM ponderada. O primeiro mede cosseno direto com a vaga; o segundo usa uma fronteira supervisionada ajustada com os 294 rótulos de desenvolvimento. São tarefas e mecanismos distintos. Não foi proposta uma nova fila baseada em probabilidade dos classificadores nem ajustado um reranqueador pelos 97 casos.
 
-### Custo e dimensão na coleção completa
+Custo e dimensão na coleção completa
 
 Tabela 7 – Processamento das três representações nos 2.483 textos
 
@@ -182,7 +184,7 @@ O TF-IDF foi armazenado em formato esparso NPZ comprimido; os vetores densos, em
 
 O custo por configuração supervisionada também foi registrado para ajuste e inferência dos 97 casos, em uma passagem. Essas medidas são rastreáveis nos relatórios, mas não foram repetidas para comparação estatística. O custo de representação na coleção e o custo do classificador são etapas distintas e não devem ser somados a tempos que incluam operações diferentes.
 
-### Interpretabilidade e janela de leitura
+Interpretabilidade e janela de leitura
 
 Na Regressão Logística com TF-IDF e pesos, termos como application, net, java, web, framework e database tiveram coeficientes positivos expressivos no contraste Adequado–Inadequado. As contribuições locais dos cinco casos foram verificadas pela soma dos termos e do intercepto, reproduzindo a diferença de logits. O resultado mostra quais sinais o modelo usa, mas não representa uma implementação explícita da rubrica técnica e não explica isoladamente a comparação com Parcialmente Adequado.
 
@@ -194,9 +196,11 @@ Nas oitenta intervenções por máscara, uma oclusão alterou a classe de um cas
 
 As variações de margem e de cosseno registram sensibilidade local a uma intervenção artificial. No SVM, o valor OvR agregado não é probabilidade e pode responder às comparações entre classes. Ausência de mudança categórica não comprova robustez geral; presença de mudança também não demonstra causalidade ou competência profissional. As explicações não corrigem a falta de referência humana independente.
 
-### Limitações e ameaças à validade
+Limitações e ameaças à validade
 
-A principal ameaça é a referência de aderência assistida. A mesma IA participou da anotação de desenvolvimento e avaliação, e cinco propostas foram ratificadas pelo autor com sugestões visíveis. Essa amostra intencional não valida os demais 92 rótulos, não estima concordância humana geral e não constitui avaliação por dois anotadores independentes. Um modelo pode concordar com um erro da referência; as métricas, portanto, não são prova de qualidade em decisões reais de recrutamento.
+Na referência original dos 97 casos, somente cinco tiveram ratificação humana assistida, com sugestões da IA visíveis; 92 ficaram sem conferência humana. A mesma IA participou dos rótulos de desenvolvimento e avaliação. Os indicadores medem concordância com essa referência, cuja correção não foi estabelecida de modo independente. A conferência posterior do top 5 completo incluiu 43311839 (TOP-06), antes não conferido, e 62994611 (TOP-07), já ratificado. Os rótulos coincidiram com a referência original; as métricas dos 97 foram preservadas. Essa revisão do autor não constitui avaliação humana independente nem valida os demais 91 casos sem conferência.
+
+Antes da defesa, recomenda-se a revisão humana dos 97 currículos por uma pessoa com domínio técnico, independente do autor, com rubrica explícita e sem acesso às predições dos modelos ou às sugestões anteriores durante o primeiro julgamento. A extensão da revisão realizada e as limitações remanescentes devem ser declaradas.
 
 Apenas quatro Adequados compõem a avaliação. Além da variação de 25 pontos no recall por um caso, precisão e F1 dessa classe podem mudar substancialmente com poucos documentos. A seleção enriquecida por sinais técnicos, a única vaga adaptada ao vocabulário da coleção e o uso de currículos em inglês restringem validade externa. Não se generalizam os resultados a outras profissões, idiomas, empresas ou distribuições de candidatos.
 
@@ -206,20 +210,22 @@ O truncamento de 8.000 caracteres e de 512 tokens nos densos pode excluir evidê
 
 Os custos refletem hardware misto e repetições distintas; a análise de interpretabilidade cobre cinco exemplos e modelos selecionados após a avaliação. Não houve teste de significância ou validação de calibração. Capturas atuais permitiram inspecionar a apresentação estática do protótipo em desktop; testes interativos completos e a conferência em telas menores permanecem pendentes. Essas restrições delimitam o alcance da demonstração e não devem ser ocultadas pela apresentação gráfica.
 
-### Síntese da discussão
+Síntese da discussão
 
 Os resultados sustentam a comparação proposta em qualidade, custo e interpretabilidade, com conclusões condicionais. TF-IDF foi competitivo na recuperação da consulta avaliada; os classificadores ponderados alteraram a recuperação da classe rara; e o melhor resultado de classificação dependeu da combinação com o modelo supervisionado. A execução da coleção completa demonstrou o funcionamento das três representações em escala, enquanto os 97 documentos forneceram evidência exploratória de qualidade. A conclusão geral é a necessidade de avaliar tarefa, configuração, custo e confiabilidade da referência conjuntamente, sem eleger uma família de representações como universalmente superior.
 
-## CONCLUSÃO
+CONCLUSÃO
 
 O trabalho comparou TF-IDF, BGE e embeddings extraídos de Qwen na triagem de currículos para uma vaga de desenvolvimento backend/web, considerando qualidade, custo e interpretabilidade. Foram processados os 2.483 documentos utilizáveis, gerados três rankings completos, ajustados classificadores com 294 casos de desenvolvimento e avaliados 97 documentos separados do treino.
 
 A implementação concretizou a comparação proposta com representações rastreáveis, três classificadores e duas condições de ponderação. A referência ampliada foi construída com assistência de IA e ratificação parcial do autor, em lugar de anotação integralmente manual. Essa alteração operacional limita a validação e foi explicitada, mantendo a pergunta comparativa e a identificação dos rótulos não conferidos.
 
-TF-IDF apresentou as maiores AP e NDCG observadas; BGE posicionou mais Adequados entre os cinco primeiros julgados. Na classificação, Qwen com SVM e pesos atingiu F1 macro 0,785 e recuperou dois dos quatro Adequados. BGE com Regressão Logística e pesos recuperou três, com mais falsos positivos. Nenhuma condição original recuperou Adequados, evidenciando a insuficiência da acurácia isolada para analisar a classe rara.
+Na avaliação exploratória dos 97 casos, TF-IDF obteve a maior AP (0,635) e o maior NDCG (0,934), enquanto Qwen com SVM e pesos obteve o maior F1 macro (0,785), recuperando dois dos quatro Adequados da referência. Na conferência humana complementar das primeiras posições do ranking completo, BGE obteve P@5 de 0,80 e TF-IDF e Qwen obtiveram 0,60. As duas avaliações mostram aspectos distintos da recuperação e da classificação para uma única vaga.
 
 Não foi estabelecido um vencedor universal. O compromisso entre omissões e falsos positivos depende do contexto de uso, e a pequena quantidade de Adequados e a referência assistida impedem tratar a comparação como recomendação validada de contratação. Os custos também descrevem uma execução local, com dispositivos e repetições distintos, enquanto as explicações registram comportamento do modelo, sem comprovar competência profissional.
 
 A coleção completa forneceu evidência de cobertura, ordenação e custo; os 97 casos forneceram evidência exploratória de concordância com referências disponíveis. O CurrículoRank integra esses níveis, abrindo o ranking com os 2.483 documentos e mantendo o subconjunto julgado como opção, com proveniência e limitações visíveis. A interface apoia a inspeção dos resultados e preserva a participação da coleção inteira no experimento.
+
+Para uma empresa, a escolha da configuração deve partir do objetivo da triagem. Se a prioridade é ordenar uma fila para leitura humana com baixo custo, TF-IDF é um ponto de partida. Se a prioridade é encontrar mais perfis aderentes nas primeiras posições, vale comparar BGE e outras alternativas em vagas reais. Em processamento de grande volume, um custo adicional recorrente por currículo se acumula. Por exemplo, 10 ms a mais por documento correspondem a 1.000 s de processamento para 100 mil documentos em série. O tempo total em produção depende de fatores como execução em lote, paralelismo e hardware. A comparação empresarial deve medir também tempo de revisão e o risco de omitir perfis aderentes.
 
 Como continuidade, propõe-se ampliar a referência humana independente, as vagas e os idiomas, e investigar documentos longos e outras estratégias de pooling. As seis dúvidas podem ser adjudicadas em versão posterior. Novas otimizações exigem outra separação de avaliação, sem reutilizar os 97 casos como teste inédito.

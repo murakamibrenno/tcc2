@@ -1,0 +1,4 @@
+# Preserve the exact submitted review bytes used by the recorded SHA-256 hashes.
+piloto_tfidf/validation/top5_formulario_devolvido_v1.json -text
+piloto_tfidf/validation/top5_mapa_formulario_v1.json -text
+piloto_tfidf/validation/top5_adjudicacao_assistida_v1.json -text

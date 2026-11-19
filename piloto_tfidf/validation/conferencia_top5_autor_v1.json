@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "batch": "top5-bb5bfc8c6fe00397",
+  "registro_consolidado_em": "2026-11-19",
+  "natureza": "Conferência posterior do autor, com adjudicação assistida de TOP-02; não é revisão independente dos 97.",
+  "procedimento": "O formulário ocultou método, posição, escores e rótulos anteriores; os textos foram apresentados em ordem aleatória. Somente Adequado conta como relevante.",
+  "universo": "Primeiras cinco posições dos três rankings completos dos 2.483 textos.",
+  "unidade": "Documento por identificador, sem agrupamento por candidato. Duas versões semelhantes ocupam duas posições no top 5 de BGE.",
+  "resultados": [
+    {
+      "representacao": "tfidf",
+      "ids": [
+        "83816738",
+        "43311839",
+        "22351830",
+        "12415691",
+        "13385306"
+      ],
+      "adequados": 3,
+      "k": 5,
+      "p_at_5": 0.6
+    },
+    {
+      "representacao": "bge",
+      "ids": [
+        "16186411",
+        "26746496",
+        "62994611",
+        "12144825",
+        "83816738"
+      ],
+      "adequados": 4,
+      "k": 5,
+      "p_at_5": 0.8
+    },
+    {
+      "representacao": "qwen",
+      "ids": [
+        "12144825",
+        "83816738",
+        "20674668",
+        "41152404",
+        "98300955"
+      ],
+      "adequados": 3,
+      "k": 5,
+      "p_at_5": 0.6
+    }
+  ],
+  "casos": [
+    {
+      "code": "TOP-01",
+      "id": "20674668",
+      "sha256": "c2b311a194aa813598ce68fc25afd4bfab8731c1a4f3e3ae911c80cd912b1f53",
+      "rotulo_enviado_pelo_autor": "Parcialmente Adequado",
+      "rotulo_final": "Parcialmente Adequado",
+      "evidencias_enviadas": "Candidato #003 — Parcialmente Adequado (3/4).\nSQL: VB, SQL, MS Access.\nIntegração: Developed Conceptual, Functional Design and Siebel Integration Design documents.\nProgramação: Worked on requirement analysis, design, coding, unit testing, documentation, maintenance and application support of Siebel 7.8.3 SFA application.\nDesenvolvimento de aplicações: Developed and configuring Siebel 7.8 ePharma applications.\nGit/Controle de versão: não evidenciado.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-02",
+      "id": "13385306",
+      "sha256": "6e22a0fa3bbe578dada81794fe0d40674963fc6eaffe1e2bbc5533a71362a29c",
+      "rotulo_enviado_pelo_autor": "Adequado",
+      "rotulo_final": "Parcialmente Adequado",
+      "evidencias_enviadas": "Candidato #004 — Adequado (4/4).\nSQL/Bancos: SQL Server, Oracle e PL/SQL.\nAPIs/Serviços web: desenvolvimento de aplicação web baseada em ASP (YSIS).\nVersionamento: TFS.\nProgramação: reescrita de biblioteca de VB.NET para C#.\nDesenvolvimento de aplicações: aplicações ASP.NET e C#.\nTodos os quatro grupos sustentados pelo currículo.",
+      "adjudicacao_assistida": {
+        "codigo": "TOP-02",
+        "origem": "conferencia pela rubrica solicitada pelo autor",
+        "rotulo_anterior": "Adequado",
+        "rotulo_final": "Parcialmente Adequado",
+        "motivo": "Migracao para ASP sem evidencia explicita de API, servico web ou integracao entre servicos."
+      }
+    },
+    {
+      "code": "TOP-03",
+      "id": "22351830",
+      "sha256": "7c82aa1ff512a2fdac8c1b10c68d93df5c1def25c40bb6f80b5800e968f3568d",
+      "rotulo_enviado_pelo_autor": "Adequado",
+      "rotulo_final": "Adequado",
+      "evidencias_enviadas": "Candidato #005 — Adequado (4/4).\nSQL/Bancos: Used Oracle RDBMS as user store, implemented Liquibase for identity and authorization.\nAPIs/Integração: Designed & developed RESTFul APIs using Spring framework; Implemented RabbitMQ for API Integration.\nGit/Versionamento: Git-Stash e Subversion (SVN).\nProgramação: Implemented several Java Utilities.\nDesenvolvimento de aplicações: Worked on Spring MVC application for Sofia UI; Implemented BL-T Admin console using HTML, JSP, JavaScript and Struts Framework.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-04",
+      "id": "16186411",
+      "sha256": "014f718ebf4479d898e8ad18d5ab37adebcc31942c6f41a780e130b79cfda384",
+      "rotulo_enviado_pelo_autor": "Adequado",
+      "rotulo_final": "Adequado",
+      "evidencias_enviadas": "Candidato #006 — Adequado (4/4).\nSQL/Bancos: Created dynamic queries, stored procedures, Views and triggers in SQL server for the database manipulation.\nAPIs/Serviços web: Modified the existing webservices like SocialSpirit, News webservices, Events web and windows services.\nGit/Versionamento: Tortoise SVN, GitHub.\nProgramação: Developed C# Console Application for Scheduled email task.\nDesenvolvimento de aplicações: Developed Application using AJAX controls; Used n-Tier Architecture, Created the Business Logic Layer by using Class Libraries to interact with database.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-05",
+      "id": "83816738",
+      "sha256": "b09eefc519fef3820110d14d64ff745703407324c1b243e75e72f91d0fe85a9b",
+      "rotulo_enviado_pelo_autor": "Adequado",
+      "rotulo_final": "Adequado",
+      "evidencias_enviadas": "Candidato #007 — Adequado (4/4).\nSQL/Bancos: Developed CMS like system majorly based on PHP and MYSQL; Used JDBC for database connectivity to SQL Server.\nAPIs/Integração: Developed REST web services for external application integration.\nGit/Versionamento: Git for source control and versioning.\nProgramação: Coded and debugged multi-tiered Java-based applications using Java and Spring.\nDesenvolvimento de aplicações: Developed the entire MRP Reading Module both backend and frontend using Java; Built multiple mobile applications Android and iOS.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-06",
+      "id": "43311839",
+      "sha256": "bef9bab0a7d09c8c7ab4ce1e278c167eb24840eb38f0cf602c9a8bf0235887d7",
+      "rotulo_enviado_pelo_autor": "Adequado",
+      "rotulo_final": "Adequado",
+      "evidencias_enviadas": "Candidato #008 — Adequado (4/4).\nSQL/Bancos: Designed and developed the database using SQL Server 2005 and wrote SQL Queries, Stored Procedures, Indexes, Triggers and Cursors.\nAPIs/Integração: Created a RESTFUL WCF Service to communicate from .NET front end application to .net service deployed in IIS.\nVersionamento: Team Foundation Server (TFS), Visual Source Safe (VSS) e IBM Rational Team Concert.\nProgramação: Created classes and core modules in C# for implementing business layer.\nDesenvolvimento de aplicações: Developed the web application and all of its components using N-Tier architecture.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-07",
+      "id": "62994611",
+      "sha256": "8132acbdad200fb1dce5a491e231347786e91e883dd26ef167c0246cdbb383d3",
+      "rotulo_enviado_pelo_autor": "Parcialmente Adequado",
+      "rotulo_final": "Parcialmente Adequado",
+      "evidencias_enviadas": "Candidato #009 — Parcialmente Adequado (3/4).\nSQL/Bancos: Project was tasked to design an Internal Marketing System using c#, SQL, HTML, .net, devexpress.\nAPIs/Integração: Integration of marketplace APIs; Amazon, Walmart, eBay and Shopify APIs were integrated.\nGit/Versionamento: Não há evidência explícita.\nProgramação: Revised, modularized and updated old code bases; Authored code fixes and enhancements.\nDesenvolvimento de aplicações: Created a Windows application with Python using BERT and ELMO; Developed the FAQ and Support part of the website.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-08",
+      "id": "12144825",
+      "sha256": "fc275d3266d1c64438b317944ed85abc6fe33afdaa2bc23cd6327a3ffb4a1708",
+      "rotulo_enviado_pelo_autor": "Adequado",
+      "rotulo_final": "Adequado",
+      "evidencias_enviadas": "Candidato #010 — Adequado (4/4).\nSQL/Bancos: MySQL, PostgreSQL e SQLite.\nAPIs/Integração: Integrate 3rd party tools in PHP using XML API such as Authorized.net, online whiteboard and PayPal.\nGit/Versionamento: Git listado entre as ferramentas.\nProgramação: Design and implement an ecommerce website (in PHP) using MVC and OOP; Bash scripts para automação.\nDesenvolvimento de aplicações: Create an admin page (in PHP) that tracks user's browsing history, incomplete registrations, clicks and communications.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-09",
+      "id": "26746496",
+      "sha256": "2996f2a079426e4d59dba12f4336e126d76b19be2d0fa8d41869dcab2777a36a",
+      "rotulo_enviado_pelo_autor": "Adequado",
+      "rotulo_final": "Adequado",
+      "evidencias_enviadas": "Candidato #011 — Adequado (4/4).\nSQL/Bancos: Created dynamic queries, stored procedures, Views and triggers in SQL server for the database manipulation.\nAPIs/Integração: Modified the existing webservices and windows services.\nGit/Versionamento: Tortoise SVN, GitHub.\nProgramação: Developed C# Console Application for Scheduled email task.\nDesenvolvimento de aplicações: Developed Application using AJAX controls; Used n-Tier Architecture, Created the Business Logic Layer by using Class Libraries to interact with database.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-10",
+      "id": "41152404",
+      "sha256": "f5187d9e47c6ca341c463e1a41397bac631e2d0be57ff369aa05a01eb3b7ed79",
+      "rotulo_enviado_pelo_autor": "Parcialmente Adequado",
+      "rotulo_final": "Parcialmente Adequado",
+      "evidencias_enviadas": "Candidato #012 — Parcialmente Adequado (2/4).\nSQL/Bancos: Database: My SQL and SQL server.\nAPIs/Integração: Apenas testes de integração com sistemas externos; não comprova implementação de serviços ou integrações.\nGit/Versionamento: Não evidenciado.\nProgramação aplicada: Developed Automation test cases using GoogleUIAutomator testing framework; Responsible for developing the QTP scripts in Expert View for assigned test cases.\nDesenvolvimento de aplicações: Não evidenciado; atuação concentrada em testes e QA.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-11",
+      "id": "12415691",
+      "sha256": "0bd952ac2d2fd38bfa4f362e3808cd808b7044c6de3d93d5608b1fbfba2a02b7",
+      "rotulo_enviado_pelo_autor": "Parcialmente Adequado",
+      "rotulo_final": "Parcialmente Adequado",
+      "evidencias_enviadas": "Candidato #013 — Parcialmente Adequado (3/4).\nSQL/Bancos: Experienced in developing stored procedures, Triggers, Cursors, Joins, Views and SQL on MySQL and Oracle 11g.\nAPIs/Integração: Integrate, maintain and configuring Single Sign-On (SSO) to web application with Luminis Platform.\nGit/Versionamento: Não evidenciado.\nProgramação: Developed the backend code in PHP that will connect employers and job seekers through web application.\nDesenvolvimento de aplicações: Designing, modeling, developing, deploying and supporting database-driven applications using Oracle APEX; sistema bancário implementado em C.",
+      "adjudicacao_assistida": null
+    },
+    {
+      "code": "TOP-12",
+      "id": "98300955",
+      "sha256": "0cd7cb4a374307a0b7ccaf0da35e50847c5ace7a141be18efce2dfa6678eb574",
+      "rotulo_enviado_pelo_autor": "Adequado",
+      "rotulo_final": "Adequado",
+      "evidencias_enviadas": "Candidato #014 — Adequado (4/4).\nSQL/Bancos: SQL Server, T-SQL e desenvolvimento de projetos de bancos de dados e data warehouses.\nAPIs/Integração: Collaborated in design and development of an API platform enabling exchange of data with external EMRs and internal applications.\nGit/Versionamento: Use source control to manage database schema.\nProgramação: Developed data services for core platform to replace stored procedures and functions.\nDesenvolvimento de aplicações: Developed a highly available, mission critical web application used by about 35,000 financial advisors daily.",
+      "adjudicacao_assistida": null
+    }
+  ],
+  "sobreposicao_coorte97": {
+    "ids": [
+      "43311839",
+      "62994611"
+    ],
+    "novo_id_conferido": "43311839",
+    "nota": "62994611 já pertencia aos cinco ratificados; 43311839 foi conferido posteriormente como TOP-06. A referência primária conserva 5 ratificações e 92 sem conferência no momento da avaliação. A conferência posterior não muda rótulos nem métricas primárias e não valida os demais 91."
+  },
+  "fontes_sha256": {
+    "mapa_revisao_humana_top5.json": "d18f55d2f4012a2cc04fc7ffe7f94622ae93d9aa3daf0a9f0c54bc47ac41a44a",
+    "decisoes_top5_recebidas.json": "d73179e136af4fc087120fac206476d6abf70bf51027dfa065d9b36f03a29701",
+    "adjudicacao_top5_final.json": "453aa02dc8627174728bf0c72d1e514521a6da79e11801fb19c9007ce07f785c"
+  }
+}

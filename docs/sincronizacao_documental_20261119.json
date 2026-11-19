@@ -1,0 +1,29 @@
+{
+  "data_local": "2026-11-19",
+  "drive_word_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
+  "sha256_docx": "df963b94d83625a9a2c2e67dbef49123b18e23c0ccfb5b2d73082f30a2ee82cc",
+  "bytes_docx": 4772793,
+  "paginas_fisicas_renderizadas": 93,
+  "sbc_inicio_fisico": 83,
+  "sbc_paginas": 11,
+  "tabelas_centralizadas": 13,
+  "numeros_tabelas_preservados": true,
+  "identificacao_orientador_preservada": true,
+  "imagens_e_estilos_preservados": true,
+  "referencia_primaria_preservada": true,
+  "testes_interface_aprovados": 13,
+  "build_aprovado": true,
+  "conferencia_posterior": {
+    "documentos": 12,
+    "posicoes": 15,
+    "P_at_5": {
+      "tfidf": 0.6,
+      "bge": 0.8,
+      "qwen": 0.6
+    },
+    "novo_id_conferido_na_coorte": "43311839"
+  },
+  "pdf_drive_atualizado": false,
+  "sbc_separado_drive_atualizado": false,
+  "limites": "Renderização local com LibreOffice autorizado pelo autor; testes em servidor e integridade não substituem cliques e conferência responsiva na VPS. Não há revisão humana independente dos 97."
+}

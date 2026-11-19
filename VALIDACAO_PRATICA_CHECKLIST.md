@@ -1,11 +1,11 @@
 # Checklist da entrega prática do TCC2
 
-Estado vigente em 10/11/2026. Históricos e decisões anteriores permanecem no Git.
+Experimento de 10/11/2026; documentação e interface sincronizadas em 19/11/2026. Históricos e decisões anteriores permanecem no Git.
 
 - [x] Inventariar 2.484 PDFs e processar 2.483 textos nas três representações.
 - [x] Excluir PDF em branco, versões semelhantes e casos ambíguos conforme os manifestos.
 - [x] Consolidar desenvolvimento com 294 casos e avaliação exploratória com 97.
-- [x] Registrar as cinco ratificações humanas assistidas sem atribuí-las aos demais 92 casos.
+- [x] Preservar a referência original (cinco ratificações e 92 então sem conferência) e registrar separadamente a revisão posterior do top 5, que incluiu mais um caso da coorte, sem mudar rótulos ou métricas primárias.
 - [x] Executar 18 condições fixadas e comparar rankings no mesmo conjunto julgado.
 - [x] Preservar matrizes, previsões por ID, custos, sementes, hashes e limitações.
 - [x] Implementar interpretabilidade lexical e oclusão densa, reproduzindo as previsões.
@@ -30,3 +30,7 @@ Seis casos ambíguos permanecem fora do desenvolvimento. Podem continuar assim, 
 Uma referência humana independente mais ampla é necessária para validação externa, e deve constar como limitação e continuidade. A auditoria assistida dos cinco casos não estima concordância humana geral. Não prometer essa validação como executada nem exigir uma nova revisão integral após a escolha expressa do autor por auditoria pequena.
 
 Ver [relatório dos 97](piloto_tfidf/output/coorte97_v1/README.md) e [interpretabilidade](piloto_tfidf/output/interpretabilidade_atual_v1/README.md).
+
+- [x] Integrar P@5 do top 5 completo, com conferência dos 12 documentos, adjudicação assistida de TOP-02 e aviso de versões semelhantes.
+- [x] Exibir conferência posterior separada da referência original nas telas de resultados e detalhes.
+- [x] Corrigir o fundo repetido do Word e sincronizar o trabalho completo e o SBC incorporado, preservando a identificação do orientador e as tabelas centralizadas.

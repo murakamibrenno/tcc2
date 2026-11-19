@@ -1,0 +1,113 @@
+{
+  "batch": "top5-bb5bfc8c6fe00397",
+  "decisions": {
+    "TOP-01": {
+      "grade": "Parcialmente Adequado",
+      "evidence": "Candidato #003 — Parcialmente Adequado (3/4).\nSQL: VB, SQL, MS Access.\nIntegração: Developed Conceptual, Functional Design and Siebel Integration Design documents.\nProgramação: Worked on requirement analysis, design, coding, unit testing, documentation, maintenance and application support of Siebel 7.8.3 SFA application.\nDesenvolvimento de aplicações: Developed and configuring Siebel 7.8 ePharma applications.\nGit/Controle de versão: não evidenciado.",
+      "sql": true,
+      "api": true,
+      "git": false,
+      "prog": true,
+      "app": true
+    },
+    "TOP-02": {
+      "grade": "Adequado",
+      "evidence": "Candidato #004 — Adequado (4/4).\nSQL/Bancos: SQL Server, Oracle e PL/SQL.\nAPIs/Serviços web: desenvolvimento de aplicação web baseada em ASP (YSIS).\nVersionamento: TFS.\nProgramação: reescrita de biblioteca de VB.NET para C#.\nDesenvolvimento de aplicações: aplicações ASP.NET e C#.\nTodos os quatro grupos sustentados pelo currículo.",
+      "sql": true,
+      "api": true,
+      "git": true,
+      "prog": true,
+      "app": true
+    },
+    "TOP-03": {
+      "grade": "Adequado",
+      "evidence": "Candidato #005 — Adequado (4/4).\nSQL/Bancos: Used Oracle RDBMS as user store, implemented Liquibase for identity and authorization.\nAPIs/Integração: Designed & developed RESTFul APIs using Spring framework; Implemented RabbitMQ for API Integration.\nGit/Versionamento: Git-Stash e Subversion (SVN).\nProgramação: Implemented several Java Utilities.\nDesenvolvimento de aplicações: Worked on Spring MVC application for Sofia UI; Implemented BL-T Admin console using HTML, JSP, JavaScript and Struts Framework.",
+      "sql": true,
+      "api": true,
+      "git": true,
+      "prog": true,
+      "app": true
+    },
+    "TOP-04": {
+      "grade": "Adequado",
+      "evidence": "Candidato #006 — Adequado (4/4).\nSQL/Bancos: Created dynamic queries, stored procedures, Views and triggers in SQL server for the database manipulation.\nAPIs/Serviços web: Modified the existing webservices like SocialSpirit, News webservices, Events web and windows services.\nGit/Versionamento: Tortoise SVN, GitHub.\nProgramação: Developed C# Console Application for Scheduled email task.\nDesenvolvimento de aplicações: Developed Application using AJAX controls; Used n-Tier Architecture, Created the Business Logic Layer by using Class Libraries to interact with database.",
+      "sql": true,
+      "api": true,
+      "git": true,
+      "prog": true,
+      "app": true
+    },
+    "TOP-05": {
+      "grade": "Adequado",
+      "evidence": "Candidato #007 — Adequado (4/4).\nSQL/Bancos: Developed CMS like system majorly based on PHP and MYSQL; Used JDBC for database connectivity to SQL Server.\nAPIs/Integração: Developed REST web services for external application integration.\nGit/Versionamento: Git for source control and versioning.\nProgramação: Coded and debugged multi-tiered Java-based applications using Java and Spring.\nDesenvolvimento de aplicações: Developed the entire MRP Reading Module both backend and frontend using Java; Built multiple mobile applications Android and iOS.",
+      "sql": true,
+      "api": true,
+      "git": true,
+      "prog": true,
+      "app": true
+    },
+    "TOP-06": {
+      "grade": "Adequado",
+      "evidence": "Candidato #008 — Adequado (4/4).\nSQL/Bancos: Designed and developed the database using SQL Server 2005 and wrote SQL Queries, Stored Procedures, Indexes, Triggers and Cursors.\nAPIs/Integração: Created a RESTFUL WCF Service to communicate from .NET front end application to .net service deployed in IIS.\nVersionamento: Team Foundation Server (TFS), Visual Source Safe (VSS) e IBM Rational Team Concert.\nProgramação: Created classes and core modules in C# for implementing business layer.\nDesenvolvimento de aplicações: Developed the web application and all of its components using N-Tier architecture.",
+      "sql": true,
+      "api": true,
+      "git": true,
+      "prog": true,
+      "app": true
+    },
+    "TOP-07": {
+      "grade": "Parcialmente Adequado",
+      "evidence": "Candidato #009 — Parcialmente Adequado (3/4).\nSQL/Bancos: Project was tasked to design an Internal Marketing System using c#, SQL, HTML, .net, devexpress.\nAPIs/Integração: Integration of marketplace APIs; Amazon, Walmart, eBay and Shopify APIs were integrated.\nGit/Versionamento: Não há evidência explícita.\nProgramação: Revised, modularized and updated old code bases; Authored code fixes and enhancements.\nDesenvolvimento de aplicações: Created a Windows application with Python using BERT and ELMO; Developed the FAQ and Support part of the website.",
+      "sql": true,
+      "api": true,
+      "git": false,
+      "prog": true,
+      "app": true
+    },
+    "TOP-08": {
+      "grade": "Adequado",
+      "evidence": "Candidato #010 — Adequado (4/4).\nSQL/Bancos: MySQL, PostgreSQL e SQLite.\nAPIs/Integração: Integrate 3rd party tools in PHP using XML API such as Authorized.net, online whiteboard and PayPal.\nGit/Versionamento: Git listado entre as ferramentas.\nProgramação: Design and implement an ecommerce website (in PHP) using MVC and OOP; Bash scripts para automação.\nDesenvolvimento de aplicações: Create an admin page (in PHP) that tracks user's browsing history, incomplete registrations, clicks and communications.",
+      "sql": true,
+      "api": true,
+      "git": true,
+      "prog": true,
+      "app": true
+    },
+    "TOP-09": {
+      "grade": "Adequado",
+      "evidence": "Candidato #011 — Adequado (4/4).\nSQL/Bancos: Created dynamic queries, stored procedures, Views and triggers in SQL server for the database manipulation.\nAPIs/Integração: Modified the existing webservices and windows services.\nGit/Versionamento: Tortoise SVN, GitHub.\nProgramação: Developed C# Console Application for Scheduled email task.\nDesenvolvimento de aplicações: Developed Application using AJAX controls; Used n-Tier Architecture, Created the Business Logic Layer by using Class Libraries to interact with database.",
+      "sql": true,
+      "api": true,
+      "git": true,
+      "prog": true,
+      "app": true
+    },
+    "TOP-10": {
+      "grade": "Parcialmente Adequado",
+      "evidence": "Candidato #012 — Parcialmente Adequado (2/4).\nSQL/Bancos: Database: My SQL and SQL server.\nAPIs/Integração: Apenas testes de integração com sistemas externos; não comprova implementação de serviços ou integrações.\nGit/Versionamento: Não evidenciado.\nProgramação aplicada: Developed Automation test cases using GoogleUIAutomator testing framework; Responsible for developing the QTP scripts in Expert View for assigned test cases.\nDesenvolvimento de aplicações: Não evidenciado; atuação concentrada em testes e QA.",
+      "sql": true,
+      "api": false,
+      "git": false,
+      "prog": true,
+      "app": false
+    },
+    "TOP-11": {
+      "grade": "Parcialmente Adequado",
+      "evidence": "Candidato #013 — Parcialmente Adequado (3/4).\nSQL/Bancos: Experienced in developing stored procedures, Triggers, Cursors, Joins, Views and SQL on MySQL and Oracle 11g.\nAPIs/Integração: Integrate, maintain and configuring Single Sign-On (SSO) to web application with Luminis Platform.\nGit/Versionamento: Não evidenciado.\nProgramação: Developed the backend code in PHP that will connect employers and job seekers through web application.\nDesenvolvimento de aplicações: Designing, modeling, developing, deploying and supporting database-driven applications using Oracle APEX; sistema bancário implementado em C.",
+      "sql": true,
+      "api": true,
+      "git": false,
+      "prog": true,
+      "app": true
+    },
+    "TOP-12": {
+      "grade": "Adequado",
+      "evidence": "Candidato #014 — Adequado (4/4).\nSQL/Bancos: SQL Server, T-SQL e desenvolvimento de projetos de bancos de dados e data warehouses.\nAPIs/Integração: Collaborated in design and development of an API platform enabling exchange of data with external EMRs and internal applications.\nGit/Versionamento: Use source control to manage database schema.\nProgramação: Developed data services for core platform to replace stored procedures and functions.\nDesenvolvimento de aplicações: Developed a highly available, mission critical web application used by about 35,000 financial advisors daily.",
+      "sql": true,
+      "api": true,
+      "git": true,
+      "prog": true,
+      "app": true
+    }
+  }
+}

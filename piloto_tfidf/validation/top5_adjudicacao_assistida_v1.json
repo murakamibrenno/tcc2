@@ -1,0 +1,21 @@
+{
+  "batch": "top5-bb5bfc8c6fe00397",
+  "casos_julgados_pelo_autor": 12,
+  "adjudicacao": {
+    "codigo": "TOP-02",
+    "origem": "conferencia pela rubrica solicitada pelo autor",
+    "rotulo_anterior": "Adequado",
+    "rotulo_final": "Parcialmente Adequado",
+    "motivo": "Migracao para ASP sem evidencia explicita de API, servico web ou integracao entre servicos."
+  },
+  "adequados": {
+    "tfidf": 3,
+    "bge": 4,
+    "qwen": 3
+  },
+  "p_at_5": {
+    "tfidf": 0.6,
+    "bge": 0.8,
+    "qwen": 0.6
+  }
+}
