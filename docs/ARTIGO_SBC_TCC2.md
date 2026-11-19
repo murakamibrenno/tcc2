@@ -62,7 +62,7 @@ A rubrica atribui Adequado quando os quatro requisitos e o desenvolvimento de ap
 
 O desenvolvimento contém seis Adequados, 75 Parciais e 213 Inadequados. A referência reúne 59 decisões ratificadas individualmente pelo autor, com sugestões da IA visíveis, e 235 anotações da IA sob autorização. Na avaliação original, há quatro Adequados, 35 Parciais e 58 Inadequados; cinco rótulos tiveram ratificação humana assistida e 92 não tinham conferência humana na avaliação original. A mesma IA participou das duas etapas, podendo produzir erros correlacionados.
 
-O plano inicial previa anotação manual. O procedimento ampliado foi assistido por IA, com ratificação parcial do autor. Essa alteração limita a validação, embora preserve a pergunta comparativa. A amostra auditada foi escolhida intencionalmente antes das métricas e não permite estimar concordância humana geral. Os registros identificam o anotador como assistente_IA, sem um snapshot imutável do serviço ou um prompt integral único; a repetição exata dessa etapa não é assegurada.
+O plano inicial previa anotação manual. A referência de avaliação foi construída com apoio de um modelo de linguagem, mediante aplicação de uma rubrica explícita de aderência técnica, com conferência do autor nos casos discriminados no protocolo. Essa alteração limita a validação, embora preserve a pergunta comparativa. A amostra auditada foi escolhida intencionalmente antes das métricas e não permite estimar concordância humana geral. Os registros identificam o anotador como assistente_IA, sem um snapshot imutável do serviço ou um prompt integral único; a repetição exata dessa etapa não é assegurada.
 
 3.3. Preparação e representações textuais
 

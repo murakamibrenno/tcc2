@@ -40,7 +40,7 @@ A referência de desenvolvimento foi consolidada em 294 documentos: seis Adequad
 
 A coorte inicialmente reservada continha 100 documentos, anotados pela mesma IA que participou do desenvolvimento. Na revisão de históricos semelhantes, três documentos foram excluídos da avaliação principal por relação substancial com um histórico do desenvolvimento, antes da consulta às predições. Os 97 restantes contêm quatro Adequados, 35 Parciais e 58 Inadequados. O autor ratificou cinco casos intencionalmente apresentados; os outros 92 não tinham conferência humana na referência original.
 
-O plano inicial previa anotação manual. Na execução ampliada, adotou-se anotação assistida por IA e ratificação parcial do autor, em razão do volume de revisão. Essa alteração operacional foi explicitada, sem atribuir autoria humana aos rótulos não conferidos. As referências não constituem padrão humano independente, e a participação da mesma IA nas duas etapas pode correlacionar erros. Foram preservados identificadores, textos, trechos de evidência, justificativas, decisões e exclusões para permitir auditoria.
+O plano inicial previa anotação manual. Na execução ampliada, a referência de avaliação foi construída com apoio de um modelo de linguagem, mediante aplicação de uma rubrica explícita de aderência técnica, com conferência do autor nos casos discriminados no protocolo. Essa alteração operacional foi explicitada, sem atribuir autoria humana aos rótulos não conferidos. As referências não constituem padrão humano independente, e a participação da mesma IA nas duas etapas pode correlacionar erros. Foram preservados identificadores, textos, trechos de evidência, justificativas, decisões e exclusões para permitir auditoria.
 
 Extração e pré-processamento textual
 

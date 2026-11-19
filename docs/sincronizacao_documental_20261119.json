@@ -1,8 +1,8 @@
 {
   "data_local": "2026-11-19",
   "drive_word_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
-  "sha256_docx": "a202cdb102f6146d50894fe01a4997adbf4b466131d0255eb41ad1d52e1aa8b1",
-  "bytes_docx": 4778546,
+  "sha256_docx": "dcae3a9e45973ff7b4ed2df7f09d523a14605897ceb075cef2908cbb8904cc42",
+  "bytes_docx": 4778605,
   "paginas_fisicas_renderizadas": 95,
   "sbc_inicio_fisico": 84,
   "sbc_paginas": 12,
@@ -65,5 +65,18 @@
     "testes_interface_aprovados": 13,
     "build_aprovado": true,
     "sem_validacao_institucional_implicita": true
+  },
+  "redacao_referencia_final": {
+    "termo": "modelo de linguagem",
+    "rubrica_explicita": true,
+    "conferencia_autor": "casos discriminados no protocolo",
+    "extensao_real_conferencia_preservada": true,
+    "ausencia_revisao_independente_mantida": true,
+    "escopo_exploratorio_concluido": true,
+    "alteracao_dados_metricas_aplicacao": false,
+    "paginas": 95,
+    "sbc_paginas": 12,
+    "indices_conferidos": true,
+    "sha256_entrada_drive": "a202cdb102f6146d50894fe01a4997adbf4b466131d0255eb41ad1d52e1aa8b1"
   }
 }
