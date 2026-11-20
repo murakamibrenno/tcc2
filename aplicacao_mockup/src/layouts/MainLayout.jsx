@@ -33,7 +33,7 @@ export default function MainLayout() {
         }}
       >
         <Alert severity="warning" sx={{ mb: 3 }}>
-          Referência original dos 97: 5 ratificações assistidas e 92 rótulos então sem conferência humana. A conferência posterior do top 5 completo está em Resultados. Não é teste humano independente nem avaliação de qualidade de toda a coleção.
+          Avaliação exploratória com referência assistida. As conferências consolidadas estão em Metodologia; os resultados primários e a análise complementar estão identificados separadamente em Resultados. Não é validação humana independente nem avaliação de qualidade de toda a coleção.
         </Alert>
         <Outlet />
       </Box>

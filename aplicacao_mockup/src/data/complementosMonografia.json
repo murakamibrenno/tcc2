@@ -1,0 +1,929 @@
+{
+  "schema": 1,
+  "conferencias": {
+    "data_local": "2026-11-19",
+    "unidade": "documento por identificador; versões semelhantes continuam documentos distintos",
+    "criterio": "contar uma vez cada ID com ratificação individual registrada ou formulário devolvido pelo autor; não promover análises da IA ou autorizações antecipadas a conferência humana",
+    "n_registros_por_etapa": {
+      "piloto_ratificado": 60,
+      "auditoria_primaria": 5,
+      "top5_posterior": 12
+    },
+    "soma_etapas": 77,
+    "sobreposicoes": {
+      "piloto_top5": [
+        "16186411",
+        "20674668",
+        "26746496",
+        "83816738"
+      ],
+      "auditoria_top5": [
+        "62994611"
+      ],
+      "piloto_auditoria": []
+    },
+    "n_ids_unicos": 72,
+    "distribuicao_atual": {
+      "desenvolvimento294": 65,
+      "avaliacao97": 6,
+      "fora_das_particoes_atuais": 1
+    },
+    "ids_fora": [
+      "26746496"
+    ],
+    "registros": [
+      {
+        "id": "10001727",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10062724",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10089434",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10138632",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10182582",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10186968",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10235429",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10247517",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10265057",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10399912",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10504237",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10553553",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10554236",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10624813",
+        "fontes": [
+          "auditoria_primaria"
+        ],
+        "particao_atual": "avaliacao97",
+        "independente": false
+      },
+      {
+        "id": "10641230",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "10953078",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "11957080",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "12144825",
+        "fontes": [
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "12415691",
+        "fontes": [
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "12635195",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "12763627",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "13385306",
+        "fontes": [
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "13405733",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "13836471",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "14789139",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "15651486",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "15802627",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "16186411",
+        "fontes": [
+          "piloto",
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "16899268",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "18067556",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "18187364",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "18297650",
+        "fontes": [
+          "auditoria_primaria"
+        ],
+        "particao_atual": "avaliacao97",
+        "independente": false
+      },
+      {
+        "id": "18301617",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "19201175",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "19796840",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "19850482",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "20001721",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "20674668",
+        "fontes": [
+          "piloto",
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "20879311",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "21297521",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "22351830",
+        "fontes": [
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "22450718",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "22776912",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "23464505",
+        "fontes": [
+          "auditoria_primaria"
+        ],
+        "particao_atual": "avaliacao97",
+        "independente": false
+      },
+      {
+        "id": "24020470",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "24889109",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "25959103",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "26746496",
+        "fontes": [
+          "piloto",
+          "top5_posterior"
+        ],
+        "particao_atual": "excluido_desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "26801767",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "27295996",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "27536013",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "28126340",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "28897981",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "30223363",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "31111279",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "31243710",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "32959732",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "33381211",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "37242217",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "39413067",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "41152404",
+        "fontes": [
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "41344156",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "43311839",
+        "fontes": [
+          "top5_posterior"
+        ],
+        "particao_atual": "avaliacao97",
+        "independente": false
+      },
+      {
+        "id": "46260230",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "47603843",
+        "fontes": [
+          "auditoria_primaria"
+        ],
+        "particao_atual": "avaliacao97",
+        "independente": false
+      },
+      {
+        "id": "51639418",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "62994611",
+        "fontes": [
+          "auditoria_primaria",
+          "top5_posterior"
+        ],
+        "particao_atual": "avaliacao97",
+        "independente": false
+      },
+      {
+        "id": "70089206",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "79541391",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "83816738",
+        "fontes": [
+          "piloto",
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "90867631",
+        "fontes": [
+          "piloto"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      },
+      {
+        "id": "98300955",
+        "fontes": [
+          "top5_posterior"
+        ],
+        "particao_atual": "desenvolvimento",
+        "independente": false
+      }
+    ],
+    "limite": "Conferência assistida do autor, não referência humana independente integral dos 97. Não altera rótulos, previsões, métricas ou proveniência histórica dos snapshots."
+  },
+  "janela": {
+    "data": "2026-11-19",
+    "natureza": "Análise complementar exploratória pós-avaliação; os mesmos 97 já foram examinados, não é teste independente novo.",
+    "limite_tokens": 512,
+    "n_documentos": 2483,
+    "n_desenvolvimento": 294,
+    "n_avaliacao": 97,
+    "prefixos": {
+      "caracteres_prefixo": {
+        "min": 707.0,
+        "mediana": 2589.0,
+        "max": 3125.0
+      },
+      "n_reduzidos": 2322
+    },
+    "ranking_comparado": [
+      {
+        "representacao": "tfidf",
+        "original": {
+          "AP_adequado": 0.6348484848484848,
+          "NDCG_graduado": 0.9337554522584183,
+          "P@5": 0.4,
+          "P@10": 0.2
+        },
+        "equivalente": {
+          "AP_adequado": 0.740909090909091,
+          "NDCG_graduado": 0.9441935552347227,
+          "P@5": 0.6,
+          "P@10": 0.3
+        },
+        "top5_completo": {
+          "ids": [
+            "83816738",
+            "43311839",
+            "12415691",
+            "22351830",
+            "16186411"
+          ],
+          "n_com_revisao_posterior_disponivel": 5,
+          "P@5": 0.8,
+          "nota": "P@5 nulo quando falta julgamento de algum documento; não julgados não são negativos. Referências dos 12 incluem revisão do autor e adjudicação assistida."
+        }
+      },
+      {
+        "representacao": "bge",
+        "original": {
+          "AP_adequado": 0.47870370370370374,
+          "NDCG_graduado": 0.864922732378267,
+          "P@5": 0.6,
+          "P@10": 0.3
+        },
+        "equivalente": {
+          "AP_adequado": 0.4816666666666667,
+          "NDCG_graduado": 0.8643324107323596,
+          "P@5": 0.6,
+          "P@10": 0.3
+        },
+        "top5_completo": {
+          "ids": [
+            "16186411",
+            "26746496",
+            "62994611",
+            "12144825",
+            "83816738"
+          ],
+          "n_com_revisao_posterior_disponivel": 5,
+          "P@5": 0.8,
+          "nota": "P@5 nulo quando falta julgamento de algum documento; não julgados não são negativos. Referências dos 12 incluem revisão do autor e adjudicação assistida."
+        }
+      },
+      {
+        "representacao": "qwen",
+        "original": {
+          "AP_adequado": 0.2541467304625199,
+          "NDCG_graduado": 0.7755172604305138,
+          "P@5": 0.2,
+          "P@10": 0.2
+        },
+        "equivalente": {
+          "AP_adequado": 0.25151515151515147,
+          "NDCG_graduado": 0.7750266638998767,
+          "P@5": 0.2,
+          "P@10": 0.2
+        },
+        "top5_completo": {
+          "ids": [
+            "12144825",
+            "20674668",
+            "83816738",
+            "41152404",
+            "98300955"
+          ],
+          "n_com_revisao_posterior_disponivel": 5,
+          "P@5": 0.6,
+          "nota": "P@5 nulo quando falta julgamento de algum documento; não julgados não são negativos. Referências dos 12 incluem revisão do autor e adjudicação assistida."
+        }
+      }
+    ],
+    "classificacao_comparada": [
+      {
+        "condicao": "original",
+        "representacao": "tfidf",
+        "classificador": "lr",
+        "f1_original": 0.3657726692209451,
+        "f1_equivalente": 0.30735269145865174,
+        "delta_f1": -0.05841997776229335,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "original",
+        "representacao": "tfidf",
+        "classificador": "svm",
+        "f1_original": 0.48328804933799113,
+        "f1_equivalente": 0.4473493100944081,
+        "delta_f1": -0.03593873924358304,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "original",
+        "representacao": "tfidf",
+        "classificador": "xgb",
+        "f1_original": 0.5571428571428572,
+        "f1_equivalente": 0.542063492063492,
+        "delta_f1": -0.015079365079365137,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "tfidf",
+        "classificador": "lr",
+        "f1_original": 0.5504398942675662,
+        "f1_equivalente": 0.5136410256410257,
+        "delta_f1": -0.03679886862654058,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "tfidf",
+        "classificador": "svm",
+        "f1_original": 0.5437853107344632,
+        "f1_equivalente": 0.5249116039858567,
+        "delta_f1": -0.018873706748606556,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "tfidf",
+        "classificador": "xgb",
+        "f1_original": 0.7591371591371591,
+        "f1_equivalente": 0.6851396391219401,
+        "delta_f1": -0.07399752001521898,
+        "recall_A_original": 0.5,
+        "recall_A_equivalente": 0.5
+      },
+      {
+        "condicao": "original",
+        "representacao": "bge",
+        "classificador": "lr",
+        "f1_original": 0.41858329890281415,
+        "f1_equivalente": 0.4067261241174285,
+        "delta_f1": -0.011857174785385671,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "original",
+        "representacao": "bge",
+        "classificador": "svm",
+        "f1_original": 0.4522032693674485,
+        "f1_equivalente": 0.41858329890281415,
+        "delta_f1": -0.03361997046463433,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "original",
+        "representacao": "bge",
+        "classificador": "xgb",
+        "f1_original": 0.44009056078021597,
+        "f1_equivalente": 0.4690831556503198,
+        "delta_f1": 0.02899259487010386,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "bge",
+        "classificador": "lr",
+        "f1_original": 0.7426066724832773,
+        "f1_equivalente": 0.7341687552213868,
+        "delta_f1": -0.00843791726189047,
+        "recall_A_original": 0.75,
+        "recall_A_equivalente": 0.75
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "bge",
+        "classificador": "svm",
+        "f1_original": 0.7132003798670464,
+        "f1_equivalente": 0.638526108990244,
+        "delta_f1": -0.07467427087680245,
+        "recall_A_original": 0.5,
+        "recall_A_equivalente": 0.25
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "bge",
+        "classificador": "xgb",
+        "f1_original": 0.44973544973544977,
+        "f1_equivalente": 0.47524999999999995,
+        "delta_f1": 0.025514550264550184,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "original",
+        "representacao": "qwen",
+        "classificador": "lr",
+        "f1_original": 0.2719298245614035,
+        "f1_equivalente": 0.2719298245614035,
+        "delta_f1": 0.0,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "original",
+        "representacao": "qwen",
+        "classificador": "svm",
+        "f1_original": 0.24946236559139787,
+        "f1_equivalente": 0.24946236559139787,
+        "delta_f1": 0.0,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "original",
+        "representacao": "qwen",
+        "classificador": "xgb",
+        "f1_original": 0.5136410256410257,
+        "f1_equivalente": 0.5044642857142857,
+        "delta_f1": -0.009176739926739952,
+        "recall_A_original": 0.0,
+        "recall_A_equivalente": 0.0
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "qwen",
+        "classificador": "lr",
+        "f1_original": 0.7041623667010665,
+        "f1_equivalente": 0.7041623667010665,
+        "delta_f1": 0.0,
+        "recall_A_original": 0.75,
+        "recall_A_equivalente": 0.75
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "qwen",
+        "classificador": "svm",
+        "f1_original": 0.7849147849147848,
+        "f1_equivalente": 0.7849147849147848,
+        "delta_f1": 0.0,
+        "recall_A_original": 0.5,
+        "recall_A_equivalente": 0.5
+      },
+      {
+        "condicao": "pesos_balanceados",
+        "representacao": "qwen",
+        "classificador": "xgb",
+        "f1_original": 0.682144544166273,
+        "f1_equivalente": 0.5437853107344632,
+        "delta_f1": -0.13835923343180978,
+        "recall_A_original": 0.25,
+        "recall_A_equivalente": 0.0
+      }
+    ],
+    "limites": "A referência assistida original, quatro Adequados, uma vaga e a ausência de referência humana independente permanecem. Conteúdo equivalente não iguala pré-treinamento, tokenizer, pooling ou dispositivo. A condição encurta o TF-IDF e pode encurtar também os densos; não é leitura integral nem demonstra causa isolada.",
+    "top5_primario": [
+      {
+        "representacao": "tfidf",
+        "P@5": 0.6
+      },
+      {
+        "representacao": "bge",
+        "P@5": 0.8
+      },
+      {
+        "representacao": "qwen",
+        "P@5": 0.6
+      }
+    ]
+  },
+  "fontes": {
+    "conferencias": {
+      "caminho": "piloto_tfidf/validation/conferencias_autor_consolidadas_v1.json",
+      "sha256_utf8_lf": "fcebce8f139c1468c31f5e8ea5421ee518847b0f466bcd92da46b050ca310916"
+    },
+    "janela": {
+      "caminho": "piloto_tfidf/output/janela_equivalente_v1/comparacao_original_equivalente.json",
+      "sha256_utf8_lf": "46bfe25a640899b2f9509dd2d18a6befcef525b2659f2ce1cdb73922f4226de2"
+    },
+    "top5_primario": {
+      "caminho": "piloto_tfidf/validation/conferencia_top5_autor_v1.json",
+      "sha256_utf8_lf": "e1dff2e5d6c67040002751fa0a887613b0c5b1c09ada86a284f9b16fcd06dbf8"
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
   "data_local": "2026-11-19",
   "drive_word_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
-  "sha256_docx": "a878e256e55a4345a916ebab1b79d15703f5f002ea0d831bcefb081775a1b053",
-  "bytes_docx": 4779998,
+  "sha256_docx": "a5b6b09fc4736f52c9111e606a579b6d05714a869e909f8af65594f8f017b37f",
+  "bytes_docx": 4780022,
   "paginas_fisicas_renderizadas": 96,
   "sbc_inicio_fisico": 85,
   "sbc_paginas": 12,
@@ -11,7 +11,7 @@
   "identificacao_orientador_preservada": true,
   "imagens_e_estilos_preservados": true,
   "referencia_primaria_preservada": true,
-  "testes_interface_aprovados": 13,
+  "testes_interface_aprovados": 16,
   "build_aprovado": true,
   "conferencia_posterior": {
     "documentos": 12,
@@ -101,8 +101,22 @@
     "quantidades_preservadas_metodologia_protocolo": true,
     "sha256_entrada_drive": "81bd4ebfd707e90f93fa67251a2f9be10bc09d18bfe39a6e3cbe834eaa63112e",
     "pdf_drive_id": "1iA4j6wWVEMBc0nIlRrO_sL0tG1NkxoQT",
-    "sha256_pdf": "0176c8b29ef8d5f034226959146c1714704a08b4294bfac646f953ba7974476c",
-    "bytes_pdf": 3750498,
+    "sha256_pdf": "8da365b4c933c6f1c374de3c72312294253c815778e70fb0a583c8bb28a527c1",
+    "bytes_pdf": 3750576,
     "escopo": "documentos por ID; não equivale a candidatos únicos ou revisão independente da coorte inteira"
+  },
+  "sincronizacao_aplicacao": {
+    "data_local": "2026-11-19",
+    "resultados_primarios_preservados": true,
+    "conferencias72_visiveis": true,
+    "janela_equivalente_painel_separado": true,
+    "fontes_complementares_validadas_por_hash_utf8_lf": true,
+    "testes_interface_aprovados": 16,
+    "build_aprovado": true,
+    "conferencia": "dados, SSR e build; sem inspeção nova por cliques na VPS",
+    "vps_atualizada_pelo_assistente": false,
+    "snapshot_primario": "aplicacao_mockup/src/data/experimentoAtual.json",
+    "complementos": "aplicacao_mockup/src/data/complementosMonografia.json",
+    "paginacao_preservada": true
   }
 }

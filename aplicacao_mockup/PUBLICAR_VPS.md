@@ -30,3 +30,7 @@ Os testes automatizados verificam os 2.483 textos integrais, os hashes, o carreg
 ## Sincronização de 19/11/2026
 
 Após atualizar a mesma branch e reconstruir o site, a página **Resultados** deve mostrar duas avaliações: métricas originais dos 97 e **Conferência posterior do top 5 da coleção completa**, com P@5 de 0,60 / 0,80 / 0,60. Abra as decisões para ver as evidências e a adjudicação assistida de TOP-02. Os links levam ao texto completo dos documentos. O caso 43311839 identifica a conferência posterior e preserva sua referência original. Essas alterações não exigem novos experimentos.
+
+Na sincronização com a monografia, **Dashboard** e **Metodologia** também mostram as 72 conferências consolidadas (65 do desenvolvimento, seis da avaliação e uma versão excluída). Em **Resultados**, confira o painel **Análise complementar — janela de leitura equivalente**: AP TF-IDF de 0,635 para 0,741; F1 TF-IDF/XGB com pesos de 0,759 para 0,685; Qwen/SVM com pesos mantém 0,785. O P@5 completo equivalente é 0,80 / 0,80 / 0,60 e fica separado do original e do P@5 entre os 97. Abra os documentos pelos botões do novo top 5.
+
+As telas Ranking, Comparativo e Interpretabilidade e as medições de custo continuam na janela original. Os complementos foram acrescentados sem substituir `experimentoAtual.json`. O build atual tem 16 testes aprovados; os testes de dados e servidor não substituem a conferência dos cliques após publicar na VPS.

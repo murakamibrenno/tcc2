@@ -224,9 +224,9 @@ Figura 1. Ranking da coleção utilizável no CurrículoRank. Fonte: aplicação
 
 Os scripts, os protocolos e os relatórios estão em https://github.com/murakamibrenno/tcc2. A referência da execução é o commit 3b3c41f4fa8bc3152e07f89b38f6ea1e42633058. Os manifestos identificam a seleção, as exclusões, a ordem dos vetores e os hashes; as previsões por ID permitem recalcular as métricas. Os textos processados estão disponíveis no repositório. A reprodução completa dos encoders requer o cache vetorial ou sua regeneração com as revisões de modelo fixadas.
 
-Foram registrados NumPy 2.5.4, scikit-learn 1.9.1, XGBoost 3.4.1, Sentence-Transformers 6.2.0, Transformers 5.22.2 e PyTorch 2.14.1+cu130. Os comandos dos scripts e os requisitos estão preservados junto do código. A verificação experimental registrou 63 testes Python após a análise complementar; na atualização de 19/11/2026, os 13 testes da interface e o build passaram. As capturas fornecidas pelo autor permitiram inspeção estática desktop; testes interativos completos e a conferência em telas menores permanecem pendentes e não são substituídos por essas verificações.
+Foram registrados NumPy 2.5.4, scikit-learn 1.9.1, XGBoost 3.4.1, Sentence-Transformers 6.2.0, Transformers 5.22.2 e PyTorch 2.14.1+cu130. Os comandos dos scripts e os requisitos estão preservados junto do código. A verificação experimental registrou 63 testes Python após a análise complementar; na atualização de 19/11/2026, os 16 testes da interface e o build passaram. As capturas fornecidas pelo autor permitiram inspeção estática desktop; testes interativos completos e a conferência em telas menores permanecem pendentes e não são substituídos por essas verificações.
 
-A análise de janela equivalente está registrada no commit 141be46b558bb65e8ad6af24f23a30b165e6ec5a, em piloto_tfidf/output/janela_equivalente_v1, com protocolo, hashes dos prefixos, rankings completos e predições por ID. O snapshot exibido na aplicação permanece o da avaliação primária.
+A análise de janela equivalente está registrada no commit 141be46b558bb65e8ad6af24f23a30b165e6ec5a, em piloto_tfidf/output/janela_equivalente_v1, com protocolo, hashes dos prefixos, rankings completos e predições por ID. Ranking, Comparativo e Interpretabilidade preservam a execução primária; a janela equivalente é apresentada separadamente em Resultados.
 
 7. Conclusão
 
