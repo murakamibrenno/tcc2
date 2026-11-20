@@ -6,6 +6,7 @@ import data from '../data/experimentoAtual.json'
 import DetalheCurriculo from '../components/DetalheCurriculo'
 import ConferenciaTop5, { NotaConferenciaPosterior } from '../components/ConferenciaTop5'
 import { ConferenciasConsolidadas, JanelaEquivalente } from '../components/ComplementosMonografia'
+import ComparacaoGuiada from '../components/ComparacaoGuiada'
 import { classesAtuais, chaveConfiguracao, rankingAtual, filtrarDocumentos } from '../utils/experimentoAtual'
 
 const fmt = (v, n = 3) => typeof v === 'number' ? v.toLocaleString('pt-BR', { maximumFractionDigits: n, minimumFractionDigits: n }) : '—'
@@ -27,7 +28,7 @@ export function DashboardAtual() {
     <Grid container spacing={2} mb={3}>{[[2484, 'PDFs inventariados'], [2483, 'Textos nas três representações'], [294, 'Casos de desenvolvimento'], [97, 'Casos da avaliação exploratória']].map(([v, s]) => <Grid item xs={6} lg={3} key={s}><Metric value={v.toLocaleString('pt-BR')} label={s} /></Grid>)}</Grid>
     <Panel title="Cobertura, avaliação e origem dos rótulos"><Typography>Um PDF em branco ficou no inventário, sem rótulo artificial. A qualidade foi medida nos mesmos 97 casos, com 4 Adequados, 35 Parciais e 58 Inadequados. As 18 configurações usam os mesmos dados de avaliação.</Typography>
       <Note severity="warning">A referência de avaliação é assistida, com conferência do autor nos casos discriminados em Metodologia. A consolidação considera desenvolvimento, avaliação e uma versão excluída; não equivale a revisão humana independente integral dos 97.</Note>
-      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap><Button component={RouterLink} to="/comparativo" variant="contained">Comparar configurações</Button><Button component={RouterLink} to="/ranking" variant="outlined">Explorar rankings</Button><Button component={RouterLink} to="/interpretabilidade">Inspecionar explicações</Button></Stack>
+      <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap><Button component={RouterLink} to="/resultados" variant="contained">Entender qualidade e custo</Button><Button component={RouterLink} to="/comparativo" variant="outlined">Comparar configurações</Button><Button component={RouterLink} to="/ranking" variant="outlined">Explorar rankings</Button><Button component={RouterLink} to="/interpretabilidade">Inspecionar explicações</Button></Stack>
     </Panel><ConferenciasConsolidadas compact /><Limits /></>
 }
 
@@ -63,6 +64,7 @@ export function ComparativoAtual() {
     setSelected(chaveConfiguracao(row))
   }
   return <><Title sub="18 condições predefinidas. Treino nos 294 casos; avaliação nos mesmos 97, sem recalibração por seus resultados.">Comparação de classificadores</Title>
+    <Button component={RouterLink} to="/resultados" variant="outlined" sx={{ mb: 2, mr: 2 }}>Entender qualidade, tempo e recursos</Button>
     <Select value={condition} onChange={e => { setCondition(e.target.value); setSelected(null) }} inputProps={{ 'aria-label': 'Condição experimental' }} sx={{ mb: 2 }}><MenuItem value="original">Original</MenuItem><MenuItem value="pesos_balanceados">Pesos balanceados</MenuItem></Select>
     <Panel><DataTable label="Métricas das nove combinações na condição escolhida" headers={['Representação / classificador', 'Acurácia / concordância', 'F1 macro', 'Precisão Adequado', 'Recall Adequado', 'ROC-AUC macro', 'Inspeção']} rows={rows.map(r => [<>{methodName(r.representacao)}<Typography variant="body2">{clfName(r.classificador)}</Typography></>, fmt(r.accuracy_concordancia), fmt(r.f1_macro), fmt(r.por_classe.Adequado.precision), fmt(r.por_classe.Adequado.recall), fmt(aucMacro(r)), <Button onClick={() => showMatrix(r)} aria-haspopup="dialog">Ver matriz</Button>])} /><Typography variant="body2" mt={2}>ROC-AUC one-vs-rest: complemento descritivo calculado após a avaliação primária, sem mudar previsões ou selecionar modelos. Avalia ordenação dos escores, não calibração; uma AUC alta pode coexistir com recall zero na decisão registrada.</Typography></Panel>
     <Note>Referência majoritária: acurácia/concordância {fmt(data.classificacao.baseline_majoritaria.accuracy_concordancia)}; F1 macro {fmt(data.classificacao.baseline_majoritaria.f1_macro)}. Os quatro Adequados permitem saltos de 25 pontos percentuais no recall por um único caso.</Note>
@@ -81,6 +83,7 @@ export function ResultadosAtuais() {
   const [detail, setDetail] = useState(null)
   const chart = data.classificacao.resultados.map(r => ({ nome: `${methodName(r.representacao)} / ${r.classificador} / ${r.condicao === 'original' ? 'original' : 'pesos'}`, F1: r.f1_macro }))
   return <><Title sub="Comparação exploratória contra referência de IA com auditoria humana limitada.">Resultados registrados</Title>
+    <ComparacaoGuiada />
     <Panel title="F1 macro nos 97 casos por configuração — janela original"><Box sx={{ width: '100%', height: 560 }}><ResponsiveContainer><BarChart data={chart} layout="vertical" margin={{ left: 15, right: 30 }}><CartesianGrid strokeDasharray="3 3" /><XAxis type="number" domain={[0, 1]} label={{ value: 'F1 macro (0 a 1)', position: 'insideBottom', offset: -2 }} /><YAxis type="category" dataKey="nome" width={210} tick={{ fontSize: 11 }} /><Tooltip formatter={v => fmt(v)} /><Bar dataKey="F1" fill="#0E7490" /></BarChart></ResponsiveContainer></Box><Typography variant="caption">Fonte: execução de 10/11/2026, coorte fixa de 97 casos. LR = Regressão Logística. As barras não indicam significância estatística.</Typography></Panel>
     <Panel title="Ranking dentro do conjunto julgado — janela original"><DataTable label="Qualidade de recuperação nos 97 julgados" headers={['Representação', 'AP — Adequado', 'NDCG graduado', 'P@5', 'P@10']} rows={data.ranking.representacoes.map(r => [methodName(r.representacao), fmt(r.AP_adequado), fmt(r.NDCG_graduado), fmt(r['P@5']), fmt(r['P@10'])])} /><Typography variant="body2" mt={2}>Uma vaga: AP, não MAP. Para AP/P@k, apenas Adequado é relevante. NDCG usa graus 2/1/0. Essas métricas avaliam os 97 julgados, sem considerar não julgados como irrelevantes.</Typography></Panel>
     <ConferenciaTop5 onOpen={id => setDetail(data.curriculos.find(r => r.id === id))} />

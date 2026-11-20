@@ -1,5 +1,46 @@
 {
   "schema": 1,
+  "recursos_execucao_primaria": [
+    {
+      "representacao": "tfidf",
+      "n_documentos": 2483,
+      "dimensoes": 652064,
+      "vetorizacao_s": 4.4637843999953475,
+      "consulta_escores_s": 0.012493649999669287,
+      "repeticoes_vetorizacao": 3,
+      "pico_rss_bytes": 396234752,
+      "pico_gpu_alocado_bytes": null,
+      "arquivo_vetorial_bytes": 15989506,
+      "dispositivo": "CPU",
+      "formato_arquivo": "NPZ esparso comprimido"
+    },
+    {
+      "representacao": "bge",
+      "n_documentos": 2483,
+      "dimensoes": 1024,
+      "vetorizacao_s": 121.82481759999064,
+      "consulta_escores_s": 0.023759099996823352,
+      "repeticoes_vetorizacao": 1,
+      "pico_rss_bytes": 1360392192,
+      "pico_gpu_alocado_bytes": 1452009984,
+      "arquivo_vetorial_bytes": 10170496,
+      "dispositivo": "NVIDIA GeForce RTX 4060",
+      "formato_arquivo": "NPY float32"
+    },
+    {
+      "representacao": "qwen",
+      "n_documentos": 2483,
+      "dimensoes": 896,
+      "vetorizacao_s": 150.41014279999945,
+      "consulta_escores_s": 0.035055950000241864,
+      "repeticoes_vetorizacao": 1,
+      "pico_rss_bytes": 3497656320,
+      "pico_gpu_alocado_bytes": 2193312256,
+      "arquivo_vetorial_bytes": 8899200,
+      "dispositivo": "NVIDIA GeForce RTX 4060",
+      "formato_arquivo": "NPY float32"
+    }
+  ],
   "conferencias": {
     "data_local": "2026-11-19",
     "unidade": "documento por identificador; versões semelhantes continuam documentos distintos",
@@ -924,6 +965,18 @@
     "top5_primario": {
       "caminho": "piloto_tfidf/validation/conferencia_top5_autor_v1.json",
       "sha256_utf8_lf": "e1dff2e5d6c67040002751fa0a887613b0c5b1c09ada86a284f9b16fcd06dbf8"
+    },
+    "custo_tfidf": {
+      "caminho": "piloto_tfidf/output/escala_v1/tfidf_medicao.json",
+      "sha256_utf8_lf": "65ae36d993ae50431d0317b825348cc55656ddea2abbc6dd0745487db9327a42"
+    },
+    "custo_bge": {
+      "caminho": "piloto_tfidf/output/escala_v1/bge_medicao.json",
+      "sha256_utf8_lf": "26a4b387f8213c900e8266c1396fc294e742406b1c479ca787024ffcbe576145"
+    },
+    "custo_qwen": {
+      "caminho": "piloto_tfidf/output/escala_v1/qwen_medicao.json",
+      "sha256_utf8_lf": "37538b36479c4256f236f31d6b814ffdf3e2e5a740bdc28031b0d29ba8c11cf3"
     }
   }
 }

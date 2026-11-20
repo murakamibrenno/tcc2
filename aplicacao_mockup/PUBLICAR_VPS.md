@@ -33,4 +33,10 @@ Após atualizar a mesma branch e reconstruir o site, a página **Resultados** de
 
 Na sincronização com a monografia, **Dashboard** e **Metodologia** também mostram as 72 conferências consolidadas (65 do desenvolvimento, seis da avaliação e uma versão excluída). Em **Resultados**, confira o painel **Análise complementar — janela de leitura equivalente**: AP TF-IDF de 0,635 para 0,741; F1 TF-IDF/XGB com pesos de 0,759 para 0,685; Qwen/SVM com pesos mantém 0,785. O P@5 completo equivalente é 0,80 / 0,80 / 0,60 e fica separado do original e do P@5 entre os 97. Abra os documentos pelos botões do novo top 5.
 
-As telas Ranking, Comparativo e Interpretabilidade e as medições de custo continuam na janela original. Os complementos foram acrescentados sem substituir `experimentoAtual.json`. O build atual tem 16 testes aprovados; os testes de dados e servidor não substituem a conferência dos cliques após publicar na VPS.
+As telas Ranking, Comparativo e Interpretabilidade e as medições de custo continuam na janela original. Os complementos foram acrescentados sem substituir `experimentoAtual.json`. O build atual tem 18 testes aprovados; os testes de dados e servidor não substituem a conferência dos cliques após publicar na VPS.
+
+## Conferência da comparação guiada
+
+Em Resultados, abra **Entenda os resultados: qualidade, tempo e recursos**. Na aba **Priorizar a leitura**, confira AP 0,635/0,479/0,254 e top 5 completo 3/5, 4/5, 3/5. Em **Classificar aderência**, alterne SVM, Regressão Logística e XGBoost, com e sem pesos; a seleção deve manter a mesma configuração nas três representações. SVM com pesos apresenta F1 macro 0,544/0,713/0,785. Em **Examinar recursos**, confira unidades MiB e a indicação de GPU não aplicável ao TF-IDF.
+
+O painel usa os custos originais: 4,46/121,82/150,41 segundos para gerar os vetores e 12,49/23,76/35,06 milissegundos para consulta e escores da coleção. Esses tempos não incluem ordenar/exportar o ranking. As notas de CPU/GPU e limites devem permanecer visíveis. Em tela menor, confira a rolagem das abas e das tabelas. Esses cliques devem ser conferidos depois da publicação; a validação local registrou 18 testes, build e captura desktop da aba inicial.
