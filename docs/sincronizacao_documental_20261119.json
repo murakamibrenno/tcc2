@@ -1,10 +1,10 @@
 {
   "data_local": "2026-11-19",
   "drive_word_id": "1PmGy9EWf7Jtit6s31piz__LMz75dMi5o",
-  "sha256_docx": "dcae3a9e45973ff7b4ed2df7f09d523a14605897ceb075cef2908cbb8904cc42",
-  "bytes_docx": 4778605,
-  "paginas_fisicas_renderizadas": 95,
-  "sbc_inicio_fisico": 84,
+  "sha256_docx": "a878e256e55a4345a916ebab1b79d15703f5f002ea0d831bcefb081775a1b053",
+  "bytes_docx": 4779998,
+  "paginas_fisicas_renderizadas": 96,
+  "sbc_inicio_fisico": 85,
   "sbc_paginas": 12,
   "tabelas_centralizadas": 16,
   "numeros_tabelas_preservados": true,
@@ -23,7 +23,7 @@
     },
     "novo_id_conferido_na_coorte": "43311839"
   },
-  "pdf_drive_atualizado": false,
+  "pdf_drive_atualizado": true,
   "sbc_separado_drive_atualizado": false,
   "limites": "Renderização local com LibreOffice autorizado pelo autor; testes em servidor e integridade não substituem cliques e conferência responsiva na VPS. Não há revisão humana independente dos 97.",
   "visual_restaurado": {
@@ -78,5 +78,31 @@
     "sbc_paginas": 12,
     "indices_conferidos": true,
     "sha256_entrada_drive": "a202cdb102f6146d50894fe01a4997adbf4b466131d0255eb41ad1d52e1aa8b1"
+  },
+  "conferencias_consolidadas": {
+    "data_local": "2026-11-19",
+    "documentos_unicos": 72,
+    "desenvolvimento_atual": 65,
+    "avaliacao97": 6,
+    "versao_excluida_desenvolvimento": 1,
+    "n_registros_etapas": 77,
+    "repeticoes_eliminadas": 5,
+    "revisao_humana_independente": false,
+    "chat_ids_acessiveis": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "chat_ids_novos": 0,
+    "rotulos_predicoes_metricas_inalterados": true,
+    "retirada_repeticao_numerica_limitacoes": true,
+    "quantidades_preservadas_metodologia_protocolo": true,
+    "sha256_entrada_drive": "81bd4ebfd707e90f93fa67251a2f9be10bc09d18bfe39a6e3cbe834eaa63112e",
+    "pdf_drive_id": "1iA4j6wWVEMBc0nIlRrO_sL0tG1NkxoQT",
+    "sha256_pdf": "0176c8b29ef8d5f034226959146c1714704a08b4294bfac646f953ba7974476c",
+    "bytes_pdf": 3750498,
+    "escopo": "documentos por ID; não equivale a candidatos únicos ou revisão independente da coorte inteira"
   }
 }

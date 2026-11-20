@@ -1,4 +1,4 @@
-Fonte textual sincronizada com o Word combinado em 19/11/2026. Tabelas em linhas separadas por ponto e vírgula; a formatação final permanece no Word do Drive.
+Fonte textual sincronizada com o Word combinado em 19/11/2026, após consolidação das conferências por identificador. A formatação final permanece no Word e PDF do Drive.
 
 APÊNDICE A – Vaga e protocolo de anotação
 
@@ -12,7 +12,7 @@ O procedimento registrado em protocolo_anotacao_teste_ia_v1.json foi: conferir e
 
 A anotação foi realizada por um assistente de IA na sessão de trabalho de 10/11/2026. Os arquivos preservados identificam o anotador como assistente_IA, mas não registram um identificador imutável do modelo, sua versão de serviço, temperatura ou um prompt único integral para todas as decisões. Portanto, a rubrica e o procedimento aqui descritos documentam os registros existentes, sem apresentar uma reconstrução posterior como prompt original reproduzível. Essa lacuna restringe a repetição exata da etapa de anotação.
 
-No desenvolvimento, 59 decisões tiveram ratificação individual assistida e 235 permaneceram anotadas pela IA sob autorização. Na coorte avaliada, 23464505, 10624813, 62994611, 47603843 e 18297650 foram ratificados com sugestões visíveis, abrangendo dois Adequados, dois Parciais e um Inadequado. A seleção foi intencional e anterior às métricas; os demais 92 casos não tinham conferência humana na avaliação original. A auditoria original permanece preservada. A conferência posterior do top 5 está registrada separadamente em conferencia_top5_autor_v1.json e inclui mais um caso da coorte, 43311839, sem alterar sua referência.
+A conferência consolidada do autor abrange 72 identificadores distintos: 65 no desenvolvimento atual, seis na coorte de avaliação e um fora dessas partições. O cálculo usa a união dos identificadores, sem somar repetidamente um documento presente no piloto, na auditoria e no top 5. A avaliação primária preserva 59 ratificações no desenvolvimento e cinco na coorte; as conferências posteriores não foram retroativamente incorporadas às métricas. Na coorte, os identificadores conferidos são 23464505, 10624813, 62994611, 47603843, 18297650 e, posteriormente, 43311839. O registro conferencias_autor_consolidadas_v1.json discrimina os 72 documentos, a etapa e a partição; auditoria_humana_5_casos_v1.json e conferencia_top5_autor_v1.json preservam as decisões de origem. A conferência é assistida e não equivale a julgamento humano independente integral dos 97.
 
 Como exemplos das evidências preservadas, 23464505 inclui “Design patterns, SQL, Pl/SQL”, “Consuming and producing SOAP and Restful web services” e “tomcat, JBOSS, Git”. Em 62994611 constam SQL, integração de APIs e desenvolvimento em C#, sem confirmação contextual de Git. Essas evidências sustentam a referência segundo a rubrica e não constituem certificação externa das competências declaradas.
 

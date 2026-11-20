@@ -1,0 +1,667 @@
+{
+  "data_local": "2026-11-19",
+  "unidade": "documento por identificador; versões semelhantes continuam documentos distintos",
+  "criterio": "contar uma vez cada ID com ratificação individual registrada ou formulário devolvido pelo autor; não promover análises da IA ou autorizações antecipadas a conferência humana",
+  "n_registros_por_etapa": {
+    "piloto_ratificado": 60,
+    "auditoria_primaria": 5,
+    "top5_posterior": 12
+  },
+  "soma_etapas": 77,
+  "sobreposicoes": {
+    "piloto_top5": [
+      "16186411",
+      "20674668",
+      "26746496",
+      "83816738"
+    ],
+    "auditoria_top5": [
+      "62994611"
+    ],
+    "piloto_auditoria": []
+  },
+  "n_ids_unicos": 72,
+  "distribuicao_atual": {
+    "desenvolvimento294": 65,
+    "avaliacao97": 6,
+    "fora_das_particoes_atuais": 1
+  },
+  "ids_fora": [
+    "26746496"
+  ],
+  "chat": {
+    "titulo": "Avaliação de currículos",
+    "id": "6af6b02c-3148-83ea-b6e2-81d1bfcba321",
+    "cobertura_acessivel": "cinco trocas disponibilizadas pela ferramenta, candidatos #010 a #014; sem cursor para recuperar anteriores",
+    "n_novos_ids": 0,
+    "correspondencias": [
+      {
+        "candidato_chat": 10,
+        "id": "12144825",
+        "turn_id": "45c52230-e87c-4bb9-b423-9df2518bea79",
+        "tipo": "análise do assistente no chat; confirmação do autor sustentada pelo formulário devolvido",
+        "ja_incluido_top5": true
+      },
+      {
+        "candidato_chat": 11,
+        "id": "26746496",
+        "turn_id": "cf208828-6621-4658-a7cf-30f171b39d2c",
+        "tipo": "análise do assistente no chat; confirmação do autor sustentada pelo formulário devolvido",
+        "ja_incluido_top5": true
+      },
+      {
+        "candidato_chat": 12,
+        "id": "41152404",
+        "turn_id": "fb23e4d5-4252-4a84-8c56-2a36458c34e3",
+        "tipo": "análise do assistente no chat; confirmação do autor sustentada pelo formulário devolvido",
+        "ja_incluido_top5": true
+      },
+      {
+        "candidato_chat": 13,
+        "id": "12415691",
+        "turn_id": "dd1f1923-13b6-43b7-8b4c-8c634fd78c6b",
+        "tipo": "análise do assistente no chat; confirmação do autor sustentada pelo formulário devolvido",
+        "ja_incluido_top5": true
+      },
+      {
+        "candidato_chat": 14,
+        "id": "98300955",
+        "turn_id": "296d5f36-e9e7-412b-ab5d-1ce021963b4b",
+        "tipo": "análise do assistente no chat; confirmação do autor sustentada pelo formulário devolvido",
+        "ja_incluido_top5": true
+      }
+    ]
+  },
+  "fontes_sha256": {
+    "data/revisao_piloto_v1/manifesto.json": "31700d8bca7cc961d3b441abce15f48a1431655ff943a8f6fc26c2f0c9c607db",
+    "data/desenvolvimento_revisado_v2/manifesto.json": "b79fd6467dca254b6907d4d31a847061352fa7ac9f58802df326574f68b5d40c",
+    "data/coorte_97_v1/manifesto.json": "3fb60346f210afe082d798ff336fe40e18896b736b183d7b4a9ca0bc506df646",
+    "validation/auditoria_humana_5_casos_v1.json": "76471d12a5c16e11e165686747ebb94fde7469fb6641bc817730b36ec0905303",
+    "validation/conferencia_top5_autor_v1.json": "39bd3c4d8fd0e9e5edbf6eade1200fb4d45fa65795d238bfffb6e3cb3159aadf",
+    "validation/top5_formulario_devolvido_v1.json": "d73179e136af4fc087120fac206476d6abf70bf51027dfa065d9b36f03a29701"
+  },
+  "registros": [
+    {
+      "id": "10001727",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10062724",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10089434",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10138632",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10182582",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10186968",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10235429",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10247517",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10265057",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10399912",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10504237",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10553553",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10554236",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10624813",
+      "fontes": [
+        "auditoria_primaria"
+      ],
+      "particao_atual": "avaliacao97",
+      "independente": false
+    },
+    {
+      "id": "10641230",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "10953078",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "11957080",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "12144825",
+      "fontes": [
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "12415691",
+      "fontes": [
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "12635195",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "12763627",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "13385306",
+      "fontes": [
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "13405733",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "13836471",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "14789139",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "15651486",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "15802627",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "16186411",
+      "fontes": [
+        "piloto",
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "16899268",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "18067556",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "18187364",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "18297650",
+      "fontes": [
+        "auditoria_primaria"
+      ],
+      "particao_atual": "avaliacao97",
+      "independente": false
+    },
+    {
+      "id": "18301617",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "19201175",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "19796840",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "19850482",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "20001721",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "20674668",
+      "fontes": [
+        "piloto",
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "20879311",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "21297521",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "22351830",
+      "fontes": [
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "22450718",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "22776912",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "23464505",
+      "fontes": [
+        "auditoria_primaria"
+      ],
+      "particao_atual": "avaliacao97",
+      "independente": false
+    },
+    {
+      "id": "24020470",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "24889109",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "25959103",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "26746496",
+      "fontes": [
+        "piloto",
+        "top5_posterior"
+      ],
+      "particao_atual": "excluido_desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "26801767",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "27295996",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "27536013",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "28126340",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "28897981",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "30223363",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "31111279",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "31243710",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "32959732",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "33381211",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "37242217",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "39413067",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "41152404",
+      "fontes": [
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "41344156",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "43311839",
+      "fontes": [
+        "top5_posterior"
+      ],
+      "particao_atual": "avaliacao97",
+      "independente": false
+    },
+    {
+      "id": "46260230",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "47603843",
+      "fontes": [
+        "auditoria_primaria"
+      ],
+      "particao_atual": "avaliacao97",
+      "independente": false
+    },
+    {
+      "id": "51639418",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "62994611",
+      "fontes": [
+        "auditoria_primaria",
+        "top5_posterior"
+      ],
+      "particao_atual": "avaliacao97",
+      "independente": false
+    },
+    {
+      "id": "70089206",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "79541391",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "83816738",
+      "fontes": [
+        "piloto",
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "90867631",
+      "fontes": [
+        "piloto"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    },
+    {
+      "id": "98300955",
+      "fontes": [
+        "top5_posterior"
+      ],
+      "particao_atual": "desenvolvimento",
+      "independente": false
+    }
+  ],
+  "limite": "Conferência assistida do autor, não referência humana independente integral dos 97. Não altera rótulos, previsões, métricas ou proveniência histórica dos snapshots."
+}

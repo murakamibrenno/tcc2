@@ -1,4 +1,4 @@
-Fonte textual sincronizada com o Word combinado em 19/11/2026, após integração da janela equivalente. Tabelas em linhas separadas por ponto e vírgula; a formatação final permanece no Word do Drive.
+Fonte textual sincronizada com o Word combinado em 19/11/2026, após consolidação das conferências por identificador. A formatação final permanece no Word e PDF do Drive.
 
 RESULTADOS E DISCUSSÃO
 
@@ -144,7 +144,7 @@ Fonte: resultados experimentais do autor (2026).
 
 TF-IDF apresentou as maiores AP e NDCG observadas, 0,635 e 0,934. BGE teve AP 0,479 e NDCG 0,865, mas colocou três Adequados nos cinco primeiros, contra dois do TF-IDF. Qwen apresentou AP 0,254 e NDCG 0,776, com um Adequado nos cinco primeiros. Os indicadores valorizam aspectos diferentes da ordenação, de modo que uma única medida não resume todas as prioridades de leitura.
 
-Na conferência complementar posterior, o autor julgou os documentos das cinco primeiras posições dos três rankings completos: 15 posições e 12 identificadores distintos. O formulário ocultou método, posição, escores e rótulos anteriores e apresentou os textos em ordem aleatória. Apenas Adequado contou como relevante. TOP-02 teve adjudicação assistida pela rubrica. A ocultação no formulário não torna essa revisão do autor independente da pesquisa. A conferência posterior do top 5 completo incluiu 43311839 (TOP-06), antes não conferido, e 62994611 (TOP-07), já ratificado. Os rótulos coincidiram com a referência original; as métricas dos 97 foram preservadas. Essa revisão do autor não constitui avaliação humana independente nem valida os demais 91 casos sem conferência.
+Na conferência complementar posterior, o autor julgou os documentos das cinco primeiras posições dos três rankings completos: 15 posições e 12 identificadores distintos. O formulário ocultou método, posição, escores e rótulos anteriores e apresentou os textos em ordem aleatória. Apenas Adequado contou como relevante. TOP-02 teve adjudicação assistida pela rubrica. A ocultação no formulário não torna essa revisão do autor independente da pesquisa. A conferência posterior do top 5 completo incluiu 43311839 (TOP-06), antes não conferido, e 62994611 (TOP-07), já ratificado. Os rótulos coincidiram com a referência original; as métricas dos 97 foram preservadas. Essa revisão do autor não constitui avaliação humana independente nem permite extrapolar a conferência à coorte inteira.
 
 No ranking completo, o P@5 foi 0,60 (3/5) para TF-IDF, 0,80 (4/5) para BGE e 0,60 (3/5) para Qwen. Na adjudicação do caso TOP-02, o desenvolvimento em ASP e a migração do sistema legado sustentaram programação aplicada, mas não forneceram evidência explícita de API, serviço web ou integração entre serviços. O caso passou a Parcialmente Adequado. Duas versões semelhantes com identificadores distintos ocuparam posições no top 5 de BGE, de modo que o resultado se refere a documentos nas posições do ranking, sem agrupamento por candidato.
 
@@ -246,7 +246,7 @@ A janela equivalente reduz uma diferença de conteúdo entre as implementações
 
 Limitações e ameaças à validade
 
-Na referência original dos 97 casos, somente cinco tiveram ratificação humana assistida, com sugestões da IA visíveis; 92 ficaram sem conferência humana. A mesma IA participou dos rótulos de desenvolvimento e avaliação. Os indicadores medem concordância com essa referência, cuja correção não foi estabelecida de modo independente. A conferência posterior do top 5 completo incluiu 43311839 (TOP-06), antes não conferido, e 62994611 (TOP-07), já ratificado. Os rótulos coincidiram com a referência original; as métricas dos 97 foram preservadas. Essa revisão do autor não constitui avaliação humana independente nem valida os demais 91 casos sem conferência.
+A referência de avaliação foi construída com apoio de um modelo de linguagem e conferência do autor nos casos discriminados na Seção 3.2 e no Apêndice A. A participação do mesmo modelo no desenvolvimento e na avaliação pode produzir erros correlacionados. A conferência do autor foi assistida e não constitui julgamento humano independente. Os indicadores descrevem concordância com essa referência; a conferência posterior do top 5 foi registrada separadamente, preservando as métricas primárias.
 
 A avaliação foi concluída no escopo exploratório descrito, com referência assistida e conferência do autor nos casos discriminados no protocolo. Não houve revisão humana independente integral dos 97 currículos. Essa condição limita a validade das conclusões: os indicadores descrevem concordância com a referência disponível, sem estabelecer qualidade validada para decisões de contratação.
 

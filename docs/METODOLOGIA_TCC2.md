@@ -1,4 +1,4 @@
-Fonte textual sincronizada com o Word combinado em 19/11/2026, após integração da janela equivalente. Tabelas em linhas separadas por ponto e vírgula; a formatação final permanece no Word do Drive.
+Fonte textual sincronizada com o Word combinado em 19/11/2026, após consolidação das conferências por identificador. A formatação final permanece no Word e PDF do Drive.
 
 Metodologia
 
@@ -38,9 +38,11 @@ O piloto histórico de 20 currículos incluiu dez documentos de Information Tech
 
 A referência de desenvolvimento foi consolidada em 294 documentos: seis Adequados, 75 Parcialmente Adequados e 213 Inadequados. Sua construção reuniu 99 representantes da revisão anterior e 195 dos 201 novos casos examinados; seis novos documentos permaneceram excluídos por dúvida. Há 59 decisões ratificadas individualmente pelo autor e 235 anotações da IA sob autorização. A ratificação ocorreu com propostas e evidências visíveis, sem anotação humana cega.
 
-A coorte inicialmente reservada continha 100 documentos, anotados pela mesma IA que participou do desenvolvimento. Na revisão de históricos semelhantes, três documentos foram excluídos da avaliação principal por relação substancial com um histórico do desenvolvimento, antes da consulta às predições. Os 97 restantes contêm quatro Adequados, 35 Parciais e 58 Inadequados. O autor ratificou cinco casos intencionalmente apresentados; os outros 92 não tinham conferência humana na referência original.
+A coorte inicialmente reservada continha 100 documentos, anotados pela mesma IA que participou do desenvolvimento. Na revisão de históricos semelhantes, três documentos foram excluídos da avaliação principal por relação substancial com um histórico do desenvolvimento, antes da consulta às predições. Os 97 restantes contêm quatro Adequados, 35 Parciais e 58 Inadequados. Na auditoria da avaliação primária, o autor ratificou cinco casos intencionalmente apresentados. A conferência posterior do top 5 incluiu outro documento dessa coorte, sem mudar sua referência.
 
 O plano inicial previa anotação manual. Na execução ampliada, a referência de avaliação foi construída com apoio de um modelo de linguagem, mediante aplicação de uma rubrica explícita de aderência técnica, com conferência do autor nos casos discriminados no protocolo. Essa alteração operacional foi explicitada, sem atribuir autoria humana aos rótulos não conferidos. As referências não constituem padrão humano independente, e a participação da mesma IA nas duas etapas pode correlacionar erros. Foram preservados identificadores, textos, trechos de evidência, justificativas, decisões e exclusões para permitir auditoria.
+
+A consolidação por identificador reuniu 72 documentos distintos com conferência registrada do autor: 65 pertencem aos 294 casos de desenvolvimento, seis aos 97 de avaliação e um corresponde à versão 26746496, excluída do desenvolvimento. Os registros compreendem 60 ratificações do piloto, cinco da auditoria primária e 12 documentos do top 5 posterior; cinco identificadores aparecem em mais de uma etapa e foram contados uma única vez. As análises recuperadas do chat “Avaliação de currículos”, candidatos #010 a #014, correspondem a documentos já presentes no formulário devolvido do top 5 e não acrescentaram novos identificadores. Essa contagem reúne etapas distintas, sem transformar a conferência assistida em revisão independente ou modificar a referência primária.
 
 Extração e pré-processamento textual
 
@@ -138,7 +140,7 @@ O protocolo distinguiu três universos: coleção completa para representação 
 
 A seleção ampliada foi registrada por manifesto com semente tcc2-20261110-v1, antes da avaliação dos modelos. Inicialmente foram separados 300 casos de desenvolvimento e 100 reservados, com identificação de documentos semelhantes por grupos e revisão contextual. Após as exclusões documentadas, permaneceram 294 e 97, respectivamente. A seleção enriquecida por sinais técnicos não corresponde a amostragem aleatória representativa de toda a coleção.
 
-A referência dos casos reservados foi anotada pela mesma IA que participou do desenvolvimento. O autor ratificou cinco casos selecionados intencionalmente, com sugestões visíveis. Três históricos relacionados ao desenvolvimento foram excluídos antes da consulta às predições. As composições finais e a origem das decisões estão descritas na Seção 3.2 e no Apêndice A.
+A referência dos casos reservados foi anotada pela mesma IA que participou do desenvolvimento. A auditoria primária utilizou casos intencionalmente selecionados, com sugestões visíveis; a abrangência consolidada da conferência do autor está discriminada na Seção 3.2. Três históricos relacionados ao desenvolvimento foram excluídos antes da consulta às predições. As composições finais e a origem das decisões estão descritas na Seção 3.2 e no Apêndice A.
 
 Na classificação, o vocabulário e o IDF foram ajustados somente nos dados de treino de cada fold e, no ajuste final, somente nos 294 documentos. Os textos reservados foram transformados com esse vetorizador. O ajuste do TF-IDF de recuperação na coleção inteira não usou rótulos e foi mantido separado, sem alimentar o treinamento supervisionado com esse vocabulário global.
 
